@@ -1,16 +1,83 @@
 @import "tailwindcss";
 
 :root {
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+  --premium-lime: #bef264;
+  --premium-dark: #07111f;
+}
+
+/* GLOBAL BODY */
+
+body {
+  font-family: var(--font-body);
+  background: #07111f;
+  color: white;
+  letter-spacing: 0.2px;
+  line-height: 1.7;
+}
+
+/* PREMIUM HEADINGS */
+
+.luxury-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  line-height: 1.1;
+}
+
+.luxury-italic {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.premium-text {
+  font-family: var(--font-body);
+  color: #d1d5db;
+  line-height: 1.9;
+}
+
+/* PREMIUM CARDS */
+
+.glass-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(190,242,100,0.12);
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  transition: all 0.35s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(190,242,100,0.28);
+  box-shadow: 0 25px 70px rgba(190,242,100,0.08);
+}
+
+/* PREMIUM BUTTON */
+
+.premium-btn {
+  transition: all 0.3s ease;
+}
+
+.premium-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(190,242,100,0.12);
+}
+
+/* SECTION SPACING */
+
+.section-tight {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+:root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -19,8 +86,65 @@
   }
 }
 
+
+
+/* GOOGLE TRANSLATE PREMIUM STYLING */
+
+#google_translate_element {
+  display: flex;
+  align-items: center;
+}
+
+.goog-te-gadget {
+  font-size: 0 !important;
+  color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: white !important;
+  border: 1px solid rgba(163, 230, 53, 0.25) !important;
+  border-radius: 14px !important;
+  padding: 10px 16px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  outline: none !important;
+  cursor: pointer !important;
+  backdrop-filter: blur(10px);
+  min-width: 180px;
+  transition: all 0.3s ease;
+}
+
+.goog-te-gadget .goog-te-combo:hover {
+  border-color: #bef264 !important;
+  box-shadow: 0 0 0 4px rgba(190, 242, 100, 0.08);
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  top: 0px !important;
+}
+/* HIDE GOOGLE TOP BAR */
+
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.skiptranslate iframe {
+  display: none !important;
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget span {
+  display: none !important;
 }
