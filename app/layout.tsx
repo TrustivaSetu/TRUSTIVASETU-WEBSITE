@@ -18,9 +18,14 @@ const inter = Inter({
   display: "swap",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Trustiva Setu",
-  description: "Healthcare Finance Infrastructure Platform",
+  description: "Private Website",
+
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({

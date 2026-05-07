@@ -1,23 +1,19 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  Mail,
-  Phone,
-  Building2,
-  ShieldCheck,
-  CreditCard,
-  Landmark,
-  ArrowRight,
-  HeartHandshake,
-  Hospital,
-  CheckCircle2,
-  Star,
-} from "lucide-react";
+
 
 import { motion } from "framer-motion";
 
 import Image from "next/image";
+import {
+  CreditCard,
+  Landmark,
+  HeartHandshake,
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
+const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
 
 function Counter({
   end,
@@ -32,6 +28,7 @@ function Counter({
 }) {
   const [count, setCount] = useState(0);
 
+  
   useEffect(() => {
     let start = 0;
     const incrementTime = 20;
@@ -49,6 +46,7 @@ function Counter({
       }
     }, incrementTime);
 
+    
     return () => clearInterval(timer);
   }, [end, duration]);
 
@@ -62,6 +60,38 @@ function Counter({
 }
 
 export default function TrustivaSetuWebsite() {
+  
+  const [clinicLoading, setClinicLoading] = useState(false);
+  const [patientLoading, setPatientLoading] = useState(false);
+  const [investorLoading, setInvestorLoading] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+const [reviews, setReviews] = useState<any[]>([]);
+useEffect(() => {
+  try {
+    const saved = localStorage.getItem("trustivaReviews");
+    if (saved) setReviews(JSON.parse(saved));
+  } catch (e) {
+    console.error("LocalStorage error", e);
+  }
+}, []);
+  
+const duplicatedReviews = [...reviews, ...reviews];
+
+  // ✅ Menu scroll lock useEffect (correct)
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
+
+
+
   const [clinicForm, setClinicForm] = useState({
     clinicName: "",
     contactPerson: "",
@@ -93,85 +123,17 @@ export default function TrustivaSetuWebsite() {
   strategicNotes: "",
 });
 
-  const [reviews, setReviews] = useState<any[]>([]);
   
-    useEffect(() => {
-  const savedReviews = localStorage.getItem("trustivaReviews");
-
-  if (savedReviews) {
-    setReviews(JSON.parse(savedReviews));
-  } else {
-    const defaultReviews = [
-      {
-        name: "Rahul Sharma",
-        message:
-          "Fast approval and excellent clinic support. Very smooth EMI process.",
-        rating: 5,
-      },
-      {
-        name: "Priya Verma",
-        message:
-          "Trustiva helped me access treatment without financial stress.",
-        rating: 5,
-      },
-    ];
-
-    setReviews(defaultReviews);
-    localStorage.setItem(
-      "trustivaReviews",
-      JSON.stringify(defaultReviews)
-    );
-  }
-}, []);
-const [reviewForm, setReviewForm] = useState({
+  
+  const [reviewForm, setReviewForm] = useState({
   name: "",
   message: "",
   rating: 0,
 });
 
 const [reviewErrors, setReviewErrors] = useState<any>({});
-const founderQuotes = [
-  {
-    quote: "Discipline beats motivation every single day.",
-    author: "Trustiva Founder Mindset",
-  },
-  {
-    quote: "Trust builds conversion. Speed builds scale.",
-    author: "Healthcare Finance Principle",
-  },
-  {
-    quote: "Great businesses solve painful problems.",
-    author: "Execution Philosophy",
-  },
-  {
-    quote: "Healthcare access should never depend on upfront cash.",
-    author: "Trustiva Vision",
-  },
-  {
-    quote: "Fast approvals create faster treatment decisions.",
-    author: "Growth Strategy",
-  },
-];
 
-const [dailyQuote, setDailyQuote] = useState(
-  founderQuotes[0]
-);
-const [typedQuote, setTypedQuote] = useState("");
-useEffect(() => {
-  let index = 0;
-  const fullText = dailyQuote.quote;
 
-  const interval = setInterval(() => {
-    setTypedQuote(fullText.slice(0, index + 1));
-    index++;
-
-    if (index === fullText.length) {
-      clearInterval(interval);
-    }
-  }, 45);
-
-  return () => clearInterval(interval);
-}, [dailyQuote]);
   const handleClinicChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -200,7 +162,9 @@ const handleInvestorChange = (
 };
 
   const handleReviewChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  e: React.ChangeEvent<
+    HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+  >
 ) => {
   setReviewForm({
     ...reviewForm,
@@ -244,6 +208,7 @@ const submitReview = () => {
     JSON.stringify(updatedReviews)
   );
 
+
   setReviews(updatedReviews);
 
   setReviewForm({
@@ -256,13 +221,7 @@ const submitReview = () => {
 
   alert("Review submitted successfully!");
 };
-useEffect(() => {
-  const randomIndex = Math.floor(
-    Math.random() * founderQuotes.length
-  );
 
-  setDailyQuote(founderQuotes[randomIndex]);
-}, []);
 const validateClinicForm = () => {
   let errors: any = {};
 
@@ -274,9 +233,9 @@ const validateClinicForm = () => {
     errors.contactPerson = "Field missing";
   }
 
-  if (!clinicForm.phone.trim()) {
-    errors.phone = "Field missing";
-  }
+  if (!/^[6-9]\d{9}$/.test(clinicForm.phone)) {
+  errors.phone = "Enter valid 10-digit number";
+}
 
   if (!clinicForm.email.trim()) {
     errors.email = "Field missing";
@@ -292,21 +251,20 @@ const validateClinicForm = () => {
     errors.specialty = "Field missing";
   }
 
+  
   setClinicErrors(errors);
-  return Object.keys(errors).length === 0;
+return Object.keys(errors).length === 0;
 };
 
 const validatePatientForm = () => {
   let errors: any = {};
-
+if (!/^[6-9]\d{9}$/.test(patientForm.phone)) {
+  errors.phone = "Enter valid 10-digit number";
+}
   if (!patientForm.fullName.trim()) {
     errors.fullName = "Field missing";
   }
-
-  if (!patientForm.phone.trim()) {
-    errors.phone = "Field missing";
-  }
-
+  
   if (!patientForm.email.trim()) {
     errors.email = "Field missing";
   } else if (!/\S+@\S+\.\S+/.test(patientForm.email)) {
@@ -332,34 +290,83 @@ const validatePatientForm = () => {
   const submitClinic = async () => {
   if (!validateClinicForm()) return;
 
-  const formData = {
-    access_key: "e85baa87-8eee-46d9-adc2-8e24b63b6622",
-    subject: "Healthcare Provider Partnership Enquiry - Trustiva Setu",
-    clinic_name: clinicForm.clinicName,
-    contact_person: clinicForm.contactPerson,
-    phone: clinicForm.phone,
-    email: clinicForm.email,
-    city: clinicForm.city,
-    specialty: clinicForm.specialty,
-    message: clinicForm.message,
-  };
+  setClinicLoading(true);
 
-  const response = await fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify(formData),
-  });
+  try {
 
-  const result = await response.json();
+    console.log(WEB3_ACCESS_KEY);
 
-  if (result.success) {
-    alert("Clinic enquiry submitted successfully!");
-  } else {
-    alert("Something went wrong!");
+    const formData = {
+      access_key: WEB3_ACCESS_KEY,
+
+      subject: "Healthcare Provider Partnership Enquiry - Trustiva Setu",
+
+      from_name: "Trustiva Setu Clinic Lead",
+
+      replyto: clinicForm.email,
+
+      clinic_name: clinicForm.clinicName,
+
+      contact_person: clinicForm.contactPerson,
+
+      phone: clinicForm.phone,
+
+      email: clinicForm.email,
+
+      city: clinicForm.city,
+
+      specialty: clinicForm.specialty,
+
+      message: clinicForm.message,
+    };
+
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    const result = await response.json();
+
+    console.log(result);
+
+    if (result.success) {
+
+      alert("Clinic enquiry submitted successfully!");
+
+      setClinicForm({
+        clinicName: "",
+        contactPerson: "",
+        phone: "",
+        email: "",
+        city: "",
+        specialty: "",
+        message: "",
+      });
+
+      setClinicErrors({});
+
+    } else {
+
+      alert(result.message || "Something went wrong!");
+
+    }
+
+  } catch (error) {
+
+    console.log(error);
+
+    alert("Network error!");
+
   }
+
+  setClinicLoading(false);
 };
 
 const [investorErrors, setInvestorErrors] = useState<any>({});
@@ -381,9 +388,9 @@ const validateInvestorForm = () => {
     errors.email = "Enter valid email";
   }
 
-  if (!investorForm.phone.trim()) {
-    errors.phone = "Field missing";
-  }
+  if (!/^[6-9]\d{9}$/.test(investorForm.phone)) {
+  errors.phone = "Enter valid 10-digit number";
+}
 
   if (!investorForm.investmentInterest.trim()) {
     errors.investmentInterest = "Field missing";
@@ -399,99 +406,168 @@ const validateInvestorForm = () => {
 };
 
   const submitInvestor = async () => {
+
   if (!validateInvestorForm()) return;
 
-  const formData = {
-    access_key: "e85baa87-8eee-46d9-adc2-8e24b63b6622",
+  setInvestorLoading(true);
 
-    subject: "Investor Conversation Request - Trustiva Setu",
+  try {
 
-    full_name: investorForm.fullName,
-    company_name: investorForm.companyName,
-    email: investorForm.email,
-    phone: investorForm.phone,
-    investment_interest: investorForm.investmentInterest,
-    strategic_notes: investorForm.strategicNotes,
+    console.log(WEB3_ACCESS_KEY);
 
-    replyto: investorForm.email,
-  };
+    const formData = {
 
-  const response = await fetch(
-    "https://api.web3forms.com/submit",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData),
+      access_key: WEB3_ACCESS_KEY,
+
+      subject: "🚀 Investor Request - Trustiva Setu",
+
+      from_name: "Investor Lead - Trustiva Setu",
+
+      replyto: investorForm.email,
+
+      fullName: investorForm.fullName,
+
+      companyName: investorForm.companyName,
+
+      email: investorForm.email,
+
+      phone: investorForm.phone,
+
+      investmentInterest: investorForm.investmentInterest,
+
+      strategicNotes: investorForm.strategicNotes,
+    };
+
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    const result = await response.json();
+
+    console.log(result);
+
+    if (result.success) {
+
+      alert("Investor request submitted!");
+
+      setInvestorForm({
+        fullName: "",
+        companyName: "",
+        email: "",
+        phone: "",
+        investmentInterest: "",
+        strategicNotes: "",
+      });
+
+      setInvestorErrors({});
+
+    } else {
+
+      alert(result.message || "Error submitting form");
+
     }
-  );
 
-  const result = await response.json();
+  } catch (error) {
 
-  if (result.success) {
-    alert("Investor request submitted successfully!");
+    console.log(error);
 
-    setInvestorForm({
-      fullName: "",
-      companyName: "",
-      email: "",
-      phone: "",
-      investmentInterest: "",
-      strategicNotes: "",
-    });
+    alert("Network error");
 
-    setInvestorErrors({});
-  } else {
-    alert("Something went wrong!");
   }
+
+  setInvestorLoading(false);
 };
 
   const submitPatient = async () => {
+
   if (!validatePatientForm()) return;
 
-  const formData = {
-    access_key: "e85baa87-8eee-46d9-adc2-8e24b63b6622",
-    subject: "Patient Healthcare Finance Enquiry - Trustiva Setu",
-    full_name: patientForm.fullName,
-    phone: patientForm.phone,
-    email: patientForm.email,
-    city: patientForm.city,
-    treatment_type: patientForm.treatmentType,
-    budget: patientForm.budget,
-    message: patientForm.message,
-  };
+  setPatientLoading(true);
 
-  const response = await fetch(
-    "https://api.web3forms.com/submit",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData),
+  try {
+
+    console.log(WEB3_ACCESS_KEY);
+
+    const formData = {
+
+      access_key: WEB3_ACCESS_KEY,
+
+      subject: "Patient Finance Enquiry - Trustiva Setu",
+
+      from_name: "Trustiva Setu Patient Lead",
+
+      replyto: patientForm.email,
+
+      fullName: patientForm.fullName,
+
+      phone: patientForm.phone,
+
+      email: patientForm.email,
+
+      city: patientForm.city,
+
+      treatmentType: patientForm.treatmentType,
+
+      budget: patientForm.budget,
+
+      message: patientForm.message,
+    };
+
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    const result = await response.json();
+
+    console.log(result);
+
+    if (result.success) {
+
+      alert("Patient enquiry submitted successfully!");
+
+      setPatientForm({
+        fullName: "",
+        phone: "",
+        email: "",
+        city: "",
+        treatmentType: "",
+        budget: "",
+        message: "",
+      });
+
+      setPatientErrors({});
+
+    } else {
+
+      alert(result.message || "Error submitting form");
+
     }
-  );
 
-  const result = await response.json();
+  } catch (error) {
 
-  if (result.success) {
-    alert("Patient enquiry submitted successfully!");
+    console.log(error);
 
-    setPatientForm({
-      fullName: "",
-      phone: "",
-      email: "",
-      city: "",
-      treatmentType: "",
-      budget: "",
-      message: "",
-    });
-  } else {
-    alert("Something went wrong!");
+    alert("Network error");
+
   }
+
+  setPatientLoading(false);
 };
 
   const navItems = [
@@ -542,54 +618,96 @@ const validateInvestorForm = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#07111f] text-white">
+    <div className={`min-h-screen bg-[#07111f] text-white ${menuOpen ? "fixed w-full" : ""}`}>
 
       {/* HEADER */}
 
-      <header className="sticky top-0 z-50 bg-[#07111f]/95 backdrop-blur-md border-b border-white/10">
-  <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+{/* MOBILE MENU */}
+<div
+  className={`
+    fixed inset-0 z-40
+    bg-[#07111f]/95 backdrop-blur-xl
+    transform transition-all duration-300 ease-in-out
+    ${menuOpen ? "translate-x-0" : "-translate-x-full"}
+  `}
+>
+  <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
+    <h2 className="text-lg font-semibold text-white">
+      Menu
+    </h2>
 
-    <div className="flex items-center gap-4">
-      <img
-        src="/logo.png"
-        alt="Trustiva Setu"
-        className="w-14 h-14 object-contain"
-      />
+    <button
+      onClick={() => setMenuOpen(false)}
+      className="text-2xl text-white"
+    >
+      ✕
+    </button>
+  </div>
+
+  <div className="flex flex-col gap-6 px-6 py-8 text-lg">
+    {navItems.map(([id, label]) => (
+      <a
+        key={id}
+        href={id === "join-us" ? "/join-us" : `#${id}`}
+        target={id === "join-us" ? "_blank" : "_self"}
+        rel={id === "join-us" ? "noopener noreferrer" : ""}
+        onClick={() => setMenuOpen(false)}
+        className="text-white border-b border-white/10 pb-3 hover:text-lime-300 transition"
+      >
+        {label}
+      </a>
+    ))}
+  </div>
+</div>
+
+      <header className="sticky top-0 z-50 bg-[#07111f]/95 backdrop-blur-md border-b border-white/10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+
+    {/* LOGO */}
+    <div className="flex items-center gap-2 md:gap-4">
+      <Image src="/logo.png" alt="logo" width={56} height={56} />
 
       <div>
-        <h1 className="text-2xl font-bold">Trustiva Setu</h1>
-        <p className="text-sm text-gray-300">
+        <h1 className="text-lg md:text-2xl font-bold">Trustiva Setu</h1>
+        <p className="text-xs md:text-sm text-gray-300">
           Aarthsetu Technologies Pvt. Ltd.
         </p>
       </div>
     </div>
 
+    {/* RIGHT SIDE */}
     <div className="flex items-center gap-6">
 
-      <div className="hidden md:flex items-center gap-3 bg-white/5 border border-lime-300/20 px-4 py-2 rounded-2xl backdrop-blur-md">
-  <span className="text-sm font-medium text-lime-300">
-    🌐 Language
-  </span>
+      {/* MOBILE BUTTON */}
+      <div className="md:hidden">
+        <button 
+        onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? "✕" : "☰"}
+        </button>
+      </div>
+      
 
-  <div id="google_translate_element"></div>
-</div>
+      {/* DESKTOP NAV */}
+      
+      <div className="hidden md:flex items-center gap-6">
 
-      <nav className="hidden md:flex gap-6">
-        {navItems.map(([id, label]) => (
-          <a
-  key={id}
-  href={id === "join-us" ? "/join-us" : `#${id}`}
-  target={id === "join-us" ? "_blank" : "_self"}
-  rel={id === "join-us" ? "noopener noreferrer" : ""}
-  className="hover:text-lime-300 transition"
->
-  {label}
-</a>
-        ))}
-      </nav>
+        <nav className="flex gap-6">
+          {navItems.map(([id, label]) => (
+            <a
+              key={id}
+              href={id === "join-us" ? "/join-us" : `#${id}`}
+              target={id === "join-us" ? "_blank" : "_self"}
+              rel={id === "join-us" ? "noopener noreferrer" : ""}
+              className="hover:text-lime-300 transition"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
 
+        
     </div>
-
+</div>
   </div>
 </header>
 
@@ -597,280 +715,153 @@ const validateInvestorForm = () => {
 
       <section
   id="home"
-  className="relative overflow-hidden max-w-7xl mx-auto px-6 pt-16 pb-16 grid md:grid-cols-2 gap-8 items-center"
+  className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12 sm:pb-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center"
 >
-  {/* Premium Visible Floating Particles */}
-
-<div className="absolute inset-0 pointer-events-none z-0">
-
-  {/* Dot 1 */}
-  <div className="absolute top-20 left-20 w-5 h-5 bg-lime-300 rounded-full shadow-[0_0_20px_rgba(163,230,53,0.8)] animate-pulse" />
-
-  {/* Dot 2 */}
-  <div className="absolute top-40 right-32 w-6 h-6 bg-green-300 rounded-full shadow-[0_0_25px_rgba(74,222,128,0.8)] animate-bounce" />
-
-  {/* Dot 3 */}
-  <div className="absolute bottom-32 left-1/3 w-5 h-5 bg-lime-200 rounded-full shadow-[0_0_20px_rgba(190,242,100,0.8)] animate-pulse" />
-
-  {/* Dot 4 */}
-  <div className="absolute bottom-20 right-20 w-6 h-6 bg-lime-300 rounded-full shadow-[0_0_25px_rgba(163,230,53,0.8)] animate-bounce" />
-
-  {/* Thin Line 1 */}
-  <div className="absolute top-32 left-40 w-40 h-[px] bg-lime-300/30 rotate-12" />
-
-  {/* Thin Line 2 */}
-  <div className="absolute bottom-40 right-40 w-52 h-[px] bg-green-300/30 -rotate-12" />
-
-</div>
+  
         <div className="relative z-10">
           
-          <p
-  className="
-    mb-6
-    mt-2
-    text-center
-    md:text-left
-    text-2xl
-    md:text-5xl
-    leading-tight
-    text-white
-    font-normal
-    tracking-wide
-  "
-  style={{
-    fontFamily: "Times New Roman, serif",
-  }}
->
-  Where Healthcare Access
-  <br />
-  Meets Financial Infrastructure
+          <p className="text-lime-300 text-sm tracking-[0.3em] uppercase mb-4">
+  Healthcare Financing Infrastructure
 </p>
 
-<h2 className="luxury-heading text-5xl md:text-7xl leading-[1.05] mb-7">
-  Building Healthcare
+<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+  Powering India’s
+  <span className="block text-lime-300">
+    Healthcare Financing Backbone
+  </span>
+</h1>
 
-  <br />
-Financing Infrastructure
-  <br />
-  Across India
-</h2>
-
-<p className="premium-text text-lg md:text-xl leading-9 mb-10 max-w-2xl">
-  Not another fintech.
-  <br />
-  Trustiva Division by Aarthsetu Technologies Private Limited enables hospitals,
-clinics, fintech partners, lenders and healthcare providers to offer seamless,
-embedded healthcare financing solutions—making quality healthcare accessible
-and affordable for every patient across India.
+<p className="text-gray-300 text-lg md:text-xl max-w-xl leading-8">
+  Connecting clinics, lenders and patients through one unified
+  financing infrastructure platform.
 </p>
 
-          <div className="flex flex-wrap gap-5 mt-2">
+          <div className="flex flex-col sm:flex-row gap-3 mt-2">
             <a href="#clinics">
               <button
-  className="
-    premium-btn
-    bg-lime-300
-    text-black
-    px-8
-    py-4
-    rounded-2xl
-    font-bold
-    text-lg
-    shadow-[0_20px_40px_rgba(163,230,53,0.18)]
-    transition-all
-    duration-300
-    hover:-translate-y-1
-    hover:scale-[1.02]
-  "
+  className="premium-btn premium-green-btn"
 >
-                Strategic Partnerships
+                Partner With Us
               </button>
             </a>
 
             <a
-  href="#investor-form"
+  href="#for-strategic-investors"
   onClick={(e) => {
     e.preventDefault();
     document
-      .getElementById("investor-form")
+      .getElementById("for-strategic-investors")
       ?.scrollIntoView({ behavior: "smooth" });
   }}
-  className="
-  premium-btn
-  inline-block
-  border
-  border-lime-300
-  px-8
-  py-4
-  rounded-2xl
-  text-lime-300
-  font-bold
-  text-lg
-  transition-all
-  duration-300
-  hover:bg-lime-300
-  hover:text-black
-  hover:-translate-y-1
-  hover:scale-[1.02]
-"
+  className="premium-btn premium-green-btn"
 >
-  Investor Conversations
+  Talk to Founders
 </a>
           </div>
         </div>
-        <div className="relative mb-4 flex justify-center items-center">
-  <div className="absolute w-105 h-105 bg-lime-300/10 blur-[120px] rounded-full" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
 
-  <img
-  src="/founder-note-visual.png"
-  alt="Trustiva Healthcare Finance Infrastructure"
-  className="
-    w-full
-    max-w-3xl
-    object-contain
-    rounded-4xl
-    border
-    border-white/10
-    shadow-[0_30px_80px_rgba(0,0,0,0.45)]
-    backdrop-blur-xl
-  "
-/>
-</div>
-      <div className="mt-4 grid md:grid-cols-2 gap-6 max-w-4xl">
-
-  {/* Abhishek Founder Note */}
-
-  <div className="glass-card p-7">
-    <p className="text-sm text-lime-300 font-semibold uppercase tracking-widest mb-3">
-      Founder’s Note
-    </p>
-
-    <p className="text-gray-200 text-lg leading-8 italic">
-      “I am not building a lending company.
-I am building the healthcare financing infrastructure layer that ensures
-treatment decisions are never delayed because of immediate affordability.”
-    </p>
-
-    <p className="mt-4 text-lime-300 font-semibold">
-      — Abhishek Kashyap
-    </p>
+  {/* LEFT: IMAGE */}
+  <div className="flex justify-center">
+    <Image
+      src="/founder-note-visual.png"
+      alt="Trustiva Healthcare"
+      width={800}
+      height={500}
+      className="w-full max-w-xs sm:max-w-md md:max-w-xl object-contain rounded-4xl border border-white/10 shadow-xl"
+    />
   </div>
 
-  {/* Ajit Founder Note */}
-
-  <div className="glass-card p-7">
-    <p className="text-sm text-lime-300 font-semibold uppercase tracking-widest mb-3">
-      Co-Founder’s Note
-    </p>
-
-    <p className="text-gray-200 text-lg leading-8 italic">
-      “Healthcare financing must move from being a support function
-to becoming a core infrastructure layer that empowers providers,
-lenders and patients at scale.”
-    </p>
-
-    <p className="mt-4 text-lime-300 font-semibold">
-      — Ajit Singh Yadav
-    </p>
-  </div>
-
-</div>
-
-        <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 shadow-2xl mt-2">
-          <h3 className="text-2xl font-bold mb-6 text-white">
-            Key Highlights
-          </h3>
-
-          <div className="grid gap-4">
-            {highlights.map((item) => (
-              <div
-                key={item}
-                className="flex items-center gap-3 border-b border-white/10 pb-3"
-              >
-                <ShieldCheck className="text-lime-300 w-5 h-5" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="relative mt-4 rounded-3xl border border-lime-300/20 bg-white/10 backdrop-blur-2xl p-6 shadow-2xl overflow-hidden">
-
-  {/* subtle glow effect */}
-  <div className="absolute top-0 right-0 w-40 h-40 bg-lime-300/20 blur-3xl rounded-full" />
-  <div className="absolute bottom-0 left-0 w-32 h-32 bg-green-400/20 blur-3xl rounded-full" />
-
-  <div className="relative z-10">
-
+  {/* RIGHT: QUOTE */}
+  <div>
     <p className="text-lime-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
       Today’s Leadership Insight
     </p>
 
-    <h3 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
+    <h3 className="text-3xl md:text-4xl font-bold mb-6">
       Founder’s Daily Quote
     </h3>
 
-    <p className="text-xl text-gray-200 leading-9 italic mb-4 min-h-22.5">
-  “{typedQuote}”
-  <span className="animate-pulse text-lime-300">|</span>
-</p>
-<div className="relative mb-6">
-  <div className="h-[0.5] w-full bg-white/10 rounded-full" />
+    <div className="relative mb-6">
+      <div className="h-[1px] w-full bg-white/10" />
+      <div className="absolute top-0 left-0 h-[1px] w-32 bg-lime-300 animate-pulse" />
+    </div>
 
-  <div className="absolute top-0 left-0 h-[0.5] w-32 bg-lime-300 rounded-full animate-pulse shadow-[0_0_20px_rgba(163,230,53,0.8)]" />
+    <p className="text-gray-300 italic mb-4">
+      "Build trust first. Scale will follow."
+    </p>
+
+    <p className="text-lime-300 font-semibold">
+      — Trustiva Founder
+    </p>
+  </div>
+
 </div>
-    <div className="flex items-center justify-between flex-wrap gap-4">
+        </section>
+      <section className="max-w-7xl mx-auto px-4 py-16">
 
-      <div>
-        <p className="text-sm text-gray-400">
-          — {dailyQuote.author}
-        </p>
+  <h2 className="text-3xl font-bold mb-6 text-center">
+    Execution in Progress
+  </h2>
 
-        <p className="text-xs text-lime-300 mt-2 tracking-wide">
-          
-        </p>
-      </div>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-      <div className="text-right">
-        <p className="text-sm text-gray-400 italic">
-          Trustiva Founder Signature
-        </p>
+    <div className="bg-white/5 p-6 rounded-2xl">
+      <h3 className="text-xl font-bold text-lime-300">
+        Clinic Partnerships
+      </h3>
+      <p className="text-gray-300">
+        Actively onboarding healthcare providers across key cities
+      </p>
+    </div>
 
-        <p className="text-lg font-semibold text-lime-300">
-          Build Trust. Build Scale.
-        </p>
-      </div>
+    <div className="bg-white/5 p-6 rounded-2xl">
+      <h3 className="text-xl font-bold text-lime-300">
+        Lender Integrations
+      </h3>
+      <p className="text-gray-300">
+        Multiple NBFC and lender discussions in advanced stages
+      </p>
+    </div>
 
+    <div className="bg-white/5 p-6 rounded-2xl">
+      <h3 className="text-xl font-bold text-lime-300">
+        Platform Build
+      </h3>
+      <p className="text-gray-300">
+        Infrastructure and approval engine under active development
+      </p>
     </div>
 
   </div>
-</div>
-      </section>
+
+</section>
 {/* TRUST METRICS STRIP */}
 
-<section className="max-w-7xl mx-auto px-6 py-4">
-  <div className="grid grid-cols-4 gap-5 max-w-7xl mx-auto">
+<section className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5 max-w-7xl mx-auto">
 
     {[
   {
     number: 50,
     suffix: "+",
-    label: "Active Lender Relationships",
+    label: "Expanding Lender Network",
   },
   {
     number: 500,
     suffix: "+",
-    label: "Clinic Financing Pipeline",
+    label: "Growing Clinic Pipeline",
   },
   {
     number: 2400,
     prefix: "₹",
     suffix: "Cr+",
-    label: "Annual Financing Opportunity",
+    label: "Large Market Opportunity",
   },
   {
     number: 72,
     suffix: "hr",
-    label: "Average Approval Cycle",
+    label: "Fast Approval Cycles",
   },
 ].map((item, index) => (
       <motion.div
@@ -884,11 +875,11 @@ lenders and patients at scale.”
         whileHover={{
           y: -8,
           scale: 1.03,
-          boxShadow: "0 20px 40px rgba(163,230,53,0.12)",
+          
         }}
-        className="relative bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl px-6 py-5 text-center shadow-xl h-42.5 w-full flex flex-col justify-center overflow-hidden"
+        className="relative bg-white/10 backdrop border border-lime-300/20 rounded-3xl px-6 py-5 text-center shadow-xl min-h-[140px] sm:min-h-[170px] w-full flex flex-col justify-center overflow-hidden"
       >
-        <div className="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-lime-300/50 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-linear-to-r from-transparent via-lime-300/50 to-transparent" />
 
         <motion.h3
 
@@ -913,14 +904,14 @@ lenders and patients at scale.”
           {item.label}
         </p>
 
-        <div className="mt-3 h-0.5 w-12 mx-auto bg-lime-300/40 rounded-full" />
+        <div className="mt-3 h-[2px] w-12 mx-auto bg-lime-300/40 rounded-full" />
       </motion.div>
     ))}
 
   </div>
 </section>
 <div className="h-8" />
-<section className="max-w-7xl mx-auto px-6 py-10">
+<section className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
 
   <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
     Strategic Credibility
@@ -936,7 +927,7 @@ lenders and patients at scale.”
     focused on building India's healthcare financing infrastructure layer.
   </p>
 
-  <div className="grid md:grid-cols-3 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
     <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-6">
       <h3 className="text-2xl font-bold text-lime-300 mb-3">
@@ -979,7 +970,7 @@ lenders and patients at scale.”
 
       <section
         id="about"
-        className="max-w-7xl mx-auto px-6 py-14"
+        className="max-w-7xl mx-auto px-4 sm:px-6 py-14"
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
           About Trustiva Setu
@@ -1005,13 +996,13 @@ that powers healthcare affordability at scale.
     Founding Team
   </h2>
 
-  <div className="grid md:grid-cols-3 gap-10">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
 
     {/* Abhishek */}
 
   <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
-  <div className="w-60 h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
+  <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
     <Image
       src="/abhishek.jpg"
       alt="Abhishek Kashyap"
@@ -1043,7 +1034,7 @@ that powers healthcare affordability at scale.
 
 <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
-  <div className="w-60 h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
+  <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
     <Image
       src="/ajit.jpg"
       alt="Ajit Singh Yadav"
@@ -1074,7 +1065,7 @@ that powers healthcare affordability at scale.
 
 <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
   <div className="flex justify-center mb-6">
-    <div className="w-60 h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
+    <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
       <Image
   src="/manish.png"
   alt="Manish Jaggi"
@@ -1086,7 +1077,7 @@ that powers healthcare affordability at scale.
   </div>
 
   <h3 className="text-2xl font-bold">
-    Mr. Manish Jaggi
+    Manish Jaggi
   </h3>
 
   <p className="text-lime-300 font-semibold mb-2">
@@ -1111,13 +1102,13 @@ that powers healthcare affordability at scale.
 
       <section
         id="solutions"
-        className="max-w-7xl mx-auto px-6 py-20"
+        className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
       >
         <h2 className="text-4xl font-bold mb-10">
           Our Financing Solutions
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
           <div className="bg-white/5 rounded-3xl p-7 border border-white/10">
             <CreditCard className="text-lime-300 mb-4" />
@@ -1153,15 +1144,15 @@ verified healthcare demand through one unified system.
 
       <section
         id="clinics"
-        className="max-w-7xl mx-auto px-6 py-20"
+        className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
       >
         <h2 className="text-4xl font-bold mb-10">
           For Clinics
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-          <div className="glass-card p-7 max-w-xl">
+          <div className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7">
             <h3 className="text-2xl font-bold mb-6 text-white">
               Healthcare Provider Partnership Enquiry
             </h3>
@@ -1172,72 +1163,115 @@ verified healthcare demand through one unified system.
   name="clinicName"
   placeholder="Clinic Name"
   onChange={handleClinicChange}
-  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
-/>             
+  className="w-full bg-white/5 border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+/>  
+{clinicErrors.clinicName && (
+  <p className="text-red-500 text-sm mt-1">
+    {clinicErrors.clinicName}
+  </p>
+)}         
               <input
                 name="contactPerson"
                 placeholder="Contact Person"
                 onChange={handleClinicChange}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
               />
+              {clinicErrors.contactPerson && (
+  <p className="text-red-500 text-sm mt-1">
+    {clinicErrors.contactPerson}
+  </p>
+)}
 <div>
-  <div className="flex">
-    <span
-  className="bg-white/10 border border-white/20 border-r-0 rounded-l-xl px-5 min-w-19.5 h-12.5 flex items-center justify-center text-white font-semibold text-base backdrop-blur-xl"
->
-  +91
-</span>
+  <div className="flex w-full flex-nowrap">
 
-    <input
-      name="phone"
-      placeholder="Phone Number"
-      onChange={handleClinicChange}
-      className="w-full border border-l-0 rounded-r-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
-    />
-  </div>
+  {/* +91 BOX */}
+  <span
+    className="
+      bg-white/10
+      border border-white/20
+      border-r-0
+      rounded-l-xl
+      px-5
+      min-w-[80px]
+      h-[50px]
+      flex items-center justify-center
+      text-white font-semibold text-base
+    "
+  >
+    +91
+  </span>
 
+  {/* PHONE INPUT */}
+  <input
+    type="tel"
+    inputMode="numeric"
+    maxLength={10}
+    name="phone"
+    placeholder="Phone Number"
+    onChange={handleClinicChange} // (change accordingly)
+    className="
+      w-full
+      bg-white/5
+      border border-white/20
+      rounded-r-xl
+      px-4
+      py-3
+      text-sm
+      text-white
+      placeholder:text-gray-400
+      focus:outline-none
+      focus:ring-2
+      focus:ring-lime-300/40"
+  />
   {clinicErrors.phone && (
-    <p className="text-red-500 text-sm mt-1">
-      {clinicErrors.phone}
-    </p>
-  )}
+  <p className="text-red-500 text-sm mt-1">
+    {clinicErrors.phone}
+  </p>
+)}
+
 </div>
               
-
+</div>
               <input
                 name="email"
                 placeholder="Email"
                 onChange={handleClinicChange}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
               />
+              {clinicErrors.email && (
+  <p className="text-red-500 text-sm mt-1">
+    {clinicErrors.email}
+  </p>
+)}
 
               <input
                 name="city"
                 placeholder="City"
                 onChange={handleClinicChange}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
               />
 
               <input
   name="specialty"
   placeholder="Specialty"
   onChange={handleClinicChange}
-  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+  className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
  />
 
               <textarea
   name="message"
   placeholder="Message"
   onChange={handleClinicChange}
-  className="w-full border border-gray-200 rounded-2xl px-4 py-3 h-28 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+  className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
 />
 
               <button
-                onClick={submitClinic}
-                className="w-full bg-[#14532d] hover:bg-[#166534] text-white py-3 rounded-2xl font-semibold text-sm transition-all duration-300"
-              >
-                Healthcare Provider Partnership Enquiry
-              </button>
+  onClick={submitClinic}
+  disabled={clinicLoading}
+className="premium-btn premium-green-btn"
+>
+  {clinicLoading ? "Submitting..." : "Healthcare Provider Partnership Enquiry"}
+</button>
 
             </div>
           </div>
@@ -1267,52 +1301,60 @@ verified healthcare demand through one unified system.
 
       <section
   id="patients"
-  className="max-w-7xl mx-auto px-6 py-20"
+  className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
 >
         <h2 className="text-4xl font-bold mb-10">
           For Patients
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
   <div>
     <h3 className="text-2xl font-bold mb-6 text-white">
-
-            <p className="text-gray-300 leading-8 text-lg">
-              One application. Multiple lenders. Instant eligibility checks.
+           One application. Multiple lenders. Instant eligibility checks.
+           </h3>
+              <p className="text-gray-300 leading-8 text-lg">
 Transparent healthcare financing with flexible repayment plans
 and zero hidden complexity for better treatment access.
             </p>
-    </h3>
+  
           </div>
 
-          <div className="glass-card p-7">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7">
             <h3 className="text-2xl font-bold mb-6 text-white">
               Patient Healthcare Finance Enquiry
             </h3>
 
             <div className="space-y-4">
 
-              <input
-                name="fullName"
-                placeholder="Full Name"
-                onChange={handlePatientChange}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
-              />
+  <input
+    name="fullName"
+    placeholder="Full Name"
+    onChange={handlePatientChange}
+    className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+  />
+  {patientErrors.fullName && (
+  <p className="text-red-500 text-sm mt-1">
+    {patientErrors.fullName}
+  </p>
+)}
 
-              <div>
-  <div className="flex">
-    <span
-  className="bg-white/10 border border-white/20 border-r-0 rounded-l-xl px-5 min-w-19.5 h-12.5 flex items-center justify-center text-white font-semibold text-base backdrop-blur-xl"
->
-  +91
-</span>
+  {/* PHONE */}
+  <div>
+  <div className="flex w-full flex-nowrap">
+
+    <span className="bg-white/10 border border-white/20 border-r-0 rounded-l-xl px-3 sm:px-5 min-w-[60px] sm:min-w-[80px] h-[45px] sm:h-[50px] flex items-center justify-center text-white font-semibold text-base">
+      +91
+    </span>
 
     <input
       name="phone"
+      type="tel"
+      inputMode="numeric"
+      maxLength={10}
       placeholder="Phone Number"
       onChange={handlePatientChange}
-      className="w-full border border-l-0 rounded-r-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+      className="w-full bg-white/5 border border-white/20 rounded-r-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-lime-300/40"
     />
   </div>
 
@@ -1322,49 +1364,53 @@ and zero hidden complexity for better treatment access.
     </p>
   )}
 </div>
-
-
               <input
                 name="email"
                 placeholder="Email"
                 onChange={handlePatientChange}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
               />
+              {patientErrors.email && (
+  <p className="text-red-500 text-sm mt-1">
+    {patientErrors.email}
+  </p>
+)}
 
               <input
                 name="city"
                 placeholder="City"
                 onChange={handlePatientChange}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
               />
 
               <input
                 name="treatmentType"
                 placeholder="Treatment Type"
                 onChange={handlePatientChange}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
               />
 
               <input
                 name="budget"
                 placeholder="Approx Budget"
                 onChange={handlePatientChange}
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
               />
 
               <textarea
   name="message"
   placeholder="Message"
   onChange={handlePatientChange}
-  className="w-full border border-gray-200 rounded-2xl px-4 py-3 h-28 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+  className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-4 py-3 h-28 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
 />
 
               <button
-                onClick={submitPatient}
-                className="w-full bg-[#14532d] text-white py-4 rounded-2xl font-semibold hover:bg-[#166534] transition-all duration-300"
-              >
-                Submit Finance Enquiry
-              </button>
+  onClick={submitPatient}
+  disabled={patientLoading}
+  className="premium-btn premium-green-btn"
+>
+  {patientLoading ? "Submitting..." : "Submit Finance Enquiry"}
+</button>
 
             </div>
           
@@ -1375,115 +1421,26 @@ and zero hidden complexity for better treatment access.
 
       {/* APPLICATION LAUNCHING SOON */}
 
-<section className="max-w-7xl mx-auto px-6 py-16">
+<section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
   <div className="relative overflow-hidden rounded-4xl border border-lime-300/20 bg-linear-to-br from-[#0b1628] via-[#10213d] to-[#07111f] p-10 shadow-2xl">
 
     {/* Glow Effect */}
-    <div className="absolute top-0 right-0 w-72 h-72 bg-lime-300/20 blur-3xl rounded-full" />
-    <div className="absolute bottom-0 left-0 w-72 h-72 bg-green-400/20 blur-3xl rounded-full" />
+    
 
     <div className="relative z-10">
 
       <div className="flex items-center gap-3 mb-4">
-        <motion.div
-  initial={{
-    y: -200,
-    scale: 0.4,
-    opacity: 0,
-  }}
-  animate={{
-    y: [ -200, 20, 0 ],
-    scale: [0.4, 1.2, 1],
-    opacity: 1,
-  }}
-  transition={{
-    duration: 1.8,
-    ease: "easeOut",
-  }}
-  className="relative inline-block"
->
-  {/* Main BIG LAUNCH Badge */}
-
-  <div className="px-5 py-2 rounded-full bg-lime-300 text-black font-bold text-sm shadow-2xl">
-    BIG LAUNCH 🚀
+  <div className="px-5 py-2 rounded-full bg-lime-300 text-black font-bold text-sm">
+    Platform Rollout
   </div>
+</div>
 
-  {/* Burst Star 1 */}
-
-  <motion.div
-    className="absolute -top-5 -right-5 text-yellow-300 text-2xl"
-    initial={{ scale: 0, opacity: 0 }}
-    animate={{
-      scale: [0, 1.6, 1],
-      opacity: [0, 1, 0.6],
-      x: [0, 20, 10],
-      y: [0, -20, -10],
-      rotate: [0, 40, 0],
-    }}
-    transition={{
-      delay: 1.2,
-      duration: 1.2,
-      repeat: Infinity,
-      repeatDelay: 3,
-    }}
-  >
-    ✨
-  </motion.div>
-
-  {/* Burst Star 2 */}
-
-  <motion.div
-    className="absolute -bottom-4 -left-5 text-yellow-200 text-xl"
-    initial={{ scale: 0, opacity: 0 }}
-    animate={{
-      scale: [0, 1.4, 1],
-      opacity: [0, 1, 0.5],
-      x: [0, -18, -8],
-      y: [0, 18, 8],
-      rotate: [0, -30, 0],
-    }}
-    transition={{
-      delay: 1.3,
-      duration: 1.3,
-      repeat: Infinity,
-      repeatDelay: 3,
-    }}
-  >
-    ⭐
-  </motion.div>
-
-  {/* Burst Star 3 */}
-
-  <motion.div
-    className="absolute top-1/2 -right-8 text-lime-200 text-lg"
-    initial={{ scale: 0, opacity: 0 }}
-    animate={{
-      scale: [0, 1.3, 1],
-      opacity: [0, 1, 0.4],
-      x: [0, 22, 10],
-      rotate: [0, 20, 0],
-    }}
-    transition={{
-      delay: 1.4,
-      duration: 1.1,
-      repeat: Infinity,
-      repeatDelay: 3,
-    }}
-  >
-    ✦
-  </motion.div>
-</motion.div>
-        <div className="text-lime-300 font-semibold tracking-widest text-sm">
-          TRUSTIVA SETU APP
-        </div>
-      </div>
-
-      <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-        Application Launching
-        <span className="block text-lime-300">
-          Very Soon 🚀
-        </span>
-      </h2>
+<h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
+  Trustiva App
+  <span className="block text-lime-300">
+    In Progress 🚀
+  </span>
+</h2>
 
       <p className="text-gray-300 text-lg leading-8 max-w-3xl mb-10">
         India’s smartest healthcare financing application is coming soon —
@@ -1498,7 +1455,7 @@ and zero hidden complexity for better treatment access.
 
       {/* Features Grid */}
 
-      <div className="grid md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {appFeatures.map((item) => (
           <div
             key={item}
@@ -1517,8 +1474,8 @@ and zero hidden complexity for better treatment access.
 </section>
       {/* PARTNERS SECTION */}
 
-<section className="max-w-7xl mx-auto px-6 py-20">
-  <div className="grid md:grid-cols-2 gap-8">
+<section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
 
     {/* Lending Partners */}
 
@@ -1533,17 +1490,9 @@ and zero hidden complexity for better treatment access.
       </p>
 
       <div className="relative overflow-hidden border-t border-white/10 pt-5">
-        <motion.div
-          animate={{ x: ["100%", "-100%"] }}
-          transition={{
-            repeat: Infinity,
-            duration: 12,
-            ease: "linear",
-          }}
-          className="whitespace-nowrap text-lime-300 font-semibold text-xl"
-        >
-          COMING SOON • COMING SOON •
-        </motion.div>
+        <div className="text-lime-300 font-semibold text-xl">
+  Partner integrations in progress
+</div>
       </div>
     </div>
 
@@ -1560,17 +1509,9 @@ and zero hidden complexity for better treatment access.
       </p>
 
       <div className="relative overflow-hidden border-t border-white/10 pt-5">
-        <motion.div
-          animate={{ x: ["100%", "-100%"] }}
-          transition={{
-            repeat: Infinity,
-            duration: 12,
-            ease: "linear",
-          }}
-          className="whitespace-nowrap text-lime-300 font-semibold text-xl"
-        >
-          COMING SOON • COMING SOON •
-        </motion.div>
+        <div className="text-lime-300 font-semibold text-xl">
+  Partner integrations in progress
+</div>
       </div>
     </div>
 
@@ -1581,7 +1522,7 @@ and zero hidden complexity for better treatment access.
 
 <section
   id="why-we-win"
-  className="max-w-7xl mx-auto px-6 py-20"
+  className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
 >
   <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
   Why We Win
@@ -1592,7 +1533,7 @@ and zero hidden complexity for better treatment access.
   We are building the infrastructure layer that creates long-term
   defensibility across clinics, lenders and patient financing behavior.
 </p>
-  <div className="grid md:grid-cols-2 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
 
     <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(163,230,53,0.12)]">
       <h3 className="text-2xl font-bold mb-4 text-lime-300">
@@ -1655,12 +1596,12 @@ Our routing engine creates lender competition, better approvals and stronger cli
 
 {/* INVESTOR SECTION */}
 
-<section className="max-w-7xl mx-auto px-6 py-20">
+<section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
   <div className="relative overflow-hidden rounded-4xl border border-lime-300/20 bg-white/5 backdrop-blur-2xl p-10 shadow-2xl">
 
     {/* glow effects */}
 
-    <div className="absolute top-0 right-0 w-72 h-72 bg-lime-300/10 blur-3xl rounded-full" />
+    
     <div className="absolute bottom-0 left-0 w-72 h-72 bg-green-400/10 blur-3xl rounded-full" />
 
     <div className="relative z-10">
@@ -1691,9 +1632,9 @@ approval intelligence, clinic workflow integration and lender distribution syste
 to accelerate lender integrations, clinic onboarding,
 distribution expansion and national healthcare financing infrastructure deployment.
       </p>
-      <div className="grid md:grid-cols-3 gap-5 mb-14">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-14">
 
-  <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-5">
+  <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-5 min-h-[120px] flex flex-col justify-center">
     <p className="text-sm text-gray-400 mb-2">
       Raise Stage
     </p>
@@ -1702,7 +1643,7 @@ distribution expansion and national healthcare financing infrastructure deployme
     </h3>
   </div>
 
-  <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-5">
+  <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-5 min-h-[120px] flex flex-col justify-center">
     <p className="text-sm text-gray-400 mb-2">
       Capital Raise
     </p>
@@ -1711,7 +1652,7 @@ distribution expansion and national healthcare financing infrastructure deployme
     </h3>
   </div>
 
-  <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-5">
+  <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-5 min-h-[120px] flex flex-col justify-center">
     <p className="text-sm text-gray-400 mb-2">
       Use of Funds
     </p>
@@ -1722,7 +1663,7 @@ distribution expansion and national healthcare financing infrastructure deployme
 
 </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-6">
           <h3 className="text-3xl font-bold text-lime-300 mb-2">
@@ -1772,7 +1713,7 @@ distribution expansion and national healthcare financing infrastructure deployme
       .getElementById("for-strategic-investors")
       ?.scrollIntoView({ behavior: "smooth" });
   }}
-  className="inline-block border border-lime-300 text-lime-300 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-lime-300 hover:text-black hover:-translate-y-1"
+  className="premium-btn premium-green-btn inline-block"
 >
   
   Strategic Partnership Deck
@@ -1788,8 +1729,9 @@ distribution expansion and national healthcare financing infrastructure deployme
 
 <section
   id="for-strategic-investors"
-  className="max-w-7xl mx-auto px-6 py-20"
+  className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
 >
+  
   <div className="bg-white/10 backdrop-blur-2xl border border-lime-300/20 rounded-3xl p-10 shadow-2xl">
 
     <p className="text-lime-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
@@ -1806,91 +1748,83 @@ distribution expansion and national healthcare financing infrastructure deployme
       partnerships and long-term infrastructure opportunities.
     </p>
 
-    <div className="grid md:grid-cols-2 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
       {/* Left Side Form */}
 
-      <div className="glass-card p-7">
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7">
 
-        <input
-  type="text"
-  name="fullName"
-  value={investorForm.fullName}
-  onChange={handleInvestorChange}
-  placeholder="Full Name"
-  className="w-full bg-transparent border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/30 transition-all"
-/>
-
-
-        <input
-  type="text"
-  name="companyName"
-  value={investorForm.companyName}
-  onChange={handleInvestorChange}
-  placeholder="Fund / Company Name"
-  className="w-full bg-transparent border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/30 transition-all"
-/>
-
-        <input
-  type="email"
-  name="email"
-  value={investorForm.email}
-  onChange={handleInvestorChange}
-  placeholder="Email Address"
-  className="w-full bg-transparent border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/30 transition-all"
-/>
-
-        <div>
-  <div className="flex">
-
-    <span
-  className="bg-white/10 border border-white/20 border-r-0 rounded-l-xl px-5 min-w-19.5 h-12.5 flex items-center justify-center text-white font-semibold text-base backdrop-blur-xl"
->
-  +91
-</span>
+  <div className="space-y-4">
 
     <input
       type="text"
-      name="phone"
-      value={investorForm.phone}
+      name="fullName"
+      value={investorForm.fullName}
       onChange={handleInvestorChange}
-      placeholder="Phone Number"
-      className="w-full border border-l-0 rounded-r-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+      placeholder="Full Name"
+      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
     />
+
+    <input
+      type="text"
+      name="companyName"
+      value={investorForm.companyName}
+      onChange={handleInvestorChange}
+      placeholder="Fund / Company Name"
+      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+    />
+
+    <input
+      type="email"
+      name="email"
+      value={investorForm.email}
+      onChange={handleInvestorChange}
+      placeholder="Email Address"
+      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+    />
+
+    <div className="flex w-full flex-nowrap">
+      <span className="bg-white/10 border border-white/20 border-r-0 rounded-l-xl px-3 sm:px-5 min-w-[60px] sm:min-w-[80px] h-[45px] sm:h-[50px] flex items-center justify-center text-white font-semibold">
+        +91
+      </span>
+
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        onChange={handleInvestorChange}
+        className="w-full bg-white/5 border border-white/20 rounded-r-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+      />
+    </div>
+
+    <input
+      type="text"
+      name="investmentInterest"
+      value={investorForm.investmentInterest}
+      onChange={handleInvestorChange}
+      placeholder="Investment Interest"
+      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+    />
+
+    <textarea
+      name="strategicNotes"
+      value={investorForm.strategicNotes}
+      onChange={handleInvestorChange}
+      placeholder="Strategic Notes"
+      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-4 py-3 h-28 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+    />
+
+    <button
+      onClick={submitInvestor}
+      disabled={investorLoading}
+      className="premium-btn premium-green-btn"
+    >
+      {investorLoading ? "Submitting..." : "Request Investor Access"}
+    </button>
 
   </div>
 
-  {investorErrors.phone && (
-    <p className="text-red-500 text-sm mt-1">
-      {investorErrors.phone}
-    </p>
-  )}
 </div>
-
-        <input
-  type="text"
-  name="investmentInterest"
-  value={investorForm.investmentInterest}
-  onChange={handleInvestorChange}
-  placeholder="Investment Interest"
-  className="w-full bg-transparent border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/30 transition-all"
-/>
-
-        <textarea
-  name="strategicNotes"
-  value={investorForm.strategicNotes}
-  onChange={handleInvestorChange}
-  placeholder="Strategic Notes"
-  className="w-full bg-transparent border border-white/20 text-white placeholder:text-gray-400 rounded-2xl px-4 py-3 h-28 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
-/>
-
-        <button
-        onClick={submitInvestor}
-          className="w-full bg-[#14532d] text-white py-4 rounded-2xl font-semibold hover:bg-[#166534] transition-all duration-300"
-        >
-          Request Investor Access
-        </button>
-      </div>
 
       {/* Right Side Contact Info */}
 
@@ -1900,7 +1834,7 @@ distribution expansion and national healthcare financing infrastructure deployme
           <h3 className="text-2xl font-bold mb-4 text-lime-300">
             Direct Founder Access
           </h3>
-
+          
           <p className="text-gray-300 leading-8">
             Serious strategic conversations deserve direct founder access.
             Reach out for investor discussions, lender partnerships and capital strategy.
@@ -1933,198 +1867,154 @@ distribution expansion and national healthcare financing infrastructure deployme
   </div>
 </section>
 
-{/* CUSTOMER REVIEWS + CONTACT DETAILS */}
-
 <section
-  id="contact"
-  className="max-w-7xl mx-auto px-6 py-20"
+  id="testimonials"
+  className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
 >
-  <div className="bg-white/10 backdrop-blur-2xl border border-lime-300/20 rounded-3xl p-10 shadow-2xl">
 
-    <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">
-      Customer Reviews & Business Contact Details
-    </h2>
+  <h2 className="text-4xl font-bold mb-10 text-center">
+    Early Feedback
+  </h2>
 
-    <div className="grid md:grid-cols-2 gap-10">
+  <div className="review-strip-wrapper">
 
-      {/* LEFT SIDE — Reviews */}
+  <div className="review-strip">
 
-      <div>
-        <h3 className="text-2xl font-bold mb-6 text-white">
-          Trusted By Patients & Clinics
-        </h3>
+    {duplicatedReviews.length > 0 ? (
 
-        <p className="text-gray-300 leading-8 text-lg mb-8">
-          Real experiences from patients and clinics using
-          Trustiva Setu for faster approvals, smoother financing
-          and stress-free treatment access.
-        </p>
+      duplicatedReviews.map((review, index) => (
 
-        <div className="overflow-hidden h-125">
-          <motion.div
-            animate={{ y: ["0%", "-50%"] }}
-            transition={{
-              repeat: Infinity,
-              duration: 18,
-              ease: "linear",
-            }}
-            className="space-y-6"
-          >
-            {[...reviews, ...reviews].map((review, index) => (
-              <div
-                key={index}
-                className="glass-card p-6 border border-lime-300/10"
-              >
-                <div className="flex gap-1 mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-yellow-400"
-                    />
-                  ))}
-                </div>
+        <div
+          key={index}
+          className="review-card"
+        >
 
-                <p className="text-gray-300 leading-7 mb-4">
-                  {review.message}
-                </p>
-
-                <p className="text-lime-300 font-semibold">
-                  — {review.name}
-                </p>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-
-      {/* RIGHT SIDE — Form + Contact */}
-
-      <div className="space-y-8">
-
-        {/* Review Form */}
-
-        <div className="glass-card p-7">
-          <h3 className="text-2xl font-bold mb-6 text-white">
-            Add Your Review
-          </h3>
-
-          <div className="space-y-4">
-
-            <input
-              name="name"
-              placeholder="Your Name"
-              value={reviewForm.name}
-              onChange={handleReviewChange}
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
-            />
-
-            {reviewErrors.name && (
-              <p className="text-red-500 text-sm">
-                {reviewErrors.name}
-              </p>
-            )}
-
-            <textarea
-              name="message"
-              placeholder="Write Your Review"
-              value={reviewForm.message}
-              onChange={handleReviewChange}
-              className="w-full border border-gray-200 rounded-2xl px-4 py-3 h-28 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
-            />
-
-            {reviewErrors.message && (
-              <p className="text-red-500 text-sm">
-                {reviewErrors.message}
-              </p>
-            )}
-
-            <div className="flex gap-2">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <button
-                  key={star}
-                  type="button"
-                  onClick={() =>
-                    setReviewForm({
-                      ...reviewForm,
-                      rating: star,
-                    })
-                  }
-                  className="transition hover:scale-110"
-                >
-                  <Star
-                    className={`w-8 h-8 ${
-                      star <= reviewForm.rating
-                        ? "text-yellow-400 fill-yellow-400"
-                        : "text-gray-300"
-                    }`}
-                  />
-                </button>
-              ))}
-            </div>
-
-            <button
-              onClick={submitReview}
-              className="w-full bg-[#14532d] text-white py-4 rounded-2xl font-semibold hover:bg-[#166534] transition-all duration-300"
-            >
-              Submit Review
-            </button>
-
-          </div>
-        </div>
-
-        {/* Business Contact Details */}
-
-        <div className="glass-card p-7">
-          <h3 className="text-2xl font-bold mb-6 text-white">
-            Let’s Build Healthcare Access Together
-          </h3>
-
-          <div className="space-y-4 text-gray-300">
-
-            <div className="flex items-center gap-3">
-              <Mail className="text-lime-300" />
-              info@trustivasetu.com
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Mail className="text-lime-300" />
-              support@trustivasetu.com
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Building2 className="text-lime-300" />
-              Aarthsetu Technologies Pvt. Ltd.
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Phone className="text-lime-300" />
-              +91 Your Number
-            </div>
-
+          <div className="flex mb-4 text-xl text-yellow-400">
+            {"⭐".repeat(review.rating)}
           </div>
 
-          {/* Social Icons */}
+          <p className="text-gray-300 leading-8 text-lg italic">
+            “{review.message}”
+          </p>
 
-          <div className="mt-8">
-            <p className="text-lime-300 font-semibold mb-4">
-              Follow Us
-            </p>
+          <p className="text-lime-300 mt-4 font-semibold">
+            — {review.name}
+          </p>
 
-            <div className="flex gap-5">
+        </div>
+
+      ))
+
+    ) : (
+
+      <>
+
+        <div className="review-card">
+
+          <p className="text-gray-300">
+            “This model can significantly improve patient conversion in clinics.”
+          </p>
+
+          <p className="text-lime-300 mt-4">
+            — Clinic Partner (Delhi)
+          </p>
+
+        </div>
+
+        <div className="review-card">
+
+          <p className="text-gray-300">
+            “Multi-lender approach is exactly what healthcare financing needs.”
+          </p>
+
+          <p className="text-lime-300 mt-4">
+            — NBFC Partner
+          </p>
+
+        </div>
+
+      </>
+
+    )}
+
+  </div>
+
+</div>
 
   
 
-            </div>
-          </div>
+  <div className="hidden grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        </div>
-
-      </div>
-
+    <div className="bg-white/5 p-6 rounded-2xl">
+      <p className="text-gray-300">
+        “This model can significantly improve patient conversion in clinics.”
+      </p>
+      <p className="text-lime-300 mt-4">— Clinic Partner (Delhi)</p>
     </div>
+
+    <div className="bg-white/5 p-6 rounded-2xl">
+      <p className="text-gray-300">
+        “Multi-lender approach is exactly what healthcare financing needs.”
+      </p>
+      <p className="text-lime-300 mt-4">— NBFC Partner</p>
+    </div>
+
   </div>
+
 </section>
-<section className="max-w-7xl mx-auto px-6 py-20">
+<section className="max-w-7xl mx-auto px-4 py-20">
+
+  <h2 className="text-4xl font-bold text-center mb-10">
+    Share Your Feedback
+  </h2>
+
+  <div className="bg-white/5 p-6 rounded-2xl max-w-xl mx-auto">
+
+    <input
+      name="name"
+      placeholder="Your Name"
+      value={reviewForm.name}
+      onChange={handleReviewChange}
+
+      className="w-full mb-3 p-3 rounded bg-white/10"
+    />
+
+    {reviewErrors.name && <p className="text-red-500">{reviewErrors.name}</p>}
+
+    <textarea
+      name="message"
+      placeholder="Your Feedback"
+      value={reviewForm.message}
+      onChange={handleReviewChange}
+    className="w-full mb-3 p-3 rounded bg-white/10"
+/>
+    {reviewErrors.message && <p className="text-red-500">{reviewErrors.message}</p>}
+
+    <select
+      name="rating"
+      value={reviewForm.rating}
+      onChange={handleReviewChange}
+      className="w-full mb-3 p-3 rounded bg-white/10"
+    >
+      <option value={0}>Select Rating</option>
+      <option value={5}>⭐⭐⭐⭐⭐</option>
+      <option value={4}>⭐⭐⭐⭐</option>
+      <option value={3}>⭐⭐⭐</option>
+    </select>
+
+    {reviewErrors.rating && <p className="text-red-500">{reviewErrors.rating}</p>}
+
+    <button
+      onClick={submitReview}
+      className="premium-btn premium-green-btn w-full"
+    >
+      Submit Review
+    </button>
+
+  </div>
+
+</section>
+<section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
 
   <div className="relative overflow-hidden rounded-4xl border border-lime-300/20 bg-white/5 backdrop-blur-2xl p-12 shadow-2xl">
 
@@ -2163,16 +2053,16 @@ distribution expansion and national healthcare financing infrastructure deployme
 
         <a
           href="#for-strategic-investors"
-          className="bg-lime-300 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:scale-[1.02] transition"
+          className="premium-btn premium-green-btn"
         >
-          Investor Conversations
+          Talk to Founders
         </a>
 
         <a
           href="/trustiva_strategic_partnership_deck.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="border border-lime-300 text-lime-300 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-lime-300 hover:text-black transition"
+          className="premium-btn premium-green-btn inline-block"
         >
           Strategic Partnership Deck
         </a>
@@ -2200,11 +2090,11 @@ distribution expansion and national healthcare financing infrastructure deployme
     </p>
 
     <p className="text-sm text-gray-400">
-      CIN: [Applied For]
+      CIN: U66190UP2026PTC247393
     </p>
 
     <p className="text-sm text-gray-400">
-      Registered Office: [5/70,Friend's Colony,Chandra Nagar,Moradabad-244001]
+      Registered Office: Moradabad Uttar Pradesh 
     </p>
 
     <p className="text-sm text-gray-400">
