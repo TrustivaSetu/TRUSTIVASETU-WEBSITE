@@ -2661,6 +2661,10 @@ Verify OTP
 </>
         ) : null}
 
+        <div className="bg-red-500 text-white p-3 text-center font-bold">
+  THIS IS LOS DASHBOARD
+</div>
+
       </main>
 
     </div>
