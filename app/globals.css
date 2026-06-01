@@ -45,7 +45,8 @@ body {
 
 .glass-card {
   background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+backdrop-filter: blur(18px);
   border: 1px solid rgba(190,242,100,0.12);
   border-radius: 28px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.18);
@@ -88,49 +89,182 @@ body {
 
 
 
-/* GOOGLE TRANSLATE PREMIUM STYLING */
+/* GOOGLE TRANSLATE — HIDDEN MOUNT POINT */
 
 #google_translate_element {
-  display: flex;
-  align-items: center;
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  pointer-events: none !important;
 }
 
-/* FORCE HIDE GOOGLE UI */
+/* HIDE ALL GOOGLE TRANSLATE UI */
+
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.skiptranslate iframe,
+.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
 
 .goog-te-gadget {
-  font-size: 0;
-}
-
-.goog-te-banner-frame {
+  font-size: 0 !important;
   display: none !important;
 }
 
-.skiptranslate iframe {
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-gadget img {
   display: none !important;
 }
-
-.goog-logo-link {
-  display: none !important;
-}
-
-.goog-te-gadget span {
-  display: none !important;
-}
-
-/* SHOW DROPDOWN ONLY WHEN CLICKED */
 
 .goog-te-combo {
+  opacity: 0 !important;
+  pointer-events: none !important;
   position: absolute !important;
-  top: 60px;
-  right: 0;
-  background: #07111f;
-  color: white;
-  border: 1px solid #bef264;
-  border-radius: 10px;
-  padding: 10px;
-  z-index: 9999;
-  display: none;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
 }
+
+.goog-tooltip,
+.goog-tooltip:hover,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-aZ2wEe {
+  display: none !important;
+}
+
+/* PREVENT GOOGLE FROM PUSHING BODY DOWN */
+body {
+  top: 0 !important;
+  position: static !important;
+}
+
+/* LANGUAGE SWITCHER SCROLLBAR */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(190, 242, 100, 0.2);
+  border-radius: 4px;
+}
+/* ================= RESPONSIVE & iOS FIXES ================= */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Remove iOS tap flash */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch-friendly interaction */
+button, a, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Prevent iOS form zoom — inputs must be ≥16px */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="file"],
+select,
+textarea {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="file"],
+  select,
+  textarea {
+    font-size: inherit;
+  }
+}
+
+/* Safe area padding for notch/Dynamic Island devices */
+.px-safe {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Long text word wrap */
+p, h1, h2, h3, h4, h5, span, li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* No horizontal scroll anywhere */
+html, body {
+  max-width: 100vw;
+}
+
+/* Large screen max-width container */
+@media (min-width: 1920px) {
+  .max-w-7xl {
+    max-width: 1400px;
+  }
+}
+
+/* Min touch target size for all interactive elements */
+@media (max-width: 767px) {
+  button, .premium-btn {
+    min-height: 44px;
+  }
+  a.premium-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* iOS momentum scrolling for overflow containers */
+.overflow-y-auto,
+.overflow-x-auto,
+.overflow-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ================= BUTTON STYLING ================= */
 
 .premium-green-btn {
@@ -169,16 +303,11 @@ img {
   height: auto;
 }
 
-/* GOOGLE DROPDOWN FIX */
-.goog-te-combo {
-  padding: 6px;
-  border-radius: 6px;
-  margin-top: 10px;
-}
 
 /* ================= MOVING REVIEW STRIP ================= */
 
 .review-strip-wrapper {
+  
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -189,6 +318,7 @@ img {
   display: flex;
   gap: 24px;
   width: max-content;
+  will-change: transform;
   animation: scrollReviews 35s linear infinite;
 }
 

@@ -1,10 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-
-
 import { motion } from "framer-motion";
-
 import Image from "next/image";
 import {
   CreditCard,
@@ -13,6 +10,8 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
+import TeamPhoto from "@/components/ui/TeamPhoto";
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
 
 function Counter({
@@ -65,16 +64,20 @@ export default function TrustivaSetuWebsite() {
   const [patientLoading, setPatientLoading] = useState(false);
   const [investorLoading, setInvestorLoading] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
 const [reviews, setReviews] = useState<any[]>([]);
+const [reviewsLoading, setReviewsLoading] = useState(true);
+
 useEffect(() => {
-  try {
-    const saved = localStorage.getItem("trustivaReviews");
-    if (saved) setReviews(JSON.parse(saved));
-  } catch (e) {
-    console.error("LocalStorage error", e);
-  }
+  fetch("/api/reviews")
+    .then((r) => r.json())
+    .then((data) => {
+      if (data.success) setReviews(data.reviews);
+    })
+    .catch(() => {})
+    .finally(() => setReviewsLoading(false));
 }, []);
-  
+
 const duplicatedReviews = [...reviews, ...reviews];
 
   // ✅ Menu scroll lock useEffect (correct)
@@ -90,7 +93,10 @@ const duplicatedReviews = [...reviews, ...reviews];
     };
   }, [menuOpen]);
 
-
+  function showToast(message: string, type: "success" | "error" = "success") {
+    setToast({ message, type });
+    setTimeout(() => setToast(null), 4000);
+  }
 
   const [clinicForm, setClinicForm] = useState({
     clinicName: "",
@@ -172,54 +178,50 @@ const handleInvestorChange = (
   });
 };
 
-const submitReview = () => {
+const [reviewSubmitting, setReviewSubmitting] = useState(false);
+const [loanAmount, setLoanAmount] = useState(50000);
+const [tenure, setTenure] = useState(12);
+const [processingFeePercent, setProcessingFeePercent] = useState(2);
+const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+const submitReview = async () => {
   let errors: any = {};
 
-  if (!reviewForm.name.trim()) {
-    errors.name = "Field missing";
-  }
-
-  if (!reviewForm.message.trim()) {
-    errors.message = "Field missing";
-  }
-
-  if (!reviewForm.rating || reviewForm.rating === 0) {
-    errors.rating = "Please select rating";
-  }
+  if (!reviewForm.name.trim()) errors.name = "Field missing";
+  if (!reviewForm.message.trim()) errors.message = "Field missing";
+  if (!reviewForm.rating || reviewForm.rating === 0) errors.rating = "Please select rating";
 
   setReviewErrors(errors);
-
   if (Object.keys(errors).length > 0) return;
 
-  const newReview = {
-    name: reviewForm.name,
-    message: reviewForm.message,
-    rating: Number(reviewForm.rating),
-  };
+  setReviewSubmitting(true);
 
-  const existingReviews = JSON.parse(
-    localStorage.getItem("trustivaReviews") || "[]"
-  );
+  try {
+    const res = await fetch("/api/reviews", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: reviewForm.name.trim(),
+        message: reviewForm.message.trim(),
+        rating: Number(reviewForm.rating),
+      }),
+    });
 
-  const updatedReviews = [...existingReviews, newReview];
+    const data = await res.json();
 
-  localStorage.setItem(
-    "trustivaReviews",
-    JSON.stringify(updatedReviews)
-  );
-
-
-  setReviews(updatedReviews);
-
-  setReviewForm({
-    name: "",
-    message: "",
-    rating: 0,
-  });
-
-  setReviewErrors({});
-
-  alert("Review submitted successfully!");
+    if (data.success) {
+      setReviews((prev) => [data.review, ...prev]);
+      setReviewForm({ name: "", message: "", rating: 0 });
+      setReviewErrors({});
+      showToast("Review submitted successfully!");
+    } else {
+      showToast(data.error || "Something went wrong. Please try again.", "error");
+    }
+  } catch {
+    showToast("Network error. Please check your connection and try again.", "error");
+  } finally {
+    setReviewSubmitting(false);
+  }
 };
 
 const validateClinicForm = () => {
@@ -294,8 +296,6 @@ if (!/^[6-9]\d{9}$/.test(patientForm.phone)) {
 
   try {
 
-    console.log(WEB3_ACCESS_KEY);
-
     const formData = {
       access_key: WEB3_ACCESS_KEY,
 
@@ -324,7 +324,7 @@ if (!/^[6-9]\d{9}$/.test(patientForm.phone)) {
       "https://api.web3forms.com/submit",
       {
         method: "POST",
-        headers: {
+headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
@@ -334,11 +334,9 @@ if (!/^[6-9]\d{9}$/.test(patientForm.phone)) {
 
     const result = await response.json();
 
-    console.log(result);
-
     if (result.success) {
 
-      alert("Clinic enquiry submitted successfully!");
+      showToast("Clinic enquiry submitted! We'll be in touch soon.");
 
       setClinicForm({
         clinicName: "",
@@ -354,15 +352,13 @@ if (!/^[6-9]\d{9}$/.test(patientForm.phone)) {
 
     } else {
 
-      alert(result.message || "Something went wrong!");
+      showToast(result.message || "Something went wrong. Please try again.", "error");
 
     }
 
   } catch (error) {
 
-    console.log(error);
-
-    alert("Network error!");
+    showToast("Network error. Please check your connection.", "error");
 
   }
 
@@ -413,8 +409,6 @@ const validateInvestorForm = () => {
 
   try {
 
-    console.log(WEB3_ACCESS_KEY);
-
     const formData = {
 
       access_key: WEB3_ACCESS_KEY,
@@ -442,7 +436,7 @@ const validateInvestorForm = () => {
       "https://api.web3forms.com/submit",
       {
         method: "POST",
-        headers: {
+headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
@@ -452,11 +446,9 @@ const validateInvestorForm = () => {
 
     const result = await response.json();
 
-    console.log(result);
-
     if (result.success) {
 
-      alert("Investor request submitted!");
+      showToast("Investment interest submitted! Our team will reach out shortly.");
 
       setInvestorForm({
         fullName: "",
@@ -471,15 +463,13 @@ const validateInvestorForm = () => {
 
     } else {
 
-      alert(result.message || "Error submitting form");
+      showToast(result.message || "Something went wrong. Please try again.", "error");
 
     }
 
   } catch (error) {
 
-    console.log(error);
-
-    alert("Network error");
+    showToast("Network error. Please check your connection.", "error");
 
   }
 
@@ -493,8 +483,6 @@ const validateInvestorForm = () => {
   setPatientLoading(true);
 
   try {
-
-    console.log(WEB3_ACCESS_KEY);
 
     const formData = {
 
@@ -525,7 +513,7 @@ const validateInvestorForm = () => {
       "https://api.web3forms.com/submit",
       {
         method: "POST",
-        headers: {
+headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
@@ -535,11 +523,9 @@ const validateInvestorForm = () => {
 
     const result = await response.json();
 
-    console.log(result);
-
     if (result.success) {
 
-      alert("Patient enquiry submitted successfully!");
+      showToast("Enquiry submitted! Our team will contact you shortly.");
 
       setPatientForm({
         fullName: "",
@@ -555,20 +541,86 @@ const validateInvestorForm = () => {
 
     } else {
 
-      alert(result.message || "Error submitting form");
+      showToast(result.message || "Something went wrong. Please try again.", "error");
 
     }
 
   } catch (error) {
 
-    console.log(error);
-
-    alert("Network error");
+    showToast("Network error. Please check your connection.", "error");
 
   }
 
   setPatientLoading(false);
 };
+
+  const treatmentCategories = [
+    { icon: "🦷", name: "Dental" },
+    { icon: "💇", name: "Hair Transplant" },
+    { icon: "🍼", name: "IVF & Fertility" },
+    { icon: "👁️", name: "Ophthalmology" },
+    { icon: "✨", name: "Cosmetology" },
+    { icon: "🦴", name: "Orthopaedics" },
+    { icon: "❤️", name: "Cardiology" },
+    { icon: "⚖️", name: "Bariatric" },
+    { icon: "👂", name: "Hearing (ENT)" },
+    { icon: "🏥", name: "General Surgery" },
+  ];
+
+  const howItWorksSteps = [
+    {
+      step: "01",
+      title: "RM Lead Punch",
+      timing: "~2 min",
+      desc: "Relationship Manager punches the patient lead directly into the LMS at the clinic. No paperwork. No delay.",
+      icon: "📋",
+    },
+    {
+      step: "02",
+      title: "Instant Approval Decision",
+      timing: "Under 2 min",
+      desc: "Quick & simple approval process — patient eligibility assessed in seconds across multiple lenders.",
+      icon: "⚡",
+    },
+    {
+      step: "03",
+      title: "Offer Select & Confirm",
+      timing: "8–10 min",
+      desc: "Best No Cost EMI offers from multiple lenders displayed. Patient selects the most suitable plan.",
+      icon: "🎯",
+    },
+    {
+      step: "04",
+      title: "Disbursal",
+      timing: "Same Day or Within 24 Hrs*",
+      desc: "Funds disbursed directly to the hospital/clinic. Patient begins treatment immediately.",
+      icon: "🏦",
+      note: "*Excl. public holidays, weekends & festivals",
+    },
+  ];
+
+  const faqs = [
+    {
+      q: "Is there any interest charged to the patient?",
+      a: "No — Trustiva Setu operates on a subvention model. The interest cost is subvented by the clinic or hospital. Patients pay only a one-time processing fee, making it a truly No Cost EMI experience.",
+    },
+    {
+      q: "How fast is the approval?",
+      a: "Our approval process takes 8–10 minutes in most cases. Pre-qualification is done in under 2 minutes, and disbursal happens the same day or within 24 hours. Subject to bank working hours — excludes public holidays, weekends & festivals.",
+    },
+    {
+      q: "How does the approval process work?",
+      a: "Trustiva Setu uses a quick & simple approval process. The RM punches the lead into the LMS, an instant eligibility check is done across multiple lenders, the patient selects the best No Cost EMI offer, and disbursal happens the same day (subject to bank working hours).",
+    },
+    {
+      q: "Which treatments are covered?",
+      a: "Dental, IVF & Fertility, Hair Transplant, Ophthalmology, Cosmetology, Orthopaedics, Cardiology, Bariatric surgery, Hearing (ENT) and General Surgery — across all major elective and planned treatment categories.",
+    },
+    {
+      q: "How can my hospital partner with Trustiva Setu?",
+      a: "Fill the clinic partner enquiry form on this page or contact us directly. A dedicated Relationship Manager will be assigned to your clinic within 24 hours of registration.",
+    },
+  ];
 
   const navItems = [
   ["home", "Home"],
@@ -620,7 +672,6 @@ const validateInvestorForm = () => {
   return (
     <div className={`min-h-screen bg-[#07111f] text-white ${menuOpen ? "fixed w-full" : ""}`}>
 
-      {/* HEADER */}
 
 {/* MOBILE MENU */}
 <div
@@ -660,7 +711,6 @@ const validateInvestorForm = () => {
   </div>
 </div>
 
-      <header className="sticky top-0 z-50 bg-[#07111f]/95 backdrop-blur-md border-b border-white/10">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
     {/* LOGO */}
@@ -676,19 +726,22 @@ const validateInvestorForm = () => {
     </div>
 
     {/* RIGHT SIDE */}
-    <div className="flex items-center gap-6">
+    <div className="flex items-center gap-3 md:gap-4">
+
+      {/* LANGUAGE SWITCHER — visible on all screens */}
+      <LanguageSwitcher />
 
       {/* MOBILE BUTTON */}
       <div className="md:hidden">
-        <button 
+        <button
         onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? "✕" : "☰"}
         </button>
       </div>
-      
+
 
       {/* DESKTOP NAV */}
-      
+
       <div className="hidden md:flex items-center gap-6">
 
         <nav className="flex gap-6">
@@ -709,7 +762,6 @@ const validateInvestorForm = () => {
     </div>
 </div>
   </div>
-</header>
 
       {/* HERO */}
 
@@ -725,7 +777,7 @@ const validateInvestorForm = () => {
 </p>
 
 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-  Powering India’s
+  Powering India's
   <span className="block text-lime-300">
     Healthcare Financing Backbone
   </span>
@@ -775,11 +827,11 @@ const validateInvestorForm = () => {
   {/* RIGHT: QUOTE */}
   <div>
     <p className="text-lime-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
-      Today’s Leadership Insight
+      From Our Founder
     </p>
 
     <h3 className="text-3xl md:text-4xl font-bold mb-6">
-      Founder’s Daily Quote
+      Our Vision
     </h3>
 
     <div className="relative mb-6">
@@ -798,6 +850,94 @@ const validateInvestorForm = () => {
 
 </div>
         </section>
+{/* HOW IT WORKS */}
+<section
+  id="how-it-works"
+  className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+>
+  <div className="flex justify-center mb-8">
+    <motion.div
+      initial={{ scale: 0.85, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="inline-flex flex-wrap items-center justify-center gap-2 px-6 py-3 rounded-full bg-lime-300 text-black font-black text-base sm:text-xl shadow-2xl"
+    >
+      <span>⚡</span>
+      <span>Approval in</span>
+      <span className="underline underline-offset-4 decoration-2">8–10 Min</span>
+      <span className="mx-1">·</span>
+      <span>Same Day Disbursal*</span>
+      <span>⚡</span>
+    </motion.div>
+  </div>
+
+  <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
+    Platform Workflow
+  </p>
+
+  <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+    How It Works
+  </h2>
+
+  <p className="text-center text-gray-300 max-w-2xl mx-auto mb-14 text-lg leading-8">
+    From patient walk-in to treatment start — India&apos;s fastest healthcare financing workflow.
+  </p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {howItWorksSteps.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: index * 0.15 }}
+        className="relative bg-white/5 border border-lime-300/20 rounded-3xl p-6 text-center hover:-translate-y-2 transition-all duration-300 hover:border-lime-300/50 hover:shadow-[0_20px_40px_rgba(190,242,100,0.1)]"
+      >
+        <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-lime-300/10 border-2 border-lime-300/40 flex items-center justify-center">
+          <span className="text-2xl">{item.icon}</span>
+        </div>
+        <div className="text-lime-300 text-xs font-bold tracking-widest mb-2 uppercase">
+          Step {item.step}
+        </div>
+        <div className="inline-block bg-lime-300 text-black text-xs font-black px-3 py-1 rounded-full mb-3">
+          {item.timing}
+        </div>
+        <h3 className="text-lg font-bold mb-3">{item.title}</h3>
+        <p className="text-gray-400 text-sm leading-6">{item.desc}</p>
+        {item.note && (
+          <p className="text-gray-500 text-xs mt-3 italic">{item.note}</p>
+        )}
+      </motion.div>
+    ))}
+  </div>
+
+  <div className="mt-14 text-center">
+    <div className="inline-block bg-lime-300/10 border border-lime-300/30 rounded-2xl px-8 py-5">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-3">
+        <div>
+          <p className="text-2xl font-black text-lime-300">Under 2 min</p>
+          <p className="text-gray-400 text-xs mt-0.5">Pre-qualification</p>
+        </div>
+        <div className="text-lime-300/30 text-2xl hidden sm:block">|</div>
+        <div>
+          <p className="text-2xl font-black text-lime-300">8–10 min</p>
+          <p className="text-gray-400 text-xs mt-0.5">Lead to Approval</p>
+        </div>
+        <div className="text-lime-300/30 text-2xl hidden sm:block">|</div>
+        <div>
+          <p className="text-2xl font-black text-lime-300">Same Day*</p>
+          <p className="text-gray-400 text-xs mt-0.5">Disbursal</p>
+        </div>
+      </div>
+      <p className="text-gray-300 text-base font-semibold">
+        Complete Cycle — Fastest in India
+      </p>
+      <p className="text-gray-500 text-xs mt-2 italic">
+        *Disbursal subject to bank working hours. Excludes public holidays, weekends &amp; festivals.
+      </p>
+    </div>
+  </div>
+</section>
+
       <section className="max-w-7xl mx-auto px-4 py-16">
 
   <h2 className="text-3xl font-bold mb-6 text-center">
@@ -859,9 +999,9 @@ const validateInvestorForm = () => {
     label: "Large Market Opportunity",
   },
   {
-    number: 72,
-    suffix: "hr",
-    label: "Fast Approval Cycles",
+    number: 8,
+    suffix: "-10 min",
+    label: "Lead to Approval",
   },
 ].map((item, index) => (
       <motion.div
@@ -986,9 +1126,9 @@ and digital partners to work together through one unified financing ecosystem.
 
 Our mission is simple:
 
-“No patient should delay treatment because of financial barriers.”
+"No patient should delay treatment because of financial barriers."
 
-We don’t just provide loans—we create the infrastructure layer
+We don't just provide loans—we create the infrastructure layer
 that powers healthcare affordability at scale. 
         </p>
         <div className="mt-20">
@@ -1003,12 +1143,12 @@ that powers healthcare affordability at scale.
   <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-    <Image
+    <TeamPhoto
       src="/abhishek.jpg"
       alt="Abhishek Kashyap"
+      name="Abhishek Kashyap"
       width={208}
       height={208}
-      className="object-cover object-top w-full h-full scale-110"
     />
   </div>
 </div>
@@ -1021,7 +1161,7 @@ that powers healthcare affordability at scale.
         Founder & Strategic Vision Lead
       </p>
 <p className="text-gray-300 text-sm mt-2 leading-6">
-  Building India’s healthcare financing infrastructure with lender-first execution.
+  Building India's healthcare financing infrastructure with lender-first execution.
 </p>
       <p className="text-gray-300">
         Healthcare Finance Infrastructure,
@@ -1035,12 +1175,12 @@ that powers healthcare affordability at scale.
 <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-    <Image
+    <TeamPhoto
       src="/ajit.jpg"
       alt="Ajit Singh Yadav"
+      name="Ajit Singh Yadav"
       width={208}
       height={208}
-      className="object-cover object-top w-full h-full scale-110"
     />
   </div>
 </div>
@@ -1066,13 +1206,13 @@ that powers healthcare affordability at scale.
 <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
   <div className="flex justify-center mb-6">
     <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-      <Image
-  src="/manish.png"
-  alt="Manish Jaggi"
-  width={240}
-  height={240}
-  className="object-cover object-top w-full h-full scale-110"
-/>
+      <TeamPhoto
+        src="/manish.png"
+        alt="Manish Jaggi"
+        name="Manish Jaggi"
+        width={240}
+        height={240}
+      />
     </div>
   </div>
 
@@ -1086,7 +1226,7 @@ that powers healthcare affordability at scale.
 
   <p className="text-gray-300 text-sm mt-2 leading-6">
     Bringing deep banking, NBFC and financial infrastructure expertise
-    to strengthen Trustiva’s lender ecosystem and strategic growth.
+    to strengthen Trustiva's lender ecosystem and strategic growth.
   </p>
 
   <p className="text-gray-300">
@@ -1162,19 +1302,21 @@ verified healthcare demand through one unified system.
  <input
   name="clinicName"
   placeholder="Clinic Name"
+  value={clinicForm.clinicName}
   onChange={handleClinicChange}
-  className="w-full bg-white/5 border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
-/>  
+  className="w-full bg-white/5 border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all min-h-[52px]"
+/>
 {clinicErrors.clinicName && (
   <p className="text-red-500 text-sm mt-1">
     {clinicErrors.clinicName}
   </p>
-)}         
+)}
               <input
                 name="contactPerson"
                 placeholder="Contact Person"
+                value={clinicForm.contactPerson}
                 onChange={handleClinicChange}
-                className="w-full bg-white/5 border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all min-h-[52px]"
               />
               {clinicErrors.contactPerson && (
   <p className="text-red-500 text-sm mt-1">
@@ -1208,7 +1350,8 @@ verified healthcare demand through one unified system.
     maxLength={10}
     name="phone"
     placeholder="Phone Number"
-    onChange={handleClinicChange} // (change accordingly)
+    value={clinicForm.phone}
+    onChange={handleClinicChange}
     className="
       w-full
       bg-white/5
@@ -1223,20 +1366,20 @@ verified healthcare demand through one unified system.
       focus:ring-2
       focus:ring-lime-300/40"
   />
-  {clinicErrors.phone && (
+
+</div>
+{clinicErrors.phone && (
   <p className="text-red-500 text-sm mt-1">
     {clinicErrors.phone}
   </p>
 )}
-
-</div>
-              
 </div>
               <input
                 name="email"
                 placeholder="Email"
+                value={clinicForm.email}
                 onChange={handleClinicChange}
-                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
               />
               {clinicErrors.email && (
   <p className="text-red-500 text-sm mt-1">
@@ -1247,23 +1390,37 @@ verified healthcare demand through one unified system.
               <input
                 name="city"
                 placeholder="City"
+                value={clinicForm.city}
                 onChange={handleClinicChange}
-                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
               />
 
               <input
   name="specialty"
   placeholder="Specialty"
+  value={clinicForm.specialty}
   onChange={handleClinicChange}
-  className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+  className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
  />
 
               <textarea
   name="message"
   placeholder="Message"
+  value={clinicForm.message}
   onChange={handleClinicChange}
-  className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+  className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
 />
+
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input type="checkbox" required className="mt-1 accent-lime-300 w-4 h-4 flex-shrink-0" />
+                <span className="text-xs text-gray-400 leading-5">
+                  I agree to the{" "}
+                  <a href="/privacy-policy" className="text-lime-300 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                  {" "}and{" "}
+                  <a href="/terms" className="text-lime-300 underline" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.
+                  I consent to Trustiva Setu contacting me regarding this enquiry.
+                </span>
+              </label>
 
               <button
   onClick={submitClinic}
@@ -1277,18 +1434,52 @@ className="premium-btn premium-green-btn"
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-white">
-              Why Clinics Choose Trustiva Setu
+            <h3 className="text-2xl font-bold mb-8 text-white">
+              Why Hospitals & Clinics Partner With Us
             </h3>
 
-            <div className="space-y-4">
-              {clinicBenefits.map((item) => (
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                {
+                  icon: "🤝",
+                  title: "Easy Onboarding",
+                  desc: "Go live in 24 hours — simple registration, no technical setup required.",
+                },
+                {
+                  icon: "👤",
+                  title: "Dedicated RM Assigned",
+                  desc: "A Relationship Manager exclusively for your clinic — always reachable.",
+                },
+                {
+                  icon: "📊",
+                  title: "Real-Time Dashboard",
+                  desc: "Track every lead, approval and disbursal in real-time from the LMS.",
+                },
+                {
+                  icon: "🏦",
+                  title: "Multiple Lender Options",
+                  desc: "Access top NBFCs and banks — best approval rate for your patients.",
+                },
+                {
+                  icon: "📈",
+                  title: "Increase Patient Footfall",
+                  desc: "No Cost EMI removes the biggest patient barrier — affordability.",
+                },
+                {
+                  icon: "⚡",
+                  title: "8–10 Min Lead to Approval",
+                  desc: "Same day disbursal* in most cases. Treatment starts fast. (*Subject to bank working hours)",
+                },
+              ].map((benefit, index) => (
                 <div
-                  key={item}
-                  className="flex items-start gap-3"
+                  key={index}
+                  className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-4 hover:border-lime-300/30 transition-all"
                 >
-                  <ArrowRight className="text-lime-300 mt-1" />
-                  <span>{item}</span>
+                  <div className="text-2xl flex-shrink-0">{benefit.icon}</div>
+                  <div>
+                    <h4 className="font-bold text-white mb-1">{benefit.title}</h4>
+                    <p className="text-gray-400 text-sm leading-5">{benefit.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -1310,15 +1501,64 @@ className="premium-btn premium-green-btn"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
   <div>
-    <h3 className="text-2xl font-bold mb-6 text-white">
-           One application. Multiple lenders. Instant eligibility checks.
-           </h3>
-              <p className="text-gray-300 leading-8 text-lg">
-Transparent healthcare financing with flexible repayment plans
-and zero hidden complexity for better treatment access.
-            </p>
-  
-          </div>
+    <h3 className="text-2xl font-bold mb-8 text-white">
+      Healthcare Finance — Made Simple for You
+    </h3>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {[
+        {
+          icon: "0%",
+          title: "No Cost EMI",
+          desc: "Zero interest to patient under subvention arrangement (terms apply). One-time processing fee only.",
+          highlight: true,
+        },
+        {
+          icon: "✓",
+          title: "Quick & Simple Approval",
+          desc: "Fast eligibility check — quick & simple process, no lengthy paperwork.",
+          highlight: false,
+        },
+        {
+          icon: "₹75K",
+          title: "Instant Approval",
+          desc: "Get approved up to ₹75,000 in minutes — no branch visits.",
+          highlight: false,
+        },
+        {
+          icon: "📱",
+          title: "100% Digital",
+          desc: "Paperless process — from application to disbursal, everything online.",
+          highlight: false,
+        },
+        {
+          icon: "💰",
+          title: "No Hidden Charges",
+          desc: "Only a one-time processing fee. No prepayment penalty. No surprises.",
+          highlight: false,
+        },
+        {
+          icon: "⚡",
+          title: "Same Day Disbursal*",
+          desc: "Approval in 8–10 min. Same day disbursal in most cases. Start treatment today.",
+          highlight: true,
+        },
+      ].map((benefit, index) => (
+        <div
+          key={index}
+          className={`rounded-2xl p-4 border transition-all duration-300 hover:-translate-y-1 ${
+            benefit.highlight
+              ? "bg-lime-300/10 border-lime-300/40"
+              : "bg-white/5 border-white/10"
+          }`}
+        >
+          <div className="text-2xl font-black text-lime-300 mb-1">{benefit.icon}</div>
+          <h4 className="font-bold text-white mb-1">{benefit.title}</h4>
+          <p className="text-gray-400 text-sm leading-5">{benefit.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
 
           <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7">
             <h3 className="text-2xl font-bold mb-6 text-white">
@@ -1330,8 +1570,9 @@ and zero hidden complexity for better treatment access.
   <input
     name="fullName"
     placeholder="Full Name"
+    value={patientForm.fullName}
     onChange={handlePatientChange}
-    className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+    className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
   />
   {patientErrors.fullName && (
   <p className="text-red-500 text-sm mt-1">
@@ -1353,8 +1594,9 @@ and zero hidden complexity for better treatment access.
       inputMode="numeric"
       maxLength={10}
       placeholder="Phone Number"
+      value={patientForm.phone}
       onChange={handlePatientChange}
-      className="w-full bg-white/5 border border-white/20 rounded-r-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+      className="w-full bg-white/5 border border-white/20 rounded-r-xl px-3 sm:px-4 py-3 text-base text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
     />
   </div>
 
@@ -1367,8 +1609,9 @@ and zero hidden complexity for better treatment access.
               <input
                 name="email"
                 placeholder="Email"
+                value={patientForm.email}
                 onChange={handlePatientChange}
-                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
               />
               {patientErrors.email && (
   <p className="text-red-500 text-sm mt-1">
@@ -1379,30 +1622,45 @@ and zero hidden complexity for better treatment access.
               <input
                 name="city"
                 placeholder="City"
+                value={patientForm.city}
                 onChange={handlePatientChange}
-                className="w-full bg-white/5 border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all min-h-[52px]"
               />
 
               <input
                 name="treatmentType"
                 placeholder="Treatment Type"
+                value={patientForm.treatmentType}
                 onChange={handlePatientChange}
-                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all min-h-[52px]"
               />
 
               <input
                 name="budget"
                 placeholder="Approx Budget"
+                value={patientForm.budget}
                 onChange={handlePatientChange}
-                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+                className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all min-h-[52px]"
               />
 
               <textarea
   name="message"
   placeholder="Message"
+  value={patientForm.message}
   onChange={handlePatientChange}
-  className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 rounded-xl px-4 py-3 h-28 text-sm focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
+  className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-4 py-3 h-28 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 transition-all"
 />
+
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input type="checkbox" required className="mt-1 accent-lime-300 w-4 h-4 flex-shrink-0" />
+                <span className="text-xs text-gray-400 leading-5">
+                  I agree to the{" "}
+                  <a href="/privacy-policy" className="text-lime-300 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                  {" "}and{" "}
+                  <a href="/terms" className="text-lime-300 underline" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>.
+                  I understand loan approval is subject to lender discretion and applicable terms.
+                </span>
+              </label>
 
               <button
   onClick={submitPatient}
@@ -1417,6 +1675,41 @@ and zero hidden complexity for better treatment access.
           </div>
 
 </div>
+</section>
+
+{/* TREATMENT CATEGORIES */}
+<section
+  id="treatments"
+  className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+>
+  <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
+    Coverage
+  </p>
+
+  <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+    Treatment Categories
+  </h2>
+
+  <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-8">
+    No Cost EMI available across all major elective and planned treatment categories.
+  </p>
+
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+    {treatmentCategories.map((cat, index) => (
+      <motion.div
+        key={index}
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.4, delay: index * 0.05 }}
+        className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-lime-300/10 hover:border-lime-300/30 transition-all duration-300 hover:-translate-y-1 group cursor-default"
+      >
+        <div className="text-4xl mb-3">{cat.icon}</div>
+        <p className="text-sm font-semibold text-gray-200 group-hover:text-lime-300 transition-colors">
+          {cat.name}
+        </p>
+      </motion.div>
+    ))}
+  </div>
 </section>
 
       {/* APPLICATION LAUNCHING SOON */}
@@ -1443,7 +1736,7 @@ and zero hidden complexity for better treatment access.
 </h2>
 
       <p className="text-gray-300 text-lg leading-8 max-w-3xl mb-10">
-        India’s smartest healthcare financing application is coming soon —
+        India's smartest healthcare financing application is coming soon —
         built for clinics, patients, lenders and seamless EMI approvals.
         One application. Multiple lenders. Faster approvals. Better conversions.
       </p>
@@ -1480,19 +1773,36 @@ and zero hidden complexity for better treatment access.
     {/* Lending Partners */}
 
     <div className="bg-white/5 border border-white/10 rounded-2xl p-6 overflow-hidden">
+      <p className="text-lime-300 text-xs font-bold tracking-[0.2em] uppercase mb-3">
+        Powered By
+      </p>
       <h2 className="text-3xl font-bold mb-4 text-white">
-        Our Lending Partners
+        Leading Banks & NBFCs
       </h2>
 
       <p className="text-gray-300 mb-6">
-        Trusted NBFCs, Banks & Financial Institutions joining our healthcare
-        financing ecosystem.
+        Trustiva Setu connects clinics and patients to a curated network of
+        lending partners — competitive rates and the fastest approval engine in healthcare finance.
       </p>
 
-      <div className="relative overflow-hidden border-t border-white/10 pt-5">
-        <div className="text-lime-300 font-semibold text-xl">
-  Partner integrations in progress
-</div>
+      <div className="grid grid-cols-3 gap-3 mb-6">
+        {[1, 2, 3, 4, 5, 6].map((i) => (
+          <div
+            key={i}
+            className="bg-white/10 border border-white/10 rounded-xl h-12 flex items-center justify-center"
+          >
+            <span className="text-gray-600 text-xs">Partner</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="border-t border-white/10 pt-4">
+        <p className="text-lime-300 font-semibold">
+          Multiple lending partners across India
+        </p>
+        <p className="text-gray-400 text-sm mt-1">
+          Partner integrations in advanced stages
+        </p>
       </div>
     </div>
 
@@ -1518,6 +1828,148 @@ and zero hidden complexity for better treatment access.
   </div>
 </section>
 
+{/* EMI CALCULATOR */}
+<section
+  id="emi-calculator"
+  className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+>
+  <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
+    Plan Your Treatment Finance
+  </p>
+
+  <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+    EMI Calculator
+  </h2>
+
+  <p className="text-center text-gray-300 max-w-xl mx-auto mb-12 text-lg leading-8">
+    Calculate your No Cost EMI instantly. Zero interest to patient under subvention arrangement — terms apply.
+  </p>
+
+  <div className="max-w-3xl mx-auto bg-white/5 border border-lime-300/20 rounded-3xl p-8 shadow-2xl">
+    <div className="mb-8">
+      <div className="flex justify-between items-center mb-3">
+        <label className="font-semibold text-white">Loan Amount</label>
+        <span className="text-2xl font-black text-lime-300">
+          ₹{loanAmount.toLocaleString("en-IN")}
+        </span>
+      </div>
+      <input
+        type="range"
+        min={10000}
+        max={500000}
+        step={5000}
+        value={loanAmount}
+        onChange={(e) => setLoanAmount(Number(e.target.value))}
+        className="w-full accent-lime-300 h-2 rounded-lg cursor-pointer"
+      />
+      <div className="flex justify-between text-gray-400 text-xs mt-1">
+        <span>₹10,000</span>
+        <span>₹5,00,000</span>
+      </div>
+    </div>
+
+    <div className="mb-8">
+      <label className="font-semibold text-white block mb-3">Tenure (Months)</label>
+      <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+        {[3, 6, 9, 12, 18, 24].map((t) => (
+          <button
+            key={t}
+            onClick={() => setTenure(t)}
+            className={`py-2.5 rounded-xl font-bold text-sm transition-all ${
+              tenure === t
+                ? "bg-lime-300 text-black shadow-lg scale-105"
+                : "bg-white/10 text-gray-300 hover:bg-white/20"
+            }`}
+          >
+            {t}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <div className="mb-8">
+      <div className="flex justify-between items-center mb-3">
+        <label className="font-semibold text-white">Processing Fee (%)</label>
+        <span className="text-lime-300 font-bold">{processingFeePercent}%</span>
+      </div>
+      <input
+        type="range"
+        min={0}
+        max={5}
+        step={0.5}
+        value={processingFeePercent}
+        onChange={(e) => setProcessingFeePercent(Number(e.target.value))}
+        className="w-full accent-lime-300 h-2 rounded-lg cursor-pointer"
+      />
+      <div className="flex justify-between text-gray-400 text-xs mt-1">
+        <span>0%</span>
+        <span>5%</span>
+      </div>
+    </div>
+
+    <div className="bg-lime-300/10 border border-lime-300/30 rounded-2xl p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+        <div>
+          <p className="text-gray-400 text-sm mb-1">Monthly EMI</p>
+          <p className="text-3xl font-black text-lime-300">
+            ₹{Math.round(loanAmount / tenure).toLocaleString("en-IN")}
+          </p>
+          <p className="text-gray-500 text-xs mt-1">for {tenure} months</p>
+        </div>
+        <div>
+          <p className="text-gray-400 text-sm mb-1">Processing Fee</p>
+          <p className="text-3xl font-black text-lime-300">
+            ₹{Math.round((loanAmount * processingFeePercent) / 100).toLocaleString("en-IN")}
+          </p>
+          <p className="text-gray-500 text-xs mt-1">one-time, upfront</p>
+        </div>
+        <div>
+          <p className="text-gray-400 text-sm mb-1">Total Interest</p>
+          <p className="text-3xl font-black text-lime-300">₹0</p>
+          <p className="text-gray-500 text-xs mt-1">subvention model</p>
+        </div>
+      </div>
+
+      <div className="mt-5 pt-4 border-t border-lime-300/20 text-center">
+        <p className="text-lime-300 font-bold text-lg">
+          No Interest — Subvention Model
+        </p>
+        <p className="text-gray-400 text-sm mt-1">
+          Interest is subvented by the hospital/clinic (terms apply). Patient pays zero interest under this arrangement.
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-6 text-center">
+      <a href="#patients">
+        <button className="premium-btn premium-green-btn">
+          Apply for No Cost EMI
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+{/* STATS BANNER */}
+<section className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+  <div className="bg-lime-300/10 border border-lime-300/20 rounded-3xl px-8 py-6">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      <div>
+        <p className="text-2xl font-bold text-lime-300">Growing Network</p>
+        <p className="text-gray-400 text-sm mt-1">Clinics & Hospitals Pan India</p>
+      </div>
+      <div className="sm:border-x border-lime-300/20">
+        <p className="text-2xl font-bold text-lime-300">Multiple Lenders</p>
+        <p className="text-gray-400 text-sm mt-1">Banks & NBFCs Across India</p>
+      </div>
+      <div>
+        <p className="text-2xl font-bold text-lime-300">Pan India Presence</p>
+        <p className="text-gray-400 text-sm mt-1">Expanding Rapidly Across States</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 {/* WHY We Win */}
 
 <section
@@ -1533,6 +1985,54 @@ and zero hidden complexity for better treatment access.
   We are building the infrastructure layer that creates long-term
   defensibility across clinics, lenders and patient financing behavior.
 </p>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+    {[
+      {
+        icon: "⚡",
+        title: "8–10 Min Lead to Approval",
+        desc: "Pre-qualify in under 2 minutes. Approval in 8–10 minutes. Same day disbursal in most cases — complete cycle, fastest in India.",
+        highlight: true,
+      },
+      {
+        icon: "✅",
+        title: "Quick & Simple Approval Process",
+        desc: "Fast, paperless eligibility check across multiple lenders. No lengthy documentation. Patient gets an answer in minutes.",
+        highlight: false,
+      },
+      {
+        icon: "0%",
+        title: "Subvention Model",
+        desc: "Zero interest to patient under subvention arrangement (terms apply). 0% EMI at point of care subject to lender approval.",
+        highlight: true,
+      },
+      {
+        icon: "🗺️",
+        title: "Pan India Network",
+        desc: "Expanding clinic and hospital network across states — one platform, nationwide reach.",
+        highlight: false,
+      },
+      {
+        icon: "📊",
+        title: "Real-Time LMS for RMs",
+        desc: "Relationship Managers get a live dashboard — track every lead, offer and disbursal instantly.",
+        highlight: false,
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
+        className={`rounded-3xl p-6 border transition-all duration-300 hover:-translate-y-1 ${
+          item.highlight
+            ? "bg-lime-300/10 border-lime-300/40"
+            : "bg-white/10 border-lime-300/20"
+        }`}
+      >
+        <div className="text-3xl font-black text-lime-300 mb-3">{item.icon}</div>
+        <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+        <p className="text-gray-400 text-sm leading-6">{item.desc}</p>
+      </div>
+    ))}
+  </div>
+
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
 
     <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(163,230,53,0.12)]">
@@ -1585,12 +2085,97 @@ Our routing engine creates lender competition, better approvals and stronger cli
       </h3>
 
       <p className="text-gray-300 leading-8">
-        To become India’s Healthcare Finance Infrastructure Layer where every
+        To become India's Healthcare Finance Infrastructure Layer where every
         clinic can offer instant financing and every patient can access
         treatment without upfront financial barriers.
       </p>
     </div>
 
+  </div>
+</section>
+
+{/* FAQ */}
+<section
+  id="faq"
+  className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+>
+  <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
+    Have Questions?
+  </p>
+
+  <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+    Frequently Asked Questions
+  </h2>
+
+  <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-8">
+    Everything you need to know about Trustiva Setu&apos;s No Cost EMI platform.
+  </p>
+
+  <div className="max-w-3xl mx-auto space-y-4">
+    {faqs.map((faq, index) => (
+      <div
+        key={index}
+        className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden"
+      >
+        <button
+          onClick={() => setOpenFaq(openFaq === index ? null : index)}
+          className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
+        >
+          <span className="font-semibold text-white pr-4">{faq.q}</span>
+          <span
+            className={`text-lime-300 text-2xl flex-shrink-0 font-bold transition-transform duration-300 ${
+              openFaq === index ? "rotate-45" : ""
+            }`}
+          >
+            +
+          </span>
+        </button>
+        {openFaq === index && (
+          <div className="px-6 pb-6">
+            <div className="h-px bg-white/10 mb-4" />
+            <p className="text-gray-300 leading-7">{faq.a}</p>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</section>
+
+{/* PARTNER WITH US CTA */}
+<section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+  <div className="relative overflow-hidden rounded-4xl border border-lime-300/30 bg-lime-300/5 backdrop-blur-xl p-10 text-center shadow-2xl">
+    <div className="absolute top-0 right-0 w-64 h-64 bg-lime-300/10 blur-3xl rounded-full pointer-events-none" />
+    <div className="absolute bottom-0 left-0 w-64 h-64 bg-lime-300/5 blur-3xl rounded-full pointer-events-none" />
+
+    <div className="relative z-10">
+      <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4">
+        For Hospitals & Clinics
+      </p>
+
+      <h2 className="text-3xl md:text-5xl font-bold mb-4">
+        Is your clinic ready to offer{" "}
+        <span className="text-lime-300">No Cost EMI</span> to patients?
+      </h2>
+
+      <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-8">
+        Join Trustiva Setu&apos;s growing network. Get a dedicated RM, real-time LMS access
+        and India&apos;s fastest approval engine — 8–10 min approvals, same day disbursal* — at zero setup cost.
+        <span className="block text-gray-500 text-xs mt-2 italic">*Subject to bank working hours. Excludes public holidays, weekends &amp; festivals.</span>
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/join-us" target="_blank" rel="noopener noreferrer">
+          <button className="premium-btn premium-green-btn text-lg px-8 py-3">
+            Become a Partner
+          </button>
+        </a>
+        <a href="#clinics">
+          <button className="premium-btn bg-white/10 border border-white/20 text-white rounded-xl px-8 py-3 font-semibold hover:bg-white/20 transition-all text-lg">
+            Learn More
+          </button>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1611,7 +2196,7 @@ Our routing engine creates lender competition, better approvals and stronger cli
       </p>
 
       <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-        Building India’s
+        Building India's
         <span className="block text-lime-300">
           Healthcare Financing Infrastructure
         </span>
@@ -1627,9 +2212,8 @@ This is not a lending business.
 This is infrastructure.
 
 We enable treatment financing at the point of care through multi-lender routing,
-approval intelligence, clinic workflow integration and lender distribution systems.
-
-to accelerate lender integrations, clinic onboarding,
+approval intelligence, clinic workflow integration and lender distribution systems —
+accelerating lender integrations, clinic onboarding,
 distribution expansion and national healthcare financing infrastructure deployment.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-14">
@@ -1706,18 +2290,13 @@ distribution expansion and national healthcare financing infrastructure deployme
       <div className="mt-20 flex flex-wrap gap-4">
 
         <a
-  href="#for-strategic-investors"
-  onClick={(e) => {
-    e.preventDefault();
-    document
-      .getElementById("for-strategic-investors")
-      ?.scrollIntoView({ behavior: "smooth" });
-  }}
-  className="premium-btn premium-green-btn inline-block"
->
-  
-  Strategic Partnership Deck
-</a>
+          href="/trustiva_strategic_partnership_deck.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="premium-btn premium-green-btn inline-block"
+        >
+          Strategic Partnership Deck
+        </a>
 
       </div>
 
@@ -1762,7 +2341,7 @@ distribution expansion and national healthcare financing infrastructure deployme
       value={investorForm.fullName}
       onChange={handleInvestorChange}
       placeholder="Full Name"
-      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
     />
 
     <input
@@ -1771,7 +2350,7 @@ distribution expansion and national healthcare financing infrastructure deployme
       value={investorForm.companyName}
       onChange={handleInvestorChange}
       placeholder="Fund / Company Name"
-      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
     />
 
     <input
@@ -1780,7 +2359,7 @@ distribution expansion and national healthcare financing infrastructure deployme
       value={investorForm.email}
       onChange={handleInvestorChange}
       placeholder="Email Address"
-      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
     />
 
     <div className="flex w-full flex-nowrap">
@@ -1793,7 +2372,7 @@ distribution expansion and national healthcare financing infrastructure deployme
         name="phone"
         placeholder="Phone Number"
         onChange={handleInvestorChange}
-        className="w-full bg-white/5 border border-white/20 rounded-r-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+        className="w-full bg-white/5 border border-white/20 rounded-r-xl px-3 sm:px-4 py-3 text-base text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
       />
     </div>
 
@@ -1803,7 +2382,7 @@ distribution expansion and national healthcare financing infrastructure deployme
       value={investorForm.investmentInterest}
       onChange={handleInvestorChange}
       placeholder="Investment Interest"
-      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40"
+      className="w-full bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-gray-400 px-3 sm:px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
     />
 
     <textarea
@@ -1876,90 +2455,38 @@ distribution expansion and national healthcare financing infrastructure deployme
     Early Feedback
   </h2>
 
-  <div className="review-strip-wrapper">
-
-  <div className="review-strip">
-
-    {duplicatedReviews.length > 0 ? (
-
-      duplicatedReviews.map((review, index) => (
-
-        <div
-          key={index}
-          className="review-card"
-        >
-
-          <div className="flex mb-4 text-xl text-yellow-400">
-            {"⭐".repeat(review.rating)}
+  {reviewsLoading ? (
+    <div className="flex justify-center py-16">
+      <p className="text-gray-400 text-lg">Loading reviews...</p>
+    </div>
+  ) : reviews.length > 0 ? (
+    <div className="review-strip-wrapper">
+      <div className="review-strip">
+        {duplicatedReviews.map((review, index) => (
+          <div key={index} className="review-card">
+            <div className="flex mb-4 text-xl text-yellow-400">
+              {"⭐".repeat(review.rating)}
+            </div>
+            <p className="text-gray-300 leading-8 text-lg italic">
+              &ldquo;{review.message}&rdquo;
+            </p>
+            <p className="text-lime-300 mt-4 font-semibold">
+              — {review.name}
+            </p>
           </div>
-
-          <p className="text-gray-300 leading-8 text-lg italic">
-            “{review.message}”
-          </p>
-
-          <p className="text-lime-300 mt-4 font-semibold">
-            — {review.name}
-          </p>
-
-        </div>
-
-      ))
-
-    ) : (
-
-      <>
-
-        <div className="review-card">
-
-          <p className="text-gray-300">
-            “This model can significantly improve patient conversion in clinics.”
-          </p>
-
-          <p className="text-lime-300 mt-4">
-            — Clinic Partner (Delhi)
-          </p>
-
-        </div>
-
-        <div className="review-card">
-
-          <p className="text-gray-300">
-            “Multi-lender approach is exactly what healthcare financing needs.”
-          </p>
-
-          <p className="text-lime-300 mt-4">
-            — NBFC Partner
-          </p>
-
-        </div>
-
-      </>
-
-    )}
-
-  </div>
-
-</div>
-
-  
-
-  <div className="hidden grid grid-cols-1 md:grid-cols-2 gap-6">
-
-    <div className="bg-white/5 p-6 rounded-2xl">
-      <p className="text-gray-300">
-        “This model can significantly improve patient conversion in clinics.”
-      </p>
-      <p className="text-lime-300 mt-4">— Clinic Partner (Delhi)</p>
+        ))}
+      </div>
     </div>
-
-    <div className="bg-white/5 p-6 rounded-2xl">
-      <p className="text-gray-300">
-        “Multi-lender approach is exactly what healthcare financing needs.”
+  ) : (
+    <div className="flex flex-col items-center justify-center py-16 text-center">
+      <p className="text-gray-400 text-lg mb-2">
+        No reviews yet — be the first to share your feedback!
       </p>
-      <p className="text-lime-300 mt-4">— NBFC Partner</p>
+      <p className="text-gray-500 text-sm">
+        Use the form below to submit your review.
+      </p>
     </div>
-
-  </div>
+  )}
 
 </section>
 <section className="max-w-7xl mx-auto px-4 py-20">
@@ -1997,18 +2524,21 @@ distribution expansion and national healthcare financing infrastructure deployme
       className="w-full mb-3 p-3 rounded bg-white/10"
     >
       <option value={0}>Select Rating</option>
-      <option value={5}>⭐⭐⭐⭐⭐</option>
-      <option value={4}>⭐⭐⭐⭐</option>
-      <option value={3}>⭐⭐⭐</option>
+      <option value={5}>⭐⭐⭐⭐⭐ — Excellent</option>
+      <option value={4}>⭐⭐⭐⭐ — Good</option>
+      <option value={3}>⭐⭐⭐ — Average</option>
+      <option value={2}>⭐⭐ — Below Average</option>
+      <option value={1}>⭐ — Poor</option>
     </select>
 
     {reviewErrors.rating && <p className="text-red-500">{reviewErrors.rating}</p>}
 
     <button
       onClick={submitReview}
+      disabled={reviewSubmitting}
       className="premium-btn premium-green-btn w-full"
     >
-      Submit Review
+      {reviewSubmitting ? "Submitting..." : "Submit Review"}
     </button>
 
   </div>
@@ -2028,7 +2558,7 @@ distribution expansion and national healthcare financing infrastructure deployme
       </p>
 
       <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
-        Building India’s
+        Building India's
         <span className="block text-lime-300">
           Healthcare Financing Infrastructure Layer
         </span>
@@ -2075,39 +2605,109 @@ distribution expansion and national healthcare financing infrastructure deployme
 
 </section>
 
+      {/* Hidden Google Translate mount — required for .goog-te-combo to exist in DOM */}
+      <div id="google_translate_element" aria-hidden="true" />
+
       {/* FOOTER */}
 
-      <footer className="border-t border-white/10 py-12 text-center text-gray-400">
+      <footer className="border-t border-white/10 pt-12 pb-8 text-gray-400">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-  <div className="max-w-5xl mx-auto px-6 space-y-4">
+    {/* RBI / Loan Facilitation Disclaimer */}
+    <div className="bg-white/5 border border-white/10 rounded-2xl p-5 mb-10 text-xs text-gray-400 leading-6">
+      <p className="font-semibold text-gray-300 mb-2">Important Disclaimer</p>
+      <p>
+        Trustiva Setu is a loan facilitation platform operated by Aarthsetu Technologies Private Limited.
+        We are not a bank or Non-Banking Financial Company (NBFC). Loans are provided by our partner banks and NBFCs.
+        Interest rates, processing fees and loan terms are determined solely by partner lenders and are subject to their policies.
+        Loan approval is at the sole discretion of the lender. Zero interest (No Cost EMI) is subject to a subvention arrangement
+        with partner clinics/hospitals — terms and conditions apply. EMI amounts shown on this website are indicative only;
+        actual amounts may vary based on lender terms, applicable taxes and processing fees.
+        Past performance does not guarantee future approval rates. All timelines (approval, disbursal) are indicative and
+        subject to bank working hours, public holidays, weekends and festivals.
+      </p>
+    </div>
 
-    <h3 className="text-xl font-bold text-white">
-      Aarthsetu Technologies Private Limited
-    </h3>
+    {/* Main Footer Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
 
-    <p className="text-gray-300">
-      Trustiva Division — Building Healthcare Financing Infrastructure Layer for India
-    </p>
+      {/* Company Info */}
+      <div className="lg:col-span-2">
+        <h3 className="text-base font-bold text-white mb-3">
+          Aarthsetu Technologies Private Limited
+        </h3>
+        <p className="text-sm text-gray-400 leading-6 mb-3">
+          Trustiva Setu Division — Building Healthcare Financing Infrastructure for India.
+        </p>
+        <div className="space-y-1 text-xs text-gray-500">
+          <p>CIN: U66190UP2026PTC247393</p>
+          <p>Registered Office: Moradabad, Uttar Pradesh, India</p>
+          <p>GSTIN: 09ABFCA5854R1ZU</p>
+        </div>
+      </div>
 
-    <p className="text-sm text-gray-400">
-      CIN: U66190UP2026PTC247393
-    </p>
+      {/* Quick Links */}
+      <div>
+        <h4 className="text-sm font-semibold text-white mb-3">Company</h4>
+        <div className="space-y-2 text-sm">
+          <a href="#about" className="block text-gray-400 hover:text-lime-300 transition-colors">About Us</a>
+          <a href="#clinics" className="block text-gray-400 hover:text-lime-300 transition-colors">For Clinics</a>
+          <a href="#patients" className="block text-gray-400 hover:text-lime-300 transition-colors">For Patients</a>
+          <a href="/join-us" className="block text-gray-400 hover:text-lime-300 transition-colors">Careers</a>
+        </div>
+      </div>
 
-    <p className="text-sm text-gray-400">
-      Registered Office: Moradabad Uttar Pradesh 
-    </p>
+      {/* Legal Links + Contact */}
+      <div>
+        <h4 className="text-sm font-semibold text-white mb-3">Legal</h4>
+        <div className="space-y-2 text-sm">
+          <a href="/privacy-policy" className="block text-gray-400 hover:text-lime-300 transition-colors">Privacy Policy</a>
+          <a href="/terms" className="block text-gray-400 hover:text-lime-300 transition-colors">Terms &amp; Conditions</a>
+          <a href="/disclaimer" className="block text-gray-400 hover:text-lime-300 transition-colors">Disclaimer</a>
+        </div>
+        <div className="mt-4 space-y-1 text-xs text-gray-500">
+          <p>📧 <a href="mailto:info@trustivasetu.com" className="hover:text-lime-300">info@trustivasetu.com</a></p>
+          <p>📧 <a href="mailto:admin@trustivasetu.com" className="hover:text-lime-300">admin@trustivasetu.com</a></p>
+          <p>📧 <a href="mailto:legal@trustivasetu.com" className="hover:text-lime-300">legal@trustivasetu.com</a></p>
+        </div>
+      </div>
 
-    <p className="text-sm text-gray-400">
-      Compliant with applicable corporate, financial and operational regulations.
-    </p>
+    </div>
 
-    <p className="text-sm text-gray-500 pt-4">
-      © 2026 Aarthsetu Technologies Private Limited. All Rights Reserved.
-    </p>
+    {/* Bottom Bar */}
+    <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+      <p>© 2026 Aarthsetu Technologies Private Limited. All Rights Reserved.</p>
+      <div className="flex flex-wrap gap-4 justify-center sm:justify-end">
+        <a href="/privacy-policy" className="hover:text-lime-300 transition-colors">Privacy Policy</a>
+        <span>·</span>
+        <a href="/terms" className="hover:text-lime-300 transition-colors">Terms &amp; Conditions</a>
+        <span>·</span>
+        <a href="/disclaimer" className="hover:text-lime-300 transition-colors">Disclaimer</a>
+      </div>
+    </div>
 
   </div>
-
 </footer>
+
+      {/* Toast notification */}
+      {toast && (
+        <div
+          className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-[99999] px-5 py-3 rounded-2xl shadow-2xl text-sm font-semibold flex items-center gap-2 pointer-events-none transition-all ${
+            toast.type === "success"
+              ? "bg-[#bef264] text-[#07111f]"
+              : "bg-red-500 text-white"
+          }`}
+          role="status"
+          aria-live="polite"
+        >
+          {toast.type === "success" ? (
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          )}
+          {toast.message}
+        </div>
+      )}
 
 </div>
 );
