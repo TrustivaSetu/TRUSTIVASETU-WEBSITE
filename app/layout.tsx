@@ -68,29 +68,38 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-(--font-inter) bg-[#07111f] text-white">
 
-        <Script id="google-translate-init" strategy="afterInteractive">
-  {`
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        {
-          pageLanguage: 'en',
-          includedLanguages: 'en,hi,bn,ta,te,mr,gu,kn,ml,pa,ur,or,as,sa,ne,sd,ks,mai,kok,doi',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        },
-        'google_translate_element'
-      );
-    }
-  `}
-</Script>
-
-<Script
-  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-  strategy="lazyOnload"
-/>
-
         {children}
         <CookieConsent />
+
+        {/* Hidden Google Translate mount point — must exist before the script loads */}
+        <div id="google_translate_element" style={{ display: "none" }} />
+
+        {/* Init function defined first so it exists when Google's script calls cb= */}
+        <Script id="google-translate-init" strategy="afterInteractive">
+          {`
+            window.googleTranslateElementInit = function() {
+              new window.google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'hi,bn,te,mr,ta,ur,gu,kn,or,ml,pa,as,sa,kok,ne,mai',
+                autoDisplay: false
+              }, 'google_translate_element');
+            };
+
+            // Re-apply saved language cookie on every page load so translate persists
+            var savedLang = localStorage.getItem('trustiva_language');
+            if (savedLang && savedLang !== 'en') {
+              var domain = window.location.hostname;
+              document.cookie = 'googtrans=/en/' + savedLang + '; path=/';
+              document.cookie = 'googtrans=/en/' + savedLang + '; path=/; domain=.' + domain;
+            }
+          `}
+        </Script>
+
+        {/* Google Translate script — loads after init function is defined */}
+        <Script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
 
       </body>
     </html>

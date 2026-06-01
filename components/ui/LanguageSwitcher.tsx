@@ -27,26 +27,18 @@ const languages = [
   { code: "doi", native: "डोगरी" },
 ];
 
-function applyGoogleTranslate(code: string) {
-  if (code === "en") {
-    document.cookie =
-      "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie =
-      "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" +
-      window.location.hostname;
+function changeLanguage(langCode: string) {
+  if (langCode === "en") {
+    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname}`;
+    localStorage.removeItem(STORAGE_KEY);
     window.location.reload();
     return;
   }
-  // Method 1 — use the hidden select element Google Translate injects
-  const combo = document.querySelector<HTMLSelectElement>(".goog-te-combo");
-  if (combo) {
-    combo.value = code;
-    combo.dispatchEvent(new Event("change", { bubbles: true }));
-    return;
-  }
-  // Method 2 — set cookie directly and reload (widget not yet ready)
-  document.cookie = `googtrans=/en/${code}; path=/; domain=.${window.location.hostname}`;
-  document.cookie = `googtrans=/en/${code}; path=/`;
+  const domain = window.location.hostname;
+  document.cookie = `googtrans=/en/${langCode}; path=/`;
+  document.cookie = `googtrans=/en/${langCode}; path=/; domain=.${domain}`;
+  localStorage.setItem(STORAGE_KEY, langCode);
   window.location.reload();
 }
 
@@ -58,11 +50,6 @@ export default function LanguageSwitcher() {
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) setSelected(saved);
-    if (saved && saved !== "en") {
-      // Wait for Google Translate widget to initialise before applying
-      const timer = setTimeout(() => applyGoogleTranslate(saved), 2500);
-      return () => clearTimeout(timer);
-    }
   }, []);
 
   const handleClickOutside = useCallback((e: MouseEvent) => {
@@ -78,9 +65,8 @@ export default function LanguageSwitcher() {
 
   function selectLanguage(code: string) {
     setSelected(code);
-    localStorage.setItem(STORAGE_KEY, code);
-    applyGoogleTranslate(code);
     setOpen(false);
+    changeLanguage(code);
   }
 
   const currentLang = languages.find((l) => l.code === selected);
