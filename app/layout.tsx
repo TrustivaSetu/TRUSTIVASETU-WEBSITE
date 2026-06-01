@@ -74,7 +74,6 @@ export default function RootLayout({
         {/* Hidden Google Translate mount point — must exist before the script loads */}
         <div id="google_translate_element" style={{ display: "none" }} />
 
-        {/* Init function defined first so it exists when Google's script calls cb= */}
         <Script id="google-translate-init" strategy="afterInteractive">
           {`
             window.googleTranslateElementInit = function() {
@@ -84,18 +83,9 @@ export default function RootLayout({
                 autoDisplay: false
               }, 'google_translate_element');
             };
-
-            // Re-apply saved language cookie on every page load so translate persists
-            var savedLang = localStorage.getItem('trustiva_language');
-            if (savedLang && savedLang !== 'en') {
-              var domain = window.location.hostname;
-              document.cookie = 'googtrans=/en/' + savedLang + '; path=/';
-              document.cookie = 'googtrans=/en/' + savedLang + '; path=/; domain=.' + domain;
-            }
           `}
         </Script>
 
-        {/* Google Translate script — loads after init function is defined */}
         <Script
           src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
           strategy="afterInteractive"

@@ -92,12 +92,12 @@ backdrop-filter: blur(18px);
 /* GOOGLE TRANSLATE — HIDDEN MOUNT POINT */
 
 #google_translate_element {
-  display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
+  position: fixed !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
   overflow: hidden !important;
-  position: absolute !important;
   pointer-events: none !important;
 }
 

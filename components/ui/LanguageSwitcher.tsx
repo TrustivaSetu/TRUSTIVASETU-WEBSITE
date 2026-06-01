@@ -20,26 +20,36 @@ const languages = [
   { code: "as", native: "অসমীয়া" },
   { code: "sa", native: "संस्कृतम्" },
   { code: "ne", native: "नेपाली" },
-  { code: "sd", native: "سنڌي" },
-  { code: "ks", native: "کٲشُر" },
   { code: "mai", native: "मैथिली" },
   { code: "kok", native: "कोंकणी" },
-  { code: "doi", native: "डोगरी" },
 ];
 
-function changeLanguage(langCode: string) {
-  if (langCode === "en") {
-    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname}`;
-    localStorage.removeItem(STORAGE_KEY);
-    window.location.reload();
-    return;
+// Wait for Google Translate to inject .goog-te-combo into the DOM
+function waitForCombo(): Promise<HTMLSelectElement> {
+  return new Promise((resolve, reject) => {
+    const existing = document.querySelector<HTMLSelectElement>(".goog-te-combo");
+    if (existing) { resolve(existing); return; }
+
+    const observer = new MutationObserver(() => {
+      const combo = document.querySelector<HTMLSelectElement>(".goog-te-combo");
+      if (combo) { observer.disconnect(); resolve(combo); }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    // Give up after 12 seconds — widget failed to load
+    setTimeout(() => { observer.disconnect(); reject(new Error("timeout")); }, 12000);
+  });
+}
+
+// Translate to a language code using the hidden combo Google Translate injects.
+// Called AFTER React hydration so React doesn't overwrite the translated DOM.
+async function applyTranslation(code: string) {
+  try {
+    const combo = await waitForCombo();
+    combo.value = code;
+    combo.dispatchEvent(new Event("change", { bubbles: true }));
+  } catch {
+    // Widget never loaded — nothing to do
   }
-  const domain = window.location.hostname;
-  document.cookie = `googtrans=/en/${langCode}; path=/`;
-  document.cookie = `googtrans=/en/${langCode}; path=/; domain=.${domain}`;
-  localStorage.setItem(STORAGE_KEY, langCode);
-  window.location.reload();
 }
 
 export default function LanguageSwitcher() {
@@ -47,9 +57,13 @@ export default function LanguageSwitcher() {
   const [selected, setSelected] = useState("en");
   const ref = useRef<HTMLDivElement>(null);
 
+  // On mount: read saved language and restore translation
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) setSelected(saved);
+    if (saved && saved !== "en") {
+      applyTranslation(saved);
+    }
   }, []);
 
   const handleClickOutside = useCallback((e: MouseEvent) => {
@@ -66,14 +80,22 @@ export default function LanguageSwitcher() {
   function selectLanguage(code: string) {
     setSelected(code);
     setOpen(false);
-    changeLanguage(code);
+
+    if (code === "en") {
+      localStorage.removeItem(STORAGE_KEY);
+      // Reload resets Google Translate (no cookie to restore)
+      window.location.reload();
+      return;
+    }
+
+    localStorage.setItem(STORAGE_KEY, code);
+    applyTranslation(code);
   }
 
   const currentLang = languages.find((l) => l.code === selected);
 
   return (
     <div ref={ref} className="relative">
-      {/* Globe button */}
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Change language"
@@ -100,7 +122,6 @@ export default function LanguageSwitcher() {
         </span>
       </button>
 
-      {/* Dropdown */}
       {open && (
         <div className="absolute right-0 top-full mt-2 w-44 bg-[#0b1628] border border-lime-300/20 rounded-2xl shadow-2xl z-[9999] overflow-hidden">
           <div className="max-h-72 overflow-y-auto scrollbar-thin">
