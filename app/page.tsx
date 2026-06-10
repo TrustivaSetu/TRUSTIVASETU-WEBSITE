@@ -10,7 +10,6 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
-import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import TeamPhoto from "@/components/ui/TeamPhoto";
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
 
@@ -133,6 +132,7 @@ const duplicatedReviews = [...reviews, ...reviews];
   
   const [reviewForm, setReviewForm] = useState({
   name: "",
+  mobile: "",
   message: "",
   rating: 0,
 });
@@ -188,6 +188,7 @@ const submitReview = async () => {
   let errors: any = {};
 
   if (!reviewForm.name.trim()) errors.name = "Field missing";
+  if (!reviewForm.mobile.trim() || !/^[6-9]\d{9}$/.test(reviewForm.mobile.trim())) errors.mobile = "Enter valid 10-digit mobile number";
   if (!reviewForm.message.trim()) errors.message = "Field missing";
   if (!reviewForm.rating || reviewForm.rating === 0) errors.rating = "Please select rating";
 
@@ -202,6 +203,7 @@ const submitReview = async () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: reviewForm.name.trim(),
+        mobile: reviewForm.mobile.trim(),
         message: reviewForm.message.trim(),
         rating: Number(reviewForm.rating),
       }),
@@ -211,7 +213,7 @@ const submitReview = async () => {
 
     if (data.success) {
       setReviews((prev) => [data.review, ...prev]);
-      setReviewForm({ name: "", message: "", rating: 0 });
+      setReviewForm({ name: "", mobile: "", message: "", rating: 0 });
       setReviewErrors({});
       showToast("Review submitted successfully!");
     } else {
@@ -319,6 +321,21 @@ if (!/^[6-9]\d{9}$/.test(patientForm.phone)) {
 
       message: clinicForm.message,
     };
+
+    fetch('https://lms.trustivasetu.com/api/enquiries/provider', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        source: 'WEBSITE_FORM',
+        clinicName: clinicForm.clinicName,
+        contactPerson: clinicForm.contactPerson,
+        mobile: clinicForm.phone,
+        email: clinicForm.email,
+        city: clinicForm.city,
+        treatmentTypes: clinicForm.specialty,
+        notes: clinicForm.message,
+      }),
+    }).catch(() => {});
 
     const response = await fetch(
       "https://api.web3forms.com/submit",
@@ -508,6 +525,21 @@ headers: {
 
       message: patientForm.message,
     };
+
+    fetch('https://lms.trustivasetu.com/api/enquiries/patient', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        source: 'WEBSITE_FORM',
+        applicantName: patientForm.fullName,
+        mobile: patientForm.phone,
+        email: patientForm.email,
+        currentCity: patientForm.city,
+        treatmentName: patientForm.treatmentType,
+        loanAmount: patientForm.budget ? parseFloat(patientForm.budget) || undefined : undefined,
+        notes: patientForm.message,
+      }),
+    }).catch(() => {});
 
     const response = await fetch(
       "https://api.web3forms.com/submit",
@@ -727,9 +759,6 @@ headers: {
 
     {/* RIGHT SIDE */}
     <div className="flex items-center gap-3 md:gap-4">
-
-      {/* LANGUAGE SWITCHER — visible on all screens */}
-      <LanguageSwitcher />
 
       {/* MOBILE BUTTON */}
       <div className="md:hidden">
@@ -2371,6 +2400,7 @@ distribution expansion and national healthcare financing infrastructure deployme
         type="tel"
         name="phone"
         placeholder="Phone Number"
+        value={investorForm.phone}
         onChange={handleInvestorChange}
         className="w-full bg-white/5 border border-white/20 rounded-r-xl px-3 sm:px-4 py-3 text-base text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-lime-300/40 min-h-[52px]"
       />
@@ -2502,11 +2532,23 @@ distribution expansion and national healthcare financing infrastructure deployme
       placeholder="Your Name"
       value={reviewForm.name}
       onChange={handleReviewChange}
-
       className="w-full mb-3 p-3 rounded bg-white/10"
     />
 
-    {reviewErrors.name && <p className="text-red-500">{reviewErrors.name}</p>}
+    {reviewErrors.name && <p className="text-red-500 text-sm mb-2">{reviewErrors.name}</p>}
+
+    <input
+      name="mobile"
+      type="tel"
+      inputMode="numeric"
+      maxLength={10}
+      placeholder="Mobile Number (for verification)"
+      value={reviewForm.mobile}
+      onChange={handleReviewChange}
+      className="w-full mb-3 p-3 rounded bg-white/10"
+    />
+
+    {reviewErrors.mobile && <p className="text-red-500 text-sm mb-2">{reviewErrors.mobile}</p>}
 
     <textarea
       name="message"
@@ -2604,9 +2646,6 @@ distribution expansion and national healthcare financing infrastructure deployme
   </div>
 
 </section>
-
-      {/* Hidden Google Translate mount — required for .goog-te-combo to exist in DOM */}
-      <div id="google_translate_element" aria-hidden="true" />
 
       {/* FOOTER */}
 
