@@ -40,4 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# LMS junction → C:\trustiva-lms (VS Code only; do not commit)
+/trustiva-lms/
+
+.vercel
 .vercel

@@ -3,7 +3,6 @@ import {
   Playfair_Display,
   Inter
 } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import CookieConsent from "@/components/ui/CookieConsent";
 
@@ -70,26 +69,6 @@ export default function RootLayout({
 
         {children}
         <CookieConsent />
-
-        {/* Hidden Google Translate mount point — must exist before the script loads */}
-        <div id="google_translate_element" style={{ display: "none" }} />
-
-        <Script id="google-translate-init" strategy="afterInteractive">
-          {`
-            window.googleTranslateElementInit = function() {
-              new window.google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'hi,bn,te,mr,ta,ur,gu,kn,or,ml,pa,as,sa,kok,ne,mai',
-                autoDisplay: false
-              }, 'google_translate_element');
-            };
-          `}
-        </Script>
-
-        <Script
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          strategy="afterInteractive"
-        />
 
       </body>
     </html>
