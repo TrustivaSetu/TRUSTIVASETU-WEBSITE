@@ -24,8 +24,7 @@ export default function PrivacyPolicyPage() {
             For queries: <a href={`mailto:${EMAIL}`} className="text-lime-300 hover:underline">{EMAIL}</a>
           </p>
           <div className="mt-4 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 text-yellow-300 text-sm">
-            [ACTION REQUIRED: This document is a template. Please have this reviewed by a qualified legal counsel
-            before publishing. Ensure it accurately reflects your actual data practices.]
+            <p className="font-bold">Important Notice:</p>
           </div>
         </div>
 
@@ -107,7 +106,7 @@ export default function PrivacyPolicyPage() {
             <p>
               We retain personal data for as long as necessary to fulfil the purposes described in this Policy,
               or as required by applicable law. Loan application data is retained for{" "}
-              <span className="text-yellow-300">[ACTION REQUIRED: specify retention period, e.g., 7 years per RBI guidelines]</span>.
+              <span className="text-yellow-300">[8 years as per PMLA 2002]</span>.
               You may request deletion of your data subject to legal and regulatory retention obligations.
             </p>
           </section>
@@ -127,7 +126,7 @@ export default function PrivacyPolicyPage() {
               <a href={`mailto:${EMAIL}`} className="text-lime-300 hover:underline">{EMAIL}</a>
             </p>
             <p className="mt-2 text-sm text-gray-400">
-              Data Protection Officer: <span className="text-yellow-300">[ACTION REQUIRED: Appoint a DPO and add their name/contact]</span>
+              Data Protection Officer: <span className="text-yellow-300">[Grievance Officer: Abhishek Kashyap | Founder & CEO | legal@trustivasetu.com | +91 82184 73534]</span>
             </p>
           </section>
 
@@ -183,7 +182,7 @@ export default function PrivacyPolicyPage() {
               This Privacy Policy is governed by the laws of India, including the Information Technology Act, 2000,
               the Digital Personal Data Protection Act, 2023, and applicable RBI guidelines.
               Any disputes shall be subject to the exclusive jurisdiction of courts in{" "}
-              <span className="text-yellow-300">[ACTION REQUIRED: Specify jurisdiction, e.g., Moradabad / Delhi]</span>.
+              <span className="text-yellow-300">[ACTION REQUIRED: Specify jurisdiction, e.g., Moradabad]</span>.
             </p>
           </section>
 

@@ -23,8 +23,7 @@ export default function TermsPage() {
             For queries: <a href={`mailto:${EMAIL}`} className="text-lime-300 hover:underline">{EMAIL}</a>
           </p>
           <div className="mt-4 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 text-yellow-300 text-sm">
-            [ACTION REQUIRED: This document is a template. Please have this reviewed and approved by
-            qualified legal counsel before publishing.]
+            
           </div>
         </div>
 
@@ -131,7 +130,7 @@ export default function TermsPage() {
               any indirect, incidental, special, consequential, or punitive damages arising from your use of
               or inability to use the platform, or from any loan decisions made by partner lenders.
               Our total liability for any claim shall not exceed <span className="text-yellow-300">
-              [ACTION REQUIRED: specify cap, e.g., ₹10,000 or fees paid]</span>.
+              [₹10,000]</span>.
             </p>
           </section>
 
@@ -166,7 +165,7 @@ export default function TermsPage() {
             <p>
               These Terms are governed by the laws of India. Any disputes shall be subject to the exclusive
               jurisdiction of courts in{" "}
-              <span className="text-yellow-300">[ACTION REQUIRED: Specify city, e.g., Moradabad / Delhi]</span>,
+              <span className="text-yellow-300">[ACTION REQUIRED: Specify city, e.g., Moradabad]</span>,
               India. We encourage resolution of disputes through mutual discussion before litigation.
             </p>
           </section>
