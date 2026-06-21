@@ -130,7 +130,7 @@ export default function TermsPage() {
               any indirect, incidental, special, consequential, or punitive damages arising from your use of
               or inability to use the platform, or from any loan decisions made by partner lenders.
               Our total liability for any claim shall not exceed <span className="text-yellow-300">
-              [₹10,000]</span>.
+              ₹10,000</span>.
             </p>
           </section>
 
@@ -165,7 +165,7 @@ export default function TermsPage() {
             <p>
               These Terms are governed by the laws of India. Any disputes shall be subject to the exclusive
               jurisdiction of courts in{" "}
-              <span className="text-yellow-300">[Moradabad, Uttar Pradesh]</span>,
+              <span className="text-yellow-300">Moradabad, Uttar Pradesh</span>,
               India. We encourage resolution of disputes through mutual discussion before litigation.
             </p>
           </section>
