@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
             For queries: <a href={`mailto:${EMAIL}`} className="text-lime-300 hover:underline">{EMAIL}</a>
           </p>
           <div className="mt-4 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 text-yellow-300 text-sm">
-            <p className="font-bold">Important Notice:</p>
+            <p className="font-bold"></p>
           </div>
         </div>
 
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
             <p>
               We retain personal data for as long as necessary to fulfil the purposes described in this Policy,
               or as required by applicable law. Loan application data is retained for{" "}
-              <span className="text-yellow-300">[8 years as per PMLA 2002]</span>.
+              <span className="text-yellow-300">8 years as per PMLA 2002</span>.
               You may request deletion of your data subject to legal and regulatory retention obligations.
             </p>
           </section>
@@ -126,7 +126,7 @@ export default function PrivacyPolicyPage() {
               <a href={`mailto:${EMAIL}`} className="text-lime-300 hover:underline">{EMAIL}</a>
             </p>
             <p className="mt-2 text-sm text-gray-400">
-              Data Protection Officer: <span className="text-yellow-300">[Grievance Officer: Abhishek Kashyap
+              Data Protection Officer: <span className="text-yellow-300">[Abhishek Kashyap
 Designation: Founder & CEO, Aarthsetu Technologies Pvt Ltd
 Email: legal@trustivasetu.com
 Phone: +91 82184 73534
@@ -141,7 +141,7 @@ Response Time: Within 30 days]</span>
               You can control cookie preferences through our cookie consent banner.
               Declining cookies may affect some features of the website.
               For more information, see our Cookie Policy{" "}
-              <span className="text-yellow-300">[Cookie Policy]</span>.
+              <span className="text-yellow-300">Cookie Policy</span>.
             </p>
           </section>
 
@@ -186,7 +186,7 @@ Response Time: Within 30 days]</span>
               This Privacy Policy is governed by the laws of India, including the Information Technology Act, 2000,
               the Digital Personal Data Protection Act, 2023, and applicable RBI guidelines.
               Any disputes shall be subject to the exclusive jurisdiction of courts in{" "}
-              <span className="text-yellow-300">[Moradabad, Uttar Pradesh]</span>.
+              <span className="text-yellow-300">Moradabad, Uttar Pradesh</span>.
             </p>
           </section>
 
