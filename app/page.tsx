@@ -322,18 +322,19 @@ if (!/^[6-9]\d{9}$/.test(patientForm.phone)) {
       message: clinicForm.message,
     };
 
-    fetch('https://lms.trustivasetu.com/api/enquiries/provider', {
+    // Routed through our signed server-side proxy (never the LMS directly).
+    fetch('/api/lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        source: 'WEBSITE_FORM',
+        type: 'provider',
         clinicName: clinicForm.clinicName,
         contactPerson: clinicForm.contactPerson,
-        mobile: clinicForm.phone,
+        phone: clinicForm.phone,
         email: clinicForm.email,
         city: clinicForm.city,
-        treatmentTypes: clinicForm.specialty,
-        notes: clinicForm.message,
+        specialty: clinicForm.specialty,
+        message: clinicForm.message,
       }),
     }).catch(() => {});
 
@@ -526,18 +527,19 @@ headers: {
       message: patientForm.message,
     };
 
-    fetch('https://lms.trustivasetu.com/api/enquiries/patient', {
+    // Routed through our signed server-side proxy (never the LMS directly).
+    fetch('/api/lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        source: 'WEBSITE_FORM',
-        applicantName: patientForm.fullName,
-        mobile: patientForm.phone,
+        type: 'patient',
+        fullName: patientForm.fullName,
+        phone: patientForm.phone,
         email: patientForm.email,
-        currentCity: patientForm.city,
-        treatmentName: patientForm.treatmentType,
-        loanAmount: patientForm.budget ? parseFloat(patientForm.budget) || undefined : undefined,
-        notes: patientForm.message,
+        city: patientForm.city,
+        treatmentType: patientForm.treatmentType,
+        budget: patientForm.budget,
+        message: patientForm.message,
       }),
     }).catch(() => {});
 
