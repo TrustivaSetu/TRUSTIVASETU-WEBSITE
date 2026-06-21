@@ -182,7 +182,7 @@ export default function PrivacyPolicyPage() {
               This Privacy Policy is governed by the laws of India, including the Information Technology Act, 2000,
               the Digital Personal Data Protection Act, 2023, and applicable RBI guidelines.
               Any disputes shall be subject to the exclusive jurisdiction of courts in{" "}
-              <span className="text-yellow-300">[ACTION REQUIRED: Specify jurisdiction, e.g., Moradabad]</span>.
+              <span className="text-yellow-300">[Moradabad, Uttar Pradesh]</span>.
             </p>
           </section>
 
