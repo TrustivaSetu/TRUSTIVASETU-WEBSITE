@@ -126,11 +126,11 @@ export default function PrivacyPolicyPage() {
               <a href={`mailto:${EMAIL}`} className="text-lime-300 hover:underline">{EMAIL}</a>
             </p>
             <p className="mt-2 text-sm text-gray-400">
-              Data Protection Officer: <span className="text-yellow-300">[Abhishek Kashyap
+              Data Protection Officer: <span className="text-yellow-300">Abhishek Kashyap
 Designation: Founder & CEO, Aarthsetu Technologies Pvt Ltd
 Email: legal@trustivasetu.com
 Phone: +91 82184 73534
-Response Time: Within 30 days]</span>
+Response Time: Within 30 days</span>
             </p>
           </section>
 
@@ -141,7 +141,7 @@ Response Time: Within 30 days]</span>
               You can control cookie preferences through our cookie consent banner.
               Declining cookies may affect some features of the website.
               For more information, see our Cookie Policy{" "}
-              <span className="text-yellow-300">Cookie Policy</span>.
+              
             </p>
           </section>
 
