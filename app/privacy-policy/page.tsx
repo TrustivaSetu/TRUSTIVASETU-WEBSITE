@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() {
               <li><strong>Device Data:</strong> Device type, operating system, unique device identifiers</li>
             </ul>
             <p className="mt-3 text-yellow-300 text-sm">
-              [ACTION REQUIRED: Verify this list reflects actual data collected by your platform.]
+              
             </p>
           </section>
 
@@ -126,7 +126,11 @@ export default function PrivacyPolicyPage() {
               <a href={`mailto:${EMAIL}`} className="text-lime-300 hover:underline">{EMAIL}</a>
             </p>
             <p className="mt-2 text-sm text-gray-400">
-              Data Protection Officer: <span className="text-yellow-300">[Grievance Officer: Abhishek Kashyap | Founder & CEO | legal@trustivasetu.com | +91 82184 73534]</span>
+              Data Protection Officer: <span className="text-yellow-300">[Grievance Officer: Abhishek Kashyap
+Designation: Founder & CEO, Aarthsetu Technologies Pvt Ltd
+Email: legal@trustivasetu.com
+Phone: +91 82184 73534
+Response Time: Within 30 days]</span>
             </p>
           </section>
 
@@ -137,7 +141,7 @@ export default function PrivacyPolicyPage() {
               You can control cookie preferences through our cookie consent banner.
               Declining cookies may affect some features of the website.
               For more information, see our Cookie Policy{" "}
-              <span className="text-yellow-300">[ACTION REQUIRED: Create separate Cookie Policy if required]</span>.
+              <span className="text-yellow-300">[Cookie Policy]</span>.
             </p>
           </section>
 
