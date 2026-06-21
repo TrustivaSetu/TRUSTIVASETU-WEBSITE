@@ -12,9 +12,16 @@ interface Review {
 // In-memory fallback — persists within a single server instance
 const memoryStore: Review[] = [];
 
+// This is a public, unauthenticated endpoint — it must NOT hold the
+// RLS-bypassing service-role key. Use the anon key and rely on Row Level
+// Security policies on the `reviews` table:
+//   • INSERT: allowed for the `anon` role
+//   • SELECT: allowed for the `anon` role (GET below selects non-PII columns
+//     only; the `mobile` column is never returned to clients)
+// Configure these policies in Supabase before relying on this route.
 function getSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY ?? process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !key) return null;
   return createClient(url, key);
 }
