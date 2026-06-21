@@ -165,7 +165,7 @@ export default function TermsPage() {
             <p>
               These Terms are governed by the laws of India. Any disputes shall be subject to the exclusive
               jurisdiction of courts in{" "}
-              <span className="text-yellow-300">[ACTION REQUIRED: Specify city, e.g., Moradabad]</span>,
+              <span className="text-yellow-300">[Moradabad, Uttar Pradesh]</span>,
               India. We encourage resolution of disputes through mutual discussion before litigation.
             </p>
           </section>
