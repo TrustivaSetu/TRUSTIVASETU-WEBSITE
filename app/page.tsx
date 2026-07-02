@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import TeamPhoto from "@/components/ui/TeamPhoto";
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
-
+import VideoTour from "@/components/ui/VideoTour";
 function Counter({
   end,
   suffix = "",
@@ -881,6 +881,7 @@ headers: {
 
 </div>
         </section>
+<VideoTour />
 {/* HOW IT WORKS */}
 <section
   id="how-it-works"
