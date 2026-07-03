@@ -2438,21 +2438,21 @@ distribution expansion and national healthcare financing infrastructure deployme
 
         <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
           <p className="text-sm text-gray-400 mb-2">
-            Founder Email
+            General Inquiries
           </p>
 
           <p className="text-lg text-lime-300 font-semibold">
-            abhishek.kashyap@trustivasetu.com
+            <a href="mailto:info@trustivasetu.com" className="hover:underline">info@trustivasetu.com</a>
           </p>
         </div>
 
         <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
           <p className="text-sm text-gray-400 mb-2">
-            Co-Founder Email
+            Admin & Support
           </p>
 
           <p className="text-lg text-lime-300 font-semibold">
-            ajit.yadav@trustivasetu.com
+            <a href="mailto:admin@trustivasetu.com" className="hover:underline">admin@trustivasetu.com</a>
           </p>
         </div>
 
