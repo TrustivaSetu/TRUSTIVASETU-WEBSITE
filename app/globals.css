@@ -273,3 +273,23 @@ img {
   }
 }
 
+
+/* ================= ANIMATED FOUNDER AVATARS ================= */
+
+@keyframes avatarSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-avatar-spin {
+  animation: avatarSpin 6s linear infinite;
+}
+
+@keyframes avatarPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.82; transform: scale(1.06); }
+}
+
+.animate-avatar-pulse {
+  animation: avatarPulse 3s ease-in-out infinite;
+}
