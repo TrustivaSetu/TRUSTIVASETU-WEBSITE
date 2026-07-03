@@ -11,6 +11,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import TeamPhoto from "@/components/ui/TeamPhoto";
+import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
 import VideoTour from "@/components/ui/VideoTour";
 function Counter({
@@ -1175,18 +1176,12 @@ that powers healthcare affordability at scale.
   <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-    <TeamPhoto
-      src="/abhishek.jpg"
-      alt="Abhishek Kashyap"
-      name="Abhishek Kashyap"
-      width={208}
-      height={208}
-    />
+    <AnimatedAvatar name="Abhishek" />
   </div>
 </div>
 
       <h3 className="text-2xl font-bold">
-        Abhishek Kashyap
+        Abhishek
       </h3>
 
       <p className="text-lime-300 font-semibold mb-2">
@@ -1207,18 +1202,12 @@ that powers healthcare affordability at scale.
 <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-    <TeamPhoto
-      src="/ajit.jpg"
-      alt="Ajit Singh Yadav"
-      name="Ajit Singh Yadav"
-      width={208}
-      height={208}
-    />
+    <AnimatedAvatar name="Ajeet" />
   </div>
 </div>
 
       <h3 className="text-2xl font-bold">
-        Ajit Singh Yadav
+        Ajeet
       </h3>
 
       <p className="text-lime-300 font-semibold mb-2">
@@ -1238,18 +1227,12 @@ that powers healthcare affordability at scale.
 <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
   <div className="flex justify-center mb-6">
     <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-      <TeamPhoto
-        src="/manish.png"
-        alt="Manish Jaggi"
-        name="Manish Jaggi"
-        width={240}
-        height={240}
-      />
+      <AnimatedAvatar name="Manish" />
     </div>
   </div>
 
   <h3 className="text-2xl font-bold">
-    Manish Jaggi
+    Manish
   </h3>
 
   <p className="text-lime-300 font-semibold mb-2">
