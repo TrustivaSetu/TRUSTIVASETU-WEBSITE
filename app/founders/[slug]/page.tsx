@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { founders, getFounderBySlug } from "@/data/founders";
+import { getAudienceBySlug } from "@/data/audiences";
 import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
 import FounderContactActions from "@/components/ui/FounderContactActions";
 
@@ -38,14 +39,25 @@ export async function generateMetadata({
   };
 }
 
+const AUDIENCE_BUTTON_LABEL: Record<string, string> = {
+  investors: "For Investors",
+  nbfc: "For NBFC Partners",
+  doctors: "For Clinics & Doctors",
+};
+
 export default async function FounderPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ from?: string }>;
 }) {
   const { slug } = await params;
+  const { from } = await searchParams;
   const founder = getFounderBySlug(slug);
   if (!founder) return notFound();
+
+  const fromAudience = from ? getAudienceBySlug(from) : undefined;
 
   return (
     <main className="min-h-screen bg-[#07111f] text-white px-4 py-16 sm:py-24">
@@ -96,29 +108,47 @@ export default async function FounderPage({
           <FounderContactActions founder={founder} />
 
           <div className="mt-8 pt-6 border-t border-white/10">
-            <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">
-              Share a tailored page
-            </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              <Link
-                href={`/founders/${founder.slug}/investors`}
-                className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
-              >
-                For Investors
-              </Link>
-              <Link
-                href={`/founders/${founder.slug}/nbfc`}
-                className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
-              >
-                For NBFC Partners
-              </Link>
-              <Link
-                href={`/founders/${founder.slug}/doctors`}
-                className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
-              >
-                For Clinics &amp; Doctors
-              </Link>
-            </div>
+            {fromAudience ? (
+              <>
+                <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">
+                  Viewing as
+                </p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  <Link
+                    href={`/founders/${founder.slug}/${fromAudience.slug}`}
+                    className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
+                  >
+                    {AUDIENCE_BUTTON_LABEL[fromAudience.slug]}
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">
+                  Share a tailored page
+                </p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  <Link
+                    href={`/founders/${founder.slug}/investors`}
+                    className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
+                  >
+                    For Investors
+                  </Link>
+                  <Link
+                    href={`/founders/${founder.slug}/nbfc`}
+                    className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
+                  >
+                    For NBFC Partners
+                  </Link>
+                  <Link
+                    href={`/founders/${founder.slug}/doctors`}
+                    className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
+                  >
+                    For Clinics &amp; Doctors
+                  </Link>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
