@@ -4,6 +4,7 @@ export interface AudienceContent {
   eyebrow: string;
   heading: string;
   description: string;
+  shareHook: string;
   video: string;
   deck: string;
   ctaLabel: string;
@@ -20,6 +21,8 @@ export const audiences: AudienceContent[] = [
     video: "/videos/explainer.mp4",
     deck: "/decks/investor-pitch-deck.pdf",
     ctaLabel: "View Investor Deck",
+    shareHook:
+      "Building India's healthcare financing infrastructure — 1000+ clinics, multi-lender routing, one platform. Worth 2 minutes of your time:",
   },
   {
     slug: "nbfc",
@@ -31,6 +34,8 @@ export const audiences: AudienceContent[] = [
     video: "/videos/lms.mp4",
     deck: "/decks/nbfc-partnership-deck.pdf",
     ctaLabel: "View Partnership Deck",
+    shareHook:
+      "A lending partnership worth exploring — faster approvals, wider reach, zero extra ops load on your end. Take a look:",
   },
   {
     slug: "doctors",
@@ -42,6 +47,8 @@ export const audiences: AudienceContent[] = [
     video: "/videos/journey.mp4",
     deck: "/decks/doctors-clinics-deck.pdf",
     ctaLabel: "View Clinic Overview",
+    shareHook:
+      "Never let a patient delay treatment over cost again — instant, paperless EMI approval in 8–10 minutes. Here's how it works:",
   },
 ];
 
