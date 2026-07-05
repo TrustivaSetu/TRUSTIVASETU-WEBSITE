@@ -4,6 +4,7 @@ import Link from "next/link";
 import { founders, getFounderBySlug } from "@/data/founders";
 import { audiences, getAudienceBySlug } from "@/data/audiences";
 import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
+import VideoPlayer from "@/components/ui/VideoPlayer";
 
 export function generateStaticParams() {
   const params: { slug: string; audience: string }[] = [];
@@ -56,9 +57,7 @@ export default async function FounderAudiencePage({
         <p className="text-gray-300 leading-7 mb-10">{aud.description}</p>
 
         <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl overflow-hidden shadow-2xl mb-8">
-          <video className="w-full aspect-video" controls playsInline preload="metadata">
-            <source src={aud.video} type="video/mp4" />
-          </video>
+          <VideoPlayer src={aud.video} />
         </div>
 
         <a

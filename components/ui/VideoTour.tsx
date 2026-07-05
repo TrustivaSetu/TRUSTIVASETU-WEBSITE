@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, X } from "lucide-react";
+import VideoPlayer from "./VideoPlayer";
 
 const videos = [
   {
@@ -126,18 +127,15 @@ export default function VideoTour() {
               <X size={20} />
             </button>
 
-            <motion.video
+            <motion.div
               key={active.id}
               initial={{ scale: 0.94, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.25 }}
-              className="w-full max-w-3xl rounded-3xl border border-lime-300/20 shadow-2xl"
-              controls
-              autoPlay
-              playsInline
+              className="w-full max-w-3xl rounded-3xl overflow-hidden border border-lime-300/20 shadow-2xl"
             >
-              <source src={active.src} type="video/mp4" />
-            </motion.video>
+              <VideoPlayer src={active.src} autoPlay />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
