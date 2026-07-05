@@ -117,7 +117,7 @@ export default async function FounderAudiencePage({
         </div>
 
         <Link
-          href={`/founders/${founder.slug}`}
+          href={`/founders/${founder.slug}?from=${aud.slug}`}
           className="inline-block mt-8 text-sm text-gray-400 hover:text-lime-300 transition"
         >
           ← Back to {founder.name}&apos;s profile
