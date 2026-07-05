@@ -39,9 +39,10 @@ export default function FounderContactActions({ founder }: { founder: Founder })
 
   const profileUrl = `${COMPANY.website}/founders/${founder.slug}`;
   const shareText = encodeURIComponent(
-    `Let's connect — I'm ${founder.name}, ${founder.role} at ${COMPANY.name}. ` +
-      `Here's my digital card (tap to call, email, or save my contact):\n\n` +
-      `${profileUrl}`
+    `Let's connect — I'm *${founder.name}*, ${founder.role} at ${COMPANY.name}.\n\n` +
+      `${profileUrl}\n\n` +
+      `📱 ${founder.phoneDisplay}\n` +
+      `📧 ${founder.email}`
   );
 
   return (
