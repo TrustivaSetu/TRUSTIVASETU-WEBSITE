@@ -79,6 +79,32 @@ export default async function FounderPage({
           </div>
 
           <FounderContactActions founder={founder} />
+
+          <div className="mt-8 pt-6 border-t border-white/10">
+            <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">
+              Share a tailored page
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              <Link
+                href={`/founders/${founder.slug}/investors`}
+                className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
+              >
+                For Investors
+              </Link>
+              <Link
+                href={`/founders/${founder.slug}/nbfc`}
+                className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
+              >
+                For NBFC Partners
+              </Link>
+              <Link
+                href={`/founders/${founder.slug}/doctors`}
+                className="text-xs font-semibold px-4 py-2 rounded-full border border-lime-300/30 text-lime-300 hover:bg-lime-300/10 transition"
+              >
+                For Clinics &amp; Doctors
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </main>
