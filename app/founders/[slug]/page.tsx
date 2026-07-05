@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { founders, getFounderBySlug } from "@/data/founders";
 import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
@@ -46,17 +45,7 @@ export default async function FounderPage({
         <div className="mt-8 bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-8 sm:p-10 text-center shadow-2xl">
           <div className="flex justify-center mb-6">
             <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-              {founder.photo ? (
-                <Image
-                  src={founder.photo}
-                  alt={founder.name}
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <AnimatedAvatar name={founder.name} />
-              )}
+              <AnimatedAvatar name={founder.name} />
             </div>
           </div>
 
