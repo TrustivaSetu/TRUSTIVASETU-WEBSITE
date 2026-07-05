@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import VideoPlayer from "@/components/ui/VideoPlayer";
 
 export const metadata: Metadata = {
   title: "For Investors — Trustiva Setu",
@@ -23,9 +24,7 @@ export default function InvestorsPage() {
         </p>
 
         <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl overflow-hidden shadow-2xl mb-8">
-          <video className="w-full aspect-video" controls playsInline preload="metadata">
-            <source src="/videos/explainer.mp4" type="video/mp4" />
-          </video>
+          <VideoPlayer src="/videos/explainer.mp4" />
         </div>
 
         <a
