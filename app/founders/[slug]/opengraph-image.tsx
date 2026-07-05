@@ -8,8 +8,9 @@ export const alt = "Trustiva Setu";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default async function Image({ params }: { params: { slug: string } }) {
-  const founder = getFounderBySlug(params.slug);
+export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const founder = getFounderBySlug(slug);
   const name = founder?.name ?? "Trustiva Setu";
   const role = founder?.role ?? "Healthcare Financing Infrastructure";
 

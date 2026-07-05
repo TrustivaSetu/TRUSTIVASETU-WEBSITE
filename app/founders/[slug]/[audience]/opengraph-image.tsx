@@ -12,10 +12,11 @@ export const contentType = "image/png";
 export default async function Image({
   params,
 }: {
-  params: { slug: string; audience: string };
+  params: Promise<{ slug: string; audience: string }>;
 }) {
-  const founder = getFounderBySlug(params.slug);
-  const aud = getAudienceBySlug(params.audience);
+  const { slug, audience } = await params;
+  const founder = getFounderBySlug(slug);
+  const aud = getAudienceBySlug(audience);
 
   const eyebrow = aud?.eyebrow ?? "Trustiva Setu";
   const heading = aud?.heading ?? "Trustiva Setu";
