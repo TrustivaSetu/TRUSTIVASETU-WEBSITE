@@ -26,12 +26,13 @@ export async function generateMetadata({
   const aud = getAudienceBySlug(audience);
   if (!founder || !aud) return {};
   const title = `${aud.eyebrow} — ${founder.name}, Trustiva Setu`;
+  const description = `This is ${founder.name}'s digital card — ${founder.role}, Trustiva Setu.\n📱 ${founder.phoneDisplay}\n🌐 ${founder.email}`;
   return {
     title,
-    description: aud.description,
+    description,
     openGraph: {
       title,
-      description: aud.description,
+      description,
       url: `https://www.trustivasetu.com/founders/${founder.slug}/${aud.slug}`,
       siteName: "Trustiva Setu",
       locale: "en_IN",
@@ -40,7 +41,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title,
-      description: aud.description,
+      description,
     },
   };
 }
