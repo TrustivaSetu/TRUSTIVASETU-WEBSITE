@@ -57,7 +57,7 @@ export default async function FounderAudiencePage({
 
   const pageUrl = `https://www.trustivasetu.com/founders/${founder.slug}/${aud.slug}`;
   const shareText = encodeURIComponent(
-    `${aud.eyebrow} — Trustiva Setu\nShared by ${founder.name} (${founder.role})\nPhone: ${founder.phoneDisplay}\nEmail: ${founder.email}\n\n${pageUrl}`
+    `${aud.shareHook}\n\n${pageUrl}\n\n— ${founder.name}, ${founder.role}\n${founder.phoneDisplay}`
   );
 
   return (
