@@ -37,11 +37,12 @@ export default function FounderContactActions({ founder }: { founder: Founder })
     setTimeout(() => URL.revokeObjectURL(url), 2000);
   }
 
+  const profileUrl = `${COMPANY.website}/founders/${founder.slug}`;
   const shareText = encodeURIComponent(
     `${founder.name} - ${founder.role}, ${COMPANY.name}\n` +
       `Phone: ${founder.phoneDisplay}\n` +
-      `Email: ${founder.email}\n` +
-      `Website: ${COMPANY.website}`
+      `Email: ${founder.email}\n\n` +
+      `${profileUrl}`
   );
 
   return (

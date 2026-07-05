@@ -41,8 +41,9 @@ export default async function FounderAudiencePage({
   const aud = getAudienceBySlug(audience);
   if (!founder || !aud) return notFound();
 
+  const pageUrl = `https://www.trustivasetu.com/founders/${founder.slug}/${aud.slug}`;
   const shareText = encodeURIComponent(
-    `${aud.eyebrow} — Trustiva Setu\nShared by ${founder.name} (${founder.role})\nPhone: ${founder.phoneDisplay}\nEmail: ${founder.email}`
+    `${aud.eyebrow} — Trustiva Setu\nShared by ${founder.name} (${founder.role})\nPhone: ${founder.phoneDisplay}\nEmail: ${founder.email}\n\n${pageUrl}`
   );
 
   return (
