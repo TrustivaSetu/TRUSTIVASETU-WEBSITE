@@ -25,9 +25,23 @@ export async function generateMetadata({
   const founder = getFounderBySlug(slug);
   const aud = getAudienceBySlug(audience);
   if (!founder || !aud) return {};
+  const title = `${aud.eyebrow} — ${founder.name}, Trustiva Setu`;
   return {
-    title: `${aud.eyebrow} — ${founder.name}, Trustiva Setu`,
+    title,
     description: aud.description,
+    openGraph: {
+      title,
+      description: aud.description,
+      url: `https://www.trustivasetu.com/founders/${founder.slug}/${aud.slug}`,
+      siteName: "Trustiva Setu",
+      locale: "en_IN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: aud.description,
+    },
   };
 }
 

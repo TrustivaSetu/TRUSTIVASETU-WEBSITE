@@ -17,9 +17,24 @@ export async function generateMetadata({
   const { slug } = await params;
   const founder = getFounderBySlug(slug);
   if (!founder) return {};
+  const title = `${founder.name} — Trustiva Setu`;
+  const description = `${founder.role} at Trustiva Setu. ${founder.focus}`;
   return {
-    title: `${founder.name} — Trustiva Setu`,
-    description: `${founder.role} at Trustiva Setu. ${founder.focus}`,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://www.trustivasetu.com/founders/${founder.slug}`,
+      siteName: "Trustiva Setu",
+      locale: "en_IN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
