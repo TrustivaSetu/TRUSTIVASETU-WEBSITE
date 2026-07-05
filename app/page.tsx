@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   CreditCard,
   Landmark,
@@ -1173,7 +1174,7 @@ that powers healthcare affordability at scale.
 
     {/* Abhishek */}
 
-  <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+  <Link href="/founders/abhishek" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
     <AnimatedAvatar name="Abhishek" />
@@ -1195,11 +1196,11 @@ that powers healthcare affordability at scale.
         Strategic Partnerships,
         NBFC Ecosystem Development
       </p>
-    </div>
+    </Link>
 
     {/* Ajit */}
 
-<div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+<Link href="/founders/ajit" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
     <AnimatedAvatar name="Ajeet" />
@@ -1221,10 +1222,10 @@ that powers healthcare affordability at scale.
         Credit Infrastructure,
         Lending Operations
       </p>
-    </div>
+    </Link>
 {/* Manish Jaggi */}
 
-<div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+<Link href="/founders/manish" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
   <div className="flex justify-center mb-6">
     <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
       <AnimatedAvatar name="Manish" />
@@ -1248,7 +1249,7 @@ that powers healthcare affordability at scale.
     ICICI Bank, TATA Capital, NBFC Strategy,
     Lending Infrastructure, Financial Advisory
   </p>
-</div>
+</Link>
     </div>
 </div>
       </section>
