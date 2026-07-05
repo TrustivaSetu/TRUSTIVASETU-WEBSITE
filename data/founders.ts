@@ -42,9 +42,9 @@ export const founders: Founder[] = [
       "Driving strategic partnerships, conversion systems and lender expansion.",
     expertise: ["Banking + Fintech", "Credit Infrastructure", "Lending Operations"],
     // TODO: confirm phone + email
-    phone: "+91XXXXXXXXXX",
-    phoneDisplay: "XXXXX XXXXX",
-    email: "ajit@trustivasetu.com",
+    phone: "+919540810017",
+    phoneDisplay: "95408 10017",
+    email: "ajit.yadav@trustivasetu.com",
   },
   {
     slug: "manish",
@@ -60,8 +60,8 @@ export const founders: Founder[] = [
       "Financial Advisory",
     ],
     // TODO: confirm phone + email
-    phone: "+91XXXXXXXXXX",
-    phoneDisplay: "XXXXX XXXXX",
+    phone: "+919650964302",
+    phoneDisplay: "96509 64302",
     email: "manish@trustivasetu.com",
   },
   {
