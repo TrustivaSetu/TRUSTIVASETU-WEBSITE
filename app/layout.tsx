@@ -26,6 +26,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.trustivasetu.com"),
   title: "Trustiva Setu — Healthcare Financing Infrastructure",
   description: "India's fastest healthcare financing platform. No Cost EMI, 8–10 min approval, same day disbursal. Loan facilitation by Aarthsetu Technologies Private Limited. Not a bank or NBFC.",
   robots: {
