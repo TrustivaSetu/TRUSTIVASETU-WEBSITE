@@ -4,7 +4,6 @@ export interface Founder {
   role: string;
   focus: string;               // one-line description (matches homepage copy style)
   expertise: string[];         // tag list (matches homepage copy style)
-  photo?: string;               // path under /public, e.g. "/abhishek.jpg"
   phone: string;                 // e.g. "+918218473534" - used for tel: and wa.me links
   phoneDisplay: string;         // e.g. "82184 73534"
   email: string;
@@ -30,7 +29,6 @@ export const founders: Founder[] = [
       "Strategic Partnerships",
       "NBFC Ecosystem Development",
     ],
-    photo: "/abhishek.jpg",
     phone: "+918218473534",
     phoneDisplay: "82184 73534",
     email: "abhishek.kashyap@trustivasetu.com",
@@ -43,7 +41,6 @@ export const founders: Founder[] = [
     focus:
       "Driving strategic partnerships, conversion systems and lender expansion.",
     expertise: ["Banking + Fintech", "Credit Infrastructure", "Lending Operations"],
-    photo: "/ajit.jpg",
     // TODO: confirm phone + email
     phone: "+91XXXXXXXXXX",
     phoneDisplay: "XXXXX XXXXX",
@@ -62,7 +59,6 @@ export const founders: Founder[] = [
       "Lending Infrastructure",
       "Financial Advisory",
     ],
-    photo: "/manish.png",
     // TODO: confirm phone + email
     phone: "+91XXXXXXXXXX",
     phoneDisplay: "XXXXX XXXXX",
@@ -71,11 +67,9 @@ export const founders: Founder[] = [
   {
     slug: "dharmendra-kumar",
     name: "Dharmendra Kumar",
-    // TODO: confirm exact designation
-    role: "Co-Founder",
+    role: "Regional Manager North",
     focus: "", // TODO: add a one-line focus statement, matching the style above
     expertise: [],
-    // no photo file yet - drop one into /public and set e.g. "/dharmendra.jpg"
     phone: "+919758524344",
     phoneDisplay: "97585 24344",
     // TODO: confirm spelling - was typed as "dhramendra.kumar@..." originally

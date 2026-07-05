@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { founders } from "@/data/founders";
 import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
 
@@ -24,17 +23,7 @@ export default function FoundersDirectoryPage() {
             >
               <div className="flex justify-center mb-6">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-                  {f.photo ? (
-                    <Image
-                      src={f.photo}
-                      alt={f.name}
-                      width={192}
-                      height={192}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <AnimatedAvatar name={f.name} />
-                  )}
+                  <AnimatedAvatar name={f.name} />
                 </div>
               </div>
               <h3 className="text-2xl font-bold">{f.name}</h3>
