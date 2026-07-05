@@ -18,7 +18,7 @@ export async function generateMetadata({
   const founder = getFounderBySlug(slug);
   if (!founder) return {};
   const title = `${founder.name} — Trustiva Setu`;
-  const description = `${founder.name}'s digital card\n📱 ${founder.phoneDisplay}\n🌐 ${founder.email}`;
+  const description = `${founder.name}'s digital card · 📱 ${founder.phoneDisplay} · 🌐 ${founder.email}`;
   return {
     title,
     description,
