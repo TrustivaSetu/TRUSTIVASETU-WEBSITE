@@ -4,6 +4,7 @@ import {
   Inter
 } from "next/font/google";
 import "./globals.css";
+import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import CookieConsent from "@/components/ui/CookieConsent";
 
 const playfair = Playfair_Display({
@@ -27,8 +28,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.trustivasetu.com"),
-  title: "Trustiva Setu — Healthcare Financing Infrastructure",
-  description: "India's fastest healthcare financing platform. No Cost EMI, 8–10 min approval, same day disbursal. Loan facilitation by Aarthsetu Technologies Private Limited. Not a bank or NBFC.",
+  title: "Medical Loans & No Cost Healthcare EMI in India | Trustiva Setu",
+  description:
+  "Get instant medical loans, No Cost EMI, IVF loans, dental loans, cosmetic surgery financing and healthcare EMI across India. Fast approvals through Trustiva Setu.",
   keywords: [
   "Healthcare Finance",
   "Medical Loan",
@@ -71,8 +73,9 @@ alternates: {
   },
 },
   openGraph: {
-    title: "Trustiva Setu — Healthcare Financing Infrastructure",
-    description: "No Cost EMI for healthcare. 8–10 min approval. Same day disbursal. Pan India network of clinics and lenders.",
+    title: "Medical Loans & No Cost Healthcare EMI in India | Trustiva Setu",
+    description:
+  "Medical loans, IVF loans, dental financing, cosmetic surgery loans and No Cost EMI across India with fast approvals.",
     url: "https://www.trustivasetu.com",
     siteName: "Trustiva Setu",
     locale: "en_IN",
@@ -88,8 +91,9 @@ alternates: {
 },
   twitter: {
     card: "summary_large_image",
-    title: "Trustiva Setu — Healthcare Financing Infrastructure",
-    description: "No Cost EMI for healthcare. Loan facilitation platform by Aarthsetu Technologies.",
+    title: "Medical Loans & No Cost Healthcare EMI in India | Trustiva Setu",
+    description:
+  "Medical loans, healthcare EMI, IVF loans and dental financing with fast approvals across India.",
     images: ["/og-image.jpg"],  
 },
   appleWebApp: {
@@ -107,27 +111,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Trustiva Setu",
-  url: "https://www.trustivasetu.com",
-  logo: "https://www.trustivasetu.com/logo.png",
-  description:
-    "Healthcare financing infrastructure platform connecting patients, clinics and lenders across India.",
-};
   return (
     <html
       lang="en"
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-(--font-inter) bg-[#07111f] text-white">
-       <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(organizationSchema),
-  }}
-/>
+       <OrganizationSchema />
         {children}
         <CookieConsent />
 

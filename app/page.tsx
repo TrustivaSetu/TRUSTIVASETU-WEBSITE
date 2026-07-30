@@ -657,6 +657,18 @@ headers: {
       a: "Fill the clinic partner enquiry form on this page or contact us directly. A dedicated Relationship Manager will be assigned to your clinic within 24 hours of registration.",
     },
   ];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
 
   const navItems = [
   ["home", "Home"],
@@ -754,11 +766,13 @@ headers: {
       <Image src="/logo.png" alt="logo" width={56} height={56} />
 
       <div>
-        <h1 className="text-lg md:text-2xl font-bold">Trustiva Setu</h1>
-        <p className="text-xs md:text-sm text-gray-300">
-          Aarthsetu Technologies Pvt. Ltd.
-        </p>
-      </div>
+  <div className="text-lg md:text-2xl font-bold">
+    Trustiva Setu
+  </div>
+  <p className="text-xs md:text-sm text-gray-300">
+    Aarthsetu Technologies Pvt. Ltd.
+  </p>
+</div>
     </div>
 
     {/* RIGHT SIDE */}
@@ -810,15 +824,16 @@ headers: {
 </p>
 
 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-  Powering India's
+  Medical Loans & No Cost Healthcare EMI
   <span className="block text-lime-300">
-    Healthcare Financing Backbone
+    Across India
   </span>
 </h1>
 
 <p className="text-gray-300 text-lg md:text-xl max-w-xl leading-8">
-  Connecting clinics, lenders and patients through one unified
-  financing infrastructure platform.
+  Trustiva Setu connects patients, clinics and lending partners to provide
+  medical loans, No Cost EMI, IVF financing, dental loans, cosmetic surgery
+  financing and other healthcare financing solutions across India.
 </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mt-2">
