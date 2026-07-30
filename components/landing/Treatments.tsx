@@ -1,3 +1,4 @@
+import { landingData } from "@/lib/landing-data";
 const treatments = [
   {
     title: "IVF & Fertility",
@@ -33,7 +34,12 @@ const treatments = [
   },
 ];
 
-export default function Treatments() {
+export default function Treatments({
+  page = "medical",
+}: {
+  page?: keyof typeof landingData;
+}) {
+  const treatments = landingData[page].treatments;
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="text-center">

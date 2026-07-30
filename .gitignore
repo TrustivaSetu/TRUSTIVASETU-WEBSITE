@@ -46,3 +46,7 @@ next-env.d.ts
 .vercel
 .vercel
 public/journey/
+
+# Large local files
+*.deb
+public/videos/*.mp4

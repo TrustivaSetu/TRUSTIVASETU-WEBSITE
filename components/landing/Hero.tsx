@@ -1,3 +1,4 @@
+import { landingData } from "@/lib/landing-data";
 const highlights = [
   "Multiple Lending Partners",
   "Fast Digital Journey",
@@ -5,7 +6,12 @@ const highlights = [
   "Pan India Network",
 ];
 
-export default function Hero() {
+export default function Hero({
+  page = "medical",
+}: {
+  page?: keyof typeof landingData;
+}) {
+  const content = landingData[page];
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(190,242,100,0.18),transparent_40%)]" />
@@ -17,16 +23,11 @@ export default function Hero() {
           </span>
 
           <h1 className="mt-8 text-5xl font-bold leading-tight lg:text-6xl">
-            Medical Loans Made
-            <span className="block text-[#bef264]">
-              Simple & Accessible
-            </span>
+            {content.heroTitle}
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-300">
-            Finance planned healthcare expenses including IVF, Dental,
-            Hair Transplant, Cosmetic Surgery and other medical treatments
-            through Trustiva Setu&apos;s lending partner network.
+            {content.heroSubtitle}
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a

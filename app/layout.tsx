@@ -6,6 +6,8 @@ import {
 import "./globals.css";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import CookieConsent from "@/components/ui/CookieConsent";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import ClarityProvider from "@/components/ClarityProvider";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -117,10 +119,13 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-(--font-inter) bg-[#07111f] text-white">
+        <ClarityProvider />
        <OrganizationSchema />
         {children}
         <CookieConsent />
-
+{process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+  <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+)}
       </body>
     </html>
   );

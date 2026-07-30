@@ -25,11 +25,12 @@ export const metadata: Metadata = {
 export default function MedicalLoanPage() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white">
-      <Hero />
-      <Treatments />
+            <Hero page="medical" />
+      <Treatments page="medical" />
       <WhyTrustiva />
       <HowItWorks />
       <Eligibility />
+      <FAQ page="medical" />
     </main>
   );
 }
