@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import {
   CreditCard,
   Landmark,
@@ -14,7 +15,17 @@ import {
 import TeamPhoto from "@/components/ui/TeamPhoto";
 import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
-import VideoTour from "@/components/ui/VideoTour";
+const VideoTour = dynamic(
+  () => import("@/components/ui/VideoTour"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="py-20 text-center text-gray-400">
+        Loading video tour...
+      </div>
+    ),
+  }
+);
 function Counter({
   end,
   suffix = "",
@@ -718,7 +729,12 @@ const faqSchema = {
   ];
 
   return (
-    <div className={`min-h-screen bg-[#07111f] text-white ${menuOpen ? "fixed w-full" : ""}`}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className={`min-h-screen bg-[#07111f] text-white ${menuOpen ? "fixed w-full" : ""}`}>
 
 
 {/* MOBILE MENU */}
@@ -731,9 +747,9 @@ const faqSchema = {
   `}
 >
   <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
-    <h2 className="text-lg font-semibold text-white">
+    <div className="text-lg font-semibold text-white">
       Menu
-    </h2>
+    </div>
 
     <button
       onClick={() => setMenuOpen(false)}
@@ -868,6 +884,8 @@ const faqSchema = {
       alt="Trustiva Healthcare"
       width={800}
       height={500}
+      priority
+      sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 33vw"
       className="w-full max-w-xs sm:max-w-md md:max-w-xl object-contain rounded-4xl border border-white/10 shadow-xl"
     />
   </div>
@@ -2751,5 +2769,6 @@ distribution expansion and national healthcare financing infrastructure deployme
       )}
 
 </div>
-);
+    </>
+  );
 }
