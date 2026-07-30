@@ -1,32 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { landingData } from "@/lib/landing-data";
 
-const faqs = [
-  {
-    question: "What is a medical loan?",
-    answer:
-      "A medical loan helps finance eligible healthcare expenses. Loan approval, amount and repayment terms are decided by the lending partner.",
-  },
-  {
-    question: "Can I apply for an IVF loan?",
-    answer:
-      "Yes. Eligible applicants can apply for financing for IVF and other fertility treatments through participating lending partners.",
-  },
-  {
-    question: "What documents are required?",
-    answer:
-      "Generally PAN, Aadhaar, address proof, income proof and other KYC documents may be required. Requirements vary by lender.",
-  },
-  {
-    question: "How long does approval take?",
-    answer:
-      "The approval timeline depends on document verification and the lending partner's assessment process.",
-  },
-];
-
-export default function FAQ() {
+export default function FAQ({
+  page = "medical",
+}: {
+  page?: keyof typeof landingData;
+}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const faqs = landingData[page].faqs;
 
   return (
     <section className="bg-[#07111f] py-20">
@@ -41,8 +25,7 @@ export default function FAQ() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            Everything you need to know before applying for a medical loan
-            through TrustivaSetu.
+            Everything you need to know before applying through Trustiva Setu.
           </p>
         </div>
 
@@ -50,17 +33,18 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-700 rounded-lg bg-gray-900/50 hover:bg-gray-900 transition-colors"
+              className="rounded-lg border border-gray-700 bg-gray-900/50 transition-colors hover:bg-gray-900"
             >
               <button
                 onClick={() =>
                   setOpenIndex(openIndex === index ? null : index)
                 }
-                className="w-full px-6 py-4 text-left flex items-center justify-between"
+                className="flex w-full items-center justify-between px-6 py-4 text-left"
               >
                 <span className="font-semibold text-white">
                   {faq.question}
                 </span>
+
                 <span
                   className={`text-[#bef264] transition-transform ${
                     openIndex === index ? "rotate-180" : ""
@@ -69,8 +53,9 @@ export default function FAQ() {
                   ▼
                 </span>
               </button>
+
               {openIndex === index && (
-                <div className="px-6 pb-4 text-gray-400 border-t border-gray-700">
+                <div className="border-t border-gray-700 px-6 pb-4 text-gray-400">
                   {faq.answer}
                 </div>
               )}

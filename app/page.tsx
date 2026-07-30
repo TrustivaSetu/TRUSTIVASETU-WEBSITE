@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Counter from "@/components/home/Counter";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +14,8 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import TeamPhoto from "@/components/ui/TeamPhoto";
-import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
+import { trackEvent } from "@/lib/analytics";
+import TrackedLink from "@/components/analytics/TrackedLink";
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
 const VideoTour = dynamic(
   () => import("@/components/ui/VideoTour"),
@@ -26,50 +28,6 @@ const VideoTour = dynamic(
     ),
   }
 );
-function Counter({
-  end,
-  suffix = "",
-  prefix = "",
-  duration = 2000,
-}: {
-  end: number;
-  suffix?: string;
-  prefix?: string;
-  duration?: number;
-}) {
-  const [count, setCount] = useState(0);
-
-  
-  useEffect(() => {
-    let start = 0;
-    const incrementTime = 20;
-    const totalSteps = duration / incrementTime;
-    const increment = end / totalSteps;
-
-    const timer = setInterval(() => {
-      start += increment;
-
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, incrementTime);
-
-    
-    return () => clearInterval(timer);
-  }, [end, duration]);
-
-  return (
-    <span>
-      {prefix}
-      {count}
-      {suffix}
-    </span>
-  );
-}
-
 export default function TrustivaSetuWebsite() {
   
   const [clinicLoading, setClinicLoading] = useState(false);
@@ -368,7 +326,9 @@ headers: {
     if (result.success) {
 
       showToast("Clinic enquiry submitted! We'll be in touch soon.");
-
+trackEvent("clinic_lead_submit", {
+  form: "clinic",
+});
       setClinicForm({
         clinicName: "",
         contactPerson: "",
@@ -480,7 +440,9 @@ headers: {
     if (result.success) {
 
       showToast("Investment interest submitted! Our team will reach out shortly.");
-
+trackEvent("investor_lead_submit", {
+  form: "investor",
+});
       setInvestorForm({
         fullName: "",
         companyName: "",
@@ -573,7 +535,9 @@ headers: {
     if (result.success) {
 
       showToast("Enquiry submitted! Our team will contact you shortly.");
-
+trackEvent("patient_lead_submit", {
+  form: "patient",
+});
       setPatientForm({
         fullName: "",
         phone: "",
@@ -1205,17 +1169,23 @@ that powers healthcare affordability at scale.
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
 
-    {/* Abhishek */}
+    {/* Abhishek Kashyap */}
 
-  <Link href="/founders/abhishek" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+  <Link href="/founders/abhishek kashyap" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-    <AnimatedAvatar name="Abhishek" />
+    <Image
+  src="/abhishek.jpg"
+  alt="Abhishek Kashyap"
+  width={240}
+  height={240}
+  className="w-full h-full object-cover"
+/>
   </div>
 </div>
 
       <h3 className="text-2xl font-bold">
-        Abhishek
+        Abhishek Kashyap
       </h3>
 
       <p className="text-lime-300 font-semibold mb-2">
@@ -1231,17 +1201,23 @@ that powers healthcare affordability at scale.
       </p>
     </Link>
 
-    {/* Ajit */}
+    {/* Ajit Yadav */}
 
-<Link href="/founders/ajit" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+<Link href="/founders/ajit yadav" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
     <div className="flex justify-center mb-6">
   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-    <AnimatedAvatar name="Ajeet" />
+    <Image
+  src="/ajit.jpg"
+  alt="Ajit Yadav"
+  width={240}
+  height={240}
+  className="w-full h-full object-cover"
+/>
   </div>
 </div>
 
       <h3 className="text-2xl font-bold">
-        Ajeet
+        Ajit Yadav
       </h3>
 
       <p className="text-lime-300 font-semibold mb-2">
@@ -1258,15 +1234,21 @@ that powers healthcare affordability at scale.
     </Link>
 {/* Manish Jaggi */}
 
-<Link href="/founders/manish" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+<Link href="/founders/manish jaggi" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
   <div className="flex justify-center mb-6">
     <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-      <AnimatedAvatar name="Manish" />
+      <Image
+  src="/manish.png"
+  alt="Manish Jaggi"
+  width={240}
+  height={240}
+  className="w-full h-full object-cover"
+/>
     </div>
   </div>
 
   <h3 className="text-2xl font-bold">
-    Manish
+    Manish Jaggi
   </h3>
 
   <p className="text-lime-300 font-semibold mb-2">
@@ -2338,15 +2320,15 @@ distribution expansion and national healthcare financing infrastructure deployme
 
       <div className="mt-20 flex flex-wrap gap-4">
 
-        <a
-          href="/trustiva_strategic_partnership_deck.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="premium-btn premium-green-btn inline-block"
-        >
-          Strategic Partnership Deck
-        </a>
-
+        <TrackedLink
+  href="/trustiva_strategic_partnership_deck.pdf"
+  event="strategic_partnership_deck_download"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="premium-btn premium-green-btn inline-block"
+>
+  Strategic Partnership Deck
+</TrackedLink>
       </div>
 
     </div>
@@ -2476,7 +2458,13 @@ distribution expansion and national healthcare financing infrastructure deployme
           </p>
 
           <p className="text-lg text-lime-300 font-semibold">
-            <a href="mailto:info@trustivasetu.com" className="hover:underline">info@trustivasetu.com</a>
+            <TrackedLink
+  href="mailto:info@trustivasetu.com"
+  event="email_click_info"
+  className="hover:underline"
+>
+  info@trustivasetu.com
+</TrackedLink>
           </p>
         </div>
 
@@ -2486,7 +2474,13 @@ distribution expansion and national healthcare financing infrastructure deployme
           </p>
 
           <p className="text-lg text-lime-300 font-semibold">
-            <a href="mailto:admin@trustivasetu.com" className="hover:underline">admin@trustivasetu.com</a>
+            <TrackedLink
+  href="mailto:admin@trustivasetu.com"
+  event="email_click_admin"
+  className="hover:underline"
+>
+  admin@trustivasetu.com
+</TrackedLink>
           </p>
         </div>
 
@@ -2643,12 +2637,13 @@ distribution expansion and national healthcare financing infrastructure deployme
 
       <div className="flex flex-wrap justify-center gap-5">
 
-        <a
-          href="#for-strategic-investors"
-          className="premium-btn premium-green-btn"
-        >
-          Talk to Founders
-        </a>
+       <TrackedLink
+  href="#for-strategic-investors"
+  event="talk_to_founders_click"
+  className="premium-btn premium-green-btn"
+>
+  Talk to Founders
+</TrackedLink>
 
         <a
           href="/trustiva_strategic_partnership_deck.pdf"
@@ -2725,9 +2720,27 @@ distribution expansion and national healthcare financing infrastructure deployme
           <a href="/disclaimer" className="block text-gray-400 hover:text-lime-300 transition-colors">Disclaimer</a>
         </div>
         <div className="mt-4 space-y-1 text-xs text-gray-500">
-          <p>📧 <a href="mailto:info@trustivasetu.com" className="hover:text-lime-300">info@trustivasetu.com</a></p>
-          <p>📧 <a href="mailto:admin@trustivasetu.com" className="hover:text-lime-300">admin@trustivasetu.com</a></p>
-          <p>📧 <a href="mailto:legal@trustivasetu.com" className="hover:text-lime-300">legal@trustivasetu.com</a></p>
+          <p>📧 <TrackedLink
+  href="mailto:info@trustivasetu.com"
+  event="email_click_info_footer"
+  className="hover:text-lime-300"
+>
+  info@trustivasetu.com
+</TrackedLink></p>
+          <p>📧 <TrackedLink
+  href="mailto:admin@trustivasetu.com"
+  event="email_click_admin_footer"
+  className="hover:text-lime-300"
+>
+  admin@trustivasetu.com
+</TrackedLink></p>
+          <p>📧 <TrackedLink
+  href="mailto:legal@trustivasetu.com"
+  event="email_click_legal_footer"
+  className="hover:text-lime-300"
+>
+  legal@trustivasetu.com
+</TrackedLink></p>
         </div>
       </div>
 
