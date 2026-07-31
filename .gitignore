@@ -64,3 +64,8 @@ generated/
 # Local backups
 *.bak
 *.before-generated
+
+# Local backup files
+*.backup
+*.bak
+*.before-*
