@@ -9,6 +9,7 @@ import RelatedTreatments from "@/components/landing/RelatedTreatments";
 import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
 export const metadata: Metadata = {
   title: "Medical Loan in India | Instant Healthcare Financing | Trustiva Setu",
@@ -30,6 +31,7 @@ export default function MedicalPage() {
       <FaqSchema page="medical" />
       <BreadcrumbSchema title="Medical Loan in India | Instant Healthcare Financing | Trustiva Setu" slug="medical-loan" />
       <OrganizationSchema />
+      <WebSiteSchema />
       <Hero page="medical" />
       <Treatments page="medical" />
       <WhyTrustiva />

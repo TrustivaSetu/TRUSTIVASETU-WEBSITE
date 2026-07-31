@@ -9,6 +9,7 @@ import RelatedTreatments from "@/components/landing/RelatedTreatments";
 import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
 export const metadata: Metadata = {
   title: "Liposuction in India | Healthcare Financing | Trustiva Setu",
@@ -30,6 +31,7 @@ export default function LiposuctionPage() {
       <FaqSchema page="liposuction" />
       <BreadcrumbSchema title="Liposuction in India | Healthcare Financing | Trustiva Setu" slug="liposuction-loan" />
       <OrganizationSchema />
+      <WebSiteSchema />
       <Hero page="liposuction" />
       <Treatments page="liposuction" />
       <WhyTrustiva />
