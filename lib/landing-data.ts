@@ -156,6 +156,48 @@ export const landingData = {
         }
     ]
 },
+  "lasik": {
+    "title": "LASIK Eye Surgery Loan",
+    "description": "Healthcare financing for LASIK eye surgery through trusted lending partners.",
+    "heroTitle": "Finance Your LASIK Eye Surgery",
+    "heroSubtitle": "Flexible healthcare financing options to help you plan your vision correction treatment.",
+    "treatments": [
+        {
+            "title": "Blade LASIK",
+            "description": "Finance conventional LASIK procedures with flexible repayment options."
+        },
+        {
+            "title": "Femto LASIK",
+            "description": "Healthcare financing for advanced bladeless LASIK treatments."
+        },
+        {
+            "title": "Contoura Vision",
+            "description": "Funding support for topography-guided laser vision correction."
+        },
+        {
+            "title": "SMILE Pro",
+            "description": "Finance minimally invasive laser vision correction procedures."
+        }
+    ],
+    "faqs": [
+        {
+            "question": "Can I get a loan for LASIK eye surgery?",
+            "answer": "Yes. Eligible applicants may apply for healthcare financing through our lending partners. Approval depends on the lender's credit assessment."
+        },
+        {
+            "question": "What documents are required?",
+            "answer": "PAN, Aadhaar, KYC documents, income proof and any additional documents requested by the lending partner."
+        },
+        {
+            "question": "Is there a minimum loan amount?",
+            "answer": "Available loan amounts depend on the treatment cost and the lending partner's eligibility criteria."
+        },
+        {
+            "question": "How long does approval take?",
+            "answer": "Approval timelines vary based on document verification and the lending partner's internal process."
+        }
+    ]
+},
   "medical": {
     "title": "Medical Loan in India",
     "description": "Instant healthcare financing for planned medical treatments across India.",
