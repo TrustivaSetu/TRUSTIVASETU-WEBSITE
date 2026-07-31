@@ -1,0 +1,52 @@
+{
+  "slug": "liposuction-loan",
+  "key": "liposuction",
+  "metadata": {
+    "title": "Liposuction in India | Healthcare Financing | Trustiva Setu",
+    "description": "Apply for a liposuction through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
+    "ogTitle": "Liposuction | Trustiva Setu",
+    "ogDescription": "Healthcare financing for liposuction."
+  },
+  "landing": {
+    "title": "Liposuction",
+    "description": "Healthcare financing for liposuction through trusted lending partners.",
+    "heroTitle": "Finance Your Liposuction",
+    "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
+    "treatments": [
+      {
+        "title": "Treatment Option 1",
+        "description": "Replace with actual treatment."
+      },
+      {
+        "title": "Treatment Option 2",
+        "description": "Replace with actual treatment."
+      },
+      {
+        "title": "Treatment Option 3",
+        "description": "Replace with actual treatment."
+      },
+      {
+        "title": "Treatment Option 4",
+        "description": "Replace with actual treatment."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who can apply?",
+        "answer": "Eligibility depends on the lending partner's credit assessment."
+      },
+      {
+        "question": "What documents are required?",
+        "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+      },
+      {
+        "question": "How much loan can I get?",
+        "answer": "Loan amount depends on treatment cost and lender eligibility."
+      },
+      {
+        "question": "How long does approval take?",
+        "answer": "Approval timelines depend on document verification and lender processes."
+      }
+    ]
+  }
+}
