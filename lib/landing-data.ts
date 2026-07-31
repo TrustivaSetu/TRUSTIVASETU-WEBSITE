@@ -14,6 +14,48 @@ export type LandingContent = {
 };
 
 export const landingData = {
+  "cataract": {
+    "title": "Cataract Surgery Loan",
+    "description": "Healthcare financing for cataract surgery through trusted lending partners.",
+    "heroTitle": "Finance Your Cataract Surgery",
+    "heroSubtitle": "Flexible healthcare financing options for cataract treatment and lens replacement surgery.",
+    "treatments": [
+        {
+            "title": "Standard Cataract Surgery",
+            "description": "Finance standard cataract removal procedures."
+        },
+        {
+            "title": "Phaco Surgery",
+            "description": "Healthcare financing for modern phacoemulsification surgery."
+        },
+        {
+            "title": "Premium IOL",
+            "description": "Funding support for premium intraocular lens implants."
+        },
+        {
+            "title": "Laser Cataract Surgery",
+            "description": "Finance advanced laser-assisted cataract surgery."
+        }
+    ],
+    "faqs": [
+        {
+            "question": "Can I finance cataract surgery?",
+            "answer": "Eligible applicants can apply for healthcare financing through our lending partners, subject to credit assessment."
+        },
+        {
+            "question": "Which documents are required?",
+            "answer": "PAN, Aadhaar, KYC documents, income proof and any additional documents requested by the lending partner."
+        },
+        {
+            "question": "What loan amount can I get?",
+            "answer": "Loan amount depends on treatment cost and lender eligibility."
+        },
+        {
+            "question": "How long does approval take?",
+            "answer": "Approval timelines depend on document verification and the lending partner's internal process."
+        }
+    ]
+},
   "dental": {
     "title": "Dental Loan in India",
     "description": "Affordable dental treatment financing for implants, braces, aligners and smile makeover procedures.",
