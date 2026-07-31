@@ -740,7 +740,7 @@ const faqSchema = {
   </div>
 </div>
 
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+  <header className="fixed top-0 left-0 right-0 z-50 bg-[#07111f]/95 backdrop-blur-xl border-b border-white/10"><div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
     {/* LOGO */}
     <div className="flex items-center gap-2 md:gap-4">
@@ -789,13 +789,14 @@ const faqSchema = {
         
     </div>
 </div>
-  </div>
+</div>
+</header>
 
       {/* HERO */}
 
       <section
   id="home"
-  className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12 sm:pb-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center"
+  className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-12 sm:pb-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center"
 >
   
         <div className="relative z-10">
@@ -2677,7 +2678,7 @@ distribution expansion and national healthcare financing infrastructure deployme
     {Object.entries(landingData).map(([slug, item]) => (
       <Link
         key={slug}
-        href={`/${slug}`}
+        href={`/${slug}-loan`}
         className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-lime-300 hover:bg-white/10"
       >
         <h3 className="text-xl font-semibold">
