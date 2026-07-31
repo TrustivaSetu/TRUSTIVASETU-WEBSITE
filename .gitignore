@@ -53,3 +53,7 @@ public/videos/*.mp4
 
 # Local backup files
 backup/
+
+# Python
+__pycache__/
+*.py[cod]
