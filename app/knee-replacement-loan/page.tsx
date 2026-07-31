@@ -11,6 +11,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
   title: "Knee Replacement Surgery in India | Healthcare Financing | Trustiva Setu",
@@ -34,6 +35,7 @@ export default function KneeReplacementPage() {
       <OrganizationSchema />
       <WebSiteSchema />
       <FinancialServiceSchema />
+      <ServiceSchema page="knee-replacement" />
       <Hero page="knee-replacement" />
       <Treatments page="knee-replacement" />
       <WhyTrustiva />

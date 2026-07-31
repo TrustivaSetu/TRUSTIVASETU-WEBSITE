@@ -11,6 +11,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
   title: "__TITLE__",
@@ -34,6 +35,7 @@ export default function __FUNCTION_NAME__() {
       <OrganizationSchema />
       <WebSiteSchema />
       <FinancialServiceSchema />
+      <ServiceSchema page="__KEY__" />
       <Hero page="__KEY__" />
       <Treatments page="__KEY__" />
       <WhyTrustiva />

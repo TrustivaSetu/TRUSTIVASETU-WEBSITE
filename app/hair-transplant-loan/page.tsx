@@ -11,6 +11,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
   title: "Hair Transplant Loan in India | Easy EMI | Trustiva Setu",
@@ -34,6 +35,7 @@ export default function HairTransplantPage() {
       <OrganizationSchema />
       <WebSiteSchema />
       <FinancialServiceSchema />
+      <ServiceSchema page="hair-transplant" />
       <Hero page="hair-transplant" />
       <Treatments page="hair-transplant" />
       <WhyTrustiva />
