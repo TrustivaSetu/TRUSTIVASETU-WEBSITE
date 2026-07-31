@@ -1313,6 +1313,36 @@ verified healthcare demand through one unified system.
         </div>
       </section>
 
+      {/* SEO INTERNAL LINKS */}
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+        <h2 className="text-3xl font-bold mb-6">
+          Explore Healthcare Financing Options
+        </h2>
+
+        <div className="flex flex-wrap gap-3">
+          <Link href="/medical-loan" className="text-lime-300 hover:underline">Medical Loan</Link>
+          <Link href="/ivf-loan" className="text-lime-300 hover:underline">IVF Loan</Link>
+          <Link href="/dental-loan" className="text-lime-300 hover:underline">Dental Loan</Link>
+          <Link href="/hair-transplant-loan" className="text-lime-300 hover:underline">Hair Transplant Loan</Link>
+          <Link href="/lasik-loan" className="text-lime-300 hover:underline">LASIK Loan</Link>
+          <Link href="/cosmetic-surgery-loan" className="text-lime-300 hover:underline">Cosmetic Surgery Loan</Link>
+          <Link href="/plastic-surgery-loan" className="text-lime-300 hover:underline">Plastic Surgery Loan</Link>
+          <Link href="/knee-replacement-loan" className="text-lime-300 hover:underline">Knee Replacement Loan</Link>
+          <Link href="/hip-replacement-loan" className="text-lime-300 hover:underline">Hip Replacement Loan</Link>
+          <Link href="/spine-surgery-loan" className="text-lime-300 hover:underline">Spine Surgery Loan</Link>
+          <Link href="/bariatric-surgery-loan" className="text-lime-300 hover:underline">Bariatric Surgery Loan</Link>
+          <Link href="/egg-freezing-loan" className="text-lime-300 hover:underline">Egg Freezing Loan</Link>
+          <Link href="/fertility-preservation-loan" className="text-lime-300 hover:underline">Fertility Preservation Loan</Link>
+          <Link href="/dental-implant-loan" className="text-lime-300 hover:underline">Dental Implant Loan</Link>
+          <Link href="/invisible-braces-loan" className="text-lime-300 hover:underline">Invisible Braces Loan</Link>
+          <Link href="/rhinoplasty-loan" className="text-lime-300 hover:underline">Rhinoplasty Loan</Link>
+          <Link href="/liposuction-loan" className="text-lime-300 hover:underline">Liposuction Loan</Link>
+          <Link href="/gynecomastia-loan" className="text-lime-300 hover:underline">Gynecomastia Loan</Link>
+          <Link href="/cataract-loan" className="text-lime-300 hover:underline">Cataract Surgery Loan</Link>
+        </div>
+      </section>
+
       {/* FOR CLINICS */}
 
       <section
