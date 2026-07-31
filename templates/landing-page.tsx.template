@@ -7,30 +7,28 @@ import Eligibility from "@/components/landing/Eligibility";
 import FAQ from "@/components/landing/FAQ";
 
 export const metadata: Metadata = {
-  title: "Medical Loan in India | Instant Healthcare Financing | Trustiva Setu",
-  description:
-    "Apply for medical loans in India for surgeries, IVF, dental treatment, hair transplant and other healthcare expenses with Trustiva Setu.",
+  title: "__TITLE__",
+  description: "__DESCRIPTION__",
   alternates: {
-    canonical: "https://www.trustivasetu.com/medical-loan",
+    canonical: "__CANONICAL__",
   },
   openGraph: {
-    title: "Medical Loan in India | Trustiva Setu",
-    description:
-      "Instant healthcare financing for planned medical treatments across India.",
-    url: "https://www.trustivasetu.com/medical-loan",
+    title: "__OG_TITLE__",
+    description: "__OG_DESCRIPTION__",
+    url: "__CANONICAL__",
     type: "website",
   },
 };
 
-export default function MedicalLoanPage() {
+export default function __FUNCTION_NAME__() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white">
-            <Hero page="medical" />
-      <Treatments page="medical" />
+      <Hero page="__KEY__" />
+      <Treatments page="__KEY__" />
       <WhyTrustiva />
       <HowItWorks />
       <Eligibility />
-      <FAQ page="medical" />
+      <FAQ page="__KEY__" />
     </main>
   );
 }
