@@ -50,3 +50,6 @@ public/journey/
 # Large local files
 *.deb
 public/videos/*.mp4
+
+# Local backup files
+backup/
