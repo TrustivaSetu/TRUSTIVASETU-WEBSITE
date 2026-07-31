@@ -3,101 +3,151 @@
 from pathlib import Path
 import argparse
 import json
+import shutil
+import subprocess
 import sys
 
-parser = argparse.ArgumentParser(
-    description="Trustiva Landing Page Generator V3"
-)
+parser = argparse.ArgumentParser(description="Trustiva Landing Generator")
 
-parser.add_argument(
-    "page_key",
-    help="Landing page key (example: medical, hair-transplant)"
-)
-
-parser.add_argument(
-    "--apply",
-    action="store_true",
-    help="Write generated page into app/"
-)
+parser.add_argument("page_key")
+parser.add_argument("--apply", action="store_true")
+parser.add_argument("--force", action="store_true")
+parser.add_argument("--build", action="store_true")
 
 args = parser.parse_args()
 
-page_key = args.page_key
-apply_mode = args.apply
-
-REQUIRED_FIELDS = ["slug", "key", "metadata", "landing"]
-REQUIRED_METADATA = ["title", "description", "ogTitle", "ogDescription"]
-REQUIRED_LANDING = [
-    "title",
-    "description",
-    "heroTitle",
-    "heroSubtitle",
-    "treatments",
-    "faqs",
-]
-
-json_file = Path(f"data/landing-content/{page_key}.json")
+json_file = Path(f"data/landing-content/{args.page_key}.json")
 template_file = Path("templates/landing-page.tsx.template")
-preview_dir = Path("generated")
 
 if not json_file.exists():
-    sys.exit(f"❌ JSON not found: {json_file}")
+    sys.exit(f"❌ Missing JSON: {json_file}")
 
 if not template_file.exists():
-    sys.exit(f"❌ Template not found: {template_file}")
+    sys.exit(f"❌ Missing template: {template_file}")
 
 data = json.loads(json_file.read_text())
 
-for field in REQUIRED_FIELDS:
-    if field not in data:
-        sys.exit(f"❌ Missing field: {field}")
+required = [
+    "slug",
+    "key",
+    "metadata",
+    "landing",
+]
 
-for field in REQUIRED_METADATA:
-    if field not in data["metadata"]:
-        sys.exit(f"❌ Missing metadata.{field}")
-
-for field in REQUIRED_LANDING:
-    if field not in data["landing"]:
-        sys.exit(f"❌ Missing landing.{field}")
+for item in required:
+    if item not in data:
+        sys.exit(f"❌ Missing {item}")
 
 target_dir = Path("app") / data["slug"]
 target_file = target_dir / "page.tsx"
 
+preview_dir = Path("generated")
+preview_dir.mkdir(exist_ok=True)
+
+preview_file = preview_dir / f'{data["slug"]}-page.tsx'
+
 template = template_file.read_text()
 
 function_name = "".join(
-    w.capitalize()
-    for w in page_key.replace("-", " ").split()
+    x.capitalize()
+    for x in data["key"].replace("-", " ").split()
 ) + "Page"
 
-replacements = {
+replace = {
     "__TITLE__": data["metadata"]["title"],
     "__DESCRIPTION__": data["metadata"]["description"],
-    "__CANONICAL__": f"https://trustivasetu.com/{data['slug']}",
+    "__CANONICAL__": f'https://trustivasetu.com/{data["slug"]}',
     "__OG_TITLE__": data["metadata"]["ogTitle"],
     "__OG_DESCRIPTION__": data["metadata"]["ogDescription"],
     "__FUNCTION_NAME__": function_name,
     "__KEY__": data["key"],
 }
 
-for old, new in replacements.items():
+for old, new in replace.items():
     template = template.replace(old, new)
 
-preview_dir.mkdir(exist_ok=True)
-
-preview_file = preview_dir / f"{data['slug']}-page.tsx"
 preview_file.write_text(template)
 
 print(f"✅ Preview : {preview_file}")
 
-if apply_mode:
+if not args.apply:
+    print("ℹ️ Preview only")
+    sys.exit(0)
 
-    if target_file.exists():
+backup = None
+
+if target_file.exists():
+
+    if not args.force:
         sys.exit(f"❌ Target already exists: {target_file}")
 
-    target_dir.mkdir(parents=True, exist_ok=True)
-    target_file.write_text(template)
+    backup = target_file.read_text()
 
-    print(f"✅ Written : {target_file}")
-else:
-    print("ℹ️ Preview only (use --apply to create app page)")
+target_dir.mkdir(parents=True, exist_ok=True)
+target_file.write_text(template)
+
+print(f"✅ Written : {target_file}")
+
+if args.build:
+
+    print("\n🚀 Running landing-data generator...\n")
+
+    result = subprocess.run(
+        ["python3", "scripts/generate-landing-data.py"],
+        capture_output=True,
+        text=True,
+    )
+
+    print(result.stdout)
+
+    if result.returncode != 0:
+
+        if backup is not None:
+            target_file.write_text(backup)
+        else:
+            try:
+                target_file.unlink()
+            except FileNotFoundError:
+                pass
+
+        sys.exit("❌ landing-data generation failed")
+
+    generated = Path("generated/landing-data.generated.ts")
+
+    if not generated.exists():
+
+        if backup is not None:
+            target_file.write_text(backup)
+        else:
+            try:
+                target_file.unlink()
+            except FileNotFoundError:
+                pass
+
+        sys.exit("❌ generated landing-data file missing")
+
+    shutil.copy2(generated, "lib/landing-data.ts")
+
+    print("✅ Updated lib/landing-data.ts")
+
+    print("\n🚀 Running npm run build...\n")
+
+    build = subprocess.run(["npm", "run", "build"])
+
+    if build.returncode != 0:
+
+        print("\n❌ Build failed")
+
+        if backup is not None:
+            target_file.write_text(backup)
+            print("↩ Restored previous page")
+        else:
+            try:
+                target_file.unlink()
+                print("↩ Removed generated page")
+            except FileNotFoundError:
+                pass
+
+        sys.exit(build.returncode)
+
+    print("\n🎉 Build successful")
