@@ -9,6 +9,7 @@ import RelatedTreatments from "@/components/landing/RelatedTreatments";
 import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
 export const metadata: Metadata = {
   title: "Hair Transplant Loan in India | Easy EMI | Trustiva Setu",
@@ -30,6 +31,7 @@ export default function HairTransplantPage() {
       <FaqSchema page="hair-transplant" />
       <BreadcrumbSchema title="Hair Transplant Loan in India | Easy EMI | Trustiva Setu" slug="hair-transplant-loan" />
       <OrganizationSchema />
+      <WebSiteSchema />
       <Hero page="hair-transplant" />
       <Treatments page="hair-transplant" />
       <WhyTrustiva />

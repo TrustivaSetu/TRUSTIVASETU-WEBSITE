@@ -9,6 +9,7 @@ import RelatedTreatments from "@/components/landing/RelatedTreatments";
 import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
 export const metadata: Metadata = {
   title: "__TITLE__",
@@ -30,6 +31,7 @@ export default function __FUNCTION_NAME__() {
       <FaqSchema page="__KEY__" />
       <BreadcrumbSchema title="__TITLE__" slug="__SLUG__" />
       <OrganizationSchema />
+      <WebSiteSchema />
       <Hero page="__KEY__" />
       <Treatments page="__KEY__" />
       <WhyTrustiva />

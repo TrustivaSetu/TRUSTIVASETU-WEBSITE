@@ -9,6 +9,7 @@ import RelatedTreatments from "@/components/landing/RelatedTreatments";
 import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
 export const metadata: Metadata = {
   title: "Spine Surgery in India | Healthcare Financing | Trustiva Setu",
@@ -30,6 +31,7 @@ export default function SpineSurgeryPage() {
       <FaqSchema page="spine-surgery" />
       <BreadcrumbSchema title="Spine Surgery in India | Healthcare Financing | Trustiva Setu" slug="spine-surgery-loan" />
       <OrganizationSchema />
+      <WebSiteSchema />
       <Hero page="spine-surgery" />
       <Treatments page="spine-surgery" />
       <WhyTrustiva />

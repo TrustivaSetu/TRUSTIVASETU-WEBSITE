@@ -9,6 +9,7 @@ import RelatedTreatments from "@/components/landing/RelatedTreatments";
 import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
 export const metadata: Metadata = {
   title: "Egg Freezing in India | Healthcare Financing | Trustiva Setu",
@@ -30,6 +31,7 @@ export default function EggFreezingPage() {
       <FaqSchema page="egg-freezing" />
       <BreadcrumbSchema title="Egg Freezing in India | Healthcare Financing | Trustiva Setu" slug="egg-freezing-loan" />
       <OrganizationSchema />
+      <WebSiteSchema />
       <Hero page="egg-freezing" />
       <Treatments page="egg-freezing" />
       <WhyTrustiva />

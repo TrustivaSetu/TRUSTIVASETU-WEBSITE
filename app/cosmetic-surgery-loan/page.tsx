@@ -9,6 +9,7 @@ import RelatedTreatments from "@/components/landing/RelatedTreatments";
 import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
 export const metadata: Metadata = {
   title: "Cosmetic Surgery Loan in India | Aesthetic Procedure Financing | Trustiva Setu",
@@ -30,6 +31,7 @@ export default function CosmeticSurgeryPage() {
       <FaqSchema page="cosmetic-surgery" />
       <BreadcrumbSchema title="Cosmetic Surgery Loan in India | Aesthetic Procedure Financing | Trustiva Setu" slug="cosmetic-surgery-loan" />
       <OrganizationSchema />
+      <WebSiteSchema />
       <Hero page="cosmetic-surgery" />
       <Treatments page="cosmetic-surgery" />
       <WhyTrustiva />

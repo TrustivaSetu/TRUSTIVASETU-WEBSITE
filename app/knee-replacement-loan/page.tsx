@@ -9,6 +9,7 @@ import RelatedTreatments from "@/components/landing/RelatedTreatments";
 import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
 export const metadata: Metadata = {
   title: "Knee Replacement Surgery in India | Healthcare Financing | Trustiva Setu",
@@ -30,6 +31,7 @@ export default function KneeReplacementPage() {
       <FaqSchema page="knee-replacement" />
       <BreadcrumbSchema title="Knee Replacement Surgery in India | Healthcare Financing | Trustiva Setu" slug="knee-replacement-loan" />
       <OrganizationSchema />
+      <WebSiteSchema />
       <Hero page="knee-replacement" />
       <Treatments page="knee-replacement" />
       <WhyTrustiva />
