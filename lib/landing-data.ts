@@ -140,6 +140,48 @@ export const landingData = {
         }
     ]
 },
+  "dental-implant": {
+    "title": "Dental Implant",
+    "description": "Healthcare financing for dental implant through trusted lending partners.",
+    "heroTitle": "Finance Your Dental Implant",
+    "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
+    "treatments": [
+        {
+            "title": "Treatment Option 1",
+            "description": "Replace with actual treatment."
+        },
+        {
+            "title": "Treatment Option 2",
+            "description": "Replace with actual treatment."
+        },
+        {
+            "title": "Treatment Option 3",
+            "description": "Replace with actual treatment."
+        },
+        {
+            "title": "Treatment Option 4",
+            "description": "Replace with actual treatment."
+        }
+    ],
+    "faqs": [
+        {
+            "question": "Who can apply?",
+            "answer": "Eligibility depends on the lending partner's credit assessment."
+        },
+        {
+            "question": "What documents are required?",
+            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+        },
+        {
+            "question": "How much loan can I get?",
+            "answer": "Loan amount depends on treatment cost and lender eligibility."
+        },
+        {
+            "question": "How long does approval take?",
+            "answer": "Approval timelines depend on document verification and lender processes."
+        }
+    ]
+},
   "dental": {
     "title": "Dental Loan in India",
     "description": "Affordable dental treatment financing for implants, braces, aligners and smile makeover procedures.",
