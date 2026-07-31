@@ -16,6 +16,7 @@ import {
 import TeamPhoto from "@/components/ui/TeamPhoto";
 import { trackEvent } from "@/lib/analytics";
 import TrackedLink from "@/components/analytics/TrackedLink";
+import { landingData } from "@/lib/landing-data";
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
 const VideoTour = dynamic(
   () => import("@/components/ui/VideoTour"),
@@ -2660,6 +2661,39 @@ distribution expansion and national healthcare financing infrastructure deployme
 
   </div>
 
+</section>
+
+<section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+  <div className="text-center mb-12">
+    <h2 className="text-4xl font-bold">
+      Explore Healthcare Financing
+    </h2>
+    <p className="mt-4 text-gray-400 max-w-3xl mx-auto">
+      Explore financing options for a wide range of planned medical treatments across India.
+    </p>
+  </div>
+
+  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {Object.entries(landingData).map(([slug, item]) => (
+      <Link
+        key={slug}
+        href={`/${slug}`}
+        className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-lime-300 hover:bg-white/10"
+      >
+        <h3 className="text-xl font-semibold">
+          {item.title}
+        </h3>
+
+        <p className="mt-3 text-sm text-gray-400 line-clamp-3">
+          {item.description}
+        </p>
+
+        <span className="mt-5 inline-flex items-center text-lime-300 font-medium">
+          Learn More →
+        </span>
+      </Link>
+    ))}
+  </div>
 </section>
 
       {/* FOOTER */}
