@@ -1,0 +1,56 @@
+{
+  "slug": "plastic-surgery-loan",
+  "key": "plastic-surgery",
+
+  "metadata": {
+    "title": "Plastic Surgery Loan in India | Healthcare Financing | Trustiva Setu",
+    "description": "Apply for a plastic surgery loan through Trustiva Setu's lending partners. Flexible healthcare financing for eligible reconstructive and plastic surgery procedures.",
+    "ogTitle": "Plastic Surgery Loan | Trustiva Setu",
+    "ogDescription": "Finance eligible plastic surgery procedures with trusted lending partners."
+  },
+
+  "landing": {
+    "title": "Plastic Surgery Loan",
+    "description": "Healthcare financing for eligible plastic surgery procedures.",
+    "heroTitle": "Finance Your Plastic Surgery",
+    "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
+
+    "treatments": [
+      {
+        "title": "Reconstructive Surgery",
+        "description": "Finance eligible reconstructive plastic surgery procedures."
+      },
+      {
+        "title": "Scar Revision",
+        "description": "Healthcare financing for scar correction procedures."
+      },
+      {
+        "title": "Skin Grafting",
+        "description": "Funding support for eligible grafting procedures."
+      },
+      {
+        "title": "Facial Reconstruction",
+        "description": "Finance eligible facial reconstruction surgeries."
+      }
+    ],
+
+    "faqs": [
+      {
+        "question": "Can I get financing for plastic surgery?",
+        "answer": "Eligible applicants may apply through our lending partners. Approval depends on the lender's credit assessment."
+      },
+      {
+        "question": "Who can apply?",
+        "answer": "Eligibility depends on the lending partner's policies, KYC verification and credit assessment."
+      },
+      {
+        "question": "Which documents are required?",
+        "answer": "PAN, Aadhaar, KYC documents, income proof and any additional documents requested by the lending partner."
+      },
+      {
+        "question": "How long does approval take?",
+        "answer": "Approval timelines depend on document verification and the lending partner's internal assessment."
+      }
+    ]
+  }
+}
