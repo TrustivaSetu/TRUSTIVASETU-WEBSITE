@@ -10,6 +10,7 @@ import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
 
 export const metadata: Metadata = {
   title: "IVF Loan in India | Fertility Treatment Financing | Trustiva Setu",
@@ -32,6 +33,7 @@ export default function IvfPage() {
       <BreadcrumbSchema title="IVF Loan in India | Fertility Treatment Financing | Trustiva Setu" slug="ivf-loan" />
       <OrganizationSchema />
       <WebSiteSchema />
+      <FinancialServiceSchema />
       <Hero page="ivf" />
       <Treatments page="ivf" />
       <WhyTrustiva />
