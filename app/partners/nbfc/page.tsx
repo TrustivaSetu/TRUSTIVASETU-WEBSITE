@@ -2,9 +2,25 @@ import type { Metadata } from "next";
 import VideoPlayer from "@/components/ui/VideoPlayer";
 
 export const metadata: Metadata = {
-  title: "For NBFC Partners — Trustiva Setu",
+  title: "For NBFC Partners | Trustiva Setu",
   description:
-    "Trustiva Setu's NBFC partnership deck and LMS workflow overview — multi-lender routing infrastructure for healthcare financing.",
+    "Multi-lender routing infrastructure for healthcare financing.",
+  alternates: {
+    canonical: "https://www.trustivasetu.com/partners/nbfc",
+  },
+  openGraph: {
+    title: "For NBFC Partners | Trustiva Setu",
+    description:
+      "Healthcare lending infrastructure.",
+    url: "https://www.trustivasetu.com/partners/nbfc",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "For NBFC Partners | Trustiva Setu",
+    description:
+      "Healthcare lending infrastructure.",
+  },
 };
 
 export default function NbfcPartnersPage() {

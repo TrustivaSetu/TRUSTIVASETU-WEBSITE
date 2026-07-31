@@ -2,9 +2,25 @@ import type { Metadata } from "next";
 import VideoPlayer from "@/components/ui/VideoPlayer";
 
 export const metadata: Metadata = {
-  title: "For Investors — Trustiva Setu",
+  title: "For Investors | Trustiva Setu",
   description:
     "Trustiva Setu's investor pitch deck and overview video — healthcare financing infrastructure for India.",
+  alternates: {
+    canonical: "https://www.trustivasetu.com/investors",
+  },
+  openGraph: {
+    title: "For Investors | Trustiva Setu",
+    description:
+      "Healthcare financing infrastructure for India.",
+    url: "https://www.trustivasetu.com/investors",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "For Investors | Trustiva Setu",
+    description:
+      "Healthcare financing infrastructure for India.",
+  },
 };
 
 export default function InvestorsPage() {

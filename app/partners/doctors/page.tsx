@@ -2,9 +2,25 @@ import type { Metadata } from "next";
 import VideoPlayer from "@/components/ui/VideoPlayer";
 
 export const metadata: Metadata = {
-  title: "For Clinics & Doctors — Trustiva Setu",
+  title: "For Clinics & Doctors | Trustiva Setu",
   description:
-    "Trustiva Setu's clinic tie-up overview — instant patient financing, easy EMI approvals, and the full onboarding-to-disbursal journey.",
+    "Trustiva Setu's clinic tie-up overview — instant patient financing, easy EMI approvals and onboarding.",
+  alternates: {
+    canonical: "https://www.trustivasetu.com/partners/doctors",
+  },
+  openGraph: {
+    title: "For Clinics & Doctors | Trustiva Setu",
+    description:
+      "Instant patient financing platform.",
+    url: "https://www.trustivasetu.com/partners/doctors",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "For Clinics & Doctors | Trustiva Setu",
+    description:
+      "Instant patient financing platform.",
+  },
 };
 
 export default function DoctorsPage() {

@@ -78,9 +78,7 @@ export default function VideoPlayer({ src, poster, autoPlay = false, className =
     if (!v) return;
     if (v.paused) {
       v.play().then(() => {
-      console.log("VIDEO PLAY OK:", src);
     }).catch((err) => {
-      console.error("VIDEO PLAY FAILED:", src, err);
     });
     } else {
       v.pause();
