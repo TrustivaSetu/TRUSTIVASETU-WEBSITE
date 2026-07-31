@@ -56,6 +56,48 @@ export const landingData = {
         }
     ]
 },
+  "cosmetic-surgery": {
+    "title": "Cosmetic Surgery Loan",
+    "description": "Healthcare financing for cosmetic and aesthetic procedures through trusted lending partners.",
+    "heroTitle": "Finance Your Cosmetic Surgery",
+    "heroSubtitle": "Flexible healthcare financing options for eligible cosmetic and aesthetic treatments.",
+    "treatments": [
+        {
+            "title": "Rhinoplasty",
+            "description": "Finance nose reshaping surgery with flexible repayment options."
+        },
+        {
+            "title": "Liposuction",
+            "description": "Healthcare financing for body contouring procedures."
+        },
+        {
+            "title": "Gynecomastia Surgery",
+            "description": "Funding support for male chest reduction surgery."
+        },
+        {
+            "title": "Facial Cosmetic Procedures",
+            "description": "Finance eligible facial aesthetic procedures."
+        }
+    ],
+    "faqs": [
+        {
+            "question": "Can I get a loan for cosmetic surgery?",
+            "answer": "Eligible applicants may apply for healthcare financing through our lending partners. Approval depends on the lender's credit assessment."
+        },
+        {
+            "question": "Which cosmetic procedures can be financed?",
+            "answer": "Available financing depends on the treatment, clinic and lending partner's policies."
+        },
+        {
+            "question": "What documents are required?",
+            "answer": "PAN, Aadhaar, KYC documents, income proof and any additional documents requested by the lending partner."
+        },
+        {
+            "question": "How long does approval take?",
+            "answer": "Approval timelines depend on document verification and the lending partner's internal assessment process."
+        }
+    ]
+},
   "dental": {
     "title": "Dental Loan in India",
     "description": "Affordable dental treatment financing for implants, braces, aligners and smile makeover procedures.",
