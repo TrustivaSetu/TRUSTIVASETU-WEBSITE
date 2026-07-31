@@ -21,38 +21,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Gastric Sleeve",
+            "description": "Finance sleeve gastrectomy."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Gastric Bypass",
+            "description": "Funding for gastric bypass surgery."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Mini Gastric Bypass",
+            "description": "Finance minimally invasive bariatric surgery."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Revision Bariatric Surgery",
+            "description": "Funding support for revision procedures."
         }
     ],
     "faqs": [
         {
-            "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "question": "Can bariatric surgery be financed?",
+            "answer": "Eligible applicants may apply through lending partners."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "question": "What procedures are covered?",
+            "answer": "Coverage depends on clinic and lender policies."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
+            "question": "Documents required?",
+            "answer": "Standard KYC and income proof."
         },
         {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "Approval time?",
+            "answer": "Depends on lender verification."
         }
     ]
 },
@@ -147,38 +147,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Single Dental Implant",
+            "description": "Finance single tooth implant procedures."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Multiple Dental Implants",
+            "description": "Funding for multiple implant restorations."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Full Mouth Implants",
+            "description": "Finance complete full-mouth rehabilitation."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Implant Supported Dentures",
+            "description": "Support for implant-retained dentures."
         }
     ],
     "faqs": [
         {
-            "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "question": "Can I finance dental implants?",
+            "answer": "Eligible applicants may apply through participating lending partners subject to credit assessment."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
-        },
-        {
-            "question": "How much loan can I get?",
+            "question": "Does financing cover full-mouth implants?",
             "answer": "Loan amount depends on treatment cost and lender eligibility."
         },
         {
+            "question": "Which documents are required?",
+            "answer": "PAN, Aadhaar, KYC and income proof may be required."
+        },
+        {
             "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "answer": "Approval depends on lender verification and internal assessment."
         }
     ]
 },
@@ -247,38 +247,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Egg Freezing Cycle",
+            "description": "Finance complete egg freezing."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Hormonal Stimulation",
+            "description": "Funding for ovarian stimulation."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Egg Retrieval",
+            "description": "Finance egg retrieval procedures."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Cryopreservation",
+            "description": "Funding for egg storage."
         }
     ],
     "faqs": [
         {
-            "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "question": "Can egg freezing be financed?",
+            "answer": "Eligible applicants may apply through participating lenders."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "question": "Does financing include storage?",
+            "answer": "Coverage depends on treatment package and lender."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
+            "question": "Required documents?",
+            "answer": "Standard KYC and income proof."
         },
         {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "Approval time?",
+            "answer": "Varies by lender."
         }
     ]
 },
@@ -289,38 +289,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Egg Preservation",
+            "description": "Finance egg preservation."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Embryo Preservation",
+            "description": "Funding for embryo freezing."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Sperm Preservation",
+            "description": "Finance sperm banking."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Oncofertility",
+            "description": "Support for fertility preservation before cancer treatment."
         }
     ],
     "faqs": [
         {
-            "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "question": "Can fertility preservation be financed?",
+            "answer": "Eligible applicants may apply subject to lender approval."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "question": "Who is eligible?",
+            "answer": "Eligibility depends on lender assessment."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
+            "question": "Documents required?",
+            "answer": "PAN, Aadhaar and income proof."
         },
         {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "Approval timeline?",
+            "answer": "Depends on lender verification."
         }
     ]
 },
@@ -331,38 +331,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Gynecomastia Surgery",
+            "description": "Finance male chest reduction surgery."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Liposuction",
+            "description": "Funding for liposuction where required."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Gland Excision",
+            "description": "Finance gland removal procedures."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Revision Surgery",
+            "description": "Funding for revision surgery."
         }
     ],
     "faqs": [
         {
+            "question": "Can gynecomastia surgery be financed?",
+            "answer": "Eligible applicants may apply through lending partners."
+        },
+        {
             "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "answer": "Subject to lender eligibility."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "question": "Required documents?",
+            "answer": "Standard KYC and income proof."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
-        },
-        {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "Approval time?",
+            "answer": "Depends on lender verification."
         }
     ]
 },
@@ -399,38 +399,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Total Hip Replacement",
+            "description": "Finance complete hip replacement surgery."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Partial Hip Replacement",
+            "description": "Funding for partial replacement procedures."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Revision Hip Surgery",
+            "description": "Support for revision procedures."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Robotic Hip Replacement",
+            "description": "Finance robotic-assisted hip surgery."
         }
     ],
     "faqs": [
         {
-            "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "question": "Can I get a hip replacement loan?",
+            "answer": "Eligible applicants can apply through lending partners."
+        },
+        {
+            "question": "How much financing is available?",
+            "answer": "Loan amount depends on treatment cost and eligibility."
         },
         {
             "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "answer": "Standard KYC and income proof."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
-        },
-        {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "How long is approval?",
+            "answer": "Approval depends on lender verification."
         }
     ]
 },
@@ -441,38 +441,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Clear Aligners",
+            "description": "Finance clear aligner treatment."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Teen Aligners",
+            "description": "Funding for adolescent aligners."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Adult Orthodontics",
+            "description": "Finance adult aligner treatment."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Retainers",
+            "description": "Funding for post-treatment retainers."
         }
     ],
     "faqs": [
         {
-            "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "question": "Can invisible braces be financed?",
+            "answer": "Eligible applicants may apply through lending partners."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "question": "Which aligners are covered?",
+            "answer": "Coverage depends on clinic and lender."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
+            "question": "Documents required?",
+            "answer": "Standard KYC and income proof."
         },
         {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "Approval timeline?",
+            "answer": "Depends on lender verification."
         }
     ]
 },
@@ -541,38 +541,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Total Knee Replacement",
+            "description": "Finance complete knee replacement surgery."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Partial Knee Replacement",
+            "description": "Funding for partial knee replacement procedures."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Revision Knee Replacement",
+            "description": "Finance revision surgery where applicable."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Robotic Knee Surgery",
+            "description": "Funding support for robotic-assisted procedures."
         }
     ],
     "faqs": [
         {
-            "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "question": "Can I finance knee replacement surgery?",
+            "answer": "Eligible applicants may apply through lending partners."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "question": "Who is eligible?",
+            "answer": "Eligibility depends on lender credit assessment."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
+            "question": "Which documents are needed?",
+            "answer": "PAN, Aadhaar, KYC and income proof."
         },
         {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "How quickly is approval given?",
+            "answer": "Approval timelines vary by lender."
         }
     ]
 },
@@ -625,38 +625,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Abdominal Liposuction",
+            "description": "Finance abdominal body contouring."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Thigh Liposuction",
+            "description": "Funding for thigh contouring."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Arm Liposuction",
+            "description": "Finance arm liposuction."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "360 Liposuction",
+            "description": "Funding for comprehensive body contouring."
         }
     ],
     "faqs": [
         {
-            "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "question": "Can liposuction be financed?",
+            "answer": "Eligible applicants may apply through participating lenders."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "question": "Is cosmetic treatment eligible?",
+            "answer": "Eligibility depends on lender policy."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
+            "question": "Documents required?",
+            "answer": "Standard KYC and income proof."
         },
         {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "Approval timeline?",
+            "answer": "Depends on lender assessment."
         }
     ]
 },
@@ -767,38 +767,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Cosmetic Rhinoplasty",
+            "description": "Finance cosmetic nose reshaping."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Functional Rhinoplasty",
+            "description": "Funding for breathing correction surgery."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Revision Rhinoplasty",
+            "description": "Finance revision surgery."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Septorhinoplasty",
+            "description": "Funding for combined procedures."
         }
     ],
     "faqs": [
         {
-            "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "question": "Can rhinoplasty be financed?",
+            "answer": "Eligible applicants may apply through lending partners."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "question": "Who is eligible?",
+            "answer": "Subject to lender assessment."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
+            "question": "Required documents?",
+            "answer": "Standard KYC and income proof."
         },
         {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "Approval time?",
+            "answer": "Depends on lender verification."
         }
     ]
 },
@@ -809,38 +809,38 @@ export const landingData = {
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
         {
-            "title": "Treatment Option 1",
-            "description": "Replace with actual treatment."
+            "title": "Slip Disc Surgery",
+            "description": "Finance spine procedures."
         },
         {
-            "title": "Treatment Option 2",
-            "description": "Replace with actual treatment."
+            "title": "Spinal Fusion",
+            "description": "Funding for spinal fusion surgery."
         },
         {
-            "title": "Treatment Option 3",
-            "description": "Replace with actual treatment."
+            "title": "Endoscopic Spine Surgery",
+            "description": "Finance minimally invasive spine procedures."
         },
         {
-            "title": "Treatment Option 4",
-            "description": "Replace with actual treatment."
+            "title": "Decompression Surgery",
+            "description": "Funding for decompression treatment."
         }
     ],
     "faqs": [
         {
+            "question": "Can spine surgery be financed?",
+            "answer": "Eligible applicants can apply through participating lenders."
+        },
+        {
             "question": "Who can apply?",
-            "answer": "Eligibility depends on the lending partner's credit assessment."
+            "answer": "Eligibility depends on lender assessment."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+            "question": "Documents required?",
+            "answer": "PAN, Aadhaar and income proof."
         },
         {
-            "question": "How much loan can I get?",
-            "answer": "Loan amount depends on treatment cost and lender eligibility."
-        },
-        {
-            "question": "How long does approval take?",
-            "answer": "Approval timelines depend on document verification and lender processes."
+            "question": "Approval timeline?",
+            "answer": "Depends on lender verification."
         }
     ]
 },

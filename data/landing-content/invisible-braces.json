@@ -14,38 +14,38 @@
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
       {
-        "title": "Treatment Option 1",
-        "description": "Replace with actual treatment."
+        "title": "Clear Aligners",
+        "description": "Finance clear aligner treatment."
       },
       {
-        "title": "Treatment Option 2",
-        "description": "Replace with actual treatment."
+        "title": "Teen Aligners",
+        "description": "Funding for adolescent aligners."
       },
       {
-        "title": "Treatment Option 3",
-        "description": "Replace with actual treatment."
+        "title": "Adult Orthodontics",
+        "description": "Finance adult aligner treatment."
       },
       {
-        "title": "Treatment Option 4",
-        "description": "Replace with actual treatment."
+        "title": "Retainers",
+        "description": "Funding for post-treatment retainers."
       }
     ],
     "faqs": [
       {
-        "question": "Who can apply?",
-        "answer": "Eligibility depends on the lending partner's credit assessment."
+        "question": "Can invisible braces be financed?",
+        "answer": "Eligible applicants may apply through lending partners."
       },
       {
-        "question": "What documents are required?",
-        "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+        "question": "Which aligners are covered?",
+        "answer": "Coverage depends on clinic and lender."
       },
       {
-        "question": "How much loan can I get?",
-        "answer": "Loan amount depends on treatment cost and lender eligibility."
+        "question": "Documents required?",
+        "answer": "Standard KYC and income proof."
       },
       {
-        "question": "How long does approval take?",
-        "answer": "Approval timelines depend on document verification and lender processes."
+        "question": "Approval timeline?",
+        "answer": "Depends on lender verification."
       }
     ]
   }

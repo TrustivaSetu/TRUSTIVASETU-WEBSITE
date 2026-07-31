@@ -5,6 +5,10 @@ import WhyTrustiva from "@/components/landing/WhyTrustiva";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Eligibility from "@/components/landing/Eligibility";
 import FAQ from "@/components/landing/FAQ";
+import RelatedTreatments from "@/components/landing/RelatedTreatments";
+import FaqSchema from "@/components/seo/FaqSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import OrganizationSchema from "@/components/seo/OrganizationSchema";
 
 export const metadata: Metadata = {
   title: "LASIK Eye Surgery Loan in India | LASIK EMI & Healthcare Financing | Trustiva Setu",
@@ -23,11 +27,15 @@ export const metadata: Metadata = {
 export default function LasikPage() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white">
+      <FaqSchema page="lasik" />
+      <BreadcrumbSchema title="LASIK Eye Surgery Loan in India | LASIK EMI & Healthcare Financing | Trustiva Setu" slug="lasik-loan" />
+      <OrganizationSchema />
       <Hero page="lasik" />
       <Treatments page="lasik" />
       <WhyTrustiva />
       <HowItWorks />
       <Eligibility />
+      <RelatedTreatments page="lasik" />
       <FAQ page="lasik" />
     </main>
   );

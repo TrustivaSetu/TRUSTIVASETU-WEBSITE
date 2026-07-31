@@ -5,6 +5,10 @@ import WhyTrustiva from "@/components/landing/WhyTrustiva";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Eligibility from "@/components/landing/Eligibility";
 import FAQ from "@/components/landing/FAQ";
+import RelatedTreatments from "@/components/landing/RelatedTreatments";
+import FaqSchema from "@/components/seo/FaqSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import OrganizationSchema from "@/components/seo/OrganizationSchema";
 
 export const metadata: Metadata = {
   title: "Hair Transplant Loan in India | Easy EMI | Trustiva Setu",
@@ -23,11 +27,15 @@ export const metadata: Metadata = {
 export default function HairTransplantPage() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white">
+      <FaqSchema page="hair-transplant" />
+      <BreadcrumbSchema title="Hair Transplant Loan in India | Easy EMI | Trustiva Setu" slug="hair-transplant-loan" />
+      <OrganizationSchema />
       <Hero page="hair-transplant" />
       <Treatments page="hair-transplant" />
       <WhyTrustiva />
       <HowItWorks />
       <Eligibility />
+      <RelatedTreatments page="hair-transplant" />
       <FAQ page="hair-transplant" />
     </main>
   );

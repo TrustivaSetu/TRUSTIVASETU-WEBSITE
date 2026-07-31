@@ -5,6 +5,10 @@ import WhyTrustiva from "@/components/landing/WhyTrustiva";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Eligibility from "@/components/landing/Eligibility";
 import FAQ from "@/components/landing/FAQ";
+import RelatedTreatments from "@/components/landing/RelatedTreatments";
+import FaqSchema from "@/components/seo/FaqSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import OrganizationSchema from "@/components/seo/OrganizationSchema";
 
 export const metadata: Metadata = {
   title: "Cosmetic Surgery Loan in India | Aesthetic Procedure Financing | Trustiva Setu",
@@ -23,11 +27,15 @@ export const metadata: Metadata = {
 export default function CosmeticSurgeryPage() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white">
+      <FaqSchema page="cosmetic-surgery" />
+      <BreadcrumbSchema title="Cosmetic Surgery Loan in India | Aesthetic Procedure Financing | Trustiva Setu" slug="cosmetic-surgery-loan" />
+      <OrganizationSchema />
       <Hero page="cosmetic-surgery" />
       <Treatments page="cosmetic-surgery" />
       <WhyTrustiva />
       <HowItWorks />
       <Eligibility />
+      <RelatedTreatments page="cosmetic-surgery" />
       <FAQ page="cosmetic-surgery" />
     </main>
   );

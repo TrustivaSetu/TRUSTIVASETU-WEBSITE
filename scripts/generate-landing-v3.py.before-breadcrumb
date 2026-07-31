@@ -61,7 +61,6 @@ replace = {
     "__OG_DESCRIPTION__": data["metadata"]["ogDescription"],
     "__FUNCTION_NAME__": function_name,
     "__KEY__": data["key"],
-    "__SLUG__": data["slug"],
 }
 
 for old, new in replace.items():

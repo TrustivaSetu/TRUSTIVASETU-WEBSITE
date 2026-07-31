@@ -14,38 +14,38 @@
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
       {
-        "title": "Treatment Option 1",
-        "description": "Replace with actual treatment."
+        "title": "Single Dental Implant",
+        "description": "Finance single tooth implant procedures."
       },
       {
-        "title": "Treatment Option 2",
-        "description": "Replace with actual treatment."
+        "title": "Multiple Dental Implants",
+        "description": "Funding for multiple implant restorations."
       },
       {
-        "title": "Treatment Option 3",
-        "description": "Replace with actual treatment."
+        "title": "Full Mouth Implants",
+        "description": "Finance complete full-mouth rehabilitation."
       },
       {
-        "title": "Treatment Option 4",
-        "description": "Replace with actual treatment."
+        "title": "Implant Supported Dentures",
+        "description": "Support for implant-retained dentures."
       }
     ],
     "faqs": [
       {
-        "question": "Who can apply?",
-        "answer": "Eligibility depends on the lending partner's credit assessment."
+        "question": "Can I finance dental implants?",
+        "answer": "Eligible applicants may apply through participating lending partners subject to credit assessment."
       },
       {
-        "question": "What documents are required?",
-        "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
-      },
-      {
-        "question": "How much loan can I get?",
+        "question": "Does financing cover full-mouth implants?",
         "answer": "Loan amount depends on treatment cost and lender eligibility."
       },
       {
+        "question": "Which documents are required?",
+        "answer": "PAN, Aadhaar, KYC and income proof may be required."
+      },
+      {
         "question": "How long does approval take?",
-        "answer": "Approval timelines depend on document verification and lender processes."
+        "answer": "Approval depends on lender verification and internal assessment."
       }
     ]
   }

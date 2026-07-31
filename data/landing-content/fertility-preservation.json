@@ -14,38 +14,38 @@
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
       {
-        "title": "Treatment Option 1",
-        "description": "Replace with actual treatment."
+        "title": "Egg Preservation",
+        "description": "Finance egg preservation."
       },
       {
-        "title": "Treatment Option 2",
-        "description": "Replace with actual treatment."
+        "title": "Embryo Preservation",
+        "description": "Funding for embryo freezing."
       },
       {
-        "title": "Treatment Option 3",
-        "description": "Replace with actual treatment."
+        "title": "Sperm Preservation",
+        "description": "Finance sperm banking."
       },
       {
-        "title": "Treatment Option 4",
-        "description": "Replace with actual treatment."
+        "title": "Oncofertility",
+        "description": "Support for fertility preservation before cancer treatment."
       }
     ],
     "faqs": [
       {
-        "question": "Who can apply?",
-        "answer": "Eligibility depends on the lending partner's credit assessment."
+        "question": "Can fertility preservation be financed?",
+        "answer": "Eligible applicants may apply subject to lender approval."
       },
       {
-        "question": "What documents are required?",
-        "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+        "question": "Who is eligible?",
+        "answer": "Eligibility depends on lender assessment."
       },
       {
-        "question": "How much loan can I get?",
-        "answer": "Loan amount depends on treatment cost and lender eligibility."
+        "question": "Documents required?",
+        "answer": "PAN, Aadhaar and income proof."
       },
       {
-        "question": "How long does approval take?",
-        "answer": "Approval timelines depend on document verification and lender processes."
+        "question": "Approval timeline?",
+        "answer": "Depends on lender verification."
       }
     ]
   }
