@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Spine Surgery in India | Healthcare Financing | Trustiva Setu",
   description: "Apply for a spine surgery through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
   alternates: {
-    canonical: "https://trustivasetu.com/spine-surgery-loan",
+    canonical: "https://www.trustivasetu.com/spine-surgery-loan",
   },
   openGraph: {
     title: "Spine Surgery | Trustiva Setu",
     description: "Healthcare financing for spine surgery.",
-    url: "https://trustivasetu.com/spine-surgery-loan",
+    url: "https://www.trustivasetu.com/spine-surgery-loan",
     type: "website",
   },
 };

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Medical Loan in India | Instant Healthcare Financing | Trustiva Setu",
   description: "Apply for medical loans in India for surgeries, IVF, dental treatment, hair transplant and other healthcare expenses with Trustiva Setu.",
   alternates: {
-    canonical: "https://trustivasetu.com/medical-loan",
+    canonical: "https://www.trustivasetu.com/medical-loan",
   },
   openGraph: {
     title: "Medical Loan in India | Trustiva Setu",
     description: "Instant healthcare financing for planned medical treatments across India.",
-    url: "https://trustivasetu.com/medical-loan",
+    url: "https://www.trustivasetu.com/medical-loan",
     type: "website",
   },
 };

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Hair Transplant Loan in India | Easy EMI | Trustiva Setu",
   description: "Get a hair transplant loan with easy EMIs through Trustiva Setu. Fast approval, flexible repayment and trusted healthcare financing.",
   alternates: {
-    canonical: "https://trustivasetu.com/hair-transplant-loan",
+    canonical: "https://www.trustivasetu.com/hair-transplant-loan",
   },
   openGraph: {
     title: "Hair Transplant Loan | Trustiva Setu",
     description: "Finance your hair transplant with affordable monthly EMIs.",
-    url: "https://trustivasetu.com/hair-transplant-loan",
+    url: "https://www.trustivasetu.com/hair-transplant-loan",
     type: "website",
   },
 };

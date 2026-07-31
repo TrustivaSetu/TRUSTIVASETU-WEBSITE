@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "IVF Loan in India | Fertility Treatment Financing | Trustiva Setu",
   description: "Affordable IVF and fertility treatment financing across India.",
   alternates: {
-    canonical: "https://trustivasetu.com/ivf-loan",
+    canonical: "https://www.trustivasetu.com/ivf-loan",
   },
   openGraph: {
     title: "IVF Loan in India | Trustiva Setu",
     description: "Finance your fertility journey with trusted healthcare lenders.",
-    url: "https://trustivasetu.com/ivf-loan",
+    url: "https://www.trustivasetu.com/ivf-loan",
     type: "website",
   },
 };

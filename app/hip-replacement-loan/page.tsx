@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Hip Replacement Surgery in India | Healthcare Financing | Trustiva Setu",
   description: "Apply for a hip replacement surgery through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
   alternates: {
-    canonical: "https://trustivasetu.com/hip-replacement-loan",
+    canonical: "https://www.trustivasetu.com/hip-replacement-loan",
   },
   openGraph: {
     title: "Hip Replacement Surgery | Trustiva Setu",
     description: "Healthcare financing for hip replacement surgery.",
-    url: "https://trustivasetu.com/hip-replacement-loan",
+    url: "https://www.trustivasetu.com/hip-replacement-loan",
     type: "website",
   },
 };

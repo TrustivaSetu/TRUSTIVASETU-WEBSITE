@@ -56,7 +56,7 @@ function_name = "".join(
 replace = {
     "__TITLE__": data["metadata"]["title"],
     "__DESCRIPTION__": data["metadata"]["description"],
-    "__CANONICAL__": f'https://trustivasetu.com/{data["slug"]}',
+    "__CANONICAL__": f'https://www.trustivasetu.com/{data["slug"]}',
     "__OG_TITLE__": data["metadata"]["ogTitle"],
     "__OG_DESCRIPTION__": data["metadata"]["ogDescription"],
     "__FUNCTION_NAME__": function_name,

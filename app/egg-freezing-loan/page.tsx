@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Egg Freezing in India | Healthcare Financing | Trustiva Setu",
   description: "Apply for a egg freezing through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
   alternates: {
-    canonical: "https://trustivasetu.com/egg-freezing-loan",
+    canonical: "https://www.trustivasetu.com/egg-freezing-loan",
   },
   openGraph: {
     title: "Egg Freezing | Trustiva Setu",
     description: "Healthcare financing for egg freezing.",
-    url: "https://trustivasetu.com/egg-freezing-loan",
+    url: "https://www.trustivasetu.com/egg-freezing-loan",
     type: "website",
   },
 };

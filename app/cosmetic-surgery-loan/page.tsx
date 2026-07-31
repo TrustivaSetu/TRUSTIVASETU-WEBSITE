@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Cosmetic Surgery Loan in India | Aesthetic Procedure Financing | Trustiva Setu",
   description: "Apply for a cosmetic surgery loan through Trustiva Setu's lending partners. Finance aesthetic procedures with flexible EMI options, subject to lender approval.",
   alternates: {
-    canonical: "https://trustivasetu.com/cosmetic-surgery-loan",
+    canonical: "https://www.trustivasetu.com/cosmetic-surgery-loan",
   },
   openGraph: {
     title: "Cosmetic Surgery Loan | Trustiva Setu",
     description: "Healthcare financing for cosmetic and aesthetic procedures.",
-    url: "https://trustivasetu.com/cosmetic-surgery-loan",
+    url: "https://www.trustivasetu.com/cosmetic-surgery-loan",
     type: "website",
   },
 };

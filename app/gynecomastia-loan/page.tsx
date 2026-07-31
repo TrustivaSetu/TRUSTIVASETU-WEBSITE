@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Gynecomastia Surgery in India | Healthcare Financing | Trustiva Setu",
   description: "Apply for a gynecomastia surgery through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
   alternates: {
-    canonical: "https://trustivasetu.com/gynecomastia-loan",
+    canonical: "https://www.trustivasetu.com/gynecomastia-loan",
   },
   openGraph: {
     title: "Gynecomastia Surgery | Trustiva Setu",
     description: "Healthcare financing for gynecomastia surgery.",
-    url: "https://trustivasetu.com/gynecomastia-loan",
+    url: "https://www.trustivasetu.com/gynecomastia-loan",
     type: "website",
   },
 };

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Fertility Preservation in India | Healthcare Financing | Trustiva Setu",
   description: "Apply for a fertility preservation through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
   alternates: {
-    canonical: "https://trustivasetu.com/fertility-preservation-loan",
+    canonical: "https://www.trustivasetu.com/fertility-preservation-loan",
   },
   openGraph: {
     title: "Fertility Preservation | Trustiva Setu",
     description: "Healthcare financing for fertility preservation.",
-    url: "https://trustivasetu.com/fertility-preservation-loan",
+    url: "https://www.trustivasetu.com/fertility-preservation-loan",
     type: "website",
   },
 };

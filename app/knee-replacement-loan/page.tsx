@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Knee Replacement Surgery in India | Healthcare Financing | Trustiva Setu",
   description: "Apply for a knee replacement surgery through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
   alternates: {
-    canonical: "https://trustivasetu.com/knee-replacement-loan",
+    canonical: "https://www.trustivasetu.com/knee-replacement-loan",
   },
   openGraph: {
     title: "Knee Replacement Surgery | Trustiva Setu",
     description: "Healthcare financing for knee replacement surgery.",
-    url: "https://trustivasetu.com/knee-replacement-loan",
+    url: "https://www.trustivasetu.com/knee-replacement-loan",
     type: "website",
   },
 };

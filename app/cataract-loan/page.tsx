@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Cataract Surgery Loan in India | Healthcare Financing | Trustiva Setu",
   description: "Apply for a cataract surgery loan with flexible EMI options through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
   alternates: {
-    canonical: "https://trustivasetu.com/cataract-loan",
+    canonical: "https://www.trustivasetu.com/cataract-loan",
   },
   openGraph: {
     title: "Cataract Surgery Loan | Trustiva Setu",
     description: "Finance your cataract surgery with trusted healthcare lending partners.",
-    url: "https://trustivasetu.com/cataract-loan",
+    url: "https://www.trustivasetu.com/cataract-loan",
     type: "website",
   },
 };

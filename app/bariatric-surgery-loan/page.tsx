@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Bariatric Surgery Loan in India | Healthcare Financing | Trustiva Setu",
   description: "Apply for a bariatric surgery loan through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
   alternates: {
-    canonical: "https://trustivasetu.com/bariatric-surgery-loan",
+    canonical: "https://www.trustivasetu.com/bariatric-surgery-loan",
   },
   openGraph: {
     title: "Bariatric Surgery Loan | Trustiva Setu",
     description: "Healthcare financing for bariatric surgery loan.",
-    url: "https://trustivasetu.com/bariatric-surgery-loan",
+    url: "https://www.trustivasetu.com/bariatric-surgery-loan",
     type: "website",
   },
 };

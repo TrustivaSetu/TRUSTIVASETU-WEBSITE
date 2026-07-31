@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Rhinoplasty in India | Healthcare Financing | Trustiva Setu",
   description: "Apply for a rhinoplasty through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
   alternates: {
-    canonical: "https://trustivasetu.com/rhinoplasty-loan",
+    canonical: "https://www.trustivasetu.com/rhinoplasty-loan",
   },
   openGraph: {
     title: "Rhinoplasty | Trustiva Setu",
     description: "Healthcare financing for rhinoplasty.",
-    url: "https://trustivasetu.com/rhinoplasty-loan",
+    url: "https://www.trustivasetu.com/rhinoplasty-loan",
     type: "website",
   },
 };
