@@ -57,3 +57,10 @@ backup/
 # Python
 __pycache__/
 *.py[cod]
+
+# Generated landing artifacts
+generated/
+
+# Local backups
+*.bak
+*.before-generated
