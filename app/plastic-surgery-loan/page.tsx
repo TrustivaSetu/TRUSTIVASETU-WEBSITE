@@ -11,6 +11,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
   title: "Plastic Surgery Loan in India | Healthcare Financing | Trustiva Setu",
@@ -34,6 +35,7 @@ export default function PlasticSurgeryPage() {
       <OrganizationSchema />
       <WebSiteSchema />
       <FinancialServiceSchema />
+      <ServiceSchema page="plastic-surgery" />
       <Hero page="plastic-surgery" />
       <Treatments page="plastic-surgery" />
       <WhyTrustiva />
