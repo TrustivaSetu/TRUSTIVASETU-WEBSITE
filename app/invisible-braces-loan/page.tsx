@@ -5,6 +5,10 @@ import WhyTrustiva from "@/components/landing/WhyTrustiva";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Eligibility from "@/components/landing/Eligibility";
 import FAQ from "@/components/landing/FAQ";
+import RelatedTreatments from "@/components/landing/RelatedTreatments";
+import FaqSchema from "@/components/seo/FaqSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import OrganizationSchema from "@/components/seo/OrganizationSchema";
 
 export const metadata: Metadata = {
   title: "Invisible Braces in India | Healthcare Financing | Trustiva Setu",
@@ -23,11 +27,15 @@ export const metadata: Metadata = {
 export default function InvisibleBracesPage() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white">
+      <FaqSchema page="invisible-braces" />
+      <BreadcrumbSchema title="Invisible Braces in India | Healthcare Financing | Trustiva Setu" slug="invisible-braces-loan" />
+      <OrganizationSchema />
       <Hero page="invisible-braces" />
       <Treatments page="invisible-braces" />
       <WhyTrustiva />
       <HowItWorks />
       <Eligibility />
+      <RelatedTreatments page="invisible-braces" />
       <FAQ page="invisible-braces" />
     </main>
   );

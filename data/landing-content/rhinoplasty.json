@@ -14,38 +14,38 @@
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
       {
-        "title": "Treatment Option 1",
-        "description": "Replace with actual treatment."
+        "title": "Cosmetic Rhinoplasty",
+        "description": "Finance cosmetic nose reshaping."
       },
       {
-        "title": "Treatment Option 2",
-        "description": "Replace with actual treatment."
+        "title": "Functional Rhinoplasty",
+        "description": "Funding for breathing correction surgery."
       },
       {
-        "title": "Treatment Option 3",
-        "description": "Replace with actual treatment."
+        "title": "Revision Rhinoplasty",
+        "description": "Finance revision surgery."
       },
       {
-        "title": "Treatment Option 4",
-        "description": "Replace with actual treatment."
+        "title": "Septorhinoplasty",
+        "description": "Funding for combined procedures."
       }
     ],
     "faqs": [
       {
-        "question": "Who can apply?",
-        "answer": "Eligibility depends on the lending partner's credit assessment."
+        "question": "Can rhinoplasty be financed?",
+        "answer": "Eligible applicants may apply through lending partners."
       },
       {
-        "question": "What documents are required?",
-        "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+        "question": "Who is eligible?",
+        "answer": "Subject to lender assessment."
       },
       {
-        "question": "How much loan can I get?",
-        "answer": "Loan amount depends on treatment cost and lender eligibility."
+        "question": "Required documents?",
+        "answer": "Standard KYC and income proof."
       },
       {
-        "question": "How long does approval take?",
-        "answer": "Approval timelines depend on document verification and lender processes."
+        "question": "Approval time?",
+        "answer": "Depends on lender verification."
       }
     ]
   }

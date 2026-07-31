@@ -14,38 +14,38 @@
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
       {
-        "title": "Treatment Option 1",
-        "description": "Replace with actual treatment."
+        "title": "Egg Freezing Cycle",
+        "description": "Finance complete egg freezing."
       },
       {
-        "title": "Treatment Option 2",
-        "description": "Replace with actual treatment."
+        "title": "Hormonal Stimulation",
+        "description": "Funding for ovarian stimulation."
       },
       {
-        "title": "Treatment Option 3",
-        "description": "Replace with actual treatment."
+        "title": "Egg Retrieval",
+        "description": "Finance egg retrieval procedures."
       },
       {
-        "title": "Treatment Option 4",
-        "description": "Replace with actual treatment."
+        "title": "Cryopreservation",
+        "description": "Funding for egg storage."
       }
     ],
     "faqs": [
       {
-        "question": "Who can apply?",
-        "answer": "Eligibility depends on the lending partner's credit assessment."
+        "question": "Can egg freezing be financed?",
+        "answer": "Eligible applicants may apply through participating lenders."
       },
       {
-        "question": "What documents are required?",
-        "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+        "question": "Does financing include storage?",
+        "answer": "Coverage depends on treatment package and lender."
       },
       {
-        "question": "How much loan can I get?",
-        "answer": "Loan amount depends on treatment cost and lender eligibility."
+        "question": "Required documents?",
+        "answer": "Standard KYC and income proof."
       },
       {
-        "question": "How long does approval take?",
-        "answer": "Approval timelines depend on document verification and lender processes."
+        "question": "Approval time?",
+        "answer": "Varies by lender."
       }
     ]
   }

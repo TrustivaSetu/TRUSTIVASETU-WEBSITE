@@ -14,38 +14,38 @@
     "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
     "treatments": [
       {
-        "title": "Treatment Option 1",
-        "description": "Replace with actual treatment."
+        "title": "Abdominal Liposuction",
+        "description": "Finance abdominal body contouring."
       },
       {
-        "title": "Treatment Option 2",
-        "description": "Replace with actual treatment."
+        "title": "Thigh Liposuction",
+        "description": "Funding for thigh contouring."
       },
       {
-        "title": "Treatment Option 3",
-        "description": "Replace with actual treatment."
+        "title": "Arm Liposuction",
+        "description": "Finance arm liposuction."
       },
       {
-        "title": "Treatment Option 4",
-        "description": "Replace with actual treatment."
+        "title": "360 Liposuction",
+        "description": "Funding for comprehensive body contouring."
       }
     ],
     "faqs": [
       {
-        "question": "Who can apply?",
-        "answer": "Eligibility depends on the lending partner's credit assessment."
+        "question": "Can liposuction be financed?",
+        "answer": "Eligible applicants may apply through participating lenders."
       },
       {
-        "question": "What documents are required?",
-        "answer": "PAN, Aadhaar, KYC documents and income proof may be required."
+        "question": "Is cosmetic treatment eligible?",
+        "answer": "Eligibility depends on lender policy."
       },
       {
-        "question": "How much loan can I get?",
-        "answer": "Loan amount depends on treatment cost and lender eligibility."
+        "question": "Documents required?",
+        "answer": "Standard KYC and income proof."
       },
       {
-        "question": "How long does approval take?",
-        "answer": "Approval timelines depend on document verification and lender processes."
+        "question": "Approval timeline?",
+        "answer": "Depends on lender assessment."
       }
     ]
   }
