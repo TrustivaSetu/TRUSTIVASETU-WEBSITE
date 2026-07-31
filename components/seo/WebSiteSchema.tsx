@@ -3,12 +3,7 @@ export default function WebSiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Trustiva Setu",
-    url: "https://www.trustivasetu.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://www.trustivasetu.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    url: "https://www.trustivasetu.com"
   };
 
   return (
