@@ -1,0 +1,72 @@
+{
+  "slug": "medical-loan",
+  "key": "medical",
+
+  "metadata": {
+    "title": "Medical Loan in India | Instant Healthcare Financing | Trustiva Setu",
+    "description": "Apply for medical loans in India for surgeries, IVF, dental treatment, hair transplant and other healthcare expenses with Trustiva Setu.",
+    "ogTitle": "Medical Loan in India | Trustiva Setu",
+    "ogDescription": "Instant healthcare financing for planned medical treatments across India."
+  },
+
+  "landing": {
+    "title": "Medical Loan in India",
+    "description": "Instant healthcare financing for planned medical treatments across India.",
+    "heroTitle": "Medical Loans Made Simple",
+    "heroSubtitle": "Access healthcare financing through our trusted lending partners.",
+
+    "treatments": [
+      {
+        "title": "IVF & Fertility",
+        "description": "Finance fertility treatments with flexible repayment options."
+      },
+      {
+        "title": "Dental Treatment",
+        "description": "Support for implants, aligners, smile makeover and more."
+      },
+      {
+        "title": "Hair Transplant",
+        "description": "Affordable financing for advanced hair restoration procedures."
+      },
+      {
+        "title": "Cosmetic Surgery",
+        "description": "Finance elective cosmetic and aesthetic procedures."
+      },
+      {
+        "title": "Eye Surgery",
+        "description": "Funding support for LASIK, cataract and vision correction."
+      },
+      {
+        "title": "Orthopedic Surgery",
+        "description": "Medical financing for bone and joint procedures."
+      },
+      {
+        "title": "General Surgery",
+        "description": "Support for planned surgical treatments across specialties."
+      },
+      {
+        "title": "Other Treatments",
+        "description": "Healthcare financing for many other planned medical expenses."
+      }
+    ],
+
+    "faqs": [
+      {
+        "question": "What is a medical loan?",
+        "answer": "A medical loan helps finance eligible healthcare expenses. Loan approval, amount and repayment terms are decided by the lending partner."
+      },
+      {
+        "question": "Who can apply for a medical loan?",
+        "answer": "Eligible salaried and self-employed applicants can apply, subject to the lending partner's credit assessment."
+      },
+      {
+        "question": "What documents are required?",
+        "answer": "PAN, Aadhaar, address proof, income proof and other KYC documents may be required depending on the lender."
+      },
+      {
+        "question": "How long does approval take?",
+        "answer": "Approval timelines depend on document verification and the lending partner's internal assessment process."
+      }
+    ]
+  }
+}

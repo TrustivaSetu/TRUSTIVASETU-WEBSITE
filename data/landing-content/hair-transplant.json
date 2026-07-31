@@ -1,0 +1,40 @@
+{
+  "slug": "hair-transplant-loan",
+  "key": "hair-transplant",
+
+  "metadata": {
+    "title": "Hair Transplant Loan in India | Easy EMI | Trustiva Setu",
+    "description": "Get a hair transplant loan with easy EMIs through Trustiva Setu. Fast approval, flexible repayment and trusted healthcare financing.",
+    "ogTitle": "Hair Transplant Loan | Trustiva Setu",
+    "ogDescription": "Finance your hair transplant with affordable monthly EMIs."
+  },
+
+  "landing": {
+    "title": "Hair Transplant Loan",
+    "description": "Affordable financing for hair transplant procedures.",
+    "heroTitle": "Hair Transplant on Easy EMIs",
+    "heroSubtitle": "Get quick healthcare financing through our trusted lending partners.",
+
+    "treatments": [
+      {
+        "title": "FUE Hair Transplant",
+        "description": "Finance advanced FUE procedures with flexible repayment."
+      },
+      {
+        "title": "FUT Hair Transplant",
+        "description": "Affordable funding for FUT hair restoration."
+      }
+    ],
+
+    "faqs": [
+      {
+        "question": "Can I finance my hair transplant?",
+        "answer": "Eligible applicants can apply through participating lending partners."
+      },
+      {
+        "question": "What documents are required?",
+        "answer": "PAN, Aadhaar, income proof and other KYC documents may be required."
+      }
+    ]
+  }
+}
