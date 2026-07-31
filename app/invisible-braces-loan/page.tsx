@@ -10,6 +10,7 @@ import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
 
 export const metadata: Metadata = {
   title: "Invisible Braces in India | Healthcare Financing | Trustiva Setu",
@@ -32,6 +33,7 @@ export default function InvisibleBracesPage() {
       <BreadcrumbSchema title="Invisible Braces in India | Healthcare Financing | Trustiva Setu" slug="invisible-braces-loan" />
       <OrganizationSchema />
       <WebSiteSchema />
+      <FinancialServiceSchema />
       <Hero page="invisible-braces" />
       <Treatments page="invisible-braces" />
       <WhyTrustiva />

@@ -10,6 +10,7 @@ import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
 
 export const metadata: Metadata = {
   title: "LASIK Eye Surgery Loan in India | LASIK EMI & Healthcare Financing | Trustiva Setu",
@@ -32,6 +33,7 @@ export default function LasikPage() {
       <BreadcrumbSchema title="LASIK Eye Surgery Loan in India | LASIK EMI & Healthcare Financing | Trustiva Setu" slug="lasik-loan" />
       <OrganizationSchema />
       <WebSiteSchema />
+      <FinancialServiceSchema />
       <Hero page="lasik" />
       <Treatments page="lasik" />
       <WhyTrustiva />

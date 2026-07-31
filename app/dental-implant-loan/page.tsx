@@ -10,6 +10,7 @@ import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
 
 export const metadata: Metadata = {
   title: "Dental Implant in India | Healthcare Financing | Trustiva Setu",
@@ -32,6 +33,7 @@ export default function DentalImplantPage() {
       <BreadcrumbSchema title="Dental Implant in India | Healthcare Financing | Trustiva Setu" slug="dental-implant-loan" />
       <OrganizationSchema />
       <WebSiteSchema />
+      <FinancialServiceSchema />
       <Hero page="dental-implant" />
       <Treatments page="dental-implant" />
       <WhyTrustiva />

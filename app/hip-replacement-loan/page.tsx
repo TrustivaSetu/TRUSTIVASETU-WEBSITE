@@ -10,6 +10,7 @@ import FaqSchema from "@/components/seo/FaqSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
 
 export const metadata: Metadata = {
   title: "Hip Replacement Surgery in India | Healthcare Financing | Trustiva Setu",
@@ -32,6 +33,7 @@ export default function HipReplacementPage() {
       <BreadcrumbSchema title="Hip Replacement Surgery in India | Healthcare Financing | Trustiva Setu" slug="hip-replacement-loan" />
       <OrganizationSchema />
       <WebSiteSchema />
+      <FinancialServiceSchema />
       <Hero page="hip-replacement" />
       <Treatments page="hip-replacement" />
       <WhyTrustiva />
