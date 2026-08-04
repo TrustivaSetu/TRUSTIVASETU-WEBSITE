@@ -1340,6 +1340,7 @@ verified healthcare demand through one unified system.
           <Link href="/liposuction-loan" className="text-lime-300 hover:underline">Liposuction Loan</Link>
           <Link href="/gynecomastia-loan" className="text-lime-300 hover:underline">Gynecomastia Loan</Link>
           <Link href="/cataract-loan" className="text-lime-300 hover:underline">Cataract Surgery Loan</Link>
+          <Link href="/resources" className="text-lime-300 hover:underline">Healthcare Knowledge Hub</Link>
         </div>
       </section>
 
