@@ -1,0 +1,44 @@
+[
+  {
+    "id":"rbi",
+    "name":"Reserve Bank of India",
+    "url":"https://www.rbi.org.in/scripts/NotificationUser.aspx",
+    "category":"Digital Lending"
+  },
+  {
+    "id":"abdm",
+    "name":"ABDM",
+    "url":"https://abdm.gov.in/news-and-media/",
+    "category":"Healthcare"
+  },
+  {
+    "id":"nabh",
+    "name":"NABH",
+    "url":"https://nabh.co/news/",
+    "category":"Hospital"
+  },
+  {
+    "id":"ima",
+    "name":"IMA",
+    "url":"https://ima-india.org/",
+    "category":"Medical"
+  },
+  {
+    "id":"isar",
+    "name":"ISAR",
+    "url":"https://www.isarindia.net/",
+    "category":"IVF"
+  },
+  {
+    "id":"iadvl",
+    "name":"IADVL",
+    "url":"https://www.iadvl.org/",
+    "category":"Dermatology"
+  },
+  {
+    "id":"dpdp",
+    "name":"MeitY",
+    "url":"https://www.meity.gov.in/",
+    "category":"Privacy"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "rbi",
+    "name": "Reserve Bank of India",
+    "url": "https://www.rbi.org.in/",
+    "type": "html",
+    "category": "Digital Lending"
+  },
+  {
+    "id": "abdm",
+    "name": "Ayushman Bharat Digital Mission",
+    "url": "https://abdm.gov.in/",
+    "type": "html",
+    "category": "Healthcare"
+  },
+  {
+    "id": "nabh",
+    "name": "NABH",
+    "url": "https://nabh.co/",
+    "type": "html",
+    "category": "Hospital Accreditation"
+  },
+  {
+    "id": "dpdp",
+    "name": "DPDP Act",
+    "url": "https://www.meity.gov.in/",
+    "type": "html",
+    "category": "Privacy"
+  },
+  {
+    "id": "ima",
+    "name": "Indian Medical Association",
+    "url": "https://ima-india.org/",
+    "type": "html",
+    "category": "Medical"
+  },
+  {
+    "id": "isar",
+    "name": "ISAR",
+    "url": "https://www.isarindia.net/",
+    "type": "html",
+    "category": "IVF"
+  },
+  {
+    "id": "iadvl",
+    "name": "IADVL",
+    "url": "https://www.iadvl.org/",
+    "type": "html",
+    "category": "Dermatology"
+  }
+]
