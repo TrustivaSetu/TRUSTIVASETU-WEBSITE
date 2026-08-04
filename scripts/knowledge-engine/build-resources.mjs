@@ -1,41 +1,39 @@
-import fs from "node:fs";
+import { readJson, writeJson } from "./lib/storage.mjs";
 
-const articles = JSON.parse(
-  fs.readFileSync(
-    "data/knowledge/generated/index.json",
-    "utf8"
-  )
+const generated = readJson(
+  "data/knowledge/generated/index.json",
+  []
 );
 
-const output = articles.map(article => ({
-  slug:
-    article.title
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g,"-")
-      .replace(/^-|-$/g,""),
+const history = readJson(
+  "data/knowledge/history/index.json",
+  []
+);
+
+const source = generated.length ? generated : history;
+
+const articles = source.map(article => ({
+  slug: article.title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/^-|-$/g,""),
 
   title: article.title,
-
   summary: article.summary,
-
   source: article.source,
-
   category: article.category,
-
   url: article.url,
-
   publishedAt: article.publishedAt,
-
   fetchedAt: article.fetchedAt
 }));
 
-fs.writeFileSync(
+writeJson(
   "data/knowledge/articles.json",
-  JSON.stringify(output,null,2)
+  articles
 );
 
 console.log(
   "Generated",
-  output.length,
+  articles.length,
   "knowledge articles."
 );

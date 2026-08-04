@@ -1,74 +1,47 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import articles from "@/data/knowledge/articles.json";
 
-export const metadata: Metadata = {
-  title: "Healthcare Finance Resources | Trustiva Setu",
-  description:
-    "Official guides and knowledge base covering RBI, ABDM, NABH, DPDP Act, IMA, ISAR, IADVL, Medical Loans and No Cost EMI.",
+export const metadata = {
+  title: "Knowledge Center | TrustivaSetu",
+  description: "Latest RBI, ABDM and healthcare industry updates."
 };
-
-const resources = [
-  {
-    title: "RBI Digital Lending Guidelines",
-    href: "/resources/rbi-digital-lending-guidelines",
-  },
-  {
-    title: "ABDM",
-    href: "/resources/abdm",
-  },
-  {
-    title: "NABH",
-    href: "/resources/nabh",
-  },
-  {
-    title: "DPDP Act",
-    href: "/resources/dpdp-act",
-  },
-  {
-    title: "IMA",
-    href: "/resources/ima",
-  },
-  {
-    title: "ISAR",
-    href: "/resources/isar",
-  },
-  {
-    title: "IADVL",
-    href: "/resources/iadvl",
-  },
-  {
-    title: "Medical Loan Guide",
-    href: "/resources/rbi-medical-loan",
-  },
-  {
-    title: "No Cost EMI Guide",
-    href: "/resources/no-cost-emi",
-  },
-];
 
 export default function ResourcesPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-4xl font-bold mb-6">
-        Trustiva Setu Knowledge Hub
-      </h1>
+    <main style={{maxWidth:1100,margin:"40px auto",padding:"20px"}}>
+      <h1>Knowledge Center</h1>
 
-      <p className="mb-10 text-gray-400">
-        Explore healthcare finance regulations, treatment financing guides,
-        digital health standards and patient education resources.
+      <p>
+        Official updates from RBI, ABDM and healthcare ecosystem.
       </p>
 
-      <div className="grid gap-4">
-        {resources.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="rounded-xl border border-gray-700 p-5 hover:border-blue-500 transition"
+      <ul style={{padding:0,listStyle:"none"}}>
+        {articles.map((article:any)=>(
+          <li
+            key={article.slug}
+            style={{
+              border:"1px solid #ddd",
+              borderRadius:10,
+              padding:20,
+              marginBottom:20
+            }}
           >
-            {item.title}
-          </Link>
+            <h2>
+              <Link href={`/resources/${article.slug}`}>
+                {article.title}
+              </Link>
+            </h2>
+
+            <p>{article.summary}</p>
+
+            <small>
+              {article.source}
+              {" • "}
+              {article.publishedAt}
+            </small>
+          </li>
         ))}
-      </div>
+      </ul>
     </main>
   );
 }
