@@ -8,6 +8,7 @@ import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import CookieConsent from "@/components/ui/CookieConsent";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import ClarityProvider from "@/components/ClarityProvider";
+import AntiCopy from "@/components/security/AntiCopy";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -120,6 +121,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-(--font-inter) bg-[#07111f] text-white">
         <ClarityProvider />
+        <AntiCopy />
        <OrganizationSchema />
         {children}
         <CookieConsent />

@@ -79,7 +79,7 @@ href="/"
 style={{
 display:"inline-block",
 padding:"10px 16px",
-borderRadius:8,
+borderRadius:999,
 background:"#0f766e",
 color:"#fff",
 textDecoration:"none",
@@ -90,23 +90,76 @@ marginBottom:15
 ← Back to Home
 </Link>
 
-<h1 style={{margin:0}}>
-Knowledge Center
+
+
+<h1
+style={{
+margin:0,
+fontSize:
+(typeof window!=="undefined" && window.innerWidth<700)
+?28
+:40,
+fontWeight:800
+}}
+>
+Healthcare Finance Knowledge Center
 </h1>
 
 <p style={{marginTop:10,color:"#666"}}>
-Official RBI, ABDM, Healthcare & Medical Industry Updates
+Official RBI • ABDM • IMA • IADVL • NABH • CDSCO • Healthcare Finance Intelligence Hub
 </p>
+
+<div
+style={{
+display:"grid",
+gridTemplateColumns:
+(typeof window!=="undefined" && window.innerWidth<700)
+?"repeat(2,1fr)"
+:"repeat(4,minmax(120px,1fr))",
+gap:16,
+marginTop:24,
+marginBottom:20
+}}
+>
+
+{[
+["100+","Articles"],
+["15+","Categories"],
+["Auto","Updated"],
+["Official","Sources"]
+].map(([a,b])=>(
+<div
+key={a}
+style={{
+background:"#f8fafc",
+border:"1px solid #e5e7eb",
+borderRadius:14,
+padding:"16px",
+textAlign:"center"
+}}
+>
+<div style={{fontSize:26,fontWeight:800,color:"#0f766e"}}>
+{a}
+</div>
+
+<div style={{fontSize:14,color:"#666"}}>
+{b}
+</div>
+
+</div>
+))}
+
+</div>
 
 </div>
 
 <input
-placeholder="Search updates..."
+placeholder="Search RBI, IADVL, IVF, Dental, NABH..."
 value={search}
 onChange={e=>setSearch(e.target.value)}
 style={{
-width:320,
-maxWidth:"100%",
+width:"100%",
+maxWidth:320,
 padding:12,
 borderRadius:10,
 border:"1px solid #ccc"
@@ -118,14 +171,32 @@ border:"1px solid #ccc"
 <div
 style={{
 display:"grid",
-gridTemplateColumns:"260px 1fr",
+position:"relative",
+gridTemplateColumns:
+(typeof window!=="undefined" && window.innerWidth<900)
+?"1fr"
+:"260px 1fr",
 gap:30
 }}
 >
 
-<aside>
+<aside
+style={{
+position:"sticky",
+top:30,
+alignSelf:"start"
+}}
+>
 
-<h3>Categories</h3>
+<h3
+style={{
+marginBottom:20,
+fontSize:24,
+fontWeight:700
+}}
+>
+Browse Categories
+</h3>
 
 {tags.map(tag=>{
 
@@ -146,11 +217,11 @@ justifyContent:"space-between",
 width:"100%",
 padding:"12px",
 marginBottom:10,
-borderRadius:8,
+borderRadius:999,
 border:"1px solid #ddd",
 background:
 active===tag
-?"#0f766e"
+?"linear-gradient(135deg,#0f766e,#0d9488)"
 :"#fff",
 color:
 active===tag
@@ -174,6 +245,20 @@ cursor:"pointer"
 
 <main>
 
+<div
+style={{
+background:"linear-gradient(90deg,#0f766e,#0d9488)",
+padding:"14px 22px",
+borderRadius:14,
+color:"#fff",
+fontWeight:700,
+marginBottom:25,
+fontSize:18
+}}
+>
+🔥 Latest Official Updates from RBI • ABDM • IMA • IADVL • NABH • CDSCO
+</div>
+
 <h2 style={{marginTop:0}}>
 {active} Updates
 </h2>
@@ -182,13 +267,60 @@ cursor:"pointer"
 Showing <strong>{filtered.length}</strong> Articles
 </p>
 
+{filtered.length>0 && (
+
+<div
+style={{
+background:"#f8fffd",
+border:"2px solid #0f766e",
+borderRadius:18,
+padding:24,
+marginBottom:28
+}}
+>
+
+<div
+style={{
+fontSize:13,
+fontWeight:700,
+color:"#0f766e",
+marginBottom:10
+}}
+>
+⭐ Featured RBI Update
+</div>
+
+<h2 style={{marginTop:0}}>
+{filtered[0].title}
+</h2>
+
+<p>
+{filtered[0].summary.slice(0,220)}...
+</p>
+
+<Link
+href={"/resources/"+filtered[0].slug}
+style={{
+color:"#0f766e",
+fontWeight:700,
+textDecoration:"none"
+}}
+>
+📖 Read Full Update →
+</Link>
+
+</div>
+
+)}
+
 {filtered.map(article=>(
 
 <div
 key={article.slug}
 style={{
 border:"1px solid #ddd",
-borderRadius:12,
+borderRadius:18,
+boxShadow:"0 8px 30px rgba(0,0,0,.08)",
 padding:22,
 marginBottom:24,
 transition:"0.2s"
@@ -243,9 +375,31 @@ color:"#666"
 }}
 >
 
-<span>{article.source}</span>
+<span
+style={{
+background:"#eef6ff",
+padding:"6px 12px",
+borderRadius:999,
+fontWeight:600
+}}
+>
+{article.source}
+</span>
 
-<span>{article.publishedAt}</span>
+<span
+style={{
+background:"#f3f4f6",
+padding:"6px 12px",
+borderRadius:999,
+fontSize:13
+}}
+>
+📅 {new Date(article.publishedAt).toLocaleDateString("en-IN",{
+day:"2-digit",
+month:"short",
+year:"numeric"
+})}
+</span>
 
 </div>
 
