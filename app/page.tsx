@@ -784,7 +784,11 @@ const faqSchema = {
               {label}
             </a>
           ))}
-        </nav>
+        
+<Link href="/resources" className="hover:text-lime-300 transition-colors">
+Knowledge Center
+</Link>
+</nav>
 
         
     </div>
