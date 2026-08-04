@@ -69,3 +69,4 @@ generated/
 *.backup
 *.bak
 *.before-*
+*.deb
