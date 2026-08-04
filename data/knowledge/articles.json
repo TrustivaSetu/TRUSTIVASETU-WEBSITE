@@ -7,7 +7,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13664&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 16:45:00",
-    "fetchedAt": "2026-08-04T04:41:28.331Z"
+    "fetchedAt": "2026-08-04T04:41:28.331Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "reserve-bank-of-india-commercial-banks-statutory-audit-directions-2026",
@@ -17,7 +21,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13639&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 16:00:00",
-    "fetchedAt": "2026-08-04T04:41:28.332Z"
+    "fetchedAt": "2026-08-04T04:41:28.332Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "reserve-bank-of-india-commercial-banks-internal-audit-function-directions-2026",
@@ -27,7 +35,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13640&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 16:00:00",
-    "fetchedAt": "2026-08-04T04:41:28.332Z"
+    "fetchedAt": "2026-08-04T04:41:28.332Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "reserve-bank-of-india-commercial-banks-fraud-risk-management-directions-2026",
@@ -37,7 +49,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13641&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 16:00:00",
-    "fetchedAt": "2026-08-04T04:41:28.332Z"
+    "fetchedAt": "2026-08-04T04:41:28.332Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "reserve-bank-of-india-commercial-banks-digital-payment-security-controls-directions-2026",
@@ -47,7 +63,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13642&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 16:00:00",
-    "fetchedAt": "2026-08-04T04:41:28.332Z"
+    "fetchedAt": "2026-08-04T04:41:28.332Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "reserve-bank-of-india-commercial-banks-cybersecurity-technology-risk-resilience-and-assurance-framework-directions-2026",
@@ -57,7 +77,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13643&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 16:00:00",
-    "fetchedAt": "2026-08-04T04:41:28.332Z"
+    "fetchedAt": "2026-08-04T04:41:28.332Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "reserve-bank-of-india-commercial-banks-concurrent-audit-directions-2026",
@@ -67,7 +91,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13644&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 16:00:00",
-    "fetchedAt": "2026-08-04T04:41:28.332Z"
+    "fetchedAt": "2026-08-04T04:41:28.332Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "reserve-bank-of-india-commercial-banks-compliance-function-directions-2026",
@@ -77,7 +105,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13645&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 16:00:00",
-    "fetchedAt": "2026-08-04T04:41:28.332Z"
+    "fetchedAt": "2026-08-04T04:41:28.332Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "consolidation-of-supervisory-instructions-repeal-of-circulars",
@@ -87,7 +119,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13663&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 16:00:00",
-    "fetchedAt": "2026-08-04T04:41:28.332Z"
+    "fetchedAt": "2026-08-04T04:41:28.332Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "fake-indian-currency-notes-ficns-detection-reporting-and-monitoring",
@@ -97,7 +133,11 @@
     "category": "Digital Lending",
     "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13662&Mode=0",
     "publishedAt": "Fri, 31 Jul 2026 15:05:00",
-    "fetchedAt": "2026-08-04T04:41:28.332Z"
+    "fetchedAt": "2026-08-04T04:41:28.332Z",
+    "tags": [
+      "RBI"
+    ],
+    "primaryTag": "RBI"
   },
   {
     "slug": "india-rolls-out-drug-registry-to-standardize-medicine-data-mint",
@@ -107,7 +147,12 @@
     "category": "Healthcare",
     "url": "https://www.etvbharat.com/en/bharat/nadda-unveils-five-major-digital-health-platforms-to-accelerate-ayushman-bharat-digital-mission-enn26062906289",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM",
+      "CDSCO"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "health-minister-nadda-unveils-5-major-digital-health-platforms-to-accelerate-ayushman-bharat-digital-mission-etv-bharat",
@@ -117,7 +162,11 @@
     "category": "Healthcare",
     "url": "https://ddnews.gov.in/health-minister-jagat-prakash-nadda-launched-many-digital-health-platforms-including-aarogya-setu-2-0/",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "centre-launches-national-drug-registry-to-standardize-medicine-data-new-indian-express",
@@ -127,7 +176,12 @@
     "category": "Healthcare",
     "url": "https://www.swasthbharat.in/launch-of-arogya-setu-2-0-and-several-digital-initiatives/",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM",
+      "CDSCO"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "launch-of-arogya-setu-2-0-and-several-digital-initiatives-swasth-bharat-media",
@@ -137,7 +191,11 @@
     "category": "Healthcare",
     "url": "https://www.newindianexpress.com/amp/story/india/2026/Jun/29/centre-launches-national-drug-registry-to-standardise-medicine-data",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-cards-can-now-be-created-on-whatsapp-health-minister-jp-nadda-has-launched-five-major-digital-facilities-etv-bharat",
@@ -147,7 +205,11 @@
     "category": "Healthcare",
     "url": "https://m.economictimes.com/news/india/j-p-nadda-launches-unified-health-interface-for-seamless-healthcare-access/amp_articleshow/132072063.cms",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "union-health-minister-jp-nadda-launches-esushrut-clinic-light-abdm-enabled-hmis-made-by-c-dac-for-small-clinics-ani",
@@ -157,7 +219,11 @@
     "category": "Healthcare",
     "url": "https://www.aninews.in/news/national/politics/union-health-minister-jp-nadda-launches-esushrutclinic-light-abdm-enabled-hmis-made-by-c-dac-for-small-clinics20260629202550/",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "government-launches-cloud-based-hospital-management-system-for-small-clinics-and-opds-abp-live",
@@ -167,7 +233,11 @@
     "category": "Healthcare",
     "url": "https://www.etvbharat.com/amp/hi/bharat/jp-nadda-launches-5-abdm-initiatives-including-aarogya-setu-2-hin26062906261",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "health-minister-jagat-prakash-nadda-launched-several-digital-health-platforms-including-aarogya-setu-2-0-dd-news",
@@ -177,7 +247,11 @@
     "category": "Healthcare",
     "url": "https://news.abplive.com/health/government-launches-esushrut-clinic-cloud-hospital-management-system-india-1853440/amp",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "e-sushrut-clinic-launched-for-small-clinics-digital-facilities-available-for-299-per-month-dd-news",
@@ -187,7 +261,11 @@
     "category": "Healthcare",
     "url": "https://ddnews.gov.in/e-sushruta-clinic-launched-for-small-clinics-digital-facility-available-for-rs-299-per-month/",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-sarathi-launch-information-on-health-services-to-be-available-on-whatsapp-jagran",
@@ -197,7 +275,11 @@
     "category": "Healthcare",
     "url": "https://www.jagran.com/news/national-ayushman-sarathi-launch-information-on-health-services-to-be-available-on-whatsapp-40289341.html",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "aarogya-setu-2-0-from-finding-hospitals-to-accessing-digital-health-records-aarogya-setu-2-0-will-facilitate-multiple-tasks-in-one-place-et-hindi",
@@ -207,7 +289,11 @@
     "category": "Healthcare",
     "url": "https://www.bhaskarhindi.com/other/hindi-jp-nadda-launches-ayushman-sarathi-whatsapp-chatbot-unified-drug-registry-20260629174217-1321058",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "aarogya-setu-2-0-aarogya-setu-2-0-is-here-now-everything-from-health-records-to-hospital-services-will-be-available-in-a-single-app-prabhat-khabar",
@@ -217,7 +303,11 @@
     "category": "Healthcare",
     "url": "https://www.prabhatkhabar.com/business/aarogya-setu-2-0-launched-health-records-to-hospitals-everything-in-one-app",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "jp-nadda-launches-digital-health-services-ayushman-sarathi-chatbot-rolled-out-bhaskar",
@@ -227,7 +317,11 @@
     "category": "Healthcare",
     "url": "https://hindi.economictimes.com/news/aarogya-setu-2-0-launch-today-know-its-new-features-from-finding-hospital-to-digital-health-records/amp_articleshow/132065200.cms",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "j-p-nadda-launches-unified-health-interface-for-seamless-healthcare-access-et",
@@ -237,7 +331,11 @@
     "category": "Healthcare",
     "url": "https://www.livemint.com/industry/drug-registry-india-pharmaceutical-healthcare-industry-ayushman-bharat-11782728452692.html",
     "publishedAt": "2026-06-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "e-sushrut-govt-to-roll-out-digital-health-management-system-for-small-clinics-primary-healthcare-centres-outlook",
@@ -247,7 +345,12 @@
     "category": "Healthcare",
     "url": "https://www.outlookmoney.com/amp/story/personal-finance/e-sushrut-govt-to-roll-out-digital-health-management-system-for-small-clinics-primary-healthcare-centres",
     "publishedAt": "2026-06-28T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM",
+      "IMA"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "rajasthan-govt-s-major-move-after-maternal-deaths-abha-cards-to-become-mandatory-for-every-pregnant-woman-health-records-to-go-digital-bhaskar",
@@ -257,7 +360,11 @@
     "category": "Healthcare",
     "url": "https://www.bhaskarenglish.in/local/rajasthan/jaipur/news/rajasthan-govt-abha-card-mandatory-pregnant-women-health-record-online-138315492.html",
     "publishedAt": "2026-06-28T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "one-app-for-health-centre-to-launch-aarogya-setu-2-0-toi",
@@ -267,7 +374,11 @@
     "category": "Healthcare",
     "url": "https://timesofindia.indiatimes.com/india/one-app-for-health-centre-to-launch-aarogya-setu-2-0/articleshow/132054418.cms",
     "publishedAt": "2026-06-28T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "centre-govt-to-launch-ai-powered-aarogya-setu-2-0-on-june-29-here-s-everything-you-need-to-know-dna",
@@ -277,7 +388,11 @@
     "category": "Healthcare",
     "url": "https://government.economictimes.indiatimes.com/amp/news/digital-india/india-unveils-aarogya-setu-2-0-to-expand-digital-health-services/132032972",
     "publishedAt": "2026-06-27T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "health-ministry-to-hold-16th-cchfw-conference-launch-aarogya-setu-2-0-and-digital-health-initiatives-on-june-29-dd-news",
@@ -287,7 +402,12 @@
     "category": "Healthcare",
     "url": "https://ddnews.gov.in/en/health-ministry-to-hold-16th-cchfw-conference-launch-aarogya-setu-2-0-and-digital-health-initiatives-on-june-29/",
     "publishedAt": "2026-06-27T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM",
+      "MoHFW"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "india-unveils-aarogya-setu-2-0-to-expand-digital-health-services-et",
@@ -297,7 +417,11 @@
     "category": "Healthcare",
     "url": "https://www.dnaindia.com/india/report-centre-govt-to-launch-ai-powered-aarogya-setu-20-on-june-29-here-s-everything-you-need-to-know-3214609",
     "publishedAt": "2026-06-27T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "nha-ceo-sunil-barnwal-reviews-abdm-pmjay-implementation-during-manipur-visit-dhn-bureau",
@@ -307,7 +431,12 @@
     "category": "Healthcare",
     "url": "https://www.digitalhealthnews.com/nha-ceo-sunil-barnwal-reviews-abdm-pmjay-implementation-during-manipur-visit",
     "publishedAt": "2026-06-26T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM",
+      "NHA"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "manipur-takes-digital-health-push-forward-imphal-west-selected-as-model-district-ne-news",
@@ -317,7 +446,11 @@
     "category": "Healthcare",
     "url": "https://timesofoman.com/article/173492-indias-health-reforms-emerge-as-model-for-universal-health-coverage",
     "publishedAt": "2026-06-25T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "india-s-health-reforms-emerge-as-model-for-universal-health-coverage-times-of-oman",
@@ -327,7 +460,11 @@
     "category": "Healthcare",
     "url": "https://www.bhaskar.com/local/uttar-pradesh/hapud/dahpa/news/pilkhuwa-gs-university-first-robotic-knee-surgery-ayushman-bharat-138286019.html",
     "publishedAt": "2026-06-25T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "how-health-insurance-is-evolving-alongside-digital-healthcare-in-india",
@@ -337,7 +474,11 @@
     "category": "Healthcare",
     "url": "https://ehealth.eletsonline.com/2026/06/how-health-insurance-is-evolving-alongside-digital-healthcare-in-india/",
     "publishedAt": "2026-06-25T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "government-tightens-grip-on-hospitals-under-ayushman-scheme-these-arrangements-must-be-made-by-august-31-hindustan",
@@ -347,7 +488,11 @@
     "category": "Healthcare",
     "url": "https://www.livehindustan.com/uttarakhand/ayushman-bharat-hospitals-gets-august-31-deadline-patient-digital-records-mandatory-in-uttarakhand-201782354297207.html",
     "publishedAt": "2026-06-24T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "major-relief-for-6-15-million-families-in-jharkhand-approval-granted-for-220-crore-for-the-ayushman-scheme-medical-treatment-worth-up-to-5-lakh-will-be-available-annually-the-news-post",
@@ -357,7 +502,11 @@
     "category": "Healthcare",
     "url": "https://thenewspost.in/amp/news/jharkhand/ranchi/major-relief-for-615-million-families-in-jharkhand-approval-granted-for-rs220-crore-for-the-ayushman-scheme",
     "publishedAt": "2026-06-24T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "sha-mandates-digital-health-system-for-all-hospitals-under-ayushman-scheme-pioneeredge",
@@ -367,7 +516,11 @@
     "category": "Healthcare",
     "url": "https://pioneeredge.in/sha-mandates-digital-health-system-for-all-hospitals-under-ayushman-scheme/",
     "publishedAt": "2026-06-24T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "building-scalable-digital-infrastructure-for-tier-2-and-tier-3-hospitals-express-health-care",
@@ -377,7 +530,11 @@
     "category": "Healthcare",
     "url": "https://www.expresshealthcare.in/amp/news/building-scalable-digital-infrastructure-for-tier-2-and-tier-3-hospitals/454066/",
     "publishedAt": "2026-06-23T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "bengal-allocates-3-100-cr-to-launch-ayushman-bharat-scheme-toi",
@@ -387,7 +544,11 @@
     "category": "Healthcare",
     "url": "https://timesofindia.indiatimes.com/city/kolkata/bengal-allocates-3100-cr-to-launch-ayushman-bharat-scheme/amp_articleshow/131942368.cms",
     "publishedAt": "2026-06-23T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "swapan-dasgupta-proposes-rs-3-100-crore-outlay-for-ayushman-bharat-rollout-in-bengal-budget-telegraph-india",
@@ -397,7 +558,11 @@
     "category": "Healthcare",
     "url": "https://www.telegraphindia.com/amp/west-bengal/kolkata/finance-minister-swapan-dasgupta-proposes-rs-3100-crore-outlay-for-ayushman-bharat-rollout-in-bengal-budget-prnt/cid/2166736",
     "publishedAt": "2026-06-22T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "complex-open-heart-surgery-performed-at-rims-woman-suffered-from-a-rare-heart-condition-etv-bharat",
@@ -407,7 +572,12 @@
     "category": "Healthcare",
     "url": "https://www.etvbharat.com/amp/hi/state/a-patient-underwent-complex-open-heart-surgery-at-rims-in-ranchi-under-ayushman-scheme-jhs26062207768",
     "publishedAt": "2026-06-22T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM",
+      "Cardiology"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "poonch-district-receives-skoch-award-for-ab-pmjay-sehat-implementation-daily-excelsior",
@@ -417,7 +587,11 @@
     "category": "Healthcare",
     "url": "https://www.dailyexcelsior.com/poonch-district-receives-skoch-award-for-ab-pmjay-sehat-implementation/amp",
     "publishedAt": "2026-06-21T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "your-medical-history-1-otp-away-how-karnataka-is-pushing-for-unified-digital-patient-records-toi",
@@ -427,7 +601,11 @@
     "category": "Healthcare",
     "url": "https://www.bhaskar.com/local/uttar-pradesh/gorakhpur/news/gorakhpur-imam-hussain-memorial-health-camp-seniors-ayushman-card-138251968.html",
     "publishedAt": "2026-06-21T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-card-camp-held-in-gorakhpur-on-the-fifth-day-of-muharram-bhaskar",
@@ -437,7 +615,11 @@
     "category": "Healthcare",
     "url": "https://timesofindia.indiatimes.com/city/bengaluru/your-medical-history-1-otp-away-how-karnataka-is-pushing-for-unified-digital-patient-records/articleshowprint/131896496.cms",
     "publishedAt": "2026-06-21T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.255Z"
+    "fetchedAt": "2026-08-04T04:46:50.255Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "major-relief-for-ayushman-cardholders-in-up-issues-regarding-card-rejection-and-approval-will-now-be-resolved-at-the-district-level-itself-etv-bharat",
@@ -447,7 +629,11 @@
     "category": "Healthcare",
     "url": "https://www.etvbharat.com/hi/state/up-ayushman-bharat-card-rejection-approval-problems-resolved-at-district-level-ups26062005290",
     "publishedAt": "2026-06-20T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "begusarai-to-become-a-model-district-for-the-national-health-authority-dm-says-people-will-receive-technology-based-health-services-bhaskar",
@@ -457,7 +643,12 @@
     "category": "Healthcare",
     "url": "https://www.bhaskar.com/local/bihar/begusarai/news/begusarai-model-district-national-health-authority-ayushman-bharat-digital-mission-review-meeting-138100537.html",
     "publishedAt": "2026-06-20T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "NHA"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-no-more-selling-land-for-medical-treatment-bengal-s-decision-sparks-a-new-ray-of-hope-in-kishanganj-prabhat-khabar",
@@ -467,7 +658,11 @@
     "category": "Healthcare",
     "url": "https://www.prabhatkhabar.com/state/bihar/kishanganj/ayushman-bharat-west-bengal-impact-news",
     "publishedAt": "2026-06-20T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "getting-an-ayushman-card-made-has-become-very-easy-you-just-need-to-install-the-ayushman-app-you-can-also-download-the-pdf-jagran",
@@ -477,7 +672,11 @@
     "category": "Healthcare",
     "url": "https://www.jagran.com/uttar-pradesh/bijnor-apply-ayushman-card-easily-via-mobile-app-download-pdf-40278176.html",
     "publishedAt": "2026-06-19T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "dimapur-chosen-as-model-district-under-ayushman-bharat-digital-mission-ehealth",
@@ -487,7 +686,12 @@
     "category": "Healthcare",
     "url": "https://ehealth.eletsonline.com/2026/06/india-surpasses-100-crore-health-records-linked-to-abha-strengthening-the-worlds-largest-digital-health-ecosystem/",
     "publishedAt": "2026-06-18T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "IMA"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "j-k-ayushman-bharat-turns-lifeline-for-banihal-residents-thousands-receive-free-treatment-thehawk",
@@ -497,7 +701,11 @@
     "category": "Healthcare",
     "url": "https://www.thehawk.in/news/health/jk-ayushman-bharat-turns-lifeline-for-banihal-residents-thousands-receive-free-treatment",
     "publishedAt": "2026-06-18T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ai-in-healthcare-transforming-india-s-hospital-ecosystem-ehealth",
@@ -507,7 +715,11 @@
     "category": "Healthcare",
     "url": "https://ehealth.eletsonline.com/2026/06/india-surpasses-100-crore-health-records-linked-to-abha-strengthening-the-worlds-largest-digital-health-ecosystem/",
     "publishedAt": "2026-06-17T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "mp-visits-hospital-in-bulandshahr-assures-to-launch-ayushman-bharat-scheme-after-eye-check-up-bhaskar",
@@ -517,7 +729,11 @@
     "category": "Healthcare",
     "url": "https://www.bhaskar.com/local/uttar-pradesh/bulandshahar/shikarpur/news/bulandshahr-mp-bholasingh-visit-global-eye-hospital-assurance-ayushman-bharat-yojana-138209802.html",
     "publishedAt": "2026-06-16T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "model-district-workshop-organized-in-diu-under-the-ayushman-bharat-digital-mission-asali-azadi",
@@ -527,7 +743,11 @@
     "category": "Healthcare",
     "url": "https://asliazadi.com/news/461427",
     "publishedAt": "2026-06-15T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "india-has-gained-recognition-as-the-country-with-the-world-s-largest-healthcare-program-pm-modi-nbt",
@@ -537,7 +757,11 @@
     "category": "Healthcare",
     "url": "https://navbharattimes.indiatimes.com/india/ayushman-bharat-india-becomes-worlds-largest-health-scheme-nation-pm-modi-lists-achievements/articleshow/131719160.cms",
     "publishedAt": "2026-06-14T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "workshop-held-at-llrm-under-ayushman-bharat-digital-mission-doctors-trained-on-opd-ipd-modules-bhaskar",
@@ -547,7 +771,11 @@
     "category": "Healthcare",
     "url": "https://www.bhaskar.com/amp/local/uttar-pradesh/meerut/news/llrm-medical-college-doctors-opd-ipd-training-online-e-prescription-138183849.html",
     "publishedAt": "2026-06-13T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "major-change-in-ayushman-panel-rules-entry-now-denied-without-50-beds-and-nabh-accreditation-small-hospitals-concerned-jagran",
@@ -557,7 +785,12 @@
     "category": "Healthcare",
     "url": "https://www.jagran.com/uttar-pradesh/moradabad-city-ayushman-bharat-hospital-new-rules-50-beds-nabh-mandatory-up-40271071.html",
     "publishedAt": "2026-06-12T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "NABH"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "nha-nepal-delegation-talks-highlight-abdm-digital-health-adoption-dhn",
@@ -567,7 +800,12 @@
     "category": "Healthcare",
     "url": "https://www.digitalhealthnews.com/nha-nepal-delegation-talks-highlight-abdm-digital-health-adoption",
     "publishedAt": "2026-06-05T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "NHA"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "begusarai-will-become-the-model-district-of-the-national-health-authority-dm-said-people-will-get-technology-based-health-services-bhaskar",
@@ -577,7 +815,12 @@
     "category": "Healthcare",
     "url": "https://www.bhaskar.com/local/bihar/begusarai/news/begusarai-model-district-national-health-authority-ayushman-bharat-digital-mission-review-meeting-138100537.html",
     "publishedAt": "2026-06-03T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "NHA"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "union-health-ministry-and-west-bengal-to-sign-mou-on-june-8-for-health-schemes-the-news-mill",
@@ -587,7 +830,12 @@
     "category": "Healthcare",
     "url": "https://thenewsmill.com/2026/06/union-health-ministry-and-west-bengal-to-sign-mou-on-june-8-for-health-schemes/",
     "publishedAt": "2026-06-02T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "MoHFW"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "union-health-ministry-west-bengal-government-likely-to-sign-mou-on-june-8-for-implementation-of-central-health-schemes-ani",
@@ -597,7 +845,12 @@
     "category": "Healthcare",
     "url": "https://www.aninews.in/news/national/general-news/union-health-ministry-west-bengal-government-likely-to-sign-mou-on-june-8-for-implementation-of-central-health-schemes20260602162839/",
     "publishedAt": "2026-06-02T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "MoHFW"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-digital-mission-crosses-landmark-milestone-of-90-cr-abha-accounts-digital-health-news",
@@ -607,7 +860,11 @@
     "category": "Healthcare",
     "url": " https://www.ndtv.com/health/west-bengal-to-implement-national-health-mission-ayushman-bharat-to-benefit-1-36-crore-families-11574751",
     "publishedAt": "2026-06-01T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "900-million-abha-accounts-india-s-biggest-achievement-under-the-leadership-of-dr-sunil-kumar-barnwal-iitism-elated-jagran",
@@ -617,7 +874,12 @@
     "category": "Healthcare",
     "url": "https://www.jagran.com/jharkhand/dhanbad-abha-accounts-cross-90-cr-dr-sunil-barnwal-leadership-40258186.html",
     "publishedAt": "2026-05-31T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "Orthopedic"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-digital-mission-crosses-landmark-milestone-of-90-crore-abha-accounts-et",
@@ -627,7 +889,11 @@
     "category": "Healthcare",
     "url": "https://health.economictimes.indiatimes.com/amp/news/policy/ayushman-bharat-digital-mission-crosses-landmark-milestone-of-90-crore-abha-accounts/131415336",
     "publishedAt": "2026-05-30T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-surpasses-90-crore-abha-accounts-nearly-half-are-women-hans-india",
@@ -637,7 +903,11 @@
     "category": "Healthcare",
     "url": "https://newsonair.gov.in/ayushman-bharat-digital-mission-crosses-landmark-milestone-of-90-crore-abhas/",
     "publishedAt": "2026-05-30T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-digital-mission-crosses-landmark-milestone-of-90-crore-abha-accounts-pib",
@@ -647,7 +917,11 @@
     "category": "Healthcare",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2266979&reg=1&lang=1",
     "publishedAt": "2026-05-30T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "india-s-ayushman-bharat-digital-mission-crosses-90-crore-abha-registrations-nearly-half-are-women-ndtv",
@@ -657,7 +931,11 @@
     "category": "Healthcare",
     "url": "https://www.ndtv.com/health/indias-ayushman-bharat-digital-mission-crosses-90-crore-abha-registrations-nearly-half-are-women-11568716/amp",
     "publishedAt": "2026-05-30T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-digital-mission-crosses-landmark-milestone-of-90-crore-abhas-air",
@@ -667,7 +945,11 @@
     "category": "Healthcare",
     "url": "https://www.thehansindia.com/news/national/ayushman-bharat-surpasses-90-crore-abha-accounts-nearly-half-are-women-1081120",
     "publishedAt": "2026-05-30T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "health-insurance-and-government-schemes-have-reduced-out-of-pocket-medical-expenses-in-india-according-to-data-released-by-the-ministry-of-health-et",
@@ -677,7 +959,12 @@
     "category": "Healthcare",
     "url": "https://ehealth.eletsonline.com/2026/05/piyush-singla-appointed-director-in-ayushman-bharat-digital-mission/",
     "publishedAt": "2026-05-29T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "MoHFW"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "india-digitalizes-health-records-of-100-crore-people-under-ayushman-bharat-daily-hunt",
@@ -687,7 +974,11 @@
     "category": "Healthcare",
     "url": "https://m.dailyhunt.in/news/india/english/health+and+me-epaper-helthnme/india+digitalizes+health+records+of+100+crore+people+under+ayushman+bharat-newsid-n713275604",
     "publishedAt": "2026-05-23T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-scheme-to-be-launched-in-west-bengal-from-july-2026-air",
@@ -697,7 +988,11 @@
     "category": "Healthcare",
     "url": "https://newsonair.gov.in/ayushman-bharat-scheme-to-be-launched-in-west-bengal-from-july-2026/",
     "publishedAt": "2026-05-23T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-scheme-to-roll-out-in-west-bengal-from-july-1-cm-suvendu-adhikari",
@@ -707,7 +1002,11 @@
     "category": "Healthcare",
     "url": "https://www.thehindu.com/news/national/west-bengal/west-bengal-gets-3000-crore-for-healthcare-revamp-ayushman-bharat-card-rollout-from-july-cm-suvendu-adhikari/article71014164.ece",
     "publishedAt": "2026-05-23T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "bengal-gets-rs-3-000-cr-for-healthcare-revamp-ayushman-bharat-card-rollout-from-july-suvendu-et",
@@ -717,7 +1016,11 @@
     "category": "Healthcare",
     "url": "https://economictimes.indiatimes.com/news/india/west-bengal-secures-rs-3000-crore-for-healthcare-overhaul-ayushman-bharat-cards-launching-in-july/articleshow/131277722.cms?from=mdr",
     "publishedAt": "2026-05-23T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "over-100-crore-health-records-linked-with-abha-medical-buyer",
@@ -727,7 +1030,11 @@
     "category": "Healthcare",
     "url": "https://medicalbuyer.co.in/over-100-crore-health-records-linked-with-abha/",
     "publishedAt": "2026-05-23T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "patients-from-across-the-country-are-arriving-in-jhalawar-for-free-treatment-of-this-complex-surgery-receiving-the-gift-of-a-new-life-patrika",
@@ -737,7 +1044,11 @@
     "category": "Healthcare",
     "url": "https://timesofindia.indiatimes.com/city/kolkata/300-hosps-join-ayushman-on-boarding-workshop/articleshowprint/131250141.cms",
     "publishedAt": "2026-05-21T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "jp-nadda-highlights-ayushman-bharat-digital-mission-at-world-health-assembly-dhn",
@@ -747,7 +1058,11 @@
     "category": "Healthcare",
     "url": "https://www.digitalhealthnews.com/jp-nadda-highlights-ayushman-bharat-digital-mission-at-world-health-assembly",
     "publishedAt": "2026-05-20T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "bjp-led-bengal-government-to-roll-out-ayushman-bharat-from-june-1",
@@ -757,7 +1072,11 @@
     "category": "Healthcare",
     "url": "https://www.telegraphindia.com/west-bengal/bjp-led-bengal-government-to-roll-out-ayushman-bharat-from-june-1-prnt/cid/2160633#goog_rewarded",
     "publishedAt": "2026-05-14T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-resulting-in-transformation-impact-health-secy-punya-srivastava",
@@ -767,7 +1086,11 @@
     "category": "Healthcare",
     "url": "https://english.punjabkesari.com/india/ayushman-bharat-resulting-in-transformative-impact-health-secy-punya-srivastava/",
     "publishedAt": "2026-05-14T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "yogi-govt-cracks-down-on-ayushman-bharat-data-discrepancies-in-up",
@@ -777,7 +1100,11 @@
     "category": "Healthcare",
     "url": "https://www.jagran.com/uttar-pradesh/lucknow-city-yogi-govt-cracks-down-on-ayushman-bharat-data-discrepancies-in-up-40238892.html",
     "publishedAt": "2026-05-14T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-card-for-west-bengal-senior-citizens-how-to-apply-online-and-what-all-are-covered",
@@ -787,7 +1114,11 @@
     "category": "Healthcare",
     "url": "https://indianexpress.com/article/cities/kolkata/ayushman-bharat-west-bengal-senior-citizens-registration-guide-10686863/",
     "publishedAt": "2026-05-13T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "narayana-hospital-celebrates-century-of-joint-replacements-under-ayushman-bharat-in-rajouri",
@@ -797,7 +1128,11 @@
     "category": "Healthcare",
     "url": "https://www.dailyexcelsior.com/narayana-hospital-celebrates-century-of-joint-replacements-under-ayushman-bharat-in-rajouri/",
     "publishedAt": "2026-05-13T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "pmjay-explores-ai-shield-against-healthcare-insurance-fraud-at-iisc-bengaluru",
@@ -807,7 +1142,11 @@
     "category": "Healthcare",
     "url": "https://timesofindia.indiatimes.com/city/bengaluru/pm-jay-explores-ai-shield-against-healthcare-insurance-fraud-at-iisc-bengaluru/articleshowprint/130988080.cms",
     "publishedAt": "2026-05-10T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ab-pmjay-hackathon-calls-for-india-specific-ai-models-to-improve-healthcare",
@@ -817,7 +1156,11 @@
     "category": "Healthcare",
     "url": "https://medicalbuyer.co.in/ab-pmjay-hackathon-calls-for-india-specific-ai-models-to-improve-healthcare/",
     "publishedAt": "2026-05-10T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "jal-jeevan-ayushman-bharat-among-schemes-likely-to-gain-pace-in-bengal",
@@ -827,7 +1170,11 @@
     "category": "Healthcare",
     "url": "https://economictimes.indiatimes.com/news/india/jal-jeevan-ayushman-bharat-among-schemes-likely-to-gain-pace-in-bengal/articleshow/130991463.cms?from=mdr",
     "publishedAt": "2026-05-10T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-ai-fraud-detection-healthcare-claims-hackathon",
@@ -837,7 +1184,11 @@
     "category": "Healthcare",
     "url": "https://the420.in/ayushman-bharat-ai-fraud-detection-healthcare-claims-hackathon/",
     "publishedAt": "2026-05-10T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "national-health-authority-convenes-day1-of-ab-pmjay-auto-adjudication-hackathon-showcase-2026-ai-driven-innovations-in-claims-adjudication-take-centre-stage",
@@ -847,7 +1198,12 @@
     "category": "Healthcare",
     "url": "https://www.tripurastarnews.com/national-health-authority-convenes-day-1-of-ab-pm-jay-auto-adjudication-hackathon-showcase-2026-ai-driven-innovations-in-claims-adjudication-take-centre-stage/",
     "publishedAt": "2026-05-10T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "NHA"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-scheme-a-blessing-for-the-poor-says-beneficiary-in-uttarakhand-s-chamoli",
@@ -857,7 +1213,11 @@
     "category": "Healthcare",
     "url": "https://english.punjabkesari.com/india/ayushman-scheme-is-blessing-for-the-poor-says-beneficiary-in-uttarakhands-chamoli/amp/",
     "publishedAt": "2026-05-09T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ai-driven-fraud-detection-emerges-key-focus-at-ayushman-bharat-hackathon-the-hindu",
@@ -867,7 +1227,11 @@
     "category": "Healthcare",
     "url": "https://www.thehindu.com/news/national/karnataka/ai-driven-fraud-detection-emerges-key-focus-at-ayushman-bharat-hackathon/article70958933.ece/amp/",
     "publishedAt": "2026-05-09T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-talks-begin-health-department-officials-explore-merger-with-swasthya-sathi",
@@ -877,7 +1241,11 @@
     "category": "Healthcare",
     "url": "https://www.telegraphindia.com/amp/west-bengal/kolkata/ayushman-bharat-talks-begin-health-department-officials-explore-merger-with-swasthya-sathi-prnt/cid/2159682",
     "publishedAt": "2026-05-08T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "nha-indiaai-mission-and-iisc-showcase-human-centric-ai-solutions-to-transform-health-claims-under-ab-pm-jay",
@@ -887,7 +1255,12 @@
     "category": "Healthcare",
     "url": "https://www.thehindu.com/news/national/karnataka/nha-indiaai-mission-and-iisc-showcase-human-centric-ai-solutions-to-transform-health-claims-under-ab-pm-jay/article70956004.ece/amp/",
     "publishedAt": "2026-05-08T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "NHA"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "mohfw-launches-ai-powered-healthcare-claims-revolution-under-ayushman-bharat",
@@ -897,7 +1270,12 @@
     "category": "Healthcare",
     "url": "https://www.devdiscourse.com/article/health/3901657-mohfw-launches-ai-powered-healthcare-claims-revolution-under-ayushman-bharat",
     "publishedAt": "2026-05-08T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM",
+      "MoHFW"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ai-driven-innovations-take-centre-stage-at-ab-pm-jay-auto-adjudication-hackathon-2026",
@@ -907,7 +1285,11 @@
     "category": "Healthcare",
     "url": "https://ddindia.co.in/2026/05/ai-driven-innovations-take-centre-stage-at-ab-pm-jay-auto-adjudication-hackathon-2026/",
     "publishedAt": "2026-05-07T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "government-to-host-ayushman-bharat-pm-jay-hackathon-finale-in-bengaluru-investmentguruindia",
@@ -917,7 +1299,11 @@
     "category": "Healthcare",
     "url": "https://investmentguruindia.com/newsdetail/government-to-host-ayushman-bharat-pm-jay-hackathon-finale-in-bengaluru651083",
     "publishedAt": "2026-05-06T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "new-swasth-bharat-portal-explained-unifying-india-s-health-systems-via-digital-integration-ndtv",
@@ -927,7 +1313,11 @@
     "category": "Healthcare",
     "url": "https://www.ndtv.com/health/new-swasth-bharat-portal-explained-unifying-indias-health-systems-via-digital-integration-11456008",
     "publishedAt": "2026-05-06T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "online-booking-of-chc-opd-started-under-abdm-scheme-investigation-report-will-be-available-on-mobile-bhaskar",
@@ -937,7 +1327,11 @@
     "category": "Healthcare",
     "url": "https://www.bhaskar.com/local/uttar-pradesh/bareilly/mirganj/news/bareilly-chc-mirganj-opd-online-booking-abdm-scheme-137862808.html",
     "publishedAt": "2026-05-05T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-will-reach-4-76-lakh-eligible-people",
@@ -947,7 +1341,11 @@
     "category": "Healthcare",
     "url": "https://www.livehindustan.com/uttar-pradesh/aligarh/story-ayushman-bharat-scheme-health-department-intensifies-efforts-to-enroll-4-76-lakh-beneficiaries-201777832519258.html",
     "publishedAt": "2026-05-03T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ramgarh-to-become-a-digital-district-aiming-to-implement-paperless-system-by-may-15",
@@ -957,7 +1355,11 @@
     "category": "Healthcare",
     "url": "https://www.etvbharat.com/amp/hi/state/under-ayushman-bharat-digital-mission-ramgarh-district-set-target-to-become-paperless-jhs26050202985",
     "publishedAt": "2026-05-02T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "abdm-abha-id-integration-with-hmis-janani-esanjeevani-boost-india-s-digital-health-ecosystem-says-health-secy-digitalhealthnews",
@@ -967,7 +1369,11 @@
     "category": "Healthcare",
     "url": "https://www.digitalhealthnews.com/abdm-abha-id-integration-with-hmis-janani-esanjeevani-boost-india-s-digital-health-ecosystem-says-health-secy",
     "publishedAt": "2026-05-01T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "12-26-lakh-construction-workers-provided-ayushman-card-facility-remaining-15-83-lakh-workers-will-also-get-the-benefit-soon-cm-yogi-adityanath-jagran",
@@ -977,7 +1383,11 @@
     "category": "Healthcare",
     "url": "https://english.dainikjagranmpcg.com/national/1226-lakh-construction-workers-provided-ayushman-card-facility-remaining-1583/article-17678",
     "publishedAt": "2026-05-01T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "ayushman-bharat-diwas-2026-how-pm-jay-has-provided-affordable-and-easy-treatment-to-millions-of-people-navbharat",
@@ -987,7 +1397,11 @@
     "category": "Healthcare",
     "url": "https://navbharatlive.com/utility-news/ayushman-bharat-diwas-2026-pm-jay-scheme-benefits-impact-healthcare-india-1707007.html",
     "publishedAt": "2026-04-30T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   },
   {
     "slug": "digital-revolution-in-jharkhand-hospitals-no-more-queues-no-more-waiting-lab-reports-will-reach-you-directly-on-your-mobile-prabhat-khabar",
@@ -997,6 +1411,10 @@
     "category": "Healthcare",
     "url": "https://www.prabhatkhabar.com/state/jharkhand/ranchi/jharkhand-hospital-news-lab-report-directly-come-to-mobile-whatsapp-under-ayushman-bharat-digital-mission/amp",
     "publishedAt": "2026-04-30T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
+    "fetchedAt": "2026-08-04T04:46:50.256Z",
+    "tags": [
+      "ABDM"
+    ],
+    "primaryTag": "ABDM"
   }
 ]
