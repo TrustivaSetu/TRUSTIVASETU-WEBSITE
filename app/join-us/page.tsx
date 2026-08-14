@@ -345,7 +345,7 @@ export default function JoinUsPage() {
       </section>
 
       {/* ── OPEN POSITIONS ───────────────────────────── */}
-      <section id="openings" className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+      <section id="openings" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24">
         <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-center text-lime-300">
           Current Openings
         </h2>
@@ -398,7 +398,7 @@ export default function JoinUsPage() {
       </section>
 
       {/* ── APPLICATION FORM ─────────────────────────── */}
-      <section id="apply" className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <section id="apply" className="max-w-4xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24">
         <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-center">
           Ready to Build With Us?
         </h2>

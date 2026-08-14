@@ -17,7 +17,7 @@ export default function AboutPage() {
 
         <section
           id="about"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-14"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-24"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             About Trustiva Setu

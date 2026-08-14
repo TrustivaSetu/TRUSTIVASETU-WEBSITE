@@ -50,7 +50,7 @@ export default function TrustivaSetuWebsite() {
 
         <section
           id="home"
-          className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-12 sm:pb-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center"
+          className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-12 sm:pb-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center scroll-mt-24"
         >
           <div className="relative z-10">
             <p className="text-lime-300 text-sm tracking-[0.3em] uppercase mb-4">
@@ -127,7 +127,7 @@ export default function TrustivaSetuWebsite() {
         {/* HOW IT WORKS */}
         <section
           id="how-it-works"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
         >
           <div className="flex justify-center mb-8">
             <motion.div

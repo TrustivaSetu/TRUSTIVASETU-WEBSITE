@@ -196,7 +196,7 @@ export default function ForPatientsPage() {
 
         <section
           id="patients"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-10">
             For Patients
@@ -378,7 +378,7 @@ export default function ForPatientsPage() {
         {/* TREATMENT CATEGORIES */}
         <section
           id="treatments"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
         >
           <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Coverage
@@ -517,7 +517,7 @@ export default function ForPatientsPage() {
         {/* EMI CALCULATOR */}
         <section
           id="emi-calculator"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
         >
           <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Plan Your Treatment Finance

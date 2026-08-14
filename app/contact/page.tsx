@@ -421,7 +421,7 @@ distribution expansion and national healthcare financing infrastructure deployme
 
         <section
           id="for-strategic-investors"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
         >
           <div className="bg-white/10 backdrop-blur-2xl border border-lime-300/20 rounded-3xl p-10 shadow-2xl">
             <p className="text-lime-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
@@ -532,7 +532,7 @@ distribution expansion and national healthcare financing infrastructure deployme
 
         <section
           id="testimonials"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
         >
           <h2 className="text-4xl font-bold mb-10 text-center">
             Early Feedback

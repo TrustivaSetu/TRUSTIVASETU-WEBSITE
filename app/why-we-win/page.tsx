@@ -57,7 +57,7 @@ export default function WhyWeWinPage() {
 
           <section
             id="why-we-win"
-            className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+            className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
               Why We Win
@@ -177,7 +177,7 @@ Our routing engine creates lender competition, better approvals and stronger cli
           {/* FAQ */}
           <section
             id="faq"
-            className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+            className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
           >
             <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
               Have Questions?

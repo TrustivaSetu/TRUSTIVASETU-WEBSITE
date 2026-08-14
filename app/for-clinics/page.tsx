@@ -164,7 +164,7 @@ export default function ForClinicsPage() {
 
         <section
           id="clinics"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-10">
             For Clinics
