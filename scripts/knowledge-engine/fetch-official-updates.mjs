@@ -3,6 +3,8 @@ import crypto from "node:crypto";
 import { fetchRBI } from "./providers/rbi.mjs";
 import { fetchABDM } from "./providers/abdm.mjs";
 import { fetchNABH } from "./providers/nabh.mjs";
+import { fetchCDSCO } from "./providers/cdsco.mjs";
+import { fetchIADVL } from "./providers/iadvl.mjs";
 
 import { readJson, writeJson } from "./lib/storage.mjs";
 
@@ -20,7 +22,9 @@ const historyByUrl=new Map(
 const updates=[
   ...(await fetchRBI()),
   ...(await fetchABDM()),
-  ...(await fetchNABH())
+  ...(await fetchNABH()),
+  ...(await fetchCDSCO()),
+  ...(await fetchIADVL())
 ];
 
 const generated=[];
@@ -64,7 +68,9 @@ console.log(
   {
     RBI:(await fetchRBI()).length,
     ABDM:(await fetchABDM()).length,
-    NABH:(await fetchNABH()).length
+    NABH:(await fetchNABH()).length,
+    CDSCO:(await fetchCDSCO()).length,
+    IADVL:(await fetchIADVL()).length
   }
 );
 

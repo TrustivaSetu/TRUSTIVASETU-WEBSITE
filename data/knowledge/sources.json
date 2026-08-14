@@ -53,7 +53,7 @@
     "url": "https://www.iadvl.org/",
     "type": "html",
     "category": "Dermatology",
-    "active": false
+    "active": true
   },
   {
     "id": "cdsco",
@@ -61,6 +61,6 @@
     "url": "https://cdsco.gov.in/",
     "type": "html",
     "category": "Drug Regulation",
-    "active": false
+    "active": true
   }
 ]
