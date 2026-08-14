@@ -1,5 +1,1649 @@
 [
   {
+    "slug": "iadvl-news-december-2019-vol-15-issue-03",
+    "title": "IADVL News – December 2019 (Vol. 15 Issue 03)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, December 2019 (Vol. 15 Issue 03)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/40-IADVLNewsletter_Dec2019.pdf",
+    "publishedAt": "2019-12-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-april-2020-vol-16-issue-01",
+    "title": "IADVL News – April 2020 (Vol. 16 Issue 01)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, April 2020 (Vol. 16 Issue 01)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/41-IADVL+Newsletter+April+2020.pdf",
+    "publishedAt": "2020-04-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-august-2020-vol-16-issue-02",
+    "title": "IADVL News – August 2020 (Vol. 16 Issue 02)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, August 2020 (Vol. 16 Issue 02)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/42-IADVLNewsAug2020.pdf",
+    "publishedAt": "2020-08-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-december-2020-vol-16-issue-03",
+    "title": "IADVL News – December 2020 (Vol. 16 Issue 03)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, December 2020 (Vol. 16 Issue 03)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/43-IADVLNews_Dec2020.pdf",
+    "publishedAt": "2020-12-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-april-2021-vol-17-issue-01",
+    "title": "IADVL News – April 2021 (Vol. 17 Issue 01)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, April 2021 (Vol. 17 Issue 01)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/44-IADVL+News2021Apr.pdf",
+    "publishedAt": "2021-04-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-august-2021-vol-17-issue-02",
+    "title": "IADVL News – August 2021 (Vol. 17 Issue 02)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, August 2021 (Vol. 17 Issue 02)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/45-IADVLNEWS_Aug2021+1.pdf",
+    "publishedAt": "2021-08-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-december-2021-vol-17-issue-03",
+    "title": "IADVL News – December 2021 (Vol. 17 Issue 03)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, December 2021 (Vol. 17 Issue 03)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/46-iadvl+newsletter+Dec2021.pdf",
+    "publishedAt": "2021-12-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-april-2022-vol-18-issue-01",
+    "title": "IADVL News – April 2022 (Vol. 18 Issue 01)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, April 2022 (Vol. 18 Issue 01)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/47-Newsletter+April+2022.pdf",
+    "publishedAt": "2022-04-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-august-2022-vol-18-issue-02",
+    "title": "IADVL News – August 2022 (Vol. 18 Issue 02)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, August 2022 (Vol. 18 Issue 02)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/Newsletter-2023/IADVL+News-+The+Official+Bulletin+of+IADVL++August+2022.pdf",
+    "publishedAt": "2022-08-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-december-2022-vol-18-issue-03",
+    "title": "IADVL News – December 2022 (Vol. 18 Issue 03)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, December 2022 (Vol. 18 Issue 03)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/DEC+NEWSLETTER2022.pdf",
+    "publishedAt": "2022-12-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-april-2023-vol-19-issue-01",
+    "title": "IADVL News – April 2023 (Vol. 19 Issue 01)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, April 2023 (Vol. 19 Issue 01)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/Newsletter-2023/IADVL+News-+The+Official+Bulletin+of+IADVL++April+2023.pdf",
+    "publishedAt": "2023-04-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-august-2023-vol-19-issue-02",
+    "title": "IADVL News – August 2023 (Vol. 19 Issue 02)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, August 2023 (Vol. 19 Issue 02)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/Newsletter-2023/IADVL+News_August_2023_5_8_2023_web_9am.pdf",
+    "publishedAt": "2023-08-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-december-2023-vol-19-issue-03",
+    "title": "IADVL News – December 2023 (Vol. 19 Issue 03)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, December 2023 (Vol. 19 Issue 03)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/Newsletter-2023/IADVL+News-+The+Official+Bulletin+of+IADVL++December+2023.pdf",
+    "publishedAt": "2023-12-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-april-2024-vol-20-issue-01",
+    "title": "IADVL News – April 2024 (Vol. 20 Issue 01)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, April 2024 (Vol. 20 Issue 01)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://webflow-site-files.s3.ap-south-1.amazonaws.com/iadvl/newsletters/IADVL-News-bulletin/IADVL+NEWS_APRIL_2024_v13_web.pdf",
+    "publishedAt": "2024-04-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-august-2024-vol-20-issue-02",
+    "title": "IADVL News – August 2024 (Vol. 20 Issue 02)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, August 2024 (Vol. 20 Issue 02)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://cdn.prod.website-files.com/660eda736872e1985ce5b507/66f40064b861d2489bf14120_IADVL%20NEWS_Aug2024_web_v19-compressed.pdf",
+    "publishedAt": "2024-08-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-december-2024-vol-20-issue-03",
+    "title": "IADVL News – December 2024 (Vol. 20 Issue 03)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, December 2024 (Vol. 20 Issue 03)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://cdn.prod.website-files.com/660eda736872e1985ce5b507/67ad7f73f59f7f80099e5654_IADVL_News_12_2_2025_web-compressed.pdf",
+    "publishedAt": "2024-12-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-april-2025-vol-21-issue-01",
+    "title": "IADVL News – April 2025 (Vol. 21 Issue 01)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, April 2025 (Vol. 21 Issue 01)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://d2wpzcjqgjdvvb.cloudfront.net/iadvl/newsletters/The+Official+Bulletin+of+IADVL/IADVL+News_April_2025_web_v15.pdf",
+    "publishedAt": "2025-04-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-august-2025-vol-21-issue-02",
+    "title": "IADVL News – August 2025 (Vol. 21 Issue 02)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, August 2025 (Vol. 21 Issue 02)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://cdn.prod.website-files.com/660eda736872e1985ce5b507/68b03f2835580cd31299f154_IADVL_News_August_2025_Demo%20(6)-compressed.pdf",
+    "publishedAt": "2025-08-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-december-2025-vol-21-issue-03",
+    "title": "IADVL News – December 2025 (Vol. 21 Issue 03)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, December 2025 (Vol. 21 Issue 03)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://cdn.prod.website-files.com/660eda736872e1985ce5b507/698c718b52c239eda6a766d3_IADVL%20News_December_25_.pdf",
+    "publishedAt": "2025-12-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "iadvl-news-april-2026-vol-22-issue-01",
+    "title": "IADVL News – April 2026 (Vol. 22 Issue 01)",
+    "summary": "IADVL News – The Official Bulletin of IADVL, April 2026 (Vol. 22 Issue 01)",
+    "source": "IADVL",
+    "category": "Dermatology",
+    "url": "https://cdn.prod.website-files.com/660eda736872e1985ce5b507/6a3bb01e2bc43d020a341992_IADVL_News_April_2026_web_compressed.pdf",
+    "publishedAt": "2026-04-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IADVL"
+    ],
+    "primaryTag": "IADVL"
+  },
+  {
+    "slug": "appointment-of-cpio-for-the-purpose-of-rti-technical-matters",
+    "title": "Appointment of CPIO for the purpose of RTI(Technical) Matters",
+    "summary": "Appointment of CPIO for the purpose of RTI(Technical) Matters",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQxNTI=",
+    "publishedAt": "2026-05-12T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "rejection-and-debarment-of-application-for-submission-of-fabricated-documents-by-firm-m-s-dmf-cosmo-829f4158",
+    "title": "Rejection and Debarment of application for submission of fabricated documents by firm M/s. DMF Cosmo Private Limited",
+    "summary": "Rejection and Debarment of application for submission of fabricated documents by firm M/s. DMF Cosmo Private Limited",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQxNzA=",
+    "publishedAt": "2026-05-15T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "strengthening-enforcement-against-unauthorized-promotion-and-distribution-of-glp-1-based-drugs",
+    "title": "Strengthening Enforcement against Unauthorized Promotion and Distribution of GLP-1 Based Drugs",
+    "summary": "Strengthening Enforcement against Unauthorized Promotion and Distribution of GLP-1 Based Drugs",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQxNzE=",
+    "publishedAt": "2026-05-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "use-of-cosmetics",
+    "title": "Use of Cosmetics",
+    "summary": "Use of Cosmetics",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQxNzU=",
+    "publishedAt": "2026-05-19T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "be-noc-prior-intimation-system-of-notification-for-certain-category-of-new-drugs-for-conduct-of-ba-b-58ad3f2d",
+    "title": "BE-NOC Prior Intimation (System of Notification for certain category of new drugs for conduct of \"BA-BE Studies\" for export purpose under Chapter V, NDCT Rule, 2019) and procedure for obtaining CT-16 application on NSWS Portal",
+    "summary": "BE-NOC Prior Intimation (System of Notification for certain category of new drugs for conduct of \"BA-BE Studies\" for export purpose under Chapter V, NDCT Rule, 2019) and procedure for obtaining CT-16 application on NSWS Portal",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQyMDc=",
+    "publishedAt": "2026-05-22T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IMA",
+      "CDSCO"
+    ],
+    "primaryTag": "IMA"
+  },
+  {
+    "slug": "prohibits-to-import-manufacture-sale-distribution-and-use-in-any-food-producing-animal-rearing-syste-a9dcd17f",
+    "title": "Prohibits to Import, manufacture, sale, distribution and use in any food producing animal rearing system of drug formulations containing \"Chloramphenicol or Nitrofurans drugs with immediate effect",
+    "summary": "Prohibits to Import, manufacture, sale, distribution and use in any food producing animal rearing system of drug formulations containing \"Chloramphenicol or Nitrofurans drugs with immediate effect",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQyODI=",
+    "publishedAt": "2026-06-04T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IMA",
+      "CDSCO"
+    ],
+    "primaryTag": "IMA"
+  },
+  {
+    "slug": "list-of-debarment-of-principal-investigators-by-cla",
+    "title": "List of Debarment of Principal Investigators by CLA",
+    "summary": "List of Debarment of Principal Investigators by CLA",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQzOTM=",
+    "publishedAt": "2026-06-12T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "list-of-suspended-ethics-committee-by-cla",
+    "title": "List of Suspended Ethics Committee by CLA",
+    "summary": "List of Suspended Ethics Committee by CLA",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQzOTI=",
+    "publishedAt": "2026-06-12T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "sale-of-in-vitro-fertilization-media-reagents-and-related-consumables-used-in-assisted-reproductive-5e46df93",
+    "title": "Sale of In-Vitro Fertilization media, reagents and related consumables used in Assisted Reproductive Technology procedures",
+    "summary": "Sale of In-Vitro Fertilization media, reagents and related consumables used in Assisted Reproductive Technology procedures",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MDE=",
+    "publishedAt": "2026-06-24T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "submission-of-post-approval-changes-applications-of-registration-certificate-and-import-licence-of-h-891fc9b0",
+    "title": "Submission of Post Approval Changes Applications of Registration Certificate and Import Licence of Human Vaccines and Anti-sera through SUGAM Portal",
+    "summary": "Submission of Post Approval Changes Applications of Registration Certificate and Import Licence of Human Vaccines and Anti-sera through SUGAM Portal",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MDQ=",
+    "publishedAt": "2026-06-24T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "cdsco-updated-list-of-laboratories-to-conduct-performance-evaluation-of-ivds-dated-29-06-2026",
+    "title": "CDSCO updated list of laboratories to conduct Performance evaluation of IVDs dated 29/06/2026",
+    "summary": "CDSCO updated list of laboratories to conduct Performance evaluation of IVDs dated 29/06/2026",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MTM=",
+    "publishedAt": "2026-06-29T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "inviting-comments-on-consideration-of-the-proposal-regarding-issue-of-use-of-brand-name-extensions-b-8161bb66",
+    "title": "Inviting comments on consideration of the proposal regarding Issue of use of brand name extensions by the pharmaceutical firms",
+    "summary": "Inviting comments on consideration of the proposal regarding Issue of use of brand name extensions by the pharmaceutical firms",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MzM=",
+    "publishedAt": "2026-07-06T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "inviting-comments-on-standard-ivd-evaluation-draft-protocols-scrub-typhus-drafted-by-icmr-and-cdsco",
+    "title": "Inviting comments on standard IVD evaluation draft protocols Scrub Typhus drafted by ICMR and CDSCO",
+    "summary": "Inviting comments on standard IVD evaluation draft protocols Scrub Typhus drafted by ICMR and CDSCO",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ2MzQ=",
+    "publishedAt": "2026-07-13T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "ICMR",
+      "CDSCO"
+    ],
+    "primaryTag": "ICMR"
+  },
+  {
+    "slug": "surrender-of-cosmetic-registration-certificate-no-rc-cos-002707-dated-06-oct-2021-and-rc-cos-002885-d1f17851",
+    "title": "Surrender of Cosmetic Registration Certificate No RC/COS-002707 dated 06-Oct. 2021 and RC/COS-002885 dated 3-Jan-2022",
+    "summary": "Surrender of Cosmetic Registration Certificate No RC/COS-002707 dated 06-Oct. 2021 and RC/COS-002885 dated 3-Jan-2022",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1MjE=",
+    "publishedAt": "2026-07-21T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "surrender-of-cosmetic-registration-certificate-no-rc-cos-002497-daled-08-jul-2021",
+    "title": "Surrender of Cosmetic Registration Certificate No RC/COS-002497 daled 08-Jul- 2021",
+    "summary": "Surrender of Cosmetic Registration Certificate No RC/COS-002497 daled 08-Jul- 2021",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1MjA=",
+    "publishedAt": "2026-07-21T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "guidance-document-on-medical-device-software-under-mdr-2017",
+    "title": "Guidance document on Medical Device Software under MDR-2017",
+    "summary": "Guidance document on Medical Device Software under MDR-2017",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1MTM=",
+    "publishedAt": "2026-07-21T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "surrender-of-cosmetic-registration-certificate-no-rc-cos-003938-dated-23-08-2023",
+    "title": "Surrender of cosmetic Registration Certificate No. RC/COS-003938 dated 23.08.2023",
+    "summary": "Surrender of cosmetic Registration Certificate No. RC/COS-003938 dated 23.08.2023",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1MzM=",
+    "publishedAt": "2026-07-23T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "regulatory-alert-regarding-cancellation-of-registration-certificates-of-ethics-committees-under-the-8531ca57",
+    "title": "Regulatory Alert regarding Cancellation of Registration Certificates of Ethics Committees under the New Drugs and Clinical Trials Rules, 2019",
+    "summary": "Regulatory Alert regarding Cancellation of Registration Certificates of Ethics Committees under the New Drugs and Clinical Trials Rules, 2019",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1NjA=",
+    "publishedAt": "2026-07-24T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "stakeholder-consultation-on-operational-guidelines-for-single-ethics-committee-review-of-multi-centr-4590d101",
+    "title": "Stakeholder Consultation on Operational Guidelines for Single Ethics Committee Review of Multi-Centre Research in India",
+    "summary": "Stakeholder Consultation on Operational Guidelines for Single Ethics Committee Review of Multi-Centre Research in India",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1Nzg=",
+    "publishedAt": "2026-08-06T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "manufacturing-and-marketing-of-un-approved-drug-products-containing-enclomiphene-and-its-combination-9aa5b2f4",
+    "title": "Manufacturing and marketing of un-approved drug products containing Enclomiphene and its combinations",
+    "summary": "Manufacturing and marketing of un-approved drug products containing Enclomiphene and its combinations",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ2MDI=",
+    "publishedAt": "2026-08-11T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-04-10-g-s-r-269-e-draft-notification-to-amend-certain-provisions-w-r-t-medical-device-testing-f-200bbdad",
+    "title": "2026.04.10_G.S.R. 269(E)_Draft Notification to amend certain provisions w.r.t. Medical Device Testing Fee under MDR, 2017",
+    "summary": "2026.04.10_G.S.R. 269(E)_Draft Notification to amend certain provisions w.r.t. Medical Device Testing Fee under MDR, 2017",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQwNTI=",
+    "publishedAt": "2026-04-10T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-04-21-g-s-r-299-e-draft-notification-for-amendment-under-rule-89-of-drugs-rules-1945-for-obtain-9d32358c",
+    "title": "2026.04.21 G.S.R. 299(E)_ Draft Notification for amendment under Rule 89 of Drugs Rules 1945, for obtaining licence under Form 29 for different categories falling under Form 25A, 25F, 28A, 28B, 28D, 28DA, 28E, 28F",
+    "summary": "2026.04.21 G.S.R. 299(E)_ Draft Notification for amendment under Rule 89 of Drugs Rules 1945, for obtaining licence under Form 29 for different categories falling under Form 25A, 25F, 28A, 28B, 28D, 28DA, 28E, 28F",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQxMTM=",
+    "publishedAt": "2026-04-21T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-05-13-g-s-r-377-e-notification-for-amendment-in-schedule-h1-for-inclusion-of-pregabalin-and-its-f4d3a785",
+    "title": "2026.05.13 G.S.R. 377(E)_Notification for amendment in Schedule H1 for inclusion of Pregabalin and its drug formulations",
+    "summary": "2026.05.13 G.S.R. 377(E)_Notification for amendment in Schedule H1 for inclusion of Pregabalin and its drug formulations",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQyMDU=",
+    "publishedAt": "2026-05-13T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-05-22-g-s-r-407-e-notification-for-revision-of-testing-fees-under-schedule-b-and-b1-of-drugs-an-1ae778a1",
+    "title": "2026.05.22 G.S.R. 407(E)_Notification for Revision of testing fees under Schedule B and B1 of Drugs and Cosmetics Actâ",
+    "summary": "2026.05.22 G.S.R. 407(E)_Notification for Revision of testing fees under Schedule B and B1 of Drugs and Cosmetics Actâ",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQyNjQ=",
+    "publishedAt": "2026-05-22T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-01-g-s-r-444-e-notification-for-amendment-in-schedule-v-w-r-t-unit-of-measurement-of-folic-a-5a51d686",
+    "title": "2026.06.01 G.S.R. 444(E)_Notification for amendment in Schedule V w.r.t. unit of measurement of Folic Acid under the Drugs Rules, 1945",
+    "summary": "2026.06.01 G.S.R. 444(E)_Notification for amendment in Schedule V w.r.t. unit of measurement of Folic Acid under the Drugs Rules, 1945",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQzMjM=",
+    "publishedAt": "2026-06-01T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-09-g-s-r-477-e-notification-for-removal-of-syrup-exemption-under-schedule-k-in-the-drugs-rul-34e5bfe1",
+    "title": "2026.06.09 G.S.R. 477(E)_Notification for Removal of Syrup exemption under schedule K in the Drugs Rules,1945",
+    "summary": "2026.06.09 G.S.R. 477(E)_Notification for Removal of Syrup exemption under schedule K in the Drugs Rules,1945",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQzNjA=",
+    "publishedAt": "2026-06-09T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-11-s-o-3068-e-to-s-o-3083-e-prohibition-of-16-fdc-s",
+    "title": "2026.06.11 S.O. 3068(E) to S.O. 3083(E)_ Prohibition of 16 FDC's",
+    "summary": "2026.06.11 S.O. 3068(E) to S.O. 3083(E)_ Prohibition of 16 FDC's",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQzOTc=",
+    "publishedAt": "2026-06-11T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-18-g-s-r-496-e-notification-of-chaudhary-charan-singh-national-institute-of-animal-health-ba-401efce0",
+    "title": "2026.06.18 G.S.R. 496(E)_Notification of Chaudhary Charan Singh National Institute of Animal Health, Baghpat, UP, as a CDL for testing viral and bacterial veterinary vaccines under the D and C Act",
+    "summary": "2026.06.18 G.S.R. 496(E)_Notification of Chaudhary Charan Singh National Institute of Animal Health, Baghpat, UP, as a CDL for testing viral and bacterial veterinary vaccines under the D and C Act",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQzOTY=",
+    "publishedAt": "2026-06-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "IMA",
+      "CDSCO"
+    ],
+    "primaryTag": "IMA"
+  },
+  {
+    "slug": "2026-06-22-g-s-r-504-e-draft-notification-regarding-submission-of-periodic-safety-update-reports-ann-084f18fe",
+    "title": "2026.06.22 G.S.R. 504(E)_Draft notification regarding submission of Periodic Safety Update Reports annually for subsequent years till the drug product is marketed in the NDCT Rules, 2019",
+    "summary": "2026.06.22 G.S.R. 504(E)_Draft notification regarding submission of Periodic Safety Update Reports annually for subsequent years till the drug product is marketed in the NDCT Rules, 2019",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MDc=",
+    "publishedAt": "2026-06-22T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-22-g-s-r-506-e-notification-regarding-amendment-under-drugs-rules-to-include-more-categories-b5abad23",
+    "title": "2026.06.22 G.S.R. 506(E)_Notification regarding amendment under Drugs Rules to include more categories under Schedule H2â",
+    "summary": "2026.06.22 G.S.R. 506(E)_Notification regarding amendment under Drugs Rules to include more categories under Schedule H2â",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MDU=",
+    "publishedAt": "2026-06-22T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-22-s-o-3286-e-implementation-of-provisions-under-jan-vishwas-amendment-of-provisions-act-202-04e13e75",
+    "title": "2026.06.22 S.O. 3286(E)_Implementation of provisions under Jan Vishwas (Amendment of Provisions) Act, 2026",
+    "summary": "2026.06.22 S.O. 3286(E)_Implementation of provisions under Jan Vishwas (Amendment of Provisions) Act, 2026",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQzOTg=",
+    "publishedAt": "2026-06-22T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-22-g-s-r-505-e-draft-notification-regarding-rationalization-of-shelf-life-under-rule-31-of-d-cd172fe2",
+    "title": "2026.06.22 G.S.R. 505(E)_Draft notification regarding rationalization of shelf life under Rule 31 of Drugs Rules, 1945",
+    "summary": "2026.06.22 G.S.R. 505(E)_Draft notification regarding rationalization of shelf life under Rule 31 of Drugs Rules, 1945",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MTY=",
+    "publishedAt": "2026-06-22T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-23-g-s-r-515-e-draft-notification-regarding-amendments-under-medical-devices-rules-2017",
+    "title": "2026.06.23 G.S.R. 515(E)_Draft notification regarding amendments under Medical Devices Rules 2017",
+    "summary": "2026.06.23 G.S.R. 515(E)_Draft notification regarding amendments under Medical Devices Rules 2017",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MTU=",
+    "publishedAt": "2026-06-23T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-23-g-s-r-509-e-draft-notification-regarding-simplification-of-the-process-for-obtaining-test-3b01eb0b",
+    "title": "2026.06.23 G.S.R. 509(E)_ Draft notification regarding simplification of the process for obtaining test licences for import of drugs under Form 11 of the Drugs Rules, 1945",
+    "summary": "2026.06.23 G.S.R. 509(E)_ Draft notification regarding simplification of the process for obtaining test licences for import of drugs under Form 11 of the Drugs Rules, 1945",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MDk=",
+    "publishedAt": "2026-06-23T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-29-g-s-r-530-e-notification-regarding-inclusion-of-additional-items-under-claa-in-drugs-rule-b4f2be16",
+    "title": "2026.06.29 G.S.R. 530(E)_Notification regarding Inclusion of additional items under CLAA in Drugs Rules 1945",
+    "summary": "2026.06.29 G.S.R. 530(E)_Notification regarding Inclusion of additional items under CLAA in Drugs Rules 1945",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MTc=",
+    "publishedAt": "2026-06-29T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-07-02-g-s-r-561-e-notification-for-consideration-of-navi-mumbai-international-airport-nmia-as-a-ed838742",
+    "title": "2026.07.02 G.S.R. 561(E)_Notification for consideration of Navi Mumbai International Airport (NMIA) as authorized Airport for Drug Import, under the provision of Rule 43A of Drugs Rules 1945â",
+    "summary": "2026.07.02 G.S.R. 561(E)_Notification for consideration of Navi Mumbai International Airport (NMIA) as authorized Airport for Drug Import, under the provision of Rule 43A of Drugs Rules 1945â",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0NTM=",
+    "publishedAt": "2026-07-02T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-07-08-g-s-r-607-e-notification-regarding-restriction-of-sale-of-drug-products-containing-alcoho-217884e2",
+    "title": "2026.07.08 G.S.R. 607(E)_Notification regarding restriction of sale of drug products containing alcohol content under Drugs Rules 1945",
+    "summary": "2026.07.08 G.S.R. 607(E)_Notification regarding restriction of sale of drug products containing alcohol content under Drugs Rules 1945",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0NTc=",
+    "publishedAt": "2026-07-08T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-06-11-s-o-3068-e-to-s-o-3083-e-prohibition-of-16-fdcs",
+    "title": "2026.06.11 S.O. 3068(E) to S.O. 3083(E)_ Prohibition of 16 FDCs",
+    "summary": "2026.06.11 S.O. 3068(E) to S.O. 3083(E)_ Prohibition of 16 FDCs",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1MTk=",
+    "publishedAt": "2026-07-21T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-07-30-g-s-r-706-e-notification-regarding-debarment-of-applicant-for-submitting-misleading-or-fa-8b386f73",
+    "title": "2026.07.30 G.S.R. 706(E)_Notification regarding Debarment of applicant for submitting misleading, or fake, or Fabricated Documents, information",
+    "summary": "2026.07.30 G.S.R. 706(E)_Notification regarding Debarment of applicant for submitting misleading, or fake, or Fabricated Documents, information",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1NzU=",
+    "publishedAt": "2026-07-30T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "2026-08-06-g-s-r-713-e-notification-for-amendment-under-rule-89-of-drugs-rules-1945-for-obtaining-li-e8daf98b",
+    "title": "2026.08.06 G.S.R. 713(E)_Notification for amendment under Rule 89 of Drugs Rules 1945, for obtaining licence under Form 29 for different categories falling under Form 25A, 25F, 28A, 28B, 28D, 28DA, 28E, 28F",
+    "summary": "2026.08.06 G.S.R. 713(E)_Notification for amendment under Rule 89 of Drugs Rules 1945, for obtaining licence under Form 29 for different categories falling under Form 25A, 25F, 28A, 28B, 28D, 28DA, 28E, 28F",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1OTQ=",
+    "publishedAt": "2026-08-06T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "state-nsq-alert-for-the-month-march-2025",
+    "title": "State NSQ Alert For The Month March-2025",
+    "summary": "State NSQ Alert For The Month March-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI2Njg=",
+    "publishedAt": "2025-04-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "revise-list-drug-alert-november-2024",
+    "title": "Revise list drug alert November-2024",
+    "summary": "Revise list drug alert November-2024",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI2NzA=",
+    "publishedAt": "2025-04-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "not-of-standard-quality-nsq-alert-for-the-month-of-march-2025",
+    "title": "NOT OF STANDARD QUALITY (NSQ) ALERT FOR THE MONTH OF MARCH-2025",
+    "summary": "NOT OF STANDARD QUALITY (NSQ) ALERT FOR THE MONTH OF MARCH-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI2Njk=",
+    "publishedAt": "2025-04-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "revise-list-drug-alert-january-2025",
+    "title": "Revise list drug alert January-2025",
+    "summary": "Revise list drug alert January-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI2NzE=",
+    "publishedAt": "2025-04-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "state-nsq-alert-for-the-month-april-2025",
+    "title": "State NSQ Alert For The Month April-2025",
+    "summary": "State NSQ Alert For The Month April-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI3Mzk=",
+    "publishedAt": "2025-05-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "list-of-drugs-medical-devices-vaccine-and-cosmetics-declared-as-not-of-standard-quality-spurious-adu-8aa262e3",
+    "title": "List of Drugs, Medical Devices, Vaccine and Cosmetics declared as Not of Standard Quality/Spurious/Adulterated/Misbranded for the Month of Januaryâ 2025 Revised",
+    "summary": "List of Drugs, Medical Devices, Vaccine and Cosmetics declared as Not of Standard Quality/Spurious/Adulterated/Misbranded for the Month of Januaryâ 2025 Revised",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI3Mzc=",
+    "publishedAt": "2025-05-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "list-of-drugs-medical-devices-vaccine-and-cosmetics-declared-as-spurious-for-the-month-of-april-2025",
+    "title": "List of Drugs Medical Devices Vaccine and Cosmetics declared as Spurious for the Month of April-2025",
+    "summary": "List of Drugs Medical Devices Vaccine and Cosmetics declared as Spurious for the Month of April-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI3NDA=",
+    "publishedAt": "2025-05-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "not-of-standard-of-quality-nsq-alert-for-the-month-of-april-2025",
+    "title": "Not Of Standard of Quality (NSQ) ALERT FOR THE MONTH OF April-2025",
+    "summary": "Not Of Standard of Quality (NSQ) ALERT FOR THE MONTH OF April-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI3Mzg=",
+    "publishedAt": "2025-05-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "list-of-registred-ba-be-study-centre-bio-analytical-laboratory-under-ndct-rules-2019",
+    "title": "LIST OF REGISTRED BA-BE STUDY CENTRE & BIO-ANALYTICAL LABORATORY under NDCT Rules 2019",
+    "summary": "LIST OF REGISTRED BA-BE STUDY CENTRE & BIO-ANALYTICAL LABORATORY under NDCT Rules 2019",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI4NjI=",
+    "publishedAt": "2025-06-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "nsq-alert-for-the-month-of-may-2025",
+    "title": "NSQ ALERT FOR THE MONTH OF MAY-2025",
+    "summary": "NSQ ALERT FOR THE MONTH OF MAY-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI4NDc=",
+    "publishedAt": "2025-06-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "list-of-drugs-medical-devices-vaccine-and-cosmetics-declared-as-spurious-for-the-month-of-may-2025",
+    "title": "List of Drugs, Medical Devices, Vaccine and Cosmetics declared as Spurious for the Month of May-2025",
+    "summary": "List of Drugs, Medical Devices, Vaccine and Cosmetics declared as Spurious for the Month of May-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI4NDU=",
+    "publishedAt": "2025-06-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.590Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "state-nsq-alert-for-the-month-of-may-2025",
+    "title": "STATE NSQ ALERT FOR THE MONTH OF MAY-2025",
+    "summary": "STATE NSQ ALERT FOR THE MONTH OF MAY-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI4NDY=",
+    "publishedAt": "2025-06-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "list-of-spurious-drugs-for-the-month-of-june-2025",
+    "title": "List of spurious Drugs for the month of June-2025",
+    "summary": "List of spurious Drugs for the month of June-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI5NTk=",
+    "publishedAt": "2025-07-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "state-nsq-alert-for-the-month-of-june-2025",
+    "title": "STATE NSQ ALERT FOR THE MONTH OF June 2025",
+    "summary": "STATE NSQ ALERT FOR THE MONTH OF June 2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI5MjY=",
+    "publishedAt": "2025-07-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "revise-list-drug-alert-may-2025",
+    "title": "Revise list drug alert May-2025",
+    "summary": "Revise list drug alert May-2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI5NjA=",
+    "publishedAt": "2025-07-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "cdsco-nsq-alert-for-the-month-of-june-2025",
+    "title": "CDSCO NSQ ALERT FOR THE MONTH OF June 2025",
+    "summary": "CDSCO NSQ ALERT FOR THE MONTH OF June 2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTI5Mjc=",
+    "publishedAt": "2025-07-18T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "corrigendum-of-m-s-spectra-medical-pvt-ltd-dated-21-08-2025",
+    "title": "corrigendum of (M/s. Spectra Medical Pvt Ltd) dated 21.08.2025",
+    "summary": "corrigendum of (M/s. Spectra Medical Pvt Ltd) dated 21.08.2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTMzMzM=",
+    "publishedAt": "2025-08-21T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "alert-on-theft-of-multiple-drug-products-of-m-s-novo-nordisk-during-transit",
+    "title": "Alert on theft of multiple drug products of M/s. Novo Nordisk during transit",
+    "summary": "Alert on theft of multiple drug products of M/s. Novo Nordisk during transit",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTMxNzQ=",
+    "publishedAt": "2025-08-21T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "availability-of-not-standard-quality-nsq-alert-on-new-link-in-cdsco-website",
+    "title": "Availability of Not Standard Quality (NSQ) Alert on New Link in CDSCO Website",
+    "summary": "Availability of Not Standard Quality (NSQ) Alert on New Link in CDSCO Website",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTMyNDU=",
+    "publishedAt": "2025-08-28T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "circular-to-all-state-ut-licensing-authorities-regarding-recent-revised-gst-rate-structure",
+    "title": "Circular to all State/UT Licensing Authorities regarding recent revised GST rate Structure",
+    "summary": "Circular to all State/UT Licensing Authorities regarding recent revised GST rate Structure",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTM0ODc=",
+    "publishedAt": "2025-10-08T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "implementation-of-prior-intimation-system-for-forms-ct-10-ct-12-and-ct-13-in-pursuance-of-g-s-r-46-e-3a7c08a1",
+    "title": "Implementation of Prior intimation System for Forms CT-10, CT-12 and CT-13 in pursuance of G.S.R. 46(E) dated 20.01.2026",
+    "summary": "Implementation of Prior intimation System for Forms CT-10, CT-12 and CT-13 in pursuance of G.S.R. 46(E) dated 20.01.2026",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTM5NDM=",
+    "publishedAt": "2026-03-06T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "IMA",
+      "CDSCO"
+    ],
+    "primaryTag": "IMA"
+  },
+  {
+    "slug": "online-applications-for-post-approval-changes-pac-w-r-t-marketing-authorization-ma-for-r-dna-product-c5f0a5f2",
+    "title": "Online Applications for Post Approval Changes (PAC) w.r.t Marketing Authorization (MA) for r-DNA products",
+    "summary": "Online Applications for Post Approval Changes (PAC) w.r.t Marketing Authorization (MA) for r-DNA products",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTM5NDQ=",
+    "publishedAt": "2026-03-09T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "online-applications-for-grant-of-license-in-form-28-d-28-da-for-r-dna-products",
+    "title": "Online Applications for grant of license in Form 28-D/28-DA for r-DNA products",
+    "summary": "Online Applications for grant of license in Form 28-D/28-DA for r-DNA products",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTM5NDU=",
+    "publishedAt": "2026-03-10T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "import-manufacturing-sale-etc-of-medical-devices-intended-for-invitro-fertilization-viz-iui-intraute-a291c9ca",
+    "title": "Import, manufacturing, sale etc. of medical devices intended for InVitro Fertilization viz., IUI (Intrauterine Insemination) kits, centrifuge for sperm washing etc. used for Assisted Reproductive Technology related procedures",
+    "summary": "Import, manufacturing, sale etc. of medical devices intended for InVitro Fertilization viz., IUI (Intrauterine Insemination) kits, centrifuge for sperm washing etc. used for Assisted Reproductive Technology related procedures",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQwMTk=",
+    "publishedAt": "2026-03-27T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "streamlining-the-procedure-for-disposal-of-applications-for-written-confirmation-wc-for-active-subst-77e000cc",
+    "title": "Streamlining the procedure for disposal of applications for \"Written Confirmation\" (WC) for Active Substances Exported to the EU for Human Use in accordance with Article 46(2)(b) of Directive 2001/83/EC received in CDSCO SUGAM Portal",
+    "summary": "Streamlining the procedure for disposal of applications for \"Written Confirmation\" (WC) for Active Substances Exported to the EU for Human Use in accordance with Article 46(2)(b) of Directive 2001/83/EC received in CDSCO SUGAM Portal",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQwMTg=",
+    "publishedAt": "2026-03-27T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "circular-on-implementation-of-prior-intimation-system-for-form-ct-05-application-for-export-purpose-59bf47c7",
+    "title": "Circular on Implementation of Prior intimation System for Form CT-05 application (for export purpose only) w.e.f 21.04.2026 in pursuance of G.S.R 50(E) dated 21.01.2026",
+    "summary": "Circular on Implementation of Prior intimation System for Form CT-05 application (for export purpose only) w.e.f 21.04.2026 in pursuance of G.S.R 50(E) dated 21.01.2026",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQxMDM=",
+    "publishedAt": "2026-04-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "IMA",
+      "CDSCO"
+    ],
+    "primaryTag": "IMA"
+  },
+  {
+    "slug": "submission-of-periodic-safety-update-reports-psurs-for-new-drugs-via-sugam-portal-on-deferred-basis-7362d283",
+    "title": "Submission of Periodic Safety Update Reports (PSURs) for New Drugs via SUGAM Portal on deferred basis in case of delayed Marketing after Approval",
+    "summary": "Submission of Periodic Safety Update Reports (PSURs) for New Drugs via SUGAM Portal on deferred basis in case of delayed Marketing after Approval",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQxMzM=",
+    "publishedAt": "2026-04-21T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "restriction-on-shifting-reallocation-of-it-equipment-without-prior-intimation-and-approval-of-admini-2db86762",
+    "title": "Restriction on shifting/reallocation of IT equipment without prior intimation and approval of Administration and IT cell of CDSCO(HQ)",
+    "summary": "Restriction on shifting/reallocation of IT equipment without prior intimation and approval of Administration and IT cell of CDSCO(HQ)",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQxMzc=",
+    "publishedAt": "2026-05-13T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "IMA",
+      "CDSCO"
+    ],
+    "primaryTag": "IMA"
+  },
+  {
+    "slug": "revised-regulatory-guidelines-for-sampling-of-drugs-cosmetics-medical-devices-by-drugs-inspectors-of-0cb4f1de",
+    "title": "Revised Regulatory Guidelines For Sampling Of Drugs, Cosmetics & Medical Devices By Drugs Inspectors Of Central & State Drug Authorities",
+    "summary": "Revised Regulatory Guidelines For Sampling Of Drugs, Cosmetics & Medical Devices By Drugs Inspectors Of Central & State Drug Authorities",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQyMTM=",
+    "publishedAt": "2026-05-26T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "implementation-of-pharmacovigilance-pv-system-as-per-the-requirement-of-schedule-m-of-drugs-cosmetic-0b2bdb67",
+    "title": "Implementation of Pharmacovigilance (PV) System as per the requirement of Schedule M of Drugs & Cosmetics Act 1940 and the Rules made there under",
+    "summary": "Implementation of Pharmacovigilance (PV) System as per the requirement of Schedule M of Drugs & Cosmetics Act 1940 and the Rules made there under",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQyNzg=",
+    "publishedAt": "2026-06-03T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "transfer-list-2025",
+    "title": "Transfer List 2025",
+    "summary": "Transfer List 2025",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQyODA=",
+    "publishedAt": "2026-06-03T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "submission-of-compliance-for-lmported-manufactured-hair-color-cosmetics-products-as-per-cosmetics-ru-f57a664c",
+    "title": "Submission of Compliance for lmported/manufactured Hair Color Cosmetics Products as per Cosmetics Rules, 2020 and applicable BIS Standards",
+    "summary": "Submission of Compliance for lmported/manufactured Hair Color Cosmetics Products as per Cosmetics Rules, 2020 and applicable BIS Standards",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQzMzM=",
+    "publishedAt": "2026-06-11T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "constitution-of-consultancy-committee-of-key-stakeholders-for-advice-on-suo-motu-disclosure-under-se-c760e607",
+    "title": "Constitution of Consultancy Committee of Key Stakeholders for Advice on Suo-Motu Disclosure under Section 4 of the RTI Act, 2005 in CDSCO",
+    "summary": "Constitution of Consultancy Committee of Key Stakeholders for Advice on Suo-Motu Disclosure under Section 4 of the RTI Act, 2005 in CDSCO",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQzODY=",
+    "publishedAt": "2026-06-16T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "regulation-of-formulation-intermediates-such-as-directly-compressible-granules-taste-masked-granules-ebf2db4e",
+    "title": "Regulation of Formulation intermediates such as Directly Compressible granules, Taste masked granules, Modified release granules / Pellets",
+    "summary": "Regulation of Formulation intermediates such as Directly Compressible granules, Taste masked granules, Modified release granules / Pellets",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ0MDM=",
+    "publishedAt": "2026-06-24T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "clarification-regarding-submission-of-applications-under-rule-4-of-the-drugs-and-cosmetics-compoundi-3755d16a",
+    "title": "Clarification regarding submission of applications under Rule 4 of the Drugs and Cosmetics (Compounding of Offences) Rules, 2025.",
+    "summary": "Clarification regarding submission of applications under Rule 4 of the Drugs and Cosmetics (Compounding of Offences) Rules, 2025.",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1Mjk=",
+    "publishedAt": "2026-07-22T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "vigilance-on-imported-cosmetics-products-sold-in-the-domestic-market-without-valid-lmport-registrati-89e6d5c0",
+    "title": "Vigilance on imported cosmetics products sold in the domestic market without valid lmport Registration certificate",
+    "summary": "Vigilance on imported cosmetics products sold in the domestic market without valid lmport Registration certificate",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1MzQ=",
+    "publishedAt": "2026-07-23T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO",
+      "Cosmetic"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "larification-on-the-submission-of-applications-for-grant-of-permission-to-import-and-market-new-drug-f1941ceb",
+    "title": "larification on the submission of applications for grant of Permission to Import and Market New Drugs not approved anywhere in the world, wherein phase III Global Clinical Trials (GCT) are ongoing or completed with participation of Indian subjects under the New Drugs and Clinical Trials Rules, 2019",
+    "summary": "larification on the submission of applications for grant of Permission to Import and Market New Drugs not approved anywhere in the world, wherein phase III Global Clinical Trials (GCT) are ongoing or completed with participation of Indian subjects under the New Drugs and Clinical Trials Rules, 2019",
+    "source": "CDSCO",
+    "category": "Drug Regulation",
+    "url": "https://cdsco.gov.in/opencms/opencms/system/modules/CDSCO.WEB/elements/download_file_division.jsp?num_id=MTQ1OTg=",
+    "publishedAt": "2026-08-10T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:58:49.589Z",
+    "tags": [
+      "CDSCO"
+    ],
+    "primaryTag": "CDSCO"
+  },
+  {
+    "slug": "notification-for-processing-of-applications-received-on-or-after-22-12-2025-under-nabh-qci-for-cghs-18371d8e",
+    "title": "Notification for Processing of Applications Received on or after 22.12.2025 under NABH-QCI for CGHS Empanelment",
+    "summary": "Notification for Processing of Applications Received on or after 22.12.2025 under NABH-QCI for CGHS Empanelment",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/01/14102537/Notification-for-Processing-of-Applications-Received-on-or-after-22.12.2025-under-NABH-QCI-for-CGHS-Empanelm.pdf",
+    "publishedAt": "2026-01-14T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "notification-for-revised-occupancy-norms",
+    "title": "Notification for Revised Occupancy Norms",
+    "summary": "Notification for Revised Occupancy Norms",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/01/03124156/Revised-Occupancy-Norms.pdf",
+    "publishedAt": "2026-01-20T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "notification-annexure-to-implementation-plan-of-2nd-edition-nabh-entry-level-certification-program-s-a8e249d0",
+    "title": "Notification – Annexure to Implementation Plan of 2nd Edition NABH Entry Level Certification Program Standards for Hospitals",
+    "summary": "Notification – Annexure to Implementation Plan of 2nd Edition NABH Entry Level Certification Program Standards for Hospitals",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/02/14132011/Notification-Annexure-to-Implementation-Plan-of-2nd-Edition-NABH-Entry-Level-Certification-Program-Standards-for-Hospitals.pdf",
+    "publishedAt": "2026-02-14T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "notification-for-cghs-empanelment-processing-of-applications",
+    "title": "Notification for CGHS Empanelment – Processing of Applications",
+    "summary": "Notification for CGHS Empanelment – Processing of Applications",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/02/19093250/Notification-for-CGHS-Empanelement-February-2026.pdf",
+    "publishedAt": "2026-02-19T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "notification-implementation-plan-of-2nd-edition-nabh-nursing-excellence-standards-for-hospitals",
+    "title": "Notification – Implementation Plan of 2nd Edition NABH Nursing Excellence Standards for Hospitals",
+    "summary": "Notification – Implementation Plan of 2nd Edition NABH Nursing Excellence Standards for Hospitals",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/02/26121719/Notification-Implementation-Plan-of-2nd-Edition-NABH-Nursing-Excellence-Standards-for-Hospitals.pdf",
+    "publishedAt": "2026-02-26T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "nabh-mitra-empanelment-programme-mep",
+    "title": "NABH Mitra Empanelment Programme (MEP)",
+    "summary": "NABH Mitra Empanelment Programme (MEP)",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/03/02114627/Announcement-Concept-note-MITRA-MEP.pdf",
+    "publishedAt": "2026-03-02T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "notification-for-rationalised-fee-for-ayush-entry-level-certification-program",
+    "title": "Notification for Rationalised Fee for Ayush Entry Level Certification program",
+    "summary": "Notification for Rationalised Fee for Ayush Entry Level Certification program",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/03/05172310/Notification-Rationalised-Fee-for-Ayush-Entry-Level-Certification-program.pdf",
+    "publishedAt": "2026-03-05T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "notification-implementation-plan-of-nabh-certification-standards-for-emergency-department-in-hospita-1d928b91",
+    "title": "Notification – Implementation Plan of NABH Certification Standards for  Emergency Department in Hospital 2 nd  Edition",
+    "summary": "Notification – Implementation Plan of NABH Certification Standards for  Emergency Department in Hospital 2 nd  Edition",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/03/05180459/Notification-Implementation-Plan-of-NABH-Emergency-Certification-Standards.pdf",
+    "publishedAt": "2026-03-05T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "public-notice-for-comments-on-checklist-for-echs-cghs-empanelment",
+    "title": "Public Notice for Comments on Checklist for ECHS & CGHS Empanelment",
+    "summary": "Public Notice for Comments on Checklist for ECHS & CGHS Empanelment",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/15125646/Public-Notice-for-CGHS-and-ECHS-Checklist.pdf",
+    "publishedAt": "2026-05-15T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "notification-implementation-plan-of-new-accreditation-standards-for-ayush-hospitals-1st-edition",
+    "title": "Notification – Implementation Plan of New Accreditation Standards for Ayush Hospitals – 1st Edition",
+    "summary": "Notification – Implementation Plan of New Accreditation Standards for Ayush Hospitals – 1st Edition",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/28172152/Notification-%E2%80%93-Implementation-Plan-of-New-Accreditation-Standards-for-Ayush-Hospitals-1st-Edition.pdf",
+    "publishedAt": "2026-05-28T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "public-notice-for-comments-on-draft-2nd-edition-nabh-entry-level-standards-for-ayush-hospitals",
+    "title": "Public Notice for Comments on Draft 2nd Edition NABH Entry Level Standards for Ayush Hospitals",
+    "summary": "Public Notice for Comments on Draft 2nd Edition NABH Entry Level Standards for Ayush Hospitals",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/07/19074616/Public-Notice-for-NABH-Entry-Level-Ayush-Hospital-Standards-2nd-Edition.pdf",
+    "publishedAt": "2026-07-19T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "public-notice-for-comments-on-draft-2nd-edition-nabh-entry-level-standards-for-ayush-centres",
+    "title": "Public Notice for Comments on Draft 2nd Edition NABH Entry Level Standards for Ayush Centres",
+    "summary": "Public Notice for Comments on Draft 2nd Edition NABH Entry Level Standards for Ayush Centres",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/07/22101620/Public-Notice-for-NABH-Entry-Level-Ayush-Centres-Standards-2nd-Edition.pdf",
+    "publishedAt": "2026-07-22T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "public-notice-for-digital-health-standards-his-emr-2nd-edition",
+    "title": "Public Notice for Digital Health Standards_HIS EMR 2nd Edition",
+    "summary": "Public Notice for Digital Health Standards_HIS EMR 2nd Edition",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/07/22172921/Public-Notice-for-Digital-Health-Standards_HIS-EMR-2nd-Edition.pdf",
+    "publishedAt": "2026-07-22T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "notification-for-assessor-logistics-for-nabh-accreditation-certification-empanelment-program",
+    "title": "Notification for Assessor Logistics for NABH Accreditation, Certification & Empanelment Program",
+    "summary": "Notification for Assessor Logistics for NABH Accreditation, Certification & Empanelment Program",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/07/28093123/Notification-for-Assessor-Logistics.pdf",
+    "publishedAt": "2026-07-28T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "call-for-paper-presentation-nabh-patient-safety-conference-2026",
+    "title": "Call for Paper Presentation- NABH Patient Safety Conference 2026",
+    "summary": "Call for Paper Presentation- NABH Patient Safety Conference 2026",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/04132912/Call-for-Papers-%E2%80%93-NPSC-2026.pdf",
+    "publishedAt": "2026-08-04T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "public-notice-for-standard-for-mvt-ready-accommodation-provider-empanelment-checklist-1st-edition",
+    "title": "Public Notice for Standard for MVT Ready Accommodation Provider Empanelment Checklist 1st Edition",
+    "summary": "Public Notice for Standard for MVT Ready Accommodation Provider Empanelment Checklist 1st Edition",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/05112336/Public-Notice-for-NABH-Standard-for-MVT-Checklist-for-Accommodation-1st-Edition.pdf",
+    "publishedAt": "2026-08-05T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "public-notice-for-nabh-international-patient-care-standards-1st-edition",
+    "title": "Public Notice for NABH International Patient Care Standards -1st Edition",
+    "summary": "Public Notice for NABH International Patient Care Standards -1st Edition",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/05114400/Public-Notice-for-NABH-International-Patient-Care-Standards-1st-Edition.pdf",
+    "publishedAt": "2026-08-05T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "public-notice-for-draft-digital-quality-management-systems-dqms-1st-edition",
+    "title": "Public Notice for Draft Digital Quality Management Systems (DQMS) – 1st Edition",
+    "summary": "Public Notice for Draft Digital Quality Management Systems (DQMS) – 1st Edition",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/08143421/Public-Notice-for-Draft-Digital-Quality-Management-Systems-DQMS-1st-Edition-1.pdf",
+    "publishedAt": "2026-08-07T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
+    "slug": "public-notice-for-draft-radiology-information-systems-picture-archiving-communication-systems-ris-pa-b27f7a1a",
+    "title": "Public Notice for Draft Radiology Information Systems & Picture Archiving Communication Systems (RIS – PACS) – 1st Edition",
+    "summary": "Public Notice for Draft Radiology Information Systems & Picture Archiving Communication Systems (RIS – PACS) – 1st Edition",
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/08145042/Public-Notice-for-Draft-Radiology-Information-Systems-Picture-Archiving-Communication-Systems-RIS-PACS-1st-Edition.pdf",
+    "publishedAt": "2026-08-08T00:00:00.000Z",
+    "fetchedAt": "2026-08-14T17:18:04.474Z",
+    "tags": [
+      "NABH"
+    ],
+    "primaryTag": "NABH"
+  },
+  {
     "slug": "formation-of-new-districts-in-the-union-territory-of-ladakh-assignment-of-lead-bank-responsibility",
     "title": "Formation of new districts in the Union Territory of Ladakh – Assignment of Lead Bank Responsibility",
     "summary": "RBI/2026-27/233 FIDD.CO.LBS.BC.No.09/02.08.001/2026-27 August 10, 2026 The Chairman / Managing Director &amp; Chief Executive Officer Lead Banks Concerned Madam/ Dear Sir, Formation of new districts in the Union Territory of Ladakh &ndash; Assignment of Lead Bank Responsibility The Administration of Union Territory (UT) of Ladakh has notified formation of five new districts, viz., Sham, Nubra, Changthang, Zanskar and Drass in the UT of Ladakh vide Gazette Notification SG-LD-E-27042026-1712 dated April 27, 2026. Accordingly, it has been decided to designate the Lead Bank of the new districts as below: Sr. No Newly created district Lead Bank Responsibility assigned to District Working Code allotted to new district 1. Sham State Bank of India 02Z (to be read as &lsquo;Numeral Zero, Numeral Two and Alphabet Z&rsquo;) 2. Nubra State Bank of India 03B (to be read as &lsquo;Numeral Zero, Numeral Three and Alphabet B&rsquo;) 3. Changthang State Bank of India 03A (to be read as &lsquo;Numeral Zero, Numeral Three and Alphabet A&rsquo;) 4. Zanskar State Bank of India 03C (to be read as &lsquo;Numeral Zero, Numeral Three and Alphabet C&rsquo;) 5. Drass State Bank of India 03D (to be read as &l",
@@ -14,7 +1658,7 @@
     "primaryTag": "RBI"
   },
   {
-    "slug": "reserve-bank-of-india-priority-sector-lending-targets-and-classification-second-amendment-directions-2026",
+    "slug": "reserve-bank-of-india-priority-sector-lending-targets-and-classification-second-amendment-directions-0dacc31f",
     "title": "Reserve Bank of India (Priority Sector Lending – Targets and Classification) Second Amendment Directions, 2026",
     "summary": "RBI/2026-27/232 FIDD.CO.PSD.BC.No.08/04.09.001/2026-27 August 07, 2026 Reserve Bank of India (Priority Sector Lending &ndash; Targets and Classification) Second Amendment Directions, 2026 Please refer to the Governor&rsquo;s Statement dated June 5, 2026 , and RBI circular FMOD.MAOG.No.S-56/01.06.016/2026-27 dated June 08, 2026 on &lsquo;Swap Facility for FCNR (B) Deposits&rsquo; , wherein it has been decided to introduce a US Dollar-Rupee swap facility for fresh Foreign Currency Non-Resident (Bank) [FCNR (B)] dollar funds, mobilised for a minimum tenor of three years and maximum tenor of five years. 2. Further, reference is also invited to the Reserve Bank of India (Cash Reserve Ratio and Statutory Liquidity Ratio) Second and Third Amendment Directions dated June 08, 2026 and June 19, 2026, as applicable to various banks, wherein exemption has been provided from maintenance of Cash Reserve Ratio and Statutory Liquidity Ratio on fresh FCNR (B) deposits of minimum tenor of three years and maximum tenor of five years mobilised (including deposits that are renewed upon maturity) between June 08, 2026 and September 30, 2026, and on fresh Non-Resident (External) Rupee (NRE) term deposits",
     "source": "Reserve Bank of India",
@@ -57,7 +1701,7 @@
     "primaryTag": "RBI"
   },
   {
-    "slug": "reserve-bank-of-india-small-finance-banks-responsible-business-conduct-fourth-amendment-directions-2026",
+    "slug": "reserve-bank-of-india-small-finance-banks-responsible-business-conduct-fourth-amendment-directions-2-c0e036f9",
     "title": "Reserve Bank of India (Small Finance Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
     "summary": "RBI/2026-2027/224 DOR.MCS.REC.No.194/01-01-033/2026-27 August 6, 2026 Reserve Bank of India (Small Finance Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026 Certain instructions on matters related to engagement of recovery agents by Small Finance Banks (SFBs) have been issued to SFBs under the Reserve Bank of India (Small Finance Banks &ndash; Responsible Business Conduct) Directions, 2025 . The extant instructions have since been reviewed and it has been decided to issue comprehensive instructions on conduct related matters in recovery of loan dues and engagement of recovery agencies to all SFBs (hereinafter referred to collectively as &ldquo;SFBs&rdquo; and individually as an &ldquo;SFB&rdquo;) under the aforesaid Directions. 2. In exercise of the powers conferred by Sections 21 and 35A of the Banking Regulation Act,1949, the Reserve Bank, being satisfied that it is necessary and expedient in public interest so to do, hereby issues the Amendment Directions hereinafter specified. 3. Short Title and Commencement (1) These Directions shall be called the Reserve Bank of India (Small Finance Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026.",
     "source": "Reserve Bank of India",
@@ -85,7 +1729,7 @@
     "primaryTag": "RBI"
   },
   {
-    "slug": "reserve-bank-of-india-regional-rural-banks-responsible-business-conduct-fourth-amendment-directions-2026",
+    "slug": "reserve-bank-of-india-regional-rural-banks-responsible-business-conduct-fourth-amendment-directions-87bf80d8",
     "title": "Reserve Bank of India (Regional Rural Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
     "summary": "RBI/2026-2027/226 DOR.MCS.REC.No.196/01-01-036/2026-27 August 6, 2026 Reserve Bank of India (Regional Rural Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026 Certain instructions on matters related to engagement of recovery agents by Regional Rural Banks (RRBs) have been issued to RRBs under the Reserve Bank of India (Regional Rural Banks &ndash; Responsible Business Conduct) Directions, 2025 . The extant instructions have since been reviewed and it has been decided to issue comprehensive instructions on conduct related matters in recovery of loan dues and engagement of recovery agencies to all RRBs (hereinafter referred to collectively as &ldquo;RRBs&rdquo; and individually as an &ldquo;RRB&rdquo;) under the aforesaid Directions. 2. In exercise of the powers conferred by Sections 21 and 35A of the Banking Regulation Act,1949, the Reserve Bank, being satisfied that it is necessary and expedient in public interest so to do, hereby issues the Amendment Directions hereinafter specified. 3. Short Title and Commencement (1) These Directions shall be called the Reserve Bank of India (Regional Rural Banks - Responsible Business Conduct) Fourth Amendment Directions, 2",
     "source": "Reserve Bank of India",
@@ -99,7 +1743,7 @@
     "primaryTag": "RBI"
   },
   {
-    "slug": "reserve-bank-of-india-urban-co-operative-banks-responsible-business-conduct-fourth-amendment-directions-2026",
+    "slug": "reserve-bank-of-india-urban-co-operative-banks-responsible-business-conduct-fourth-amendment-directi-8e681112",
     "title": "Reserve Bank of India (Urban Co-operative Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
     "summary": "RBI/2026-27/227 DOR.MCS.REC.No.197/01-01-037/2026-27 August 6, 2026 Reserve Bank of India (Urban Co-operative Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026 Certain instructions on matters related to engagement of recovery agents by Urban Co-operative Banks (UCBs) have been issued to UCBs under the Reserve Bank of India (Urban Co-operative Banks &ndash; Responsible Business Conduct) Directions, 2025 . The extant instructions have since been reviewed and it has been decided to issue comprehensive instructions on conduct related matters in recovery of loan dues and engagement of recovery agencies to all UCBs (hereinafter referred to collectively as &ldquo;UCBs&rdquo; and individually as an &ldquo;UCB&rdquo;) under the aforesaid Directions. 2. In exercise of the powers conferred by Sections 21, 35A and 56 of the Banking Regulation Act,1949, the Reserve Bank, being satisfied that it is necessary and expedient in public interest so to do, hereby issues the Amendment Directions hereinafter specified. 3. Short Title and Commencement (1) These Directions shall be called the Reserve Bank of India (Urban Co-operative Banks - Responsible Business Conduct) Fourth Amend",
     "source": "Reserve Bank of India",
@@ -113,7 +1757,7 @@
     "primaryTag": "RBI"
   },
   {
-    "slug": "reserve-bank-of-india-rural-co-operative-banks-responsible-business-conduct-fourth-amendment-directions-2026",
+    "slug": "reserve-bank-of-india-rural-co-operative-banks-responsible-business-conduct-fourth-amendment-directi-ddf1dd52",
     "title": "Reserve Bank of India (Rural Co-operative Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
     "summary": "RBI/2026-2027/228 DOR.MCS.REC.No.198/01-01-038/2026-27 August 6, 2026 Reserve Bank of India (Rural Co-operative Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026 Certain instructions on matters related to engagement of recovery agents by Rural Co-operative Banks (RCBs) have been issued to RCBs under the Reserve Bank of India (Rural Co-operative Banks &ndash; Responsible Business Conduct) Directions, 2025 . The extant instructions have since been reviewed and it has been decided to issue comprehensive instructions on conduct related matters in recovery of loan dues and engagement of recovery agencies to all RCBs (hereinafter referred to collectively as &ldquo;RCBs&rdquo; and individually as an &ldquo;RCB&rdquo;) under the aforesaid Directions. 2. In exercise of the powers conferred by Sections 21, 35A and 56 of the Banking Regulation Act,1949, the Reserve Bank, being satisfied that it is necessary and expedient in public interest so to do, hereby issues the Amendment Directions hereinafter specified. 3. Short Title and Commencement (1) These Directions shall be called the Reserve Bank of India (Rural Co-operative Banks - Responsible Business Conduct) Fourth Ame",
     "source": "Reserve Bank of India",
@@ -127,7 +1771,7 @@
     "primaryTag": "RBI"
   },
   {
-    "slug": "reserve-bank-of-india-all-india-financial-institutions-responsible-business-conduct-third-amendment-directions-2026",
+    "slug": "reserve-bank-of-india-all-india-financial-institutions-responsible-business-conduct-third-amendment-26146227",
     "title": "Reserve Bank of India (All India Financial Institutions - Responsible Business Conduct) Third Amendment Directions, 2026",
     "summary": "RBI/2026-27/229 DOR.MCS.REC.No.200/01-01-040/2026-27 August 6, 2026 Reserve Bank of India (All India Financial Institutions - Responsible Business Conduct) Third Amendment Directions, 2026 Certain instructions on responsibilities of an All India Financial Institution (AIFI) employing recovery agents have been issued to AIFIs under the Reserve Bank of India (All India Financial Institutions &ndash; Responsible Business Conduct) Directions, 2025 . The extant instructions have since been reviewed and it has been decided to issue comprehensive instructions on conduct related matters in recovery of loan dues and engagement of recovery agencies to all AIFIs (hereinafter referred to collectively as &ldquo;AIFIs&rdquo; and individually as an &ldquo;AIFI&rdquo;) under the aforesaid Directions. 2. In exercise of the powers conferred by Section 45L of the Reserve Bank of India Act, 1934, the Reserve Bank, being satisfied that it is necessary and expedient in public interest so to do, hereby issues the Amendment Directions hereinafter specified. 3. Short Title and Commencement (1) These Directions shall be called the Reserve Bank of India (All India Financial Institutions - Responsible Busines",
     "source": "Reserve Bank of India",
@@ -141,7 +1785,7 @@
     "primaryTag": "RBI"
   },
   {
-    "slug": "reserve-bank-of-india-non-banking-financial-companies-responsible-business-conduct-third-amendment-directions-2026",
+    "slug": "reserve-bank-of-india-non-banking-financial-companies-responsible-business-conduct-third-amendment-d-9be73f8f",
     "title": "Reserve Bank of India (Non-Banking Financial Companies - Responsible Business Conduct) Third Amendment Directions, 2026",
     "summary": "RBI/2026-27/230 DOR.MCS.REC.No.199/01-01-039/2026-27 August 6, 2026 Reserve Bank of India (Non-Banking Financial Companies - Responsible Business Conduct) Third Amendment Directions, 2026 Certain instructions on matters related to engagement of recovery agents by Non-Banking Financial Companies (NBFCs) have been issued to NBFCs under Chapter III on &lsquo;Responsible Lending Conduct&rsquo; of the Reserve Bank of India (Non-Banking Financial Companies &ndash; Responsible Business Conduct) Directions, 2025 . The extant instructions have since been reviewed and it has been decided to issue comprehensive instructions on conduct related matters in recovery of loan dues and engagement of recovery agencies to all NBFCs, excluding Mortgage Guarantee Companies, Core Investment Companies, NBFC-Account Aggregators, Standalone Primary Dealers, Non-Operating Financial Holding Companies, and NBFCs not having any customer interface. 2. In exercise of the powers conferred by Sections 45JA, 45L and 45M of the Reserve Bank of India Act, 1934, the Reserve Bank, being satisfied that it is necessary and expedient in public interest so to do, hereby issues the Amendment Directions hereinafter specified.",
     "source": "Reserve Bank of India",
@@ -156,133 +1800,7 @@
     "primaryTag": "RBI"
   },
   {
-    "slug": "reserve-bank-of-india-commercial-banks-responsible-business-conduct-fourth-amendment-directions-2026",
-    "title": "Reserve Bank of India (Commercial Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "summary": "",
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13665&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "fetchedAt": "2026-08-06T18:00:03.016Z",
-    "tags": [
-      "RBI"
-    ],
-    "primaryTag": "RBI"
-  },
-  {
-    "slug": "reserve-bank-of-india-small-finance-banks-responsible-business-conduct-fourth-amendment-directions-2026",
-    "title": "Reserve Bank of India (Small Finance Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "summary": "",
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13666&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "fetchedAt": "2026-08-06T18:00:03.016Z",
-    "tags": [
-      "RBI"
-    ],
-    "primaryTag": "RBI"
-  },
-  {
-    "slug": "reserve-bank-of-india-local-area-banks-responsible-business-conduct-fourth-amendment-directions-2026",
-    "title": "Reserve Bank of India (Local Area Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "summary": "",
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13667&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "fetchedAt": "2026-08-06T18:00:03.015Z",
-    "tags": [
-      "RBI"
-    ],
-    "primaryTag": "RBI"
-  },
-  {
-    "slug": "reserve-bank-of-india-regional-rural-banks-responsible-business-conduct-fourth-amendment-directions-2026",
-    "title": "Reserve Bank of India (Regional Rural Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "summary": "",
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13668&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "fetchedAt": "2026-08-06T18:00:03.015Z",
-    "tags": [
-      "RBI"
-    ],
-    "primaryTag": "RBI"
-  },
-  {
-    "slug": "reserve-bank-of-india-urban-co-operative-banks-responsible-business-conduct-fourth-amendment-directions-2026",
-    "title": "Reserve Bank of India (Urban Co-operative Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "summary": "",
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13669&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "fetchedAt": "2026-08-06T18:00:03.015Z",
-    "tags": [
-      "RBI"
-    ],
-    "primaryTag": "RBI"
-  },
-  {
-    "slug": "reserve-bank-of-india-rural-co-operative-banks-responsible-business-conduct-fourth-amendment-directions-2026",
-    "title": "Reserve Bank of India (Rural Co-operative Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "summary": "",
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13670&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "fetchedAt": "2026-08-06T18:00:03.015Z",
-    "tags": [
-      "RBI"
-    ],
-    "primaryTag": "RBI"
-  },
-  {
-    "slug": "reserve-bank-of-india-all-india-financial-institutions-responsible-business-conduct-third-amendment-directions-2026",
-    "title": "Reserve Bank of India (All India Financial Institutions - Responsible Business Conduct) Third Amendment Directions, 2026",
-    "summary": "",
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13671&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "fetchedAt": "2026-08-06T18:00:03.015Z",
-    "tags": [
-      "RBI"
-    ],
-    "primaryTag": "RBI"
-  },
-  {
-    "slug": "reserve-bank-of-india-non-banking-financial-companies-responsible-business-conduct-third-amendment-directions-2026",
-    "title": "Reserve Bank of India (Non-Banking Financial Companies - Responsible Business Conduct) Third Amendment Directions, 2026",
-    "summary": "",
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13672&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "fetchedAt": "2026-08-06T18:00:03.015Z",
-    "tags": [
-      "RBI"
-    ],
-    "primaryTag": "RBI"
-  },
-  {
-    "slug": "reserve-bank-of-india-housing-finance-companies-third-amendment-directions-2026",
-    "title": "Reserve Bank of India (Housing Finance Companies) Third Amendment Directions, 2026",
-    "summary": "",
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13673&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "fetchedAt": "2026-08-06T18:00:03.015Z",
-    "tags": [
-      "RBI"
-    ],
-    "primaryTag": "RBI"
-  },
-  {
-    "slug": "implementation-of-section-51a-of-uapa-1967-updates-to-unsc-s-1988-2011-taliban-sanctions-list-amendment-of-05-entries",
+    "slug": "implementation-of-section-51a-of-uapa-1967-updates-to-unsc-s-1988-2011-taliban-sanctions-list-amendm-3f4da583",
     "title": "Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1988 (2011) Taliban Sanctions List: Amendment of 05 Entries:",
     "summary": "RBI/2026-27/222 DOR.AML.REC.192/14.06.001/2026-27 July 31, 2026 The Chairpersons/ CEOs of the Commercial Banks, Small Finance Banks, Payment Banks, Urban Co-operative Banks, Rural Co-operative Banks, Regional Rural Banks, Local Area Banks, Non-Banking Financial Companies, Asset Reconstruction Companies, All India Financial Institutions Madam/Dear Sir, Implementation of Section 51A of UAPA, 1967: Updates to UNSC&rsquo;s 1988 (2011) Taliban Sanctions List: Amendment of 05 Entries: Please refer to Chapter IX on &ldquo;Requirements/obligations under International Agreements - Communications from International Agencies&rdquo; of the Reserve Bank of India - Know Your Customer, Directions, 2025 dated November 28, 2025 (amended as on December 29, 2025) (&ldquo;Directions&rdquo;), as applicable, as per which, regulated entity shall ensure that in terms of section 51A of the Unlawful Activities (Prevention) (UAPA) Act, 1967 and amendments thereto, it does not have any account in the name of individuals / entities appearing in the lists of individuals and entities, suspected of having terrorist links, which are approved by and periodically circulated by the United Nations Security Council (UN",
     "source": "Reserve Bank of India",
@@ -352,7 +1870,7 @@
     "primaryTag": "RBI"
   },
   {
-    "slug": "reserve-bank-of-india-commercial-banks-cybersecurity-technology-risk-resilience-and-assurance-framework-directions-2026",
+    "slug": "reserve-bank-of-india-commercial-banks-cybersecurity-technology-risk-resilience-and-assurance-framew-b7e39e61",
     "title": "Reserve Bank of India (Commercial Banks – Cybersecurity, Technology: Risk, Resilience and Assurance Framework) Directions, 2026",
     "summary": "RBI/DoS/2026-27/410 DoS.CO.CSITEG.4/31.01.015/2026-27 July 31, 2026 Reserve Bank of India (Commercial Banks &ndash; Cybersecurity, Technology: Risk, Resilience and Assurance Framework) Directions, 2026 Table of Contents Chapter I - Preliminary A. Short Title and Commencement B. Applicability C. Definitions Chapter II - Role of the Board A. Board Approved Policies B. Board Level Committees Chapter III &ndash; Information Technology Governance and Oversight A. IT Governance Framework B. Information Security Policy and Cybersecurity Policy C. IT Strategy Committee of the Board D. Senior Management and IT Steering Committee E. Information Security Committee F. Head of IT Function G. Chief Information Security Officer H. Information Technology Project Management I. IT Architecture J. IT Services Management Chapter IV - IT and Information Security Risk Management A. Periodic Review of IT related Risks B. IT and Information Security Risk Management Framework C. Risk Identification, Assessment, and Documentation Chapter V - Baseline Cybersecurity and Resilience Requirements A. Inventory Management of Information Assets B. Data Leak Prevention Strategy C. Data Migration Controls D. Preventi",
     "source": "Reserve Bank of India",
@@ -437,7 +1955,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "health-minister-nadda-unveils-5-major-digital-health-platforms-to-accelerate-ayushman-bharat-digital-mission-etv-bharat",
+    "slug": "health-minister-nadda-unveils-5-major-digital-health-platforms-to-accelerate-ayushman-bharat-digital-50a3c4bb",
     "title": "Health Minister Nadda Unveils 5 Major Digital Health Platforms to Accelerate Ayushman Bharat Digital Mission - ETV BHARAT",
     "summary": "DD News",
     "source": "Ayushman Bharat Digital Mission",
@@ -480,7 +1998,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "ayushman-cards-can-now-be-created-on-whatsapp-health-minister-jp-nadda-has-launched-five-major-digital-facilities-etv-bharat",
+    "slug": "ayushman-cards-can-now-be-created-on-whatsapp-health-minister-jp-nadda-has-launched-five-major-digit-0a3047f5",
     "title": "Ayushman cards can now be created on WhatsApp! Health Minister JP Nadda has launched five major digital facilities. - ETV BHARAT",
     "summary": "Economic Times",
     "source": "Ayushman Bharat Digital Mission",
@@ -494,7 +2012,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "union-health-minister-jp-nadda-launches-esushrut-clinic-light-abdm-enabled-hmis-made-by-c-dac-for-small-clinics-ani",
+    "slug": "union-health-minister-jp-nadda-launches-esushrut-clinic-light-abdm-enabled-hmis-made-by-c-dac-for-sm-0f054181",
     "title": "Union Health Minister JP Nadda launches eSushrut@clinic - light ABDM-enabled HMIS made by C-DAC for small clinics - ANI",
     "summary": "ANI News",
     "source": "Ayushman Bharat Digital Mission",
@@ -522,7 +2040,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "health-minister-jagat-prakash-nadda-launched-several-digital-health-platforms-including-aarogya-setu-2-0-dd-news",
+    "slug": "health-minister-jagat-prakash-nadda-launched-several-digital-health-platforms-including-aarogya-setu-bb95fe4a",
     "title": " Health Minister Jagat Prakash Nadda launched several digital health platforms, including Aarogya Setu 2.0.- DD NEWS",
     "summary": "ABP Live",
     "source": "Ayushman Bharat Digital Mission",
@@ -564,7 +2082,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "aarogya-setu-2-0-from-finding-hospitals-to-accessing-digital-health-records-aarogya-setu-2-0-will-facilitate-multiple-tasks-in-one-place-et-hindi",
+    "slug": "aarogya-setu-2-0-from-finding-hospitals-to-accessing-digital-health-records-aarogya-setu-2-0-will-fa-9d5a3fd0",
     "title": "Aarogya Setu 2.0: From finding hospitals to accessing digital health records, Aarogya Setu 2.0 will facilitate multiple tasks in one place. - ET HINDI",
     "summary": "Bhaskar Hindi",
     "source": "Ayushman Bharat Digital Mission",
@@ -578,7 +2096,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "aarogya-setu-2-0-aarogya-setu-2-0-is-here-now-everything-from-health-records-to-hospital-services-will-be-available-in-a-single-app-prabhat-khabar",
+    "slug": "aarogya-setu-2-0-aarogya-setu-2-0-is-here-now-everything-from-health-records-to-hospital-services-wi-1523fefe",
     "title": "Aarogya Setu 2.0: Aarogya Setu 2.0 is here! Now, everything—from health records to hospital services—will be available in a single app.- Prabhat Khabar",
     "summary": "Prabhat Khabar",
     "source": "Ayushman Bharat Digital Mission",
@@ -620,7 +2138,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "e-sushrut-govt-to-roll-out-digital-health-management-system-for-small-clinics-primary-healthcare-centres-outlook",
+    "slug": "e-sushrut-govt-to-roll-out-digital-health-management-system-for-small-clinics-primary-healthcare-cen-7cbd272a",
     "title": "e-Sushrut: Govt to Roll Out Digital Health Management System for Small Clinics, Primary Healthcare Centres - Outlook ",
     "summary": "Outlook Money",
     "source": "Ayushman Bharat Digital Mission",
@@ -635,7 +2153,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "rajasthan-govt-s-major-move-after-maternal-deaths-abha-cards-to-become-mandatory-for-every-pregnant-woman-health-records-to-go-digital-bhaskar",
+    "slug": "rajasthan-govt-s-major-move-after-maternal-deaths-abha-cards-to-become-mandatory-for-every-pregnant-be284f75",
     "title": "        Rajasthan govt's major move after maternal deaths: ABHA cards to become mandatory for every pregnant woman, health records to go digital - Bhaskar",
     "summary": "Bhaskar English",
     "source": "Ayushman Bharat Digital Mission",
@@ -677,7 +2195,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "health-ministry-to-hold-16th-cchfw-conference-launch-aarogya-setu-2-0-and-digital-health-initiatives-on-june-29-dd-news",
+    "slug": "health-ministry-to-hold-16th-cchfw-conference-launch-aarogya-setu-2-0-and-digital-health-initiatives-b2ee6863",
     "title": "Health Ministry to hold 16th CCHFW Conference, launch Aarogya Setu 2.0 and digital health initiatives on June 29 - DD NEWS",
     "summary": "DD News",
     "source": "Ayushman Bharat Digital Mission",
@@ -763,7 +2281,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "government-tightens-grip-on-hospitals-under-ayushman-scheme-these-arrangements-must-be-made-by-august-31-hindustan",
+    "slug": "government-tightens-grip-on-hospitals-under-ayushman-scheme-these-arrangements-must-be-made-by-augus-21ba2f34",
     "title": "Government tightens grip on hospitals under Ayushman scheme; these arrangements must be made by August 31- Hindustan",
     "summary": "Live Hindustan",
     "source": "Ayushman Bharat Digital Mission",
@@ -777,7 +2295,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "major-relief-for-6-15-million-families-in-jharkhand-approval-granted-for-220-crore-for-the-ayushman-scheme-medical-treatment-worth-up-to-5-lakh-will-be-available-annually-the-news-post",
+    "slug": "major-relief-for-6-15-million-families-in-jharkhand-approval-granted-for-220-crore-for-the-ayushman-c31a5cd1",
     "title": "        Major relief for 6.15 million families in Jharkhand! Approval granted for ₹220 crore for the Ayushman scheme; medical treatment worth up to ₹5 lakh will be available annually. -The News Post",
     "summary": "The News Post",
     "source": "Ayushman Bharat Digital Mission",
@@ -833,7 +2351,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "swapan-dasgupta-proposes-rs-3-100-crore-outlay-for-ayushman-bharat-rollout-in-bengal-budget-telegraph-india",
+    "slug": "swapan-dasgupta-proposes-rs-3-100-crore-outlay-for-ayushman-bharat-rollout-in-bengal-budget-telegrap-80d76447",
     "title": "Swapan Dasgupta proposes Rs 3,100 crore outlay for Ayushman Bharat rollout in Bengal Budget-Telegraph India",
     "summary": "Telegraph India",
     "source": "Ayushman Bharat Digital Mission",
@@ -904,7 +2422,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "major-relief-for-ayushman-cardholders-in-up-issues-regarding-card-rejection-and-approval-will-now-be-resolved-at-the-district-level-itself-etv-bharat",
+    "slug": "major-relief-for-ayushman-cardholders-in-up-issues-regarding-card-rejection-and-approval-will-now-be-46b25682",
     "title": "Major relief for Ayushman cardholders in UP: Issues regarding card rejection and approval will now be resolved at the district level itself. -ETV BHARAT",
     "summary": "ETV Bharat",
     "source": "Ayushman Bharat Digital Mission",
@@ -918,7 +2436,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "begusarai-to-become-a-model-district-for-the-national-health-authority-dm-says-people-will-receive-technology-based-health-services-bhaskar",
+    "slug": "begusarai-to-become-a-model-district-for-the-national-health-authority-dm-says-people-will-receive-t-ddb8ae48",
     "title": "Begusarai to become a model district for the National Health Authority; DM says people will receive technology-based health services. -BHASKAR",
     "summary": "Bhaskar",
     "source": "Ayushman Bharat Digital Mission",
@@ -933,7 +2451,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "ayushman-bharat-no-more-selling-land-for-medical-treatment-bengal-s-decision-sparks-a-new-ray-of-hope-in-kishanganj-prabhat-khabar",
+    "slug": "ayushman-bharat-no-more-selling-land-for-medical-treatment-bengal-s-decision-sparks-a-new-ray-of-hop-01aaf40f",
     "title": "Ayushman Bharat: No more selling land for medical treatment! Bengal's decision sparks a new ray of hope in Kishanganj. - Prabhat Khabar",
     "summary": "Prabhat Khabar",
     "source": "Ayushman Bharat Digital Mission",
@@ -947,7 +2465,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "getting-an-ayushman-card-made-has-become-very-easy-you-just-need-to-install-the-ayushman-app-you-can-also-download-the-pdf-jagran",
+    "slug": "getting-an-ayushman-card-made-has-become-very-easy-you-just-need-to-install-the-ayushman-app-you-can-1dbd739c",
     "title": "Getting an Ayushman card made has become very easy; you just need to install the Ayushman app... you can also download the PDF-JAGRAN ",
     "summary": "Jagran",
     "source": "Ayushman Bharat Digital Mission",
@@ -990,21 +2508,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "ai-in-healthcare-transforming-india-s-hospital-ecosystem-ehealth",
-    "title": "AI in Healthcare Transforming India’s Hospital Ecosystem-ehealth",
-    "summary": "E Health",
-    "source": "Ayushman Bharat Digital Mission",
-    "category": "Healthcare",
-    "url": "https://ehealth.eletsonline.com/2026/06/india-surpasses-100-crore-health-records-linked-to-abha-strengthening-the-worlds-largest-digital-health-ecosystem/",
-    "publishedAt": "2026-06-17T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z",
-    "tags": [
-      "ABDM"
-    ],
-    "primaryTag": "ABDM"
-  },
-  {
-    "slug": "mp-visits-hospital-in-bulandshahr-assures-to-launch-ayushman-bharat-scheme-after-eye-check-up-bhaskar",
+    "slug": "mp-visits-hospital-in-bulandshahr-assures-to-launch-ayushman-bharat-scheme-after-eye-check-up-bhaska-25d7cf9f",
     "title": "MP visits hospital in Bulandshahr: Assures to launch Ayushman Bharat scheme after eye check-up-Bhaskar",
     "summary": "Bhaskar",
     "source": "Ayushman Bharat Digital Mission",
@@ -1046,7 +2550,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "workshop-held-at-llrm-under-ayushman-bharat-digital-mission-doctors-trained-on-opd-ipd-modules-bhaskar",
+    "slug": "workshop-held-at-llrm-under-ayushman-bharat-digital-mission-doctors-trained-on-opd-ipd-modules-bhask-462d8da6",
     "title": "Workshop held at LLRM under Ayushman Bharat Digital Mission: Doctors trained on OPD/IPD modules. - BHASKAR",
     "summary": "Bhaskar",
     "source": "Ayushman Bharat Digital Mission",
@@ -1060,7 +2564,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "major-change-in-ayushman-panel-rules-entry-now-denied-without-50-beds-and-nabh-accreditation-small-hospitals-concerned-jagran",
+    "slug": "major-change-in-ayushman-panel-rules-entry-now-denied-without-50-beds-and-nabh-accreditation-small-h-36712cd5",
     "title": "Major change in Ayushman panel rules: Entry now denied without 50 beds and NABH accreditation; small hospitals concerned. - JAGRAN",
     "summary": "Jagran.com",
     "source": "Ayushman Bharat Digital Mission",
@@ -1090,21 +2594,6 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "begusarai-will-become-the-model-district-of-the-national-health-authority-dm-said-people-will-get-technology-based-health-services-bhaskar",
-    "title": "Begusarai will become the model district of the National Health Authority: DM said – people will get technology-based health services-Bhaskar",
-    "summary": "Bhaskar",
-    "source": "Ayushman Bharat Digital Mission",
-    "category": "Healthcare",
-    "url": "https://www.bhaskar.com/local/bihar/begusarai/news/begusarai-model-district-national-health-authority-ayushman-bharat-digital-mission-review-meeting-138100537.html",
-    "publishedAt": "2026-06-03T18:30:00.000Z",
-    "fetchedAt": "2026-08-04T04:46:50.256Z",
-    "tags": [
-      "ABDM",
-      "NHA"
-    ],
-    "primaryTag": "ABDM"
-  },
-  {
     "slug": "union-health-ministry-and-west-bengal-to-sign-mou-on-june-8-for-health-schemes-the-news-mill",
     "title": "Union Health Ministry and West Bengal to sign MoU on June 8 for health schemes - The News Mill",
     "summary": "The News Mill",
@@ -1120,7 +2609,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "union-health-ministry-west-bengal-government-likely-to-sign-mou-on-june-8-for-implementation-of-central-health-schemes-ani",
+    "slug": "union-health-ministry-west-bengal-government-likely-to-sign-mou-on-june-8-for-implementation-of-cent-8fb9373b",
     "title": "        Union Health Ministry, West Bengal Government likely to sign MoU on June 8 for implementation of Central Health Schemes - ANI",
     "summary": "ANI",
     "source": "Ayushman Bharat Digital Mission",
@@ -1135,7 +2624,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "ayushman-bharat-digital-mission-crosses-landmark-milestone-of-90-cr-abha-accounts-digital-health-news",
+    "slug": "ayushman-bharat-digital-mission-crosses-landmark-milestone-of-90-cr-abha-accounts-digital-health-new-d8c9f630",
     "title": "Ayushman Bharat Digital Mission Crosses Landmark Milestone of 90 Cr ABHA Accounts - Digital Health News",
     "summary": "NDTV",
     "source": "Ayushman Bharat Digital Mission",
@@ -1149,7 +2638,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "900-million-abha-accounts-india-s-biggest-achievement-under-the-leadership-of-dr-sunil-kumar-barnwal-iitism-elated-jagran",
+    "slug": "900-million-abha-accounts-india-s-biggest-achievement-under-the-leadership-of-dr-sunil-kumar-barnwal-fbe91044",
     "title": "900 million ABHA accounts, India's biggest achievement under the leadership of Dr. Sunil Kumar Barnwal; IITISM elated - JAGRAN",
     "summary": "Jagran",
     "source": "Ayushman Bharat Digital Mission",
@@ -1206,7 +2695,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "india-s-ayushman-bharat-digital-mission-crosses-90-crore-abha-registrations-nearly-half-are-women-ndtv",
+    "slug": "india-s-ayushman-bharat-digital-mission-crosses-90-crore-abha-registrations-nearly-half-are-women-nd-e49fcb91",
     "title": "India's Ayushman Bharat Digital Mission Crosses 90 Crore ABHA Registrations, Nearly Half Are Women - NDTV",
     "summary": "NDTV",
     "source": "Ayushman Bharat Digital Mission",
@@ -1234,7 +2723,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "health-insurance-and-government-schemes-have-reduced-out-of-pocket-medical-expenses-in-india-according-to-data-released-by-the-ministry-of-health-et",
+    "slug": "health-insurance-and-government-schemes-have-reduced-out-of-pocket-medical-expenses-in-india-accordi-7b57c0da",
     "title": "Health insurance and government schemes have reduced out-of-pocket medical expenses in India, according to data released by the Ministry of Health. - ET",
     "summary": "The Economic Times",
     "source": "Ayushman Bharat Digital Mission",
@@ -1319,7 +2808,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "patients-from-across-the-country-are-arriving-in-jhalawar-for-free-treatment-of-this-complex-surgery-receiving-the-gift-of-a-new-life-patrika",
+    "slug": "patients-from-across-the-country-are-arriving-in-jhalawar-for-free-treatment-of-this-complex-surgery-3fbc8d51",
     "title": "Patients from across the country are arriving in Jhalawar for free treatment of this complex surgery, receiving the 'gift of a new life'.- Patrika",
     "summary": "TOI",
     "source": "Ayushman Bharat Digital Mission",
@@ -1473,7 +2962,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "national-health-authority-convenes-day1-of-ab-pmjay-auto-adjudication-hackathon-showcase-2026-ai-driven-innovations-in-claims-adjudication-take-centre-stage",
+    "slug": "national-health-authority-convenes-day1-of-ab-pmjay-auto-adjudication-hackathon-showcase-2026-ai-dri-29d4f22b",
     "title": "National Health Authority convenes Day1 of AB- PMJAY Auto-Adjudication Hackathon showcase 2026 AI driven innovations in claims adjudication take centre-stage ",
     "summary": "Tripura StarNews",
     "source": "Ayushman Bharat Digital Mission",
@@ -1530,7 +3019,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "nha-indiaai-mission-and-iisc-showcase-human-centric-ai-solutions-to-transform-health-claims-under-ab-pm-jay",
+    "slug": "nha-indiaai-mission-and-iisc-showcase-human-centric-ai-solutions-to-transform-health-claims-under-ab-c35d3d8e",
     "title": "NHA, IndiaAI Mission and IISc showcase human-centric AI solutions to transform health claims under AB PM-JAY",
     "summary": "The Hindu",
     "source": "Ayushman Bharat Digital Mission",
@@ -1602,7 +3091,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "online-booking-of-chc-opd-started-under-abdm-scheme-investigation-report-will-be-available-on-mobile-bhaskar",
+    "slug": "online-booking-of-chc-opd-started-under-abdm-scheme-investigation-report-will-be-available-on-mobile-315ffc26",
     "title": "Online booking of CHC OPD started: Under ABDM scheme, investigation report will be available on mobile-Bhaskar",
     "summary": "Bhaskar",
     "source": "Ayushman Bharat Digital Mission",
@@ -1644,7 +3133,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "abdm-abha-id-integration-with-hmis-janani-esanjeevani-boost-india-s-digital-health-ecosystem-says-health-secy-digitalhealthnews",
+    "slug": "abdm-abha-id-integration-with-hmis-janani-esanjeevani-boost-india-s-digital-health-ecosystem-says-he-02f09e7e",
     "title": "ABDM & ABHA ID Integration with HMIS, JANANI & eSanjeevani Boost India's Digital Health Ecosystem, Says Health Secy - digitalhealthnews",
     "summary": "DHN",
     "source": "Ayushman Bharat Digital Mission",
@@ -1658,7 +3147,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "12-26-lakh-construction-workers-provided-ayushman-card-facility-remaining-15-83-lakh-workers-will-also-get-the-benefit-soon-cm-yogi-adityanath-jagran",
+    "slug": "12-26-lakh-construction-workers-provided-ayushman-card-facility-remaining-15-83-lakh-workers-will-al-83f93832",
     "title": "12.26 lakh construction workers provided Ayushman card facility, remaining 15.83 lakh workers will also get the benefit soon: CM Yogi Adityanath-Jagran",
     "summary": "Dainik Jagran MP CG",
     "source": "Ayushman Bharat Digital Mission",
@@ -1672,7 +3161,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "ayushman-bharat-diwas-2026-how-pm-jay-has-provided-affordable-and-easy-treatment-to-millions-of-people-navbharat",
+    "slug": "ayushman-bharat-diwas-2026-how-pm-jay-has-provided-affordable-and-easy-treatment-to-millions-of-peop-c017385c",
     "title": "Ayushman Bharat Diwas 2026: How PM-JAY has provided affordable and easy treatment to millions of people- NAVBHARAT",
     "summary": "Navbharat Live",
     "source": "Ayushman Bharat Digital Mission",
@@ -1686,7 +3175,7 @@
     "primaryTag": "ABDM"
   },
   {
-    "slug": "digital-revolution-in-jharkhand-hospitals-no-more-queues-no-more-waiting-lab-reports-will-reach-you-directly-on-your-mobile-prabhat-khabar",
+    "slug": "digital-revolution-in-jharkhand-hospitals-no-more-queues-no-more-waiting-lab-reports-will-reach-you-6828029e",
     "title": "Digital revolution in Jharkhand hospitals: No more queues, no more waiting, lab reports will reach you directly on your mobile- Prabhat Khabar",
     "summary": "Prabhat Khabar",
     "source": "Ayushman Bharat Digital Mission",
