@@ -398,6 +398,7 @@ export default function ForPatientsPage() {
                 key={index}
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-lime-300/10 hover:border-lime-300/30 transition-all duration-300 hover:-translate-y-1 group cursor-default"
               >

@@ -14,7 +14,7 @@ const navItems = [
   { label: "For Patients", href: "/for-patients" },
   { label: "Why We Win", href: "/why-we-win" },
   { label: "Join Us", href: "/join-us", external: true },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const knowledgeSources = sources.map((s) => ({
