@@ -4,48 +4,63 @@
     "name": "Reserve Bank of India",
     "url": "https://www.rbi.org.in/",
     "type": "html",
-    "category": "Digital Lending"
+    "category": "Digital Lending",
+    "active": true
   },
   {
     "id": "abdm",
     "name": "Ayushman Bharat Digital Mission",
     "url": "https://abdm.gov.in/",
     "type": "html",
-    "category": "Healthcare"
+    "category": "Healthcare",
+    "active": true
   },
   {
     "id": "nabh",
     "name": "NABH",
     "url": "https://nabh.co/",
     "type": "html",
-    "category": "Hospital Accreditation"
+    "category": "Hospital Accreditation",
+    "active": true
   },
   {
     "id": "dpdp",
     "name": "DPDP Act",
     "url": "https://www.meity.gov.in/",
     "type": "html",
-    "category": "Privacy"
+    "category": "Privacy",
+    "active": false
   },
   {
     "id": "ima",
     "name": "Indian Medical Association",
     "url": "https://ima-india.org/",
     "type": "html",
-    "category": "Medical"
+    "category": "Medical",
+    "active": false
   },
   {
     "id": "isar",
     "name": "ISAR",
     "url": "https://www.isarindia.net/",
     "type": "html",
-    "category": "IVF"
+    "category": "IVF",
+    "active": false
   },
   {
     "id": "iadvl",
     "name": "IADVL",
     "url": "https://www.iadvl.org/",
     "type": "html",
-    "category": "Dermatology"
+    "category": "Dermatology",
+    "active": false
+  },
+  {
+    "id": "cdsco",
+    "name": "CDSCO",
+    "url": "https://cdsco.gov.in/",
+    "type": "html",
+    "category": "Drug Regulation",
+    "active": false
   }
 ]

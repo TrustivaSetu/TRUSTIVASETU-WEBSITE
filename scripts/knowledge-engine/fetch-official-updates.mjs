@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 
 import { fetchRBI } from "./providers/rbi.mjs";
 import { fetchABDM } from "./providers/abdm.mjs";
+import { fetchNABH } from "./providers/nabh.mjs";
 
 import { readJson, writeJson } from "./lib/storage.mjs";
 
@@ -12,9 +13,14 @@ const GENERATED_FILE="data/knowledge/generated/index.json";
 const cache=readJson(CACHE_FILE,{});
 const history=readJson(HISTORY_FILE,[]);
 
+const historyByUrl=new Map(
+  history.map(article=>[article.url||article.title,article])
+);
+
 const updates=[
   ...(await fetchRBI()),
-  ...(await fetchABDM())
+  ...(await fetchABDM()),
+  ...(await fetchNABH())
 ];
 
 const generated=[];
@@ -23,10 +29,16 @@ for(const item of updates){
 
   const hash=crypto
     .createHash("sha256")
-    .update(item.title+(item.summary||""))
+    .update(item.url||item.title)
     .digest("hex");
 
-  if(cache[hash]){
+  const existing=historyByUrl.get(item.url||item.title);
+
+  if(existing){
+    if(!existing.summary && item.summary){
+      existing.summary=item.summary;
+      existing.fetchedAt=new Date().toISOString();
+    }
     continue;
   }
 
@@ -40,6 +52,7 @@ for(const item of updates){
 
   generated.push(article);
   history.unshift(article);
+  historyByUrl.set(item.url||item.title,article);
 }
 
 writeJson(CACHE_FILE,cache);
@@ -50,7 +63,8 @@ console.log(
   "Sources:",
   {
     RBI:(await fetchRBI()).length,
-    ABDM:(await fetchABDM()).length
+    ABDM:(await fetchABDM()).length,
+    NABH:(await fetchNABH()).length
   }
 );
 

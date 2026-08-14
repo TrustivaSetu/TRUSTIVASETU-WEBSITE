@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronDown } from "lucide-react";
+import sources from "@/data/knowledge/sources.json";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -15,8 +17,16 @@ const navItems = [
   { label: "Contact", href: "/contact" },
 ];
 
+const knowledgeSources = sources.map((s) => ({
+  id: s.id,
+  label: `${s.id.toUpperCase()} Updates`,
+  active: s.active === true,
+}));
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [kcDesktopOpen, setKcDesktopOpen] = useState(false);
+  const [kcMobileOpen, setKcMobileOpen] = useState(false);
 
   useEffect(() => {
     if (menuOpen) {
@@ -62,6 +72,54 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
+
+          <div className="border-b border-white/10 pb-3">
+            <button
+              onClick={() => setKcMobileOpen((o) => !o)}
+              className="w-full flex items-center justify-between text-white hover:text-lime-300 transition"
+            >
+              <span>Knowledge Center</span>
+              <ChevronDown
+                size={20}
+                className={`transition-transform duration-200 ${kcMobileOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            {kcMobileOpen && (
+              <div className="mt-4 flex flex-col gap-4 pl-4 text-base">
+                <Link
+                  href="/resources"
+                  onClick={() => setMenuOpen(false)}
+                  className="text-gray-300 hover:text-lime-300 transition"
+                >
+                  All Updates
+                </Link>
+                {knowledgeSources.map((s) =>
+                  s.active ? (
+                    <Link
+                      key={s.id}
+                      href={`/resources?source=${s.id}`}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-gray-300 hover:text-lime-300 transition"
+                    >
+                      {s.label}
+                    </Link>
+                  ) : (
+                    <div
+                      key={s.id}
+                      aria-disabled="true"
+                      className="flex items-center justify-between gap-2 text-gray-500 cursor-not-allowed"
+                    >
+                      <span>{s.label}</span>
+                      <span className="text-[10px] font-semibold uppercase tracking-wide bg-white/5 border border-white/10 rounded-full px-2 py-0.5 text-gray-500">
+                        Coming Soon
+                      </span>
+                    </div>
+                  )
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -101,9 +159,56 @@ export default function Navbar() {
                   </Link>
                 ))}
 
-                <Link href="/resources" className="hover:text-lime-300 transition-colors">
-                  Knowledge Center
-                </Link>
+                <div
+                  className="relative"
+                  onMouseEnter={() => setKcDesktopOpen(true)}
+                  onMouseLeave={() => setKcDesktopOpen(false)}
+                >
+                  <button
+                    onClick={() => setKcDesktopOpen((o) => !o)}
+                    className="flex items-center gap-1 hover:text-lime-300 transition-colors"
+                  >
+                    Knowledge Center
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-200 ${kcDesktopOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+
+                  {kcDesktopOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-[#0b1628] border border-white/10 rounded-xl shadow-2xl py-2 z-50">
+                      <Link
+                        href="/resources"
+                        className="block px-4 py-2 text-sm text-white hover:bg-white/5 hover:text-lime-300 transition"
+                      >
+                        All Updates
+                      </Link>
+                      <div className="h-px bg-white/10 my-1" />
+                      {knowledgeSources.map((s) =>
+                        s.active ? (
+                          <Link
+                            key={s.id}
+                            href={`/resources?source=${s.id}`}
+                            className="block px-4 py-2 text-sm text-white hover:bg-white/5 hover:text-lime-300 transition"
+                          >
+                            {s.label}
+                          </Link>
+                        ) : (
+                          <div
+                            key={s.id}
+                            aria-disabled="true"
+                            className="flex items-center justify-between gap-2 px-4 py-2 text-sm text-gray-500 cursor-not-allowed"
+                          >
+                            <span>{s.label}</span>
+                            <span className="text-[10px] font-semibold uppercase tracking-wide bg-white/5 border border-white/10 rounded-full px-2 py-0.5 text-gray-500">
+                              Coming Soon
+                            </span>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  )}
+                </div>
               </nav>
             </div>
           </div>

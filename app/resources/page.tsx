@@ -1,12 +1,22 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import articles from "@/data/knowledge/articles.json";
+import sources from "@/data/knowledge/sources.json";
 
 export default function KnowledgeCenter() {
 
   const allArticles = articles as any[];
+
+  const [sourceParam, setSourceParam] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setSourceParam(params.get("source"));
+  }, []);
+
+  const sourceMeta = sources.find((s) => s.id === sourceParam) || null;
 
   const tags = [
     "All",
@@ -32,6 +42,9 @@ export default function KnowledgeCenter() {
           article.primaryTag === active ||
           (article.tags || []).includes(active);
 
+        const sourceMatch =
+          !sourceMeta || article.source === sourceMeta.name;
+
         const q = search.toLowerCase();
 
         const text = (
@@ -40,7 +53,7 @@ export default function KnowledgeCenter() {
           article.source
         ).toLowerCase();
 
-        return tagMatch && text.includes(q);
+        return tagMatch && sourceMatch && text.includes(q);
 
       })
       .sort(
@@ -49,7 +62,7 @@ export default function KnowledgeCenter() {
           new Date(a.publishedAt).getTime()
       );
 
-  }, [active,search]);
+  }, [active,search,sourceMeta]);
 
   return (
 
@@ -165,6 +178,38 @@ borderRadius:10,
 border:"1px solid #ccc"
 }}
 />
+
+{sourceMeta && (
+<div
+style={{
+display:"flex",
+alignItems:"center",
+gap:12,
+flexWrap:"wrap",
+marginTop:16,
+padding:"10px 16px",
+borderRadius:999,
+background:"#eef6ff",
+border:"1px solid #0f766e",
+width:"fit-content"
+}}
+>
+<span style={{fontSize:14,color:"#222"}}>
+Showing updates from <strong>{sourceMeta.name}</strong>
+</span>
+<Link
+href="/resources"
+style={{
+fontSize:13,
+fontWeight:700,
+color:"#0f766e",
+textDecoration:"none"
+}}
+>
+✕ Clear filter
+</Link>
+</div>
+)}
 
 </div>
 
@@ -309,6 +354,44 @@ textDecoration:"none"
 📖 Read Full Update →
 </Link>
 
+</div>
+
+)}
+
+{filtered.length===0 && (
+
+<div
+style={{
+background:"#f8fafc",
+border:"1px dashed #ccc",
+borderRadius:18,
+padding:40,
+textAlign:"center",
+color:"#666"
+}}
+>
+<p style={{fontSize:18,fontWeight:700,marginBottom:8,color:"#222"}}>
+No updates found{sourceMeta ? ` from ${sourceMeta.name}` : ""}
+</p>
+<p style={{fontSize:14}}>
+{sourceMeta
+? "We haven't published any updates from this source yet — check back soon, or browse all updates below."
+: "Try a different search term or category."}
+</p>
+{sourceMeta && (
+<Link
+href="/resources"
+style={{
+display:"inline-block",
+marginTop:16,
+color:"#0f766e",
+fontWeight:700,
+textDecoration:"none"
+}}
+>
+View All Updates →
+</Link>
+)}
 </div>
 
 )}

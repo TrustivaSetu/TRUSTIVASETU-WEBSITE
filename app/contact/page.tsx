@@ -219,7 +219,90 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[#07111f] text-white">
       <Navbar />
 
-      <div className="pt-32 sm:pt-36">
+      <div className="pt-12 sm:pt-16">
+        {/* CONTACT US */}
+
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
+            Get In Touch
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            Contact Us
+          </h2>
+
+          <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-8">
+            Reach out to Trustiva Setu for general enquiries, admin support or to speak directly with our team.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
+              <p className="text-sm text-gray-400 mb-2">
+                General Inquiries
+              </p>
+
+              <p className="text-lg text-lime-300 font-semibold">
+                <TrackedLink
+                  href="mailto:info@trustivasetu.com"
+                  event="email_click_info"
+                  className="hover:underline"
+                >
+                  info@trustivasetu.com
+                </TrackedLink>
+              </p>
+            </div>
+
+            <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
+              <p className="text-sm text-gray-400 mb-2">
+                Admin & Support
+              </p>
+
+              <p className="text-lg text-lime-300 font-semibold">
+                <TrackedLink
+                  href="mailto:admin@trustivasetu.com"
+                  event="email_click_admin"
+                  className="hover:underline"
+                >
+                  admin@trustivasetu.com
+                </TrackedLink>
+              </p>
+            </div>
+
+            <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
+              <p className="text-sm text-gray-400 mb-2">
+                Call Us
+              </p>
+
+              <p className="text-lg text-lime-300 font-semibold flex flex-col">
+                <TrackedLink
+                  href="tel:+918218473534"
+                  event="phone_click_primary"
+                  className="hover:underline"
+                >
+                  +91 82184 73534
+                </TrackedLink>
+                <TrackedLink
+                  href="tel:+919540810017"
+                  event="phone_click_secondary"
+                  className="hover:underline mt-1"
+                >
+                  +91 95408 10017
+                </TrackedLink>
+              </p>
+            </div>
+
+            <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
+              <p className="text-sm text-gray-400 mb-2">
+                Registered Office
+              </p>
+
+              <p className="text-lg text-lime-300 font-semibold leading-6">
+                Moradabad, Uttar Pradesh, India
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* INVESTOR SECTION */}
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
@@ -440,38 +523,6 @@ distribution expansion and national healthcare financing infrastructure deployme
                   <p className="text-gray-300 leading-8">
                     Serious strategic conversations deserve direct founder access.
                     Reach out for investor discussions, lender partnerships and capital strategy.
-                  </p>
-                </div>
-
-                <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
-                  <p className="text-sm text-gray-400 mb-2">
-                    General Inquiries
-                  </p>
-
-                  <p className="text-lg text-lime-300 font-semibold">
-                    <TrackedLink
-                      href="mailto:info@trustivasetu.com"
-                      event="email_click_info"
-                      className="hover:underline"
-                    >
-                      info@trustivasetu.com
-                    </TrackedLink>
-                  </p>
-                </div>
-
-                <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
-                  <p className="text-sm text-gray-400 mb-2">
-                    Admin & Support
-                  </p>
-
-                  <p className="text-lg text-lime-300 font-semibold">
-                    <TrackedLink
-                      href="mailto:admin@trustivasetu.com"
-                      event="email_click_admin"
-                      className="hover:underline"
-                    >
-                      admin@trustivasetu.com
-                    </TrackedLink>
                   </p>
                 </div>
               </div>

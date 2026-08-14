@@ -12,14 +12,14 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[#07111f] text-white">
       <Navbar />
 
-      <div className="pt-32 sm:pt-36">
+      <div className="pt-12 sm:pt-16">
         {/* ABOUT */}
 
         <section
           id="about"
           className="max-w-7xl mx-auto px-4 sm:px-6 py-14"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
             About Trustiva Setu
           </h2>
 
@@ -39,7 +39,7 @@ We don't just provide loans—we create the infrastructure layer
 that powers healthcare affordability at scale.
           </p>
           <div className="mt-20">
-            <h2 className="text-4xl font-bold mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold mb-10">
               Founding Team
             </h2>
 

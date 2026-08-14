@@ -5,21 +5,8 @@ import Counter from "@/components/home/Counter";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-
-const VideoTour = dynamic(
-  () => import("@/components/ui/VideoTour"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="py-20 text-center text-gray-400">
-        Loading video tour...
-      </div>
-    ),
-  }
-);
 
 export default function TrustivaSetuWebsite() {
   const howItWorksSteps = [
@@ -137,7 +124,6 @@ export default function TrustivaSetuWebsite() {
             </div>
           </div>
         </section>
-        <VideoTour />
         {/* HOW IT WORKS */}
         <section
           id="how-it-works"

@@ -1,19 +1,14 @@
 import { readJson, writeJson } from "./lib/storage.mjs";
 import { classify } from "./lib/classifier.mjs";
 
-const generated = readJson(
-  "data/knowledge/generated/index.json",
-  []
-);
-
 const history = readJson(
   "data/knowledge/history/index.json",
   []
 );
 
-const source = generated.length ? generated : history;
+const seenSlugs = new Map();
 
-const articles = source
+const articles = history
   .map(article => ({
     slug: article.title
       .toLowerCase()
@@ -27,6 +22,21 @@ const articles = source
     publishedAt: article.publishedAt,
     fetchedAt: article.fetchedAt
   }))
+  .filter(article => {
+    const existing = seenSlugs.get(article.slug);
+
+    if (!existing) {
+      seenSlugs.set(article.slug, article);
+      return true;
+    }
+
+    if (!existing.summary && article.summary) {
+      existing.summary = article.summary;
+      existing.fetchedAt = article.fetchedAt;
+    }
+
+    return false;
+  })
   .map(classify);
 
 writeJson(

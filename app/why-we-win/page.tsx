@@ -52,7 +52,7 @@ export default function WhyWeWinPage() {
       <div className="min-h-screen bg-[#07111f] text-white">
         <Navbar />
 
-        <div className="pt-32 sm:pt-36">
+        <div className="pt-12 sm:pt-16">
           {/* WHY We Win */}
 
           <section

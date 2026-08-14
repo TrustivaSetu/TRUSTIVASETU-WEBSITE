@@ -1,5 +1,205 @@
 [
   {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Notification for Processing of Applications Received on or after 22.12.2025 under NABH-QCI for CGHS Empanelment",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/01/14102537/Notification-for-Processing-of-Applications-Received-on-or-after-22.12.2025-under-NABH-QCI-for-CGHS-Empanelm.pdf",
+    "publishedAt": "2026-01-14T00:00:00.000Z",
+    "summary": "Notification for Processing of Applications Received on or after 22.12.2025 under NABH-QCI for CGHS Empanelment",
+    "hash": "2317c63fc128de37736b6871a63187417085cef43964bbd85e3417f4e481bcb9",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Notification for Revised Occupancy Norms",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/01/03124156/Revised-Occupancy-Norms.pdf",
+    "publishedAt": "2026-01-20T00:00:00.000Z",
+    "summary": "Notification for Revised Occupancy Norms",
+    "hash": "bf4b2a11ab81856ceb2d2df5d17f151777d3446f5405b4b007652c1bf30d1600",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Notification – Annexure to Implementation Plan of 2nd Edition NABH Entry Level Certification Program Standards for Hospitals",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/02/14132011/Notification-Annexure-to-Implementation-Plan-of-2nd-Edition-NABH-Entry-Level-Certification-Program-Standards-for-Hospitals.pdf",
+    "publishedAt": "2026-02-14T00:00:00.000Z",
+    "summary": "Notification – Annexure to Implementation Plan of 2nd Edition NABH Entry Level Certification Program Standards for Hospitals",
+    "hash": "2b63af0b2cfd80ec3a90ecc982c5a96c746d554fcc0c6ea12eed5c6652f6af56",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Notification for CGHS Empanelment – Processing of Applications",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/02/19093250/Notification-for-CGHS-Empanelement-February-2026.pdf",
+    "publishedAt": "2026-02-19T00:00:00.000Z",
+    "summary": "Notification for CGHS Empanelment – Processing of Applications",
+    "hash": "f7c2b6caca7ee2a624dd27e8a5aed62121af1c186ad1df9bb630ee3f878490f3",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Notification – Implementation Plan of 2nd Edition NABH Nursing Excellence Standards for Hospitals",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/02/26121719/Notification-Implementation-Plan-of-2nd-Edition-NABH-Nursing-Excellence-Standards-for-Hospitals.pdf",
+    "publishedAt": "2026-02-26T00:00:00.000Z",
+    "summary": "Notification – Implementation Plan of 2nd Edition NABH Nursing Excellence Standards for Hospitals",
+    "hash": "500dfeccf04807e0c8dc0a6c76d445b44a431a2df5c438d46075e37a83ebd0c0",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "NABH Mitra Empanelment Programme (MEP)",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/03/02114627/Announcement-Concept-note-MITRA-MEP.pdf",
+    "publishedAt": "2026-03-02T00:00:00.000Z",
+    "summary": "NABH Mitra Empanelment Programme (MEP)",
+    "hash": "2b4ea3a269198b5f7bfd05fbee9070c25ec48ae001bb1ba345182d7aa9cd5ff3",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Notification for Rationalised Fee for Ayush Entry Level Certification program",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/03/05172310/Notification-Rationalised-Fee-for-Ayush-Entry-Level-Certification-program.pdf",
+    "publishedAt": "2026-03-05T00:00:00.000Z",
+    "summary": "Notification for Rationalised Fee for Ayush Entry Level Certification program",
+    "hash": "b30490b016e96232a7b57dd0730dbef133bbab522ce05dc7240f1dba314661cb",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Notification – Implementation Plan of NABH Certification Standards for  Emergency Department in Hospital 2 nd  Edition",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/03/05180459/Notification-Implementation-Plan-of-NABH-Emergency-Certification-Standards.pdf",
+    "publishedAt": "2026-03-05T00:00:00.000Z",
+    "summary": "Notification – Implementation Plan of NABH Certification Standards for  Emergency Department in Hospital 2 nd  Edition",
+    "hash": "7d27a2ce5020b16fa99211fa5038416816a36a43e6e8c006f7f4f16fb13a0625",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Public Notice for Comments on Checklist for ECHS & CGHS Empanelment",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/15125646/Public-Notice-for-CGHS-and-ECHS-Checklist.pdf",
+    "publishedAt": "2026-05-15T00:00:00.000Z",
+    "summary": "Public Notice for Comments on Checklist for ECHS & CGHS Empanelment",
+    "hash": "68bfaa7a7ae3de42b486cd86a27603898ff5fb2a3ab2f63c9a1062d69111c5c9",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Notification – Implementation Plan of New Accreditation Standards for Ayush Hospitals – 1st Edition",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/28172152/Notification-%E2%80%93-Implementation-Plan-of-New-Accreditation-Standards-for-Ayush-Hospitals-1st-Edition.pdf",
+    "publishedAt": "2026-05-28T00:00:00.000Z",
+    "summary": "Notification – Implementation Plan of New Accreditation Standards for Ayush Hospitals – 1st Edition",
+    "hash": "5c82b0994a98c680f5b1088e223c5381fea8189f46bfc46efd4ab593fe7b74d8",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "NABH Mitra Empanelment Programme (MEP)",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/06/02155333/Announcement-Concept-note-MITRA-MEP-2nd-June-2026.pdf",
+    "publishedAt": "2026-06-02T00:00:00.000Z",
+    "summary": "NABH Mitra Empanelment Programme (MEP)",
+    "hash": "e6c12a1d0ab3d6dd9f881f65d13b4a87c33bb17dc08e6603d3cb793e7b861e63",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Public Notice for Comments on Draft 2nd Edition NABH Entry Level Standards for Ayush Hospitals",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/07/19074616/Public-Notice-for-NABH-Entry-Level-Ayush-Hospital-Standards-2nd-Edition.pdf",
+    "publishedAt": "2026-07-19T00:00:00.000Z",
+    "summary": "Public Notice for Comments on Draft 2nd Edition NABH Entry Level Standards for Ayush Hospitals",
+    "hash": "220d77c3a8eb98dfe45a1fdfcbfffabab66a979814b965bb6bab58cfad6a4ed3",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Public Notice for Comments on Draft 2nd Edition NABH Entry Level Standards for Ayush Centres",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/07/22101620/Public-Notice-for-NABH-Entry-Level-Ayush-Centres-Standards-2nd-Edition.pdf",
+    "publishedAt": "2026-07-22T00:00:00.000Z",
+    "summary": "Public Notice for Comments on Draft 2nd Edition NABH Entry Level Standards for Ayush Centres",
+    "hash": "4f9a8a09a6a379a1db95ec048cb03136170e510876342e6de955a0f55ce78993",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Public Notice for Digital Health Standards_HIS EMR 2nd Edition",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/07/22172921/Public-Notice-for-Digital-Health-Standards_HIS-EMR-2nd-Edition.pdf",
+    "publishedAt": "2026-07-22T00:00:00.000Z",
+    "summary": "Public Notice for Digital Health Standards_HIS EMR 2nd Edition",
+    "hash": "991127148c33f33bb8acb48cdfd90dcd19d2cc8c49cfd51525ad6c91e9a8c061",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Notification for Assessor Logistics for NABH Accreditation, Certification & Empanelment Program",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/07/28093123/Notification-for-Assessor-Logistics.pdf",
+    "publishedAt": "2026-07-28T00:00:00.000Z",
+    "summary": "Notification for Assessor Logistics for NABH Accreditation, Certification & Empanelment Program",
+    "hash": "201831ae1e151cb7957e2ecf8a4a7315ee53a96e0da1b078867d2c9e3f77c801",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Call for Paper Presentation- NABH Patient Safety Conference 2026",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/04132912/Call-for-Papers-%E2%80%93-NPSC-2026.pdf",
+    "publishedAt": "2026-08-04T00:00:00.000Z",
+    "summary": "Call for Paper Presentation- NABH Patient Safety Conference 2026",
+    "hash": "d718563540890302caed3dddc9807fd367fe9980165498c536cd7ba9c0cd8fa9",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Public Notice for Standard for MVT Ready Accommodation Provider Empanelment Checklist 1st Edition",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/05112336/Public-Notice-for-NABH-Standard-for-MVT-Checklist-for-Accommodation-1st-Edition.pdf",
+    "publishedAt": "2026-08-05T00:00:00.000Z",
+    "summary": "Public Notice for Standard for MVT Ready Accommodation Provider Empanelment Checklist 1st Edition",
+    "hash": "6ec4193229cbef66b84b893d7e502158a6ada4abecda57541777880c9b374a07",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Public Notice for NABH International Patient Care Standards -1st Edition",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/05114400/Public-Notice-for-NABH-International-Patient-Care-Standards-1st-Edition.pdf",
+    "publishedAt": "2026-08-05T00:00:00.000Z",
+    "summary": "Public Notice for NABH International Patient Care Standards -1st Edition",
+    "hash": "f31519c1644618313cf803ab6519cff380ebcf8a8cc1b2008937d3a28273b6a5",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Public Notice for Draft Digital Quality Management Systems (DQMS) – 1st Edition",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/08143421/Public-Notice-for-Draft-Digital-Quality-Management-Systems-DQMS-1st-Edition-1.pdf",
+    "publishedAt": "2026-08-07T00:00:00.000Z",
+    "summary": "Public Notice for Draft Digital Quality Management Systems (DQMS) – 1st Edition",
+    "hash": "132f84b2415f884b73bc39b57819c0812a46b083b779715c802cb8c611a7dbef",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
+    "source": "NABH",
+    "category": "Hospital Accreditation",
+    "title": "Public Notice for Draft Radiology Information Systems & Picture Archiving Communication Systems (RIS – PACS) – 1st Edition",
+    "url": "https://nabh-portal-live.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/08/08145042/Public-Notice-for-Draft-Radiology-Information-Systems-Picture-Archiving-Communication-Systems-RIS-PACS-1st-Edition.pdf",
+    "publishedAt": "2026-08-08T00:00:00.000Z",
+    "summary": "Public Notice for Draft Radiology Information Systems & Picture Archiving Communication Systems (RIS – PACS) – 1st Edition",
+    "hash": "0b92adaf4b78f36b1e2ff677dba7d7370dc0ae7bdabcde352abd2a7e1fe8a9de",
+    "fetchedAt": "2026-08-14T17:18:04.474Z"
+  },
+  {
     "source": "Reserve Bank of India",
     "category": "Digital Lending",
     "title": "Formation of new districts in the Union Territory of Ladakh – Assignment of Lead Bank Responsibility",
@@ -108,96 +308,6 @@
     "summary": "RBI/2026-27/230 DOR.MCS.REC.No.199/01-01-039/2026-27 August 6, 2026 Reserve Bank of India (Non-Banking Financial Companies - Responsible Business Conduct) Third Amendment Directions, 2026 Certain instructions on matters related to engagement of recovery agents by Non-Banking Financial Companies (NBFCs) have been issued to NBFCs under Chapter III on &lsquo;Responsible Lending Conduct&rsquo; of the Reserve Bank of India (Non-Banking Financial Companies &ndash; Responsible Business Conduct) Directions, 2025 . The extant instructions have since been reviewed and it has been decided to issue comprehensive instructions on conduct related matters in recovery of loan dues and engagement of recovery agencies to all NBFCs, excluding Mortgage Guarantee Companies, Core Investment Companies, NBFC-Account Aggregators, Standalone Primary Dealers, Non-Operating Financial Holding Companies, and NBFCs not having any customer interface. 2. In exercise of the powers conferred by Sections 45JA, 45L and 45M of the Reserve Bank of India Act, 1934, the Reserve Bank, being satisfied that it is necessary and expedient in public interest so to do, hereby issues the Amendment Directions hereinafter specified.",
     "hash": "f03419251a29a5f7830f92554cc8f1a0d7ff73f978a92caba156ffbaabb9566f",
     "fetchedAt": "2026-08-07T06:00:02.642Z"
-  },
-  {
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "title": "Reserve Bank of India (Commercial Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13665&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "summary": "",
-    "hash": "70fd57f2cc9a8e4a092fe8d38a5c8efe4ca273e486e4b296e766166155cea4b6",
-    "fetchedAt": "2026-08-06T18:00:03.016Z"
-  },
-  {
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "title": "Reserve Bank of India (Small Finance Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13666&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "summary": "",
-    "hash": "d06fa36459769059f1106696d85501055a7036179302fcd8ee2c8f9bb4ded4ff",
-    "fetchedAt": "2026-08-06T18:00:03.016Z"
-  },
-  {
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "title": "Reserve Bank of India (Local Area Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13667&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "summary": "",
-    "hash": "1f270700a68ef0fa8ac93675745de029dc7e2352d3fd851d1f3871b8a05c9ef2",
-    "fetchedAt": "2026-08-06T18:00:03.015Z"
-  },
-  {
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "title": "Reserve Bank of India (Regional Rural Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13668&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "summary": "",
-    "hash": "3598f3891b56563400e8223077ea979422d9a189fe3b6e719e4df748d7e44e4f",
-    "fetchedAt": "2026-08-06T18:00:03.015Z"
-  },
-  {
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "title": "Reserve Bank of India (Urban Co-operative Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13669&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "summary": "",
-    "hash": "1b116ecdde2f9674788f01fd77d849db03a99fe8bea336408ce0f59e0624870d",
-    "fetchedAt": "2026-08-06T18:00:03.015Z"
-  },
-  {
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "title": "Reserve Bank of India (Rural Co-operative Banks - Responsible Business Conduct) Fourth Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13670&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "summary": "",
-    "hash": "97a89b49e2551b0ecb01efd6d132df2e2f460eb4131ffe9485938211d0175d9f",
-    "fetchedAt": "2026-08-06T18:00:03.015Z"
-  },
-  {
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "title": "Reserve Bank of India (All India Financial Institutions - Responsible Business Conduct) Third Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13671&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "summary": "",
-    "hash": "5b8e91a84476d0e1517d8fa45e23fe36de9d08ab4c204e891e86562aae01be94",
-    "fetchedAt": "2026-08-06T18:00:03.015Z"
-  },
-  {
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "title": "Reserve Bank of India (Non-Banking Financial Companies - Responsible Business Conduct) Third Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13672&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "summary": "",
-    "hash": "4ed49e4f5f90e59a7b59643f1ddef932ae8033ce5bdb656c3fd71e71d42567e1",
-    "fetchedAt": "2026-08-06T18:00:03.015Z"
-  },
-  {
-    "source": "Reserve Bank of India",
-    "category": "Digital Lending",
-    "title": "Reserve Bank of India (Housing Finance Companies) Third Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13673&Mode=0",
-    "publishedAt": "Thu, 06 Aug 2026 18:10:00",
-    "summary": "",
-    "hash": "ffaa7dda84d04e8c82b4cb3325cab33a3a15b5865e6e291ebd520aab7aa18340",
-    "fetchedAt": "2026-08-06T18:00:03.015Z"
   },
   {
     "source": "Reserve Bank of India",
@@ -702,16 +812,6 @@
   {
     "source": "Ayushman Bharat Digital Mission",
     "category": "Healthcare",
-    "title": "AI in Healthcare Transforming India’s Hospital Ecosystem-ehealth",
-    "url": "https://ehealth.eletsonline.com/2026/06/india-surpasses-100-crore-health-records-linked-to-abha-strengthening-the-worlds-largest-digital-health-ecosystem/",
-    "publishedAt": "2026-06-17T18:30:00.000Z",
-    "summary": "E Health",
-    "hash": "7f3cf89302e8a7697e11f6d15dac32b8468d76d83d1495f30d6ae6c01dce0e45",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
-  },
-  {
-    "source": "Ayushman Bharat Digital Mission",
-    "category": "Healthcare",
     "title": "MP visits hospital in Bulandshahr: Assures to launch Ayushman Bharat scheme after eye check-up-Bhaskar",
     "url": "https://www.bhaskar.com/local/uttar-pradesh/bulandshahar/shikarpur/news/bulandshahr-mp-bholasingh-visit-global-eye-hospital-assurance-ayushman-bharat-yojana-138209802.html",
     "publishedAt": "2026-06-16T18:30:00.000Z",
@@ -767,16 +867,6 @@
     "publishedAt": "2026-06-05T18:30:00.000Z",
     "summary": "Digital Health News",
     "hash": "fdcd7dd9394f475a35c5330fea22bc1a72519e29af4aeffd3a99c499c6cfb0ef",
-    "fetchedAt": "2026-08-04T04:46:50.256Z"
-  },
-  {
-    "source": "Ayushman Bharat Digital Mission",
-    "category": "Healthcare",
-    "title": "Begusarai will become the model district of the National Health Authority: DM said – people will get technology-based health services-Bhaskar",
-    "url": "https://www.bhaskar.com/local/bihar/begusarai/news/begusarai-model-district-national-health-authority-ayushman-bharat-digital-mission-review-meeting-138100537.html",
-    "publishedAt": "2026-06-03T18:30:00.000Z",
-    "summary": "Bhaskar",
-    "hash": "a0688d74687af59d70816a35953e2fac2cd3e6b203f284e3bbc3cb674c594d9c",
     "fetchedAt": "2026-08-04T04:46:50.256Z"
   },
   {
