@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms & Conditions — Trustiva Setu",
   description: "Terms and Conditions for using the Trustiva Setu healthcare loan facilitation platform.",
+  alternates: {
+    canonical: "https://www.trustivasetu.com/terms",
+  },
 };
 
 const LAST_UPDATED = "June 1, 2026";

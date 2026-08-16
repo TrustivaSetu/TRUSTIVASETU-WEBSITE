@@ -4,6 +4,9 @@ import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
 
 export const metadata = {
   title: "Our Team — Trustiva Setu",
+  alternates: {
+    canonical: "https://www.trustivasetu.com/founders",
+  },
 };
 
 export default function FoundersDirectoryPage() {

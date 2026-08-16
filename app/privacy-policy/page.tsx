@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy — Trustiva Setu",
   description: "Privacy Policy for Trustiva Setu by Aarthsetu Technologies Private Limited. DPDP Act 2023 compliant.",
+  alternates: {
+    canonical: "https://www.trustivasetu.com/privacy-policy",
+  },
 };
 
 const LAST_UPDATED = "June 1, 2026";

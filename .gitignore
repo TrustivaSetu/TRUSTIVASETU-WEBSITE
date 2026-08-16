@@ -70,3 +70,6 @@ generated/
 *.bak
 *.before-*
 *.deb
+
+# Ad-hoc audit run artifacts (not code)
+seo-audit-lighthouse.json
