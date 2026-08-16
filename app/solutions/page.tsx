@@ -2,6 +2,8 @@ import Link from "next/link";
 import { CreditCard, Landmark, HeartHandshake } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 export const metadata = {
   title: "Our Financing Solutions — Trustiva Setu",
@@ -13,6 +15,8 @@ export const metadata = {
 export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-[#07111f] text-white">
+      <WebSiteSchema />
+      <BreadcrumbSchema title="Our Financing Solutions — Trustiva Setu" slug="solutions" />
       <Navbar />
 
       <div className="pt-12 sm:pt-16">

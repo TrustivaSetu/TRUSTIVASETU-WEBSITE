@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
 export default function TrustivaSetuWebsite() {
   const howItWorksSteps = [
@@ -44,6 +45,7 @@ export default function TrustivaSetuWebsite() {
   return (
     <>
       <div className="min-h-screen bg-[#07111f] text-white">
+        <WebSiteSchema />
         <Navbar />
 
         {/* HERO */}

@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 export default function WhyWeWinPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -50,6 +52,8 @@ export default function WhyWeWinPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className="min-h-screen bg-[#07111f] text-white">
+        <WebSiteSchema />
+        <BreadcrumbSchema title="Why We Win — Trustiva Setu" slug="why-we-win" />
         <Navbar />
 
         <div className="pt-12 sm:pt-16">

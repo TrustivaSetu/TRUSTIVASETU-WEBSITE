@@ -2,9 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 export const metadata = {
   title: "About Us — Trustiva Setu",
+  description:
+    "Trustiva Setu is the healthcare financing infrastructure division of Aarthsetu Technologies Private Limited, connecting clinics, lenders and patients through India's fastest No Cost EMI platform.",
   alternates: {
     canonical: "https://www.trustivasetu.com/about",
   },
@@ -13,6 +17,8 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#07111f] text-white">
+      <WebSiteSchema />
+      <BreadcrumbSchema title="About Us — Trustiva Setu" slug="about" />
       <Navbar />
 
       <div className="pt-12 sm:pt-16">
