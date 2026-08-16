@@ -5,6 +5,9 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Our Financing Solutions — Trustiva Setu",
+  alternates: {
+    canonical: "https://www.trustivasetu.com/solutions",
+  },
 };
 
 export default function SolutionsPage() {

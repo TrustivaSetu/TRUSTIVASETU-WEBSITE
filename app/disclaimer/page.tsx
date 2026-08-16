@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer — Trustiva Setu",
   description: "Legal disclaimer for Trustiva Setu loan facilitation platform. Not a bank or NBFC.",
+  alternates: {
+    canonical: "https://www.trustivasetu.com/disclaimer",
+  },
 };
 
 const LAST_UPDATED = "June 1, 2026";

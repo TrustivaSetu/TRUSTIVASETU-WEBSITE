@@ -5,6 +5,9 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "About Us — Trustiva Setu",
+  alternates: {
+    canonical: "https://www.trustivasetu.com/about",
+  },
 };
 
 export default function AboutPage() {
@@ -46,7 +49,7 @@ that powers healthcare affordability at scale.
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
               {/* Abhishek Kashyap */}
 
-              <Link href="/founders/abhishek kashyap" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+              <Link href="/founders/abhishek" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
                 <div className="flex justify-center mb-6">
                   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
                     <Image
@@ -78,7 +81,7 @@ that powers healthcare affordability at scale.
 
               {/* Ajit Yadav */}
 
-              <Link href="/founders/ajit yadav" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+              <Link href="/founders/ajit" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
                 <div className="flex justify-center mb-6">
                   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
                     <Image
@@ -109,7 +112,7 @@ that powers healthcare affordability at scale.
               </Link>
               {/* Manish Jaggi */}
 
-              <Link href="/founders/manish jaggi" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
+              <Link href="/founders/manish" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
                 <div className="flex justify-center mb-6">
                   <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
                     <Image
