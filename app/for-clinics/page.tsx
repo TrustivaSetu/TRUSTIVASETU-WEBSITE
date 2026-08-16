@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { trackEvent } from "@/lib/analytics";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
 
@@ -157,6 +159,8 @@ export default function ForClinicsPage() {
 
   return (
     <div className="min-h-screen bg-[#07111f] text-white">
+      <WebSiteSchema />
+      <BreadcrumbSchema title="For Clinics & Hospitals — Trustiva Setu" slug="for-clinics" />
       <Navbar />
 
       <div className="pt-12 sm:pt-16">

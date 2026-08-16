@@ -6,6 +6,8 @@ import { CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { trackEvent } from "@/lib/analytics";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
 
@@ -189,6 +191,8 @@ export default function ForPatientsPage() {
 
   return (
     <div className="min-h-screen bg-[#07111f] text-white">
+      <WebSiteSchema />
+      <BreadcrumbSchema title="For Patients — No Cost EMI & Healthcare Loans | Trustiva Setu" slug="for-patients" />
       <Navbar />
 
       <div className="pt-12 sm:pt-16">

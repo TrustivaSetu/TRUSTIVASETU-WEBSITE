@@ -4,6 +4,8 @@ import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
 
 export const metadata = {
   title: "Our Team — Trustiva Setu",
+  description:
+    "Meet the founding team behind Trustiva Setu — deep experience across banking, NBFC lending and healthcare fintech, building India's healthcare financing infrastructure layer.",
   alternates: {
     canonical: "https://www.trustivasetu.com/founders",
   },

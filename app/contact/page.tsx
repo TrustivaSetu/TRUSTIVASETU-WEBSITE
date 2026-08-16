@@ -7,6 +7,8 @@ import Footer from "@/components/layout/Footer";
 import TrackedLink from "@/components/analytics/TrackedLink";
 import { trackEvent } from "@/lib/analytics";
 import { landingData } from "@/lib/landing-data";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
 
@@ -217,6 +219,8 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-[#07111f] text-white">
+      <WebSiteSchema />
+      <BreadcrumbSchema title="Contact Us — Trustiva Setu" slug="contact" />
       <Navbar />
 
       <div className="pt-12 sm:pt-16">
