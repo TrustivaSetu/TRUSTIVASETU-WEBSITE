@@ -123,7 +123,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#07111f]/95 backdrop-blur-xl border-b border-white/10">
+      <header className="sticky top-0 left-0 right-0 z-50 bg-[#07111f]/95 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
           {/* LOGO */}
           <div className="flex items-center gap-2 md:gap-4">

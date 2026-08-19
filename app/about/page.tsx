@@ -21,7 +21,7 @@ export default function AboutPage() {
       <BreadcrumbSchema title="About Us — Trustiva Setu" slug="about" />
       <Navbar />
 
-      <div className="pt-12 sm:pt-16">
+      <div className="pt-6 sm:pt-8">
         {/* ABOUT */}
 
         <section
@@ -47,8 +47,8 @@ Our mission is simple:
 We don't just provide loans—we create the infrastructure layer
 that powers healthcare affordability at scale.
           </p>
-          <div className="mt-12 md:mt-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-10">
+          <div className="mt-8 md:mt-10">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Founding Team
             </h2>
 
@@ -57,7 +57,7 @@ that powers healthcare affordability at scale.
 
               <Link href="/founders/abhishek" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
                 <div className="flex justify-center mb-6">
-                  <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
+                  <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
                     <Image
                       src="/abhishek.jpg"
                       alt="Abhishek Kashyap"
@@ -89,7 +89,7 @@ that powers healthcare affordability at scale.
 
               <Link href="/founders/ajit" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
                 <div className="flex justify-center mb-6">
-                  <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
+                  <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
                     <Image
                       src="/ajit.jpg"
                       alt="Ajit Yadav"

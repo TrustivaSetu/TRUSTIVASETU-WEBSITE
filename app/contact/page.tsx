@@ -223,10 +223,10 @@ export default function ContactPage() {
       <BreadcrumbSchema title="Contact Us — Trustiva Setu" slug="contact" />
       <Navbar />
 
-      <div className="pt-12 sm:pt-16">
+      <div className="pt-6 sm:pt-8">
         {/* CONTACT US */}
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
           <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Get In Touch
           </p>
@@ -309,7 +309,7 @@ export default function ContactPage() {
 
         {/* INVESTOR SECTION */}
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
           <div className="relative overflow-hidden rounded-4xl border border-lime-300/20 bg-white/5 backdrop-blur-2xl p-10 shadow-2xl">
             <div className="absolute bottom-0 left-0 w-72 h-72 bg-green-400/10 blur-3xl rounded-full" />
 
@@ -340,7 +340,7 @@ accelerating lender integrations, clinic onboarding,
 distribution expansion and national healthcare financing infrastructure deployment.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-14">
-                <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-5 min-h-[120px] flex flex-col justify-center">
+                <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-4 sm:p-5 min-h-[110px] flex flex-col justify-center">
                   <p className="text-sm text-gray-400 mb-2">
                     Raise Stage
                   </p>
@@ -349,7 +349,7 @@ distribution expansion and national healthcare financing infrastructure deployme
                   </h3>
                 </div>
 
-                <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-5 min-h-[120px] flex flex-col justify-center">
+                <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-4 sm:p-5 min-h-[110px] flex flex-col justify-center">
                   <p className="text-sm text-gray-400 mb-2">
                     Capital Raise
                   </p>
@@ -358,7 +358,7 @@ distribution expansion and national healthcare financing infrastructure deployme
                   </h3>
                 </div>
 
-                <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-5 min-h-[120px] flex flex-col justify-center">
+                <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-4 sm:p-5 min-h-[110px] flex flex-col justify-center">
                   <p className="text-sm text-gray-400 mb-2">
                     Use of Funds
                   </p>
@@ -406,7 +406,7 @@ distribution expansion and national healthcare financing infrastructure deployme
                 </div>
               </div>
 
-              <div className="mt-12 md:mt-16 flex flex-wrap gap-4">
+              <div className="mt-8 md:mt-10 flex flex-wrap gap-4">
                 <TrackedLink
                   href="/trustiva_strategic_partnership_deck.pdf"
                   event="strategic_partnership_deck_download"
@@ -425,7 +425,7 @@ distribution expansion and national healthcare financing infrastructure deployme
 
         <section
           id="for-strategic-investors"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 scroll-mt-24"
         >
           <div className="bg-white/10 backdrop-blur-2xl border border-lime-300/20 rounded-3xl p-10 shadow-2xl">
             <p className="text-lime-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
@@ -436,7 +436,7 @@ distribution expansion and national healthcare financing infrastructure deployme
               Schedule Strategic Investor Conversation
             </h2>
 
-            <p className="text-gray-300 text-lg leading-8 max-w-4xl mb-10">
+            <p className="text-gray-300 text-lg leading-8 max-w-4xl mb-6">
               For strategic investors, lending partners and institutional conversations,
               connect directly with the founding team to explore capital deployment,
               partnerships and long-term infrastructure opportunities.
@@ -536,14 +536,14 @@ distribution expansion and national healthcare financing infrastructure deployme
 
         <section
           id="testimonials"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 scroll-mt-24"
         >
-          <h2 className="text-4xl font-bold mb-10 text-center">
+          <h2 className="text-4xl font-bold mb-6 text-center">
             Early Feedback
           </h2>
 
           {reviewsLoading ? (
-            <div className="flex justify-center py-16">
+            <div className="flex justify-center py-10 sm:py-12">
               <p className="text-gray-400 text-lg">Loading reviews...</p>
             </div>
           ) : reviews.length > 0 ? (
@@ -565,7 +565,7 @@ distribution expansion and national healthcare financing infrastructure deployme
               </div>
             </div>
           ) : (
-            <div className="flex flex-col items-center justify-center py-16 text-center">
+            <div className="flex flex-col items-center justify-center py-10 sm:py-12 text-center">
               <p className="text-gray-400 text-lg mb-2">
                 No reviews yet — be the first to share your feedback!
               </p>
@@ -575,8 +575,8 @@ distribution expansion and national healthcare financing infrastructure deployme
             </div>
           )}
         </section>
-        <section className="max-w-7xl mx-auto px-4 py-14 md:py-16">
-          <h2 className="text-4xl font-bold text-center mb-10">
+        <section className="max-w-7xl mx-auto px-4 py-8 sm:py-10 md:py-12">
+          <h2 className="text-4xl font-bold text-center mb-6">
             Share Your Feedback
           </h2>
 
@@ -638,8 +638,8 @@ distribution expansion and national healthcare financing infrastructure deployme
             </button>
           </div>
         </section>
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16">
-          <div className="relative overflow-hidden rounded-4xl border border-lime-300/20 bg-white/5 backdrop-blur-2xl p-12 shadow-2xl">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
+          <div className="relative overflow-hidden rounded-4xl border border-lime-300/20 bg-white/5 backdrop-blur-2xl p-6 sm:p-8 md:p-10 shadow-2xl">
             <div className="absolute top-0 right-0 w-72 h-72 bg-lime-300/10 blur-3xl rounded-full" />
             <div className="absolute bottom-0 left-0 w-72 h-72 bg-green-400/10 blur-3xl rounded-full" />
 
@@ -655,7 +655,7 @@ distribution expansion and national healthcare financing infrastructure deployme
                 </span>
               </h2>
 
-              <p className="text-gray-300 text-lg leading-9 max-w-4xl mx-auto mb-10">
+              <p className="text-gray-300 text-lg leading-9 max-w-4xl mx-auto mb-6">
                 Trustiva Setu is not building another lending company.
 
                 We are building the infrastructure that ensures treatment decisions
@@ -692,7 +692,7 @@ distribution expansion and national healthcare financing infrastructure deployme
           </div>
         </section>
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold">
               Explore Healthcare Financing

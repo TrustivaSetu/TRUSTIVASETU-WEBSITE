@@ -207,14 +207,14 @@ export default function ForPatientsPage() {
       <BreadcrumbSchema title="For Patients — No Cost EMI & Healthcare Loans | Trustiva Setu" slug="for-patients" />
       <Navbar />
 
-      <div className="pt-12 sm:pt-16">
+      <div className="pt-6 sm:pt-8">
         {/* FOR PATIENTS */}
 
         <section
           id="patients"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 scroll-mt-24"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             For Patients
           </h2>
 
@@ -394,7 +394,7 @@ export default function ForPatientsPage() {
         {/* TREATMENT CATEGORIES */}
         <section
           id="treatments"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 scroll-mt-24"
         >
           <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Coverage
@@ -429,7 +429,7 @@ export default function ForPatientsPage() {
 
         {/* APPLICATION LAUNCHING SOON */}
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
           <div className="relative overflow-hidden rounded-4xl border border-lime-300/20 bg-linear-to-br from-[#0b1628] via-[#10213d] to-[#07111f] p-10 shadow-2xl">
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4">
@@ -445,7 +445,7 @@ export default function ForPatientsPage() {
                 </span>
               </h2>
 
-              <p className="text-gray-300 text-lg leading-8 max-w-3xl mb-10">
+              <p className="text-gray-300 text-lg leading-8 max-w-3xl mb-6">
                 India's smartest healthcare financing application is coming soon —
                 built for clinics, patients, lenders and seamless EMI approvals.
                 One application. Multiple lenders. Faster approvals. Better conversions.
@@ -471,7 +471,7 @@ export default function ForPatientsPage() {
         </section>
         {/* PARTNERS SECTION */}
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Lending Partners */}
 
@@ -533,7 +533,7 @@ export default function ForPatientsPage() {
         {/* EMI CALCULATOR */}
         <section
           id="emi-calculator"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 scroll-mt-24"
         >
           <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Plan Your Treatment Finance

@@ -56,12 +56,12 @@ export default function WhyWeWinPage() {
         <BreadcrumbSchema title="Why We Win — Trustiva Setu" slug="why-we-win" />
         <Navbar />
 
-        <div className="pt-12 sm:pt-16">
+        <div className="pt-6 sm:pt-8">
           {/* WHY We Win */}
 
           <section
             id="why-we-win"
-            className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
+            className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 scroll-mt-24"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
               Why We Win
@@ -72,7 +72,7 @@ export default function WhyWeWinPage() {
               We are building the infrastructure layer that creates long-term
               defensibility across clinics, lenders and patient financing behavior.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
               {[
                 {
                   icon: "⚡",
@@ -181,7 +181,7 @@ Our routing engine creates lender competition, better approvals and stronger cli
           {/* FAQ */}
           <section
             id="faq"
-            className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
+            className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 scroll-mt-24"
           >
             <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
               Have Questions?
@@ -226,7 +226,7 @@ Our routing engine creates lender competition, better approvals and stronger cli
           </section>
 
           {/* PARTNER WITH US CTA */}
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
             <div className="relative overflow-hidden rounded-4xl border border-lime-300/30 bg-lime-300/5 backdrop-blur-xl p-10 text-center shadow-2xl">
               <div className="absolute top-0 right-0 w-64 h-64 bg-lime-300/10 blur-3xl rounded-full pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-lime-300/5 blur-3xl rounded-full pointer-events-none" />

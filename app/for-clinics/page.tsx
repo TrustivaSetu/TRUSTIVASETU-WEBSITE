@@ -163,14 +163,14 @@ export default function ForClinicsPage() {
       <BreadcrumbSchema title="For Clinics & Hospitals — Trustiva Setu" slug="for-clinics" />
       <Navbar />
 
-      <div className="pt-12 sm:pt-16">
+      <div className="pt-6 sm:pt-8">
         {/* FOR CLINICS */}
 
         <section
           id="clinics"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 scroll-mt-24"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             For Clinics
           </h2>
 
