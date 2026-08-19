@@ -52,7 +52,7 @@ that powers healthcare affordability at scale.
               Founding Team
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+            <div className="mx-auto grid w-full max-w-5xl grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10">
               {/* Abhishek Kashyap */}
 
               <Link href="/founders/abhishek" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
