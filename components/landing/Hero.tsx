@@ -37,7 +37,7 @@ export default function Hero({
           <div className="mt-10 flex flex-wrap gap-4">
 
             <a
-              href="/"
+              href={`/for-patients?treatment=${encodeURIComponent(content.title.replace(/\s+Loan(?:\s+in\s+India)?$/i, ""))}#patients`}
               className="rounded-xl bg-[#bef264] px-8 py-4 font-semibold text-[#07111f] transition hover:scale-105"
             >
               Apply Now

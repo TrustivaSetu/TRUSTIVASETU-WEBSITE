@@ -761,44 +761,52 @@ export const landingData = {
     ]
 },
   "rhinoplasty": {
-    "title": "Rhinoplasty",
-    "description": "Healthcare financing for rhinoplasty through trusted lending partners.",
-    "heroTitle": "Finance Your Rhinoplasty",
-    "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
+    "title": "Rhinoplasty Loan in India",
+    "description": "Explore healthcare financing options for eligible rhinoplasty procedures through Trustiva Setu's lending partners.",
+    "heroTitle": "Rhinoplasty Loan & Financing in India",
+    "heroSubtitle": "Explore healthcare financing options for eligible rhinoplasty procedures through trusted lending partners.",
     "treatments": [
         {
             "title": "Cosmetic Rhinoplasty",
-            "description": "Finance cosmetic nose reshaping."
+            "description": "Financing options for eligible cosmetic nose reshaping procedures, subject to lender and clinic policies."
         },
         {
             "title": "Functional Rhinoplasty",
-            "description": "Funding for breathing correction surgery."
+            "description": "Explore financing options for eligible functional rhinoplasty procedures, subject to lender assessment."
         },
         {
             "title": "Revision Rhinoplasty",
-            "description": "Finance revision surgery."
+            "description": "Financing options may be available for eligible revision rhinoplasty procedures through participating lenders."
         },
         {
             "title": "Septorhinoplasty",
-            "description": "Funding for combined procedures."
+            "description": "Explore financing for eligible combined nasal procedures, subject to treatment and lender eligibility."
         }
     ],
     "faqs": [
         {
-            "question": "Can rhinoplasty be financed?",
-            "answer": "Eligible applicants may apply through lending partners."
+            "question": "Can I get a loan for rhinoplasty?",
+            "answer": "Eligible applicants may apply for rhinoplasty financing through participating lending partners. Approval, loan amount and repayment terms depend on the lender's assessment."
         },
         {
-            "question": "Who is eligible?",
-            "answer": "Subject to lender assessment."
+            "question": "What types of rhinoplasty may be eligible for financing?",
+            "answer": "Depending on the lender and healthcare provider, financing may be available for eligible cosmetic, functional, revision or combined rhinoplasty procedures. Final eligibility is determined by the lending partner."
         },
         {
-            "question": "Required documents?",
-            "answer": "Standard KYC and income proof."
+            "question": "What documents are generally required for a rhinoplasty loan?",
+            "answer": "Applicants may be asked for PAN, Aadhaar, KYC and income-related documents. The exact documentation can vary by lending partner and applicant profile."
         },
         {
-            "question": "Approval time?",
-            "answer": "Depends on lender verification."
+            "question": "How does rhinoplasty financing work?",
+            "answer": "You can submit an enquiry through Trustiva Setu, provide the requested information and documents, and undergo the lending partner's eligibility and credit assessment. Any approval and final terms are decided by the lender."
+        },
+        {
+            "question": "How long does rhinoplasty loan approval take?",
+            "answer": "Processing time depends on document verification, applicant information and the lending partner's internal assessment process. No approval timeline is guaranteed."
+        },
+        {
+            "question": "Does Trustiva Setu directly provide the rhinoplasty loan?",
+            "answer": "Trustiva Setu is a healthcare financing platform that connects applicants with lending partners. Final approval, loan amount, interest, fees and repayment terms are determined by the applicable lending partner."
         }
     ]
 },

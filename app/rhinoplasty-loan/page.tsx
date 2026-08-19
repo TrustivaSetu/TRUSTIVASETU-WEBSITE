@@ -14,14 +14,16 @@ import FinancialServiceSchema from "@/components/seo/FinancialServiceSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
-  title: "Rhinoplasty in India | Healthcare Financing | Trustiva Setu",
-  description: "Apply for a rhinoplasty through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
+  title: "Rhinoplasty Loan in India | Healthcare Financing | Trustiva Setu",
+  description:
+    "Explore rhinoplasty loan and healthcare financing options in India through Trustiva Setu's lending partners. Approval and final terms depend on lender eligibility.",
   alternates: {
     canonical: "https://www.trustivasetu.com/rhinoplasty-loan",
   },
   openGraph: {
-    title: "Rhinoplasty | Trustiva Setu",
-    description: "Healthcare financing for rhinoplasty.",
+    title: "Rhinoplasty Loan in India | Trustiva Setu",
+    description:
+      "Explore healthcare financing options for eligible rhinoplasty procedures through Trustiva Setu's lending partners.",
     url: "https://www.trustivasetu.com/rhinoplasty-loan",
     type: "website",
   },

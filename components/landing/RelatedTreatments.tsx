@@ -6,9 +6,26 @@ export default function RelatedTreatments({
 }: {
   page: keyof typeof landingData;
 }) {
-  const items = Object.entries(landingData)
-    .filter(([key]) => key !== page)
-    .slice(0, 6);
+  const curatedLinks: Partial<Record<keyof typeof landingData, string[]>> = {
+    rhinoplasty: [
+      "cosmetic-surgery",
+      "plastic-surgery",
+      "medical",
+      "liposuction",
+      "gynecomastia",
+      "hair-transplant",
+    ],
+  };
+
+  const selectedLinks = curatedLinks[page];
+
+  const items = selectedLinks
+    ? selectedLinks
+        .filter((key) => key in landingData && key !== page)
+        .map((key) => [key, landingData[key as keyof typeof landingData]] as const)
+    : Object.entries(landingData)
+        .filter(([key]) => key !== page)
+        .slice(0, 6);
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">

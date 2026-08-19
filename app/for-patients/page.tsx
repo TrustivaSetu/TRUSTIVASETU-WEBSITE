@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
@@ -29,6 +29,18 @@ export default function ForPatientsPage() {
     budget: "",
     message: "",
   });
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const treatment = params.get("treatment");
+
+    if (treatment) {
+      setPatientForm((current) => ({
+        ...current,
+        treatmentType: treatment,
+      }));
+    }
+  }, []);
   const [patientErrors, setPatientErrors] = useState<any>({});
 
   const [loanAmount, setLoanAmount] = useState(50000);
