@@ -4,10 +4,15 @@
   --font-heading: var(--font-playfair);
   --font-body: var(--font-inter);
   --premium-lime: #bef264;
+  --premium-lime-soft: #d9f99d;
   --premium-dark: #07111f;
+  --premium-surface: #0b1628;
+  --premium-surface-2: #0d1b2d;
+  --premium-border: rgba(255,255,255,0.10);
+  --premium-muted: #9ca3af;
 
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #07111f;
+  --foreground: #f8fafc;
 }
 
 /* GLOBAL BODY */
@@ -16,8 +21,10 @@ body {
   font-family: var(--font-body);
   background: #07111f;
   color: white;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* PREMIUM HEADINGS */
@@ -25,8 +32,9 @@ body {
 .luxury-heading {
   font-family: var(--font-heading);
   font-weight: 700;
-  letter-spacing: -0.6px;
-  line-height: 1.1;
+  letter-spacing: -0.7px;
+  line-height: 1.08;
+  text-wrap: balance;
 }
 
 .luxury-italic {
@@ -37,8 +45,8 @@ body {
 
 .premium-text {
   font-family: var(--font-body);
-  color: #d1d5db;
-  line-height: 1.9;
+  color: #cbd5e1;
+  line-height: 1.8;
 }
 
 /* PREMIUM CARDS */
@@ -79,13 +87,6 @@ backdrop-filter: blur(18px);
 
 
 
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 /* ================= RESPONSIVE & iOS FIXES ================= */
 
@@ -184,8 +185,8 @@ html, body {
 /* ================= BUTTON STYLING ================= */
 
 .premium-green-btn {
-  background-color: #14532d;
-  color: white;
+  background-color: #bef264;
+  color: #07111f;
   border-radius: 12px;
   padding: 12px 20px;
   font-weight: 600;
@@ -193,7 +194,7 @@ html, body {
 }
 
 .premium-green-btn:hover {
-  background-color: #166534;
+  background-color: #d9f99d;
   transform: translateY(-2px);
 }
 
@@ -318,3 +319,55 @@ img{
   user-drag:none;
 }
 
+
+
+/* ================= TRUSTIVA PREMIUM POLISH ================= */
+
+::selection {
+  background: rgba(190,242,100,0.28);
+  color: #ffffff;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+.premium-surface {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.075),
+      rgba(255,255,255,0.035)
+    );
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.premium-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(190,242,100,0.18),
+    transparent
+  );
+}
+
+.premium-glow {
+  box-shadow:
+    0 0 0 1px rgba(190,242,100,0.08),
+    0 20px 60px rgba(190,242,100,0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -55,18 +55,18 @@ export default function TrustivaSetuWebsite() {
           className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-12 sm:pb-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center scroll-mt-24"
         >
           <div className="relative z-10">
-            <p className="text-lime-300 text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-[#bef264] text-sm tracking-[0.3em] uppercase mb-4">
               Healthcare Financing Infrastructure
             </p>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
               Medical Loans & No Cost Healthcare EMI
-              <span className="block text-lime-300">
+              <span className="block text-[#bef264]">
                 Across India
               </span>
             </h1>
 
-            <p className="text-gray-300 text-lg md:text-xl max-w-xl leading-8">
+            <p className="text-slate-300 text-lg md:text-xl max-w-xl leading-8">
               Trustiva Setu connects patients, clinics and lending partners to provide
               medical loans, No Cost EMI, IVF financing, dental loans, cosmetic surgery
               financing and other healthcare financing solutions across India.
@@ -103,7 +103,7 @@ export default function TrustivaSetuWebsite() {
 
             {/* RIGHT: QUOTE */}
             <div>
-              <p className="text-lime-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+              <p className="text-[#bef264] text-sm font-semibold tracking-[0.2em] uppercase mb-3">
                 From Our Founder
               </p>
 
@@ -120,7 +120,7 @@ export default function TrustivaSetuWebsite() {
                 "Build trust first. Scale will follow."
               </p>
 
-              <p className="text-lime-300 font-semibold">
+              <p className="text-[#bef264] font-semibold">
                 — Trustiva Founder
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function TrustivaSetuWebsite() {
               initial={{ scale: 0.85, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex flex-wrap items-center justify-center gap-2 px-6 py-3 rounded-full bg-lime-300 text-black font-black text-base sm:text-xl shadow-2xl"
+              className="inline-flex flex-wrap items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#bef264] text-[#07111f] font-black text-base sm:text-xl shadow-2xl"
             >
               <span>⚡</span>
               <span>Approval in</span>
@@ -147,7 +147,7 @@ export default function TrustivaSetuWebsite() {
             </motion.div>
           </div>
 
-          <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
+          <p className="text-[#bef264] text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Platform Workflow
           </p>
 
@@ -166,15 +166,15 @@ export default function TrustivaSetuWebsite() {
                 initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="relative bg-white/5 border border-lime-300/20 rounded-3xl p-6 text-center hover:-translate-y-2 transition-all duration-300 hover:border-lime-300/50 hover:shadow-[0_20px_40px_rgba(190,242,100,0.1)]"
+                className="relative bg-white/[0.045] backdrop-blur-sm border border-white/10 rounded-3xl p-6 text-center hover:-translate-y-2 transition-all duration-300 hover:border-[#bef264]/40 hover:shadow-[0_20px_40px_rgba(190,242,100,0.1)]"
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-lime-300/10 border-2 border-lime-300/40 flex items-center justify-center">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#bef264]/10 border-2 border-[#bef264]/30 flex items-center justify-center">
                   <span className="text-2xl">{item.icon}</span>
                 </div>
-                <div className="text-lime-300 text-xs font-bold tracking-widest mb-2 uppercase">
+                <div className="text-[#bef264] text-xs font-bold tracking-widest mb-2 uppercase">
                   Step {item.step}
                 </div>
-                <div className="inline-block bg-lime-300 text-black text-xs font-black px-3 py-1 rounded-full mb-3">
+                <div className="inline-block bg-[#bef264] text-[#07111f] text-xs font-black px-3 py-1 rounded-full mb-3">
                   {item.timing}
                 </div>
                 <h3 className="text-lg font-bold mb-3">{item.title}</h3>
@@ -187,20 +187,20 @@ export default function TrustivaSetuWebsite() {
           </div>
 
           <div className="mt-14 text-center">
-            <div className="inline-block bg-lime-300/10 border border-lime-300/30 rounded-2xl px-8 py-5">
+            <div className="inline-block bg-white/[0.045] backdrop-blur-sm border border-white/10 rounded-2xl px-8 py-5">
               <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-3">
                 <div>
-                  <p className="text-2xl font-black text-lime-300">Under 2 min</p>
+                  <p className="text-2xl font-black text-[#bef264]">Under 2 min</p>
                   <p className="text-gray-400 text-xs mt-0.5">Pre-qualification</p>
                 </div>
-                <div className="text-lime-300/30 text-2xl hidden sm:block">|</div>
+                <div className="text-[#bef264]/30 text-2xl hidden sm:block">|</div>
                 <div>
-                  <p className="text-2xl font-black text-lime-300">8–10 min</p>
+                  <p className="text-2xl font-black text-[#bef264]">8–10 min</p>
                   <p className="text-gray-400 text-xs mt-0.5">Lead to Approval</p>
                 </div>
-                <div className="text-lime-300/30 text-2xl hidden sm:block">|</div>
+                <div className="text-[#bef264]/30 text-2xl hidden sm:block">|</div>
                 <div>
-                  <p className="text-2xl font-black text-lime-300">Same Day*</p>
+                  <p className="text-2xl font-black text-[#bef264]">Same Day*</p>
                   <p className="text-gray-400 text-xs mt-0.5">Disbursal</p>
                 </div>
               </div>
@@ -221,7 +221,7 @@ export default function TrustivaSetuWebsite() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white/5 p-6 rounded-2xl">
-              <h3 className="text-xl font-bold text-lime-300">
+              <h3 className="text-xl font-bold text-[#bef264]">
                 Clinic Partnerships
               </h3>
               <p className="text-gray-300">
@@ -230,7 +230,7 @@ export default function TrustivaSetuWebsite() {
             </div>
 
             <div className="bg-white/5 p-6 rounded-2xl">
-              <h3 className="text-xl font-bold text-lime-300">
+              <h3 className="text-xl font-bold text-[#bef264]">
                 Lender Integrations
               </h3>
               <p className="text-gray-300">
@@ -239,7 +239,7 @@ export default function TrustivaSetuWebsite() {
             </div>
 
             <div className="bg-white/5 p-6 rounded-2xl">
-              <h3 className="text-xl font-bold text-lime-300">
+              <h3 className="text-xl font-bold text-[#bef264]">
                 Platform Build
               </h3>
               <p className="text-gray-300">
@@ -300,7 +300,7 @@ export default function TrustivaSetuWebsite() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="text-2xl font-bold text-lime-300"
+                  className="text-2xl font-bold text-[#bef264]"
                 >
                   <Counter
                     end={item.number}
@@ -320,7 +320,7 @@ export default function TrustivaSetuWebsite() {
         </section>
         <div className="h-8" />
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-          <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
+          <p className="text-[#bef264] text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Strategic Credibility
           </p>
 
@@ -336,7 +336,7 @@ export default function TrustivaSetuWebsite() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-6">
-              <h3 className="text-2xl font-bold text-lime-300 mb-3">
+              <h3 className="text-2xl font-bold text-[#bef264] mb-3">
                 NBFC + Banking Expertise
               </h3>
 
@@ -347,7 +347,7 @@ export default function TrustivaSetuWebsite() {
             </div>
 
             <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-6">
-              <h3 className="text-2xl font-bold text-lime-300 mb-3">
+              <h3 className="text-2xl font-bold text-[#bef264] mb-3">
                 Founder-Led Execution
               </h3>
 
@@ -358,7 +358,7 @@ export default function TrustivaSetuWebsite() {
             </div>
 
             <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-6">
-              <h3 className="text-2xl font-bold text-lime-300 mb-3">
+              <h3 className="text-2xl font-bold text-[#bef264] mb-3">
                 Infrastructure-First Model
               </h3>
 
