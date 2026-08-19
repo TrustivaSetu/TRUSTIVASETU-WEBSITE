@@ -7,6 +7,14 @@ export default function RelatedTreatments({
   page: keyof typeof landingData;
 }) {
   const curatedLinks: Partial<Record<keyof typeof landingData, string[]>> = {
+    medical: [
+      "ivf",
+      "fertility-preservation",
+      "egg-freezing",
+      "dental",
+      "dental-implant",
+      "hair-transplant",
+    ],
     rhinoplasty: [
       "cosmetic-surgery",
       "plastic-surgery",
