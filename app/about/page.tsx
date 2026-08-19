@@ -116,39 +116,7 @@ that powers healthcare affordability at scale.
                   Lending Operations
                 </p>
               </Link>
-              {/* Manish Jaggi */}
 
-              <Link href="/founders/manish" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">
-                <div className="flex justify-center mb-6">
-                  <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-lime-300/30 shadow-2xl">
-                    <Image
-                      src="/manish.png"
-                      alt="Manish Jaggi"
-                      width={240}
-                      height={240}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                <h3 className="text-2xl font-bold">
-                  Manish Jaggi
-                </h3>
-
-                <p className="text-lime-300 font-semibold mb-2">
-                  Strategic Advisor
-                </p>
-
-                <p className="text-gray-300 text-sm mt-2 leading-6">
-                  Bringing deep banking, NBFC and financial infrastructure expertise
-                  to strengthen Trustiva's lender ecosystem and strategic growth.
-                </p>
-
-                <p className="text-gray-300">
-                  ICICI Bank, TATA Capital, NBFC Strategy,
-                  Lending Infrastructure, Financial Advisory
-                </p>
-              </Link>
             </div>
           </div>
         </section>
