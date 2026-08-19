@@ -168,13 +168,13 @@ export default function ForClinicsPage() {
 
         <section
           id="clinics"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-10">
             For Clinics
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7">
               <h3 className="text-2xl font-bold mb-6 text-white">
                 Healthcare Provider Partnership Enquiry

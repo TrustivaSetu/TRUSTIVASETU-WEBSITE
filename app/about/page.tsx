@@ -47,12 +47,12 @@ Our mission is simple:
 We don't just provide loans—we create the infrastructure layer
 that powers healthcare affordability at scale.
           </p>
-          <div className="mt-20">
+          <div className="mt-12 md:mt-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-10">
               Founding Team
             </h2>
 
-            <div className="mx-auto grid w-full max-w-5xl grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10">
+            <div className="mx-auto grid w-full max-w-5xl grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-8">
               {/* Abhishek Kashyap */}
 
               <Link href="/founders/abhishek" className="block bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl p-6 text-center shadow-2xl hover:scale-[1.02] transition duration-300">

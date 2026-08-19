@@ -309,7 +309,7 @@ export default function ContactPage() {
 
         {/* INVESTOR SECTION */}
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16">
           <div className="relative overflow-hidden rounded-4xl border border-lime-300/20 bg-white/5 backdrop-blur-2xl p-10 shadow-2xl">
             <div className="absolute bottom-0 left-0 w-72 h-72 bg-green-400/10 blur-3xl rounded-full" />
 
@@ -406,7 +406,7 @@ distribution expansion and national healthcare financing infrastructure deployme
                 </div>
               </div>
 
-              <div className="mt-20 flex flex-wrap gap-4">
+              <div className="mt-12 md:mt-16 flex flex-wrap gap-4">
                 <TrackedLink
                   href="/trustiva_strategic_partnership_deck.pdf"
                   event="strategic_partnership_deck_download"
@@ -425,7 +425,7 @@ distribution expansion and national healthcare financing infrastructure deployme
 
         <section
           id="for-strategic-investors"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
         >
           <div className="bg-white/10 backdrop-blur-2xl border border-lime-300/20 rounded-3xl p-10 shadow-2xl">
             <p className="text-lime-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
@@ -442,7 +442,7 @@ distribution expansion and national healthcare financing infrastructure deployme
               partnerships and long-term infrastructure opportunities.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Left Side Form */}
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7">
@@ -536,7 +536,7 @@ distribution expansion and national healthcare financing infrastructure deployme
 
         <section
           id="testimonials"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
         >
           <h2 className="text-4xl font-bold mb-10 text-center">
             Early Feedback
@@ -575,7 +575,7 @@ distribution expansion and national healthcare financing infrastructure deployme
             </div>
           )}
         </section>
-        <section className="max-w-7xl mx-auto px-4 py-20">
+        <section className="max-w-7xl mx-auto px-4 py-14 md:py-16">
           <h2 className="text-4xl font-bold text-center mb-10">
             Share Your Feedback
           </h2>
@@ -638,7 +638,7 @@ distribution expansion and national healthcare financing infrastructure deployme
             </button>
           </div>
         </section>
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16">
           <div className="relative overflow-hidden rounded-4xl border border-lime-300/20 bg-white/5 backdrop-blur-2xl p-12 shadow-2xl">
             <div className="absolute top-0 right-0 w-72 h-72 bg-lime-300/10 blur-3xl rounded-full" />
             <div className="absolute bottom-0 left-0 w-72 h-72 bg-green-400/10 blur-3xl rounded-full" />
@@ -692,7 +692,7 @@ distribution expansion and national healthcare financing infrastructure deployme
           </div>
         </section>
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold">
               Explore Healthcare Financing

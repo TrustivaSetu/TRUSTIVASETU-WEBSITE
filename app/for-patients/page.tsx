@@ -212,13 +212,13 @@ export default function ForPatientsPage() {
 
         <section
           id="patients"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-10">
             For Patients
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-8 text-white">
                 Healthcare Finance — Made Simple for You
@@ -394,7 +394,7 @@ export default function ForPatientsPage() {
         {/* TREATMENT CATEGORIES */}
         <section
           id="treatments"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
         >
           <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Coverage
@@ -471,7 +471,7 @@ export default function ForPatientsPage() {
         </section>
         {/* PARTNERS SECTION */}
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Lending Partners */}
 
@@ -533,7 +533,7 @@ export default function ForPatientsPage() {
         {/* EMI CALCULATOR */}
         <section
           id="emi-calculator"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 scroll-mt-24"
         >
           <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Plan Your Treatment Finance
