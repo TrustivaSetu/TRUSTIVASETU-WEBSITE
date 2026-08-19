@@ -59,7 +59,7 @@ export default function TrustivaSetuWebsite() {
               Healthcare Financing Infrastructure
             </p>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-[-0.035em] mb-6">
               Medical Loans & No Cost Healthcare EMI
               <span className="block text-[#bef264]">
                 Across India
@@ -151,11 +151,11 @@ export default function TrustivaSetuWebsite() {
             Platform Workflow
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-4xl md:text-[44px] font-bold text-center mb-4">
             How It Works
           </h2>
 
-          <p className="text-center text-gray-300 max-w-2xl mx-auto mb-14 text-lg leading-8">
+          <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-8">
             From patient walk-in to treatment start — India&apos;s fastest healthcare financing workflow.
           </p>
 
@@ -166,7 +166,7 @@ export default function TrustivaSetuWebsite() {
                 initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="relative bg-white/[0.045] backdrop-blur-sm border border-white/10 rounded-3xl p-6 text-center hover:-translate-y-2 transition-all duration-300 hover:border-[#bef264]/40 hover:shadow-[0_20px_40px_rgba(190,242,100,0.1)]"
+                className="relative bg-white/[0.045] backdrop-blur-sm border border-white/10 rounded-3xl p-7 text-center hover:-translate-y-2 transition-all duration-300 hover:border-[#bef264]/40 hover:shadow-[0_20px_40px_rgba(190,242,100,0.1)]"
               >
                 <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#bef264]/10 border-2 border-[#bef264]/30 flex items-center justify-center">
                   <span className="text-2xl">{item.icon}</span>
