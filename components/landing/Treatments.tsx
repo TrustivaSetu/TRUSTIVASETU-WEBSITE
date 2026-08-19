@@ -61,7 +61,7 @@ export default function Treatments({
         {treatments.map((item) => (
           <div
             key={item.title}
-            className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-[#bef264]/50"
+            className="rounded-2xl border border-white/10 bg-white/[0.045] backdrop-blur-sm p-6 transition hover:-translate-y-1 hover:border-[#bef264]/40 hover:shadow-[0_18px_50px_rgba(190,242,100,0.06)]"
           >
             <h3 className="text-xl font-semibold">{item.title}</h3>
 

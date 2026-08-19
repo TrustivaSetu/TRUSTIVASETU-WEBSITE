@@ -33,7 +33,7 @@ export default function FAQ({
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="rounded-lg border border-gray-700 bg-gray-900/50 transition-colors hover:bg-gray-900"
+              className="rounded-2xl border border-white/10 bg-white/[0.04] transition-all hover:border-white/15 hover:bg-white/[0.055]"
             >
               <button
                 onClick={() =>
@@ -55,7 +55,7 @@ export default function FAQ({
               </button>
 
               {openIndex === index && (
-                <div className="border-t border-gray-700 px-6 pb-4 text-gray-400">
+                <div className="border-t border-white/10 px-6 pb-5 pt-2 text-gray-400 leading-7">
                   {faq.answer}
                 </div>
               )}

@@ -50,7 +50,7 @@ export default function RelatedTreatments({
           <Link
             key={key}
             href={`/${key}-loan`}
-            className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-[#bef264]"
+            className="rounded-2xl border border-white/10 bg-white/[0.045] backdrop-blur-sm p-6 transition hover:border-[#bef264]"
           >
             <h3 className="text-xl font-semibold">
               {item.title}

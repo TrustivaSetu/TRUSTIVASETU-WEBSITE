@@ -42,7 +42,7 @@ export default function HowItWorks() {
         {steps.map((step) => (
           <div
             key={step.step}
-            className="rounded-2xl border border-white/10 bg-white/5 p-6"
+            className="rounded-2xl border border-white/10 bg-white/[0.045] backdrop-blur-sm p-6"
           >
             <div className="text-4xl font-bold text-[#bef264]">
               {step.step}
