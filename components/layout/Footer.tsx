@@ -34,6 +34,44 @@ export default function Footer() {
               <p>Registered Office: Moradabad, Uttar Pradesh, India</p>
               <p>GSTIN: 09ABFCA5854R1ZU</p>
             </div>
+
+            <div className="mt-5">
+              <p className="text-sm font-semibold text-white mb-3">Connect With Us</p>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="https://www.linkedin.com/in/aarthsetu-technologies-private-limited-trustivasetu-30ba34426"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Trustiva Setu on LinkedIn"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-gray-300 transition-colors hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-blue-300"
+                >
+                  <span aria-hidden="true">in</span>
+                  LinkedIn
+                </a>
+
+                <a
+                  href="https://www.instagram.com/trustivasetu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Trustiva Setu on Instagram"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-gray-300 transition-colors hover:border-pink-400/40 hover:bg-pink-500/10 hover:text-pink-300"
+                >
+                  <span aria-hidden="true">◎</span>
+                  Instagram
+                </a>
+
+                <a
+                  href="https://www.youtube.com/@AarthsetuCompany"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Aarthsetu Technologies on YouTube"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-gray-300 transition-colors hover:border-red-400/40 hover:bg-red-500/10 hover:text-red-300"
+                >
+                  <span aria-hidden="true">▶</span>
+                  YouTube
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
