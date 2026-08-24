@@ -8,6 +8,7 @@ import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
+import LendingPartners from "@/components/landing/LendingPartners";
 
 export default function TrustivaSetuWebsite() {
   const howItWorksSteps = [
@@ -319,6 +320,7 @@ export default function TrustivaSetuWebsite() {
           </div>
         </section>
         <div className="h-8" />
+        <LendingPartners />
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
           <p className="text-[#bef264] text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
             Strategic Credibility

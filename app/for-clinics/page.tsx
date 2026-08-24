@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import LendingPartners from "@/components/landing/LendingPartners";
 import { trackEvent } from "@/lib/analytics";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
@@ -422,6 +423,8 @@ export default function ForClinicsPage() {
           </div>
         </section>
       </div>
+
+      <LendingPartners />
 
       {/* Toast notification */}
       {toast && (
