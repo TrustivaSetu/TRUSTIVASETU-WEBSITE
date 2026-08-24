@@ -54,6 +54,7 @@ export default function Footer() {
               <a href="/privacy-policy" className="block text-gray-400 hover:text-lime-300 transition-colors">Privacy Policy</a>
               <a href="/terms" className="block text-gray-400 hover:text-lime-300 transition-colors">Terms &amp; Conditions</a>
               <a href="/disclaimer" className="block text-gray-400 hover:text-lime-300 transition-colors">Disclaimer</a>
+              <a href="/refund-cancellation-policy" className="block text-gray-400 hover:text-lime-300 transition-colors">Refund &amp; Cancellation Policy</a>
             </div>
             <div className="mt-4 space-y-1 text-xs text-gray-500">
               <p>📧 <TrackedLink
@@ -90,6 +91,8 @@ export default function Footer() {
             <a href="/terms" className="hover:text-lime-300 transition-colors">Terms &amp; Conditions</a>
             <span>·</span>
             <a href="/disclaimer" className="hover:text-lime-300 transition-colors">Disclaimer</a>
+            <span>·</span>
+            <a href="/refund-cancellation-policy" className="hover:text-lime-300 transition-colors">Refund &amp; Cancellation Policy</a>
           </div>
         </div>
       </div>
