@@ -15,6 +15,7 @@ const STATIC_ROUTES = [
   "/privacy-policy",
   "/terms",
   "/disclaimer",
+  "/refund-cancellation-policy",
   "/partners/doctors",
   "/partners/nbfc",
   "/investors",
