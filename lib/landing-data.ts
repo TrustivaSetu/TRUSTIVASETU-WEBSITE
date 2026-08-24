@@ -184,59 +184,75 @@ export const landingData = {
 },
   "dental": {
     "title": "Dental Loan in India",
-    "description": "Affordable dental treatment financing for implants, braces, aligners and smile makeover procedures.",
-    "heroTitle": "Dental Treatment Financing",
-    "heroSubtitle": "Finance your dental treatment through trusted lending partners.",
+    "description": "Dental loan and treatment financing in India for eligible procedures including dental implants, braces, aligners, root canal treatment, crowns, bridges and smile makeover procedures through trusted lending partners.",
+    "heroTitle": "Dental Loan in India",
+    "heroSubtitle": "Get financing for dental treatment in India through trusted lending partners, including dental implants, braces, aligners, root canal treatment and other eligible procedures.",
     "treatments": [
         {
             "title": "Dental Implants",
-            "description": "Finance single and full-mouth dental implant procedures."
+            "description": "Explore financing for single, multiple and full-mouth dental implant procedures."
         },
         {
             "title": "Invisible Aligners",
-            "description": "Affordable financing for clear aligner treatments."
+            "description": "Financing options for eligible invisible aligner and clear aligner treatments."
         },
         {
             "title": "Braces",
-            "description": "Flexible payment options for orthodontic treatment."
+            "description": "Explore dental financing options for orthodontic treatment and braces."
         },
         {
             "title": "Root Canal Treatment",
-            "description": "Finance advanced restorative dental procedures."
+            "description": "Financing support for eligible root canal and restorative dental treatments."
         },
         {
             "title": "Smile Makeover",
-            "description": "Funding support for cosmetic dentistry treatments."
+            "description": "Financing options for eligible cosmetic dentistry and smile makeover procedures."
         },
         {
             "title": "Dental Crowns & Bridges",
-            "description": "Finance restorative dental care with easy repayments."
+            "description": "Explore financing for restorative dental care including crowns and bridges."
         },
         {
             "title": "Full Mouth Rehabilitation",
-            "description": "Funding for comprehensive dental restoration."
+            "description": "Financing support for comprehensive dental restoration and full-mouth rehabilitation."
         },
         {
             "title": "Other Dental Treatments",
-            "description": "Finance a wide range of planned dental procedures."
+            "description": "Explore financing for other eligible planned dental procedures through participating lending partners."
         }
     ],
     "faqs": [
         {
+            "question": "Can I get a dental loan in India?",
+            "answer": "Eligible applicants can apply for dental treatment financing through participating lending partners. Approval, loan amount and terms are subject to the lender's eligibility and credit assessment."
+        },
+        {
             "question": "Can I get a loan for dental treatment?",
-            "answer": "Eligible applicants can apply for financing for dental procedures through participating lending partners."
+            "answer": "Eligible applicants may apply for financing for dental procedures including implants, braces, aligners, root canal treatment and other eligible treatments through participating lending partners."
         },
         {
-            "question": "Which dental treatments are eligible?",
-            "answer": "Eligibility depends on the treatment and the lending partner's policies."
+            "question": "Can I finance dental implants?",
+            "answer": "Eligible applicants may apply for financing for dental implant procedures. The available loan amount and approval depend on treatment cost and lender eligibility."
         },
         {
-            "question": "What documents are required?",
-            "answer": "PAN, Aadhaar, income proof and standard KYC documents may be required."
+            "question": "Can I finance braces or invisible aligners?",
+            "answer": "Financing may be available for eligible orthodontic treatments such as braces and invisible aligners, subject to the lending partner's policies and applicant eligibility."
         },
         {
-            "question": "How quickly can my application be processed?",
-            "answer": "Processing time depends on document verification and lender assessment."
+            "question": "Can I get financing for root canal treatment?",
+            "answer": "Eligible applicants may apply for financing for root canal treatment through participating lending partners, subject to lender assessment."
+        },
+        {
+            "question": "What documents are required for a dental loan?",
+            "answer": "PAN, Aadhaar, income proof and standard KYC documents may be required. Additional documents may be requested by the lending partner during verification."
+        },
+        {
+            "question": "How is dental loan eligibility decided?",
+            "answer": "Eligibility is determined by the participating lending partner based on factors such as applicant information, documentation, income and credit assessment."
+        },
+        {
+            "question": "How quickly can my dental loan application be processed?",
+            "answer": "Processing time depends on document verification, lender assessment and the individual application. Final approval timelines are determined by the lending partner."
         }
     ]
 },

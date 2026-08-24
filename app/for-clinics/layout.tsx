@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "For Clinics & Hospitals — Trustiva Setu",
+  title: "Clinic Financing & Dental Clinic Partnerships in India | Trustiva Setu",
   description:
-    "Partner with Trustiva Setu to offer No Cost EMI at the point of care. Dedicated RM, 8–10 minute approvals, multiple lender access and a real-time LMS — register your clinic today.",
+    "Clinic financing and healthcare partnership solutions for hospitals, clinics, dental clinics, dentists and healthcare providers in India. Offer eligible patients treatment financing and No Cost EMI through participating lending partners.",
   alternates: {
     canonical: "https://www.trustivasetu.com/for-clinics",
   },

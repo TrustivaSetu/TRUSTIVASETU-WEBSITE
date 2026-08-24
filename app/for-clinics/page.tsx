@@ -170,9 +170,65 @@ export default function ForClinicsPage() {
           id="clinics"
           className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 md:py-12 scroll-mt-24"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            For Clinics
-          </h2>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Clinic Financing & Healthcare Partnerships in India
+          </h1>
+
+          <p className="max-w-4xl text-lg leading-8 text-gray-300 mb-8">
+            Trustiva Setu helps eligible hospitals, clinics, dental clinics and
+            healthcare providers offer treatment financing and No Cost EMI
+            options to patients through participating lending partners.
+          </p>
+
+          <div className="mb-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <h2 className="text-lg font-bold text-white">
+                Dental Clinic Financing
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-gray-400">
+                Help patients explore financing for eligible dental treatments
+                including implants, braces, aligners and other planned care.
+              </p>
+              <a
+                href="/dental-loan"
+                className="mt-4 inline-block text-sm font-semibold text-lime-300 hover:underline"
+              >
+                Explore Dental Loan
+              </a>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <h2 className="text-lg font-bold text-white">
+                Dental Practice Support
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-gray-400">
+                Dental practices and dentists can enquire about becoming a
+                Trustiva Setu healthcare provider partner.
+              </p>
+              <a
+                href="/partners/doctors"
+                className="mt-4 inline-block text-sm font-semibold text-lime-300 hover:underline"
+              >
+                Partner as a Doctor
+              </a>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <h2 className="text-lg font-bold text-white">
+                Treatment Financing
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-gray-400">
+                Offer patients a digital financing journey through a network
+                of participating lending partners, subject to eligibility.
+              </p>
+              <a
+                href="/dental-implant-loan"
+                className="mt-4 inline-block text-sm font-semibold text-lime-300 hover:underline"
+              >
+                Dental Implant Financing
+              </a>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7">
@@ -314,7 +370,7 @@ export default function ForClinicsPage() {
 
             <div>
               <h3 className="text-2xl font-bold mb-8 text-white">
-                Why Hospitals & Clinics Partner With Us
+                Why Hospitals, Clinics & Dental Practices Partner With Us
               </h3>
 
               <div className="grid grid-cols-1 gap-4">

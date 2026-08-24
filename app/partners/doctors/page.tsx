@@ -1,47 +1,128 @@
 import type { Metadata } from "next";
 import VideoPlayer from "@/components/ui/VideoPlayer";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "For Clinics & Doctors | Trustiva Setu",
+  title: "Dental Clinic & Doctor Financing | Patient EMI | Trustiva Setu",
   description:
-    "Trustiva Setu's clinic tie-up overview — instant patient financing, easy EMI approvals and onboarding.",
+    "Patient financing and EMI solutions for dental clinics, dentists, doctors and healthcare providers in India through participating lending partners.",
   alternates: {
     canonical: "https://www.trustivasetu.com/partners/doctors",
   },
   openGraph: {
-    title: "For Clinics & Doctors | Trustiva Setu",
+    title: "Dental Clinic & Doctor Financing | Patient EMI | Trustiva Setu",
     description:
-      "Instant patient financing platform.",
+      "Patient financing and EMI solutions for dental clinics, dentists, doctors and healthcare providers in India.",
     url: "https://www.trustivasetu.com/partners/doctors",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "For Clinics & Doctors | Trustiva Setu",
+    title: "Dental Clinic & Doctor Financing | Patient EMI | Trustiva Setu",
     description:
-      "Instant patient financing platform.",
+      "Patient financing and EMI solutions for dental clinics, dentists, doctors and healthcare providers in India.",
   },
 };
 
 export default function DoctorsPage() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white px-4 py-16 sm:py-24">
-      <div className="max-w-2xl mx-auto text-center">
+      <BreadcrumbSchema
+        title="Dental Clinic & Doctor Financing | Trustiva Setu"
+        slug="partners/doctors"
+      />
+
+      <div className="max-w-4xl mx-auto text-center">
         <p className="text-lime-300 text-sm font-semibold tracking-[0.25em] uppercase mb-3">
-          For Clinics &amp; Doctors
+          For Dental Clinics, Dentists &amp; Doctors
         </p>
+
         <h1 className="text-3xl sm:text-4xl font-bold font-(--font-playfair) mb-4">
-          Offer Instant Patient Financing
+          Dental Clinic &amp; Doctor Patient Financing in India
         </h1>
+
         <p className="text-gray-300 leading-7 mb-10">
-          Help your patients start treatment without upfront cost worries —
-          instant, paperless EMI approvals through Trustiva Setu&apos;s
-          lender network. Watch the full patient journey below, or view the
-          tie-up overview.
+          Trustiva Setu helps dental clinics, dentists, doctors and healthcare
+          providers offer eligible patients treatment financing and EMI
+          options through participating lending partners.
         </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left mb-10">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <h2 className="text-lg font-bold text-white">
+              Dental Clinic Financing
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-gray-400">
+              Help patients explore financing for eligible dental treatments
+              including implants, braces, aligners and other planned care.
+            </p>
+            <a
+              href="/dental-loan"
+              className="mt-4 inline-block text-sm font-semibold text-lime-300 hover:underline"
+            >
+              Dental Loan
+            </a>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <h2 className="text-lg font-bold text-white">
+              Dental Implant Financing
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-gray-400">
+              Patients can explore financing options for eligible single,
+              multiple and full-mouth dental implant procedures.
+            </p>
+            <a
+              href="/dental-implant-loan"
+              className="mt-4 inline-block text-sm font-semibold text-lime-300 hover:underline"
+            >
+              Dental Implant Loan
+            </a>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <h2 className="text-lg font-bold text-white">
+              Doctor &amp; Clinic Partnership
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-gray-400">
+              Doctors and healthcare providers can enquire about joining the
+              Trustiva Setu provider partnership network.
+            </p>
+            <a
+              href="/for-clinics#clinics"
+              className="mt-4 inline-block text-sm font-semibold text-lime-300 hover:underline"
+            >
+              Partner With Us
+            </a>
+          </div>
+        </div>
 
         <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl overflow-hidden shadow-2xl mb-8">
           <VideoPlayer src="/videos/journey.mp4" />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-10">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <h2 className="text-xl font-bold text-white mb-2">
+              Patient Treatment Financing
+            </h2>
+            <p className="text-sm leading-6 text-gray-400">
+              Offer eligible patients a digital financing journey for planned
+              healthcare treatment, subject to lender eligibility, verification
+              and approval.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <h2 className="text-xl font-bold text-white mb-2">
+              No Cost EMI for Eligible Patients
+            </h2>
+            <p className="text-sm leading-6 text-gray-400">
+              Participating healthcare providers can help eligible patients
+              access available EMI and financing options through the lender
+              network.
+            </p>
+          </div>
         </div>
 
         <a

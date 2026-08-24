@@ -15,13 +15,13 @@ import ServiceSchema from "@/components/seo/ServiceSchema";
 
 export const metadata: Metadata = {
   title: "Dental Loan in India | Dental Treatment Financing | Trustiva Setu",
-  description: "Affordable dental treatment financing for implants, braces, aligners and smile makeover procedures.",
+  description: "Dental loan and treatment financing in India for eligible procedures including dental implants, braces, aligners, root canal treatment, crowns, bridges and smile makeover procedures through trusted lending partners.",
   alternates: {
     canonical: "https://www.trustivasetu.com/dental-loan",
   },
   openGraph: {
     title: "Dental Loan in India | Trustiva Setu",
-    description: "Finance your dental treatment through trusted lending partners.",
+    description: "Get financing for dental treatment in India through trusted lending partners, including dental implants, braces, aligners, root canal treatment and other eligible procedures.",
     url: "https://www.trustivasetu.com/dental-loan",
     type: "website",
   },
