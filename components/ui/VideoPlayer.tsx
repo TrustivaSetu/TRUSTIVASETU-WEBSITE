@@ -34,7 +34,13 @@ export default function VideoPlayer({ src, poster, autoPlay = false, className =
     const v = videoRef.current;
     if (!v) return;
 
-    const onPlay = () => setPlaying(true);
+    const onPlay = () => {
+      setPlaying(true);
+      // Pause every other <video> on the page so only one plays at a time.
+      document.querySelectorAll("video").forEach((other) => {
+        if (other !== v && !other.paused) other.pause();
+      });
+    };
     const onPause = () => setPlaying(false);
     const onTimeUpdate = () => {
       setCurrent(v.currentTime);
@@ -63,6 +69,18 @@ export default function VideoPlayer({ src, poster, autoPlay = false, className =
       v.removeEventListener("playing", onPlaying);
       v.removeEventListener("ended", onEnded);
     };
+  }, []);
+
+  useEffect(() => {
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        const v = videoRef.current;
+        if (v && !v.paused) v.pause();
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    return () =>
+      document.removeEventListener("visibilitychange", onVisibilityChange);
   }, []);
 
   useEffect(() => {
