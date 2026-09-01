@@ -10,8 +10,6 @@ import { landingData } from "@/lib/landing-data";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
-const WEB3_ACCESS_KEY = "09879d5d-1685-4b55-b604-405fd11bd3db";
-
 export default function ContactPage() {
   const [investorLoading, setInvestorLoading] = useState(false);
   const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
@@ -152,46 +150,21 @@ export default function ContactPage() {
 
   const submitInvestor = async () => {
     if (!validateInvestorForm()) return;
-
     setInvestorLoading(true);
-
     try {
-      const formData = {
-        access_key: WEB3_ACCESS_KEY,
-
-        subject: "🚀 Investor Request - Trustiva Setu",
-
-        from_name: "Investor Lead - Trustiva Setu",
-
-        replyto: investorForm.email,
-
-        fullName: investorForm.fullName,
-
-        companyName: investorForm.companyName,
-
-        email: investorForm.email,
-
-        phone: investorForm.phone,
-
-        investmentInterest: investorForm.investmentInterest,
-
-        strategicNotes: investorForm.strategicNotes,
-      };
-
-      const response = await fetch(
-        "https://api.web3forms.com/submit",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: investorForm.fullName,
+          phone: investorForm.phone,
+          email: investorForm.email,
+          clinicName: investorForm.companyName,
+          message: `Investment Interest: ${investorForm.investmentInterest}\n\nStrategic Notes: ${investorForm.strategicNotes}`,
+          source: "investor-form",
+        }),
+      });
       const result = await response.json();
-
       if (result.success) {
         showToast("Investment interest submitted! Our team will reach out shortly.");
         trackEvent("investor_lead_submit", {
@@ -208,7 +181,7 @@ export default function ContactPage() {
 
         setInvestorErrors({});
       } else {
-        showToast(result.message || "Something went wrong. Please try again.", "error");
+        showToast(result.error || "Something went wrong. Please try again.", "error");
       }
     } catch (error) {
       showToast("Network error. Please check your connection.", "error");
