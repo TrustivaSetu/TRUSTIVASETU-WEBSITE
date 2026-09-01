@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import LendingPartners from "@/components/landing/LendingPartners";
 import EligibilityWidget from "@/components/home/EligibilityWidget";
+import VideoPlayer from "@/components/ui/VideoPlayer";
 
 export default function TrustivaSetuWebsite() {
   const howItWorksSteps = [
@@ -93,6 +94,17 @@ export default function TrustivaSetuWebsite() {
             </div>
           </div>
         </section>
+
+        {/* MARKETING HIGHLIGHT REEL */}
+        <section className="max-w-3xl mx-auto px-4 sm:px-6 pt-2 pb-8">
+          <p className="text-[#bef264] text-sm font-semibold tracking-[0.25em] uppercase mb-3 text-center">
+            Watch the 36-second overview
+          </p>
+          <div className="bg-white/10 backdrop-blur-xl border border-lime-300/20 rounded-3xl overflow-hidden shadow-2xl">
+            <VideoPlayer src="/videos/highlight-reel.mp4" />
+          </div>
+        </section>
+
         {/* HOW IT WORKS */}
         <section
           id="how-it-works"
