@@ -1,7 +1,8 @@
 "use client";
- 
+
 import { useEffect, useState } from "react";
- 
+import Link from "next/link";
+
 type Post = {
   id: string;
   title: string;
@@ -12,15 +13,15 @@ type Post = {
   published: boolean;
   createdAt: string;
 };
- 
+
 const empty = { id: "", title: "", slug: "", excerpt: "", content: "", coverImage: "", published: false };
- 
+
 export default function AdminBlogPage() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [editing, setEditing] = useState<typeof empty | Post>(empty);
   const [loading, setLoading] = useState(true);
   const [msg, setMsg] = useState("");
- 
+
   async function loadPosts() {
     setLoading(true);
     const res = await fetch("/api/admin/blog");
@@ -32,11 +33,11 @@ export default function AdminBlogPage() {
     setPosts(data);
     setLoading(false);
   }
- 
+
   useEffect(() => {
     loadPosts();
   }, []);
- 
+
   function slugify(title: string) {
     return title
       .toLowerCase()
@@ -44,41 +45,46 @@ export default function AdminBlogPage() {
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)/g, "");
   }
- 
+
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
     setMsg("");
     const isEdit = "id" in editing && editing.id;
     const url = isEdit ? `/api/admin/blog/${editing.id}` : "/api/admin/blog";
     const method = isEdit ? "PUT" : "POST";
- 
+
     const res = await fetch(url, {
       method,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(editing),
     });
- 
+
     if (!res.ok) {
       const data = await res.json();
       setMsg(data.error || "Save failed");
       return;
     }
- 
+
     setEditing(empty);
     setMsg("Saved.");
     loadPosts();
   }
- 
+
   async function handleDelete(id: string) {
     if (!confirm("Delete this post?")) return;
     await fetch(`/api/admin/blog/${id}`, { method: "DELETE" });
     loadPosts();
   }
- 
+
   return (
     <div style={styles.wrap}>
+      <nav style={styles.nav}>
+        <Link href="/admin/blog" style={{ ...styles.navLink, fontWeight: 700 }}>Blog</Link>
+        <Link href="/admin/testimonials" style={styles.navLink}>Testimonials</Link>
+        <Link href="/admin/team" style={styles.navLink}>Team</Link>
+      </nav>
       <h1 style={styles.h1}>Blog Manager</h1>
- 
+
       <form onSubmit={handleSave} style={styles.form}>
         <h2 style={styles.h2}>{"id" in editing && editing.id ? "Edit Post" : "New Post"}</h2>
         <input
@@ -140,7 +146,7 @@ export default function AdminBlogPage() {
           )}
         </div>
       </form>
- 
+
       <h2 style={styles.h2}>All Posts</h2>
       {loading ? (
         <p>Loading...</p>
@@ -176,17 +182,11 @@ export default function AdminBlogPage() {
     </div>
   );
 }
- 
+
 const styles: Record<string, React.CSSProperties> = {
-  wrap: {
-    maxWidth: "800px",
-    margin: "2rem auto",
-    padding: "2rem",
-    fontFamily: "system-ui, sans-serif",
-    background: "#ffffff",
-    borderRadius: "12px",
-    boxShadow: "0 10px 40px rgba(0,0,0,0.3)",
-  },
+  wrap: { maxWidth: "800px", margin: "2rem auto", padding: "2rem", fontFamily: "system-ui, sans-serif", background: "#ffffff", borderRadius: "12px", boxShadow: "0 10px 40px rgba(0,0,0,0.3)" },
+  nav: { display: "flex", gap: "1.2rem", marginBottom: "1.5rem", borderBottom: "1px solid #eee", paddingBottom: "0.8rem" },
+  navLink: { color: "#07111f", textDecoration: "none" },
   h1: { color: "#07111f" },
   h2: { color: "#07111f", fontSize: "1.1rem", marginTop: "1.5rem" },
   form: { border: "1px solid #ddd", borderRadius: "10px", padding: "1.2rem", marginBottom: "2rem" },
@@ -225,3 +225,4 @@ const styles: Record<string, React.CSSProperties> = {
   td: { borderBottom: "1px solid #eee", padding: "0.5rem" },
   linkBtn: { background: "none", border: "none", color: "#07111f", textDecoration: "underline", cursor: "pointer", padding: 0 },
 };
+
