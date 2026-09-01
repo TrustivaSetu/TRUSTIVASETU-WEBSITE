@@ -13,6 +13,9 @@ const navItems = [
   { label: "For Clinics", href: "/for-clinics" },
   { label: "For Patients", href: "/for-patients" },
   { label: "Why We Win", href: "/why-we-win" },
+  { label: "Blog", href: "/blog" },
+  { label: "Team", href: "/team" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "Join Us", href: "/join-us", external: true },
   { label: "Contact Us", href: "/contact" },
 ];
