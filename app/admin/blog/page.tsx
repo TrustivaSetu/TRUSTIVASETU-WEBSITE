@@ -185,7 +185,7 @@ export default function AdminBlogPage() {
 }
 
 const styles: Record<string, React.CSSProperties> = {
-  wrap: { maxWidth: "800px", margin: "2rem auto", padding: "2rem", fontFamily: "system-ui, sans-serif", background: "#ffffff", borderRadius: "12px", boxShadow: "0 10px 40px rgba(0,0,0,0.3)" },
+  wrap: { maxWidth: "800px", margin: "2rem auto", padding: "2rem", fontFamily: "system-ui, sans-serif", background: "#ffffff", color: "#111111", borderRadius: "12px", boxShadow: "0 10px 40px rgba(0,0,0,0.3)" },
   nav: { display: "flex", gap: "1.2rem", marginBottom: "1.5rem", borderBottom: "1px solid #eee", paddingBottom: "0.8rem" },
   navLink: { color: "#07111f", textDecoration: "none" },
   h1: { color: "#07111f" },
@@ -203,7 +203,7 @@ const styles: Record<string, React.CSSProperties> = {
     background: "#ffffff",
     color: "#111111",
   },
-  checkboxLabel: { display: "block", marginBottom: "0.8rem", fontSize: "0.9rem" },
+  checkboxLabel: { display: "block", marginBottom: "0.8rem", fontSize: "0.9rem", color: "#374151" },
   button: {
     padding: "0.6rem 1.2rem",
     background: "#07111f",
@@ -222,8 +222,8 @@ const styles: Record<string, React.CSSProperties> = {
     cursor: "pointer",
   },
   table: { width: "100%", borderCollapse: "collapse" },
-  th: { textAlign: "left", borderBottom: "2px solid #ddd", padding: "0.5rem" },
-  td: { borderBottom: "1px solid #eee", padding: "0.5rem" },
+  th: { textAlign: "left", borderBottom: "2px solid #ddd", padding: "0.5rem", color: "#07111f" },
+  td: { borderBottom: "1px solid #eee", padding: "0.5rem", color: "#1f2937" },
   linkBtn: { background: "none", border: "none", color: "#07111f", textDecoration: "underline", cursor: "pointer", padding: 0 },
 };
 
