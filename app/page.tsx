@@ -53,15 +53,15 @@ export default function TrustivaSetuWebsite() {
         {/* HERO */}
         <section
           id="home"
-          className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 sm:pt-6 pb-8 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 sm:pt-5 pb-6 scroll-mt-24"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 md:gap-8 items-center">
             {/* LEFT COLUMN — text, CTA, eligibility widget */}
             <div>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-[-0.02em] mb-3 sm:mb-4">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-[-0.02em] mb-3">
                 Medical loans and no-cost EMI for healthcare, across India.
               </h1>
-              <p className="text-slate-300 text-base md:text-xl leading-7 max-w-xl mb-4 sm:mb-5">
+              <p className="text-slate-300 text-base md:text-xl leading-6 md:leading-7 max-w-xl mb-4">
                 Trustiva Setu connects patients, clinics and lending partners in one
                 financing infrastructure covering IVF, dental, cosmetic surgery and more.
               </p>

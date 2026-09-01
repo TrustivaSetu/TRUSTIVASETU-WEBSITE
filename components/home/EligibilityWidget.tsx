@@ -37,14 +37,14 @@ export default function EligibilityWidget() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-6 bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 max-w-md"
+      className="mt-4 bg-white/5 border border-white/10 rounded-2xl p-3.5 sm:p-4 max-w-lg"
     >
-      <p className="text-sm text-slate-300 mb-3">Check your No-Cost EMI eligibility</p>
-      <div className="flex flex-col gap-2.5">
+      <p className="text-sm text-slate-300 mb-2.5">Check your No-Cost EMI eligibility</p>
+      <div className="grid grid-cols-1 min-[400px]:grid-cols-2 gap-2.5">
         <select
           value={treatment}
           onChange={(e) => setTreatment(e.target.value)}
-          className="bg-[#07111f] border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-lime-300"
+          className="bg-[#07111f] border border-white/20 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-lime-300"
         >
           <option value="">Select treatment</option>
           {treatments.map((t) => (
@@ -56,16 +56,16 @@ export default function EligibilityWidget() {
         <input
           type="number"
           min="1"
-          placeholder="Estimated treatment cost (₹)"
+          placeholder="Treatment cost (₹)"
           value={cost}
           onChange={(e) => setCost(e.target.value)}
-          className="bg-[#07111f] border border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-lime-300"
+          className="bg-[#07111f] border border-white/20 rounded-lg px-3 py-2.5 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-lime-300"
         />
-        {error && <p className="text-red-400 text-sm">{error}</p>}
-        <button type="submit" className="premium-btn premium-green-btn w-full">
-          Check my EMI options
-        </button>
       </div>
+      {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
+      <button type="submit" className="premium-btn premium-green-btn w-full mt-2.5">
+        Check my EMI options
+      </button>
     </form>
   );
 }
