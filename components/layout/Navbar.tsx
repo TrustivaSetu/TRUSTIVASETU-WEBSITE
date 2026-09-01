@@ -13,11 +13,14 @@ const navItems = [
   { label: "For Clinics", href: "/for-clinics" },
   { label: "For Patients", href: "/for-patients" },
   { label: "Why We Win", href: "/why-we-win" },
+  { label: "Contact Us", href: "/contact" },
+];
+
+const companyItems = [
   { label: "Blog", href: "/blog" },
   { label: "Team", href: "/team" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Join Us", href: "/join-us", external: true },
-  { label: "Contact Us", href: "/contact" },
 ];
 
 const knowledgeSources = sources.map((s) => ({
@@ -30,6 +33,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [kcDesktopOpen, setKcDesktopOpen] = useState(false);
   const [kcMobileOpen, setKcMobileOpen] = useState(false);
+  const [companyDesktopOpen, setCompanyDesktopOpen] = useState(false);
+  const [companyMobileOpen, setCompanyMobileOpen] = useState(false);
 
   useEffect(() => {
     if (menuOpen) {
@@ -67,14 +72,42 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              target={item.external ? "_blank" : "_self"}
-              rel={item.external ? "noopener noreferrer" : undefined}
               onClick={() => setMenuOpen(false)}
               className="text-white border-b border-white/10 pb-3 hover:text-lime-300 transition"
             >
               {item.label}
             </Link>
           ))}
+
+          <div className="border-b border-white/10 pb-3">
+            <button
+              onClick={() => setCompanyMobileOpen((o) => !o)}
+              className="w-full flex items-center justify-between text-white hover:text-lime-300 transition"
+            >
+              <span>Company</span>
+              <ChevronDown
+                size={20}
+                className={`transition-transform duration-200 ${companyMobileOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            {companyMobileOpen && (
+              <div className="mt-4 flex flex-col gap-4 pl-4 text-base">
+                {companyItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    target={item.external ? "_blank" : "_self"}
+                    rel={item.external ? "noopener noreferrer" : undefined}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-gray-300 hover:text-lime-300 transition"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
           <div className="border-b border-white/10 pb-3">
             <button
@@ -141,26 +174,59 @@ export default function Navbar() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="flex items-center gap-3 md:gap-4">
+          <div className="flex items-center gap-3 md:gap-4 lg:flex-1 lg:ml-8 xl:ml-12">
             {/* MOBILE BUTTON */}
             <div className="md:hidden">
               <button onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "✕" : "☰"}</button>
             </div>
 
             {/* DESKTOP NAV */}
-            <div className="hidden md:flex items-center gap-6">
-              <nav className="flex gap-6">
+            <div className="hidden md:flex items-center gap-6 lg:flex-1">
+              <nav className="flex items-center gap-5 lg:gap-6 lg:flex-1 lg:justify-between">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    target={item.external ? "_blank" : "_self"}
-                    rel={item.external ? "noopener noreferrer" : undefined}
-                    className="hover:text-lime-300 transition"
+                    className="inline-block transition-all duration-200 ease-out hover:text-lime-300 hover:-translate-y-0.5"
                   >
                     {item.label}
                   </Link>
                 ))}
+
+                <div
+                  className="relative"
+                  onMouseEnter={() => setCompanyDesktopOpen(true)}
+                  onMouseLeave={() => setCompanyDesktopOpen(false)}
+                >
+                  <button
+                    onClick={() => setCompanyDesktopOpen((o) => !o)}
+                    className="flex items-center gap-1 transition-all duration-200 ease-out hover:text-lime-300 hover:-translate-y-0.5"
+                  >
+                    Company
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-200 ${companyDesktopOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+
+                  {companyDesktopOpen && (
+                    <div className="absolute top-full left-0 pt-2 w-48 z-50">
+                      <div className="bg-[#0b1628] border border-white/10 rounded-xl shadow-2xl py-2">
+                        {companyItems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            target={item.external ? "_blank" : "_self"}
+                            rel={item.external ? "noopener noreferrer" : undefined}
+                            className="block px-4 py-2 text-sm text-white hover:bg-white/5 hover:text-lime-300 transition"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
 
                 <div
                   className="relative"
@@ -169,7 +235,7 @@ export default function Navbar() {
                 >
                   <button
                     onClick={() => setKcDesktopOpen((o) => !o)}
-                    className="flex items-center gap-1 hover:text-lime-300 transition-colors"
+                    className="flex items-center gap-1 transition-all duration-200 ease-out hover:text-lime-300 hover:-translate-y-0.5"
                   >
                     Knowledge Center
                     <ChevronDown
@@ -179,36 +245,38 @@ export default function Navbar() {
                   </button>
 
                   {kcDesktopOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-[#0b1628] border border-white/10 rounded-xl shadow-2xl py-2 z-50">
-                      <Link
-                        href="/resources"
-                        className="block px-4 py-2 text-sm text-white hover:bg-white/5 hover:text-lime-300 transition"
-                      >
-                        All Updates
-                      </Link>
-                      <div className="h-px bg-white/10 my-1" />
-                      {knowledgeSources.map((s) =>
-                        s.active ? (
-                          <Link
-                            key={s.id}
-                            href={`/resources?source=${s.id}`}
-                            className="block px-4 py-2 text-sm text-white hover:bg-white/5 hover:text-lime-300 transition"
-                          >
-                            {s.label}
-                          </Link>
-                        ) : (
-                          <div
-                            key={s.id}
-                            aria-disabled="true"
-                            className="flex items-center justify-between gap-2 px-4 py-2 text-sm text-gray-500 cursor-not-allowed"
-                          >
-                            <span>{s.label}</span>
-                            <span className="text-[10px] font-semibold uppercase tracking-wide bg-white/5 border border-white/10 rounded-full px-2 py-0.5 text-gray-500">
-                              Coming Soon
-                            </span>
-                          </div>
-                        )
-                      )}
+                    <div className="absolute top-full left-0 pt-2 w-56 z-50">
+                      <div className="bg-[#0b1628] border border-white/10 rounded-xl shadow-2xl py-2">
+                        <Link
+                          href="/resources"
+                          className="block px-4 py-2 text-sm text-white hover:bg-white/5 hover:text-lime-300 transition"
+                        >
+                          All Updates
+                        </Link>
+                        <div className="h-px bg-white/10 my-1" />
+                        {knowledgeSources.map((s) =>
+                          s.active ? (
+                            <Link
+                              key={s.id}
+                              href={`/resources?source=${s.id}`}
+                              className="block px-4 py-2 text-sm text-white hover:bg-white/5 hover:text-lime-300 transition"
+                            >
+                              {s.label}
+                            </Link>
+                          ) : (
+                            <div
+                              key={s.id}
+                              aria-disabled="true"
+                              className="flex items-center justify-between gap-2 px-4 py-2 text-sm text-gray-500 cursor-not-allowed"
+                            >
+                              <span>{s.label}</span>
+                              <span className="text-[10px] font-semibold uppercase tracking-wide bg-white/5 border border-white/10 rounded-full px-2 py-0.5 text-gray-500">
+                                Coming Soon
+                              </span>
+                            </div>
+                          )
+                        )}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -220,3 +288,4 @@ export default function Navbar() {
     </>
   );
 }
+

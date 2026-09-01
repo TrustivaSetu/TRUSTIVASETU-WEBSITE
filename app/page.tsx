@@ -9,6 +9,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import LendingPartners from "@/components/landing/LendingPartners";
+import EligibilityWidget from "@/components/home/EligibilityWidget";
 
 export default function TrustivaSetuWebsite() {
   const howItWorksSteps = [
@@ -50,87 +51,52 @@ export default function TrustivaSetuWebsite() {
         <Navbar />
 
         {/* HERO */}
-
         <section
           id="home"
-          className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-12 sm:pb-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 sm:pt-12 pb-10 scroll-mt-24"
         >
-          <div className="relative z-10">
-            <p className="text-[#bef264] text-sm tracking-[0.3em] uppercase mb-4">
-              Healthcare Financing Infrastructure
-            </p>
-
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-[-0.035em] mb-6">
-              Medical Loans & No Cost Healthcare EMI
-              <span className="block text-[#bef264]">
-                Across India
-              </span>
-            </h1>
-
-            <p className="text-slate-300 text-lg md:text-xl max-w-xl leading-8">
-              Trustiva Setu connects patients, clinics and lending partners to provide
-              medical loans, No Cost EMI, IVF financing, dental loans, cosmetic surgery
-              financing and other healthcare financing solutions across India.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-3 mt-2">
-              <Link href="/for-clinics#clinics">
-                <button className="premium-btn premium-green-btn">
-                  Partner With Us
-                </button>
-              </Link>
-
-              <Link
-                href="/contact#for-strategic-investors"
-                className="premium-btn premium-green-btn"
-              >
-                Talk to Founders
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            {/* LEFT COLUMN — text, CTA, eligibility widget */}
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-[-0.02em] mb-6">
+                Medical loans and no-cost EMI for healthcare, across India.
+              </h1>
+              <p className="text-slate-300 text-lg md:text-xl leading-8 max-w-xl mb-8">
+                Trustiva Setu connects patients, clinics and lending partners in one
+                financing infrastructure covering IVF, dental, cosmetic surgery and more.
+              </p>
+              <div className="flex flex-wrap items-center gap-6">
+                <Link href="/for-clinics#clinics">
+                  <button className="premium-btn premium-green-btn">
+                    Partner with us
+                  </button>
+                </Link>
+                <Link
+                  href="/contact#for-strategic-investors"
+                  className="text-slate-300 hover:text-lime-300 transition underline underline-offset-4"
+                >
+                  Talk to founders
+                </Link>
+              </div>
+              <EligibilityWidget />
             </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            {/* LEFT: IMAGE */}
-            <div className="flex justify-center">
+
+            {/* RIGHT COLUMN — supporting visual */}
+            <div className="flex justify-center md:justify-end">
               <Image
                 src="/founder-note-visual.png"
-                alt="Trustiva Healthcare"
+                alt="Trustiva Setu founder note"
                 width={800}
                 height={500}
-                priority
-                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 33vw"
-                className="w-full max-w-xs sm:max-w-md md:max-w-xl object-contain rounded-4xl border border-white/10 shadow-xl"
+                className="w-full max-w-xs sm:max-w-md md:max-w-lg h-auto object-contain rounded-4xl border border-white/10 shadow-xl"
               />
-            </div>
-
-            {/* RIGHT: QUOTE */}
-            <div>
-              <p className="text-[#bef264] text-sm font-semibold tracking-[0.2em] uppercase mb-3">
-                From Our Founder
-              </p>
-
-              <h3 className="text-3xl md:text-4xl font-bold mb-6">
-                Our Vision
-              </h3>
-
-              <div className="relative mb-6">
-                <div className="h-[1px] w-full bg-white/10" />
-                <div className="absolute top-0 left-0 h-[1px] w-32 bg-lime-300 animate-pulse" />
-              </div>
-
-              <p className="text-gray-300 italic mb-4">
-                "Build trust first. Scale will follow."
-              </p>
-
-              <p className="text-[#bef264] font-semibold">
-                — Trustiva Founder
-              </p>
             </div>
           </div>
         </section>
         {/* HOW IT WORKS */}
         <section
           id="how-it-works"
-          className="max-w-7xl mx-auto px-4 sm:px-6 py-20 scroll-mt-24"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-12 scroll-mt-24"
         >
           <div className="flex justify-center mb-8">
             <motion.div
@@ -214,44 +180,9 @@ export default function TrustivaSetuWebsite() {
             </div>
           </div>
         </section>
-
-        <section className="max-w-7xl mx-auto px-4 py-16">
-          <h2 className="text-3xl font-bold mb-6 text-center">
-            Execution in Progress
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/5 p-6 rounded-2xl">
-              <h3 className="text-xl font-bold text-[#bef264]">
-                Clinic Partnerships
-              </h3>
-              <p className="text-gray-300">
-                Actively onboarding healthcare providers across key cities
-              </p>
-            </div>
-
-            <div className="bg-white/5 p-6 rounded-2xl">
-              <h3 className="text-xl font-bold text-[#bef264]">
-                Lender Integrations
-              </h3>
-              <p className="text-gray-300">
-                Multiple NBFC and lender discussions in advanced stages
-              </p>
-            </div>
-
-            <div className="bg-white/5 p-6 rounded-2xl">
-              <h3 className="text-xl font-bold text-[#bef264]">
-                Platform Build
-              </h3>
-              <p className="text-gray-300">
-                Infrastructure and approval engine under active development
-              </p>
-            </div>
-          </div>
-        </section>
         {/* TRUST METRICS STRIP */}
 
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5 max-w-7xl mx-auto">
             {[
               {
@@ -319,59 +250,7 @@ export default function TrustivaSetuWebsite() {
             ))}
           </div>
         </section>
-        <div className="h-8" />
         <LendingPartners />
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-          <p className="text-[#bef264] text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-center">
-            Strategic Credibility
-          </p>
-
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
-            Built For Institutional Scale
-          </h2>
-
-          <p className="text-center text-gray-300 max-w-4xl mx-auto leading-8 text-lg mb-12">
-            Trustiva Setu is being built with deep lender relationships,
-            strategic healthcare partnerships and execution-first leadership
-            focused on building India's healthcare financing infrastructure layer.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-6">
-              <h3 className="text-2xl font-bold text-[#bef264] mb-3">
-                NBFC + Banking Expertise
-              </h3>
-
-              <p className="text-gray-300 leading-8">
-                Strong lender ecosystem understanding across banking,
-                NBFC operations, approvals and healthcare financing models.
-              </p>
-            </div>
-
-            <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-6">
-              <h3 className="text-2xl font-bold text-[#bef264] mb-3">
-                Founder-Led Execution
-              </h3>
-
-              <p className="text-gray-300 leading-8">
-                Built directly by founders focused on lender partnerships,
-                infrastructure deployment and long-term platform defensibility.
-              </p>
-            </div>
-
-            <div className="bg-white/10 border border-lime-300/20 rounded-3xl p-6">
-              <h3 className="text-2xl font-bold text-[#bef264] mb-3">
-                Infrastructure-First Model
-              </h3>
-
-              <p className="text-gray-300 leading-8">
-                Not lead generation.
-                Not a lending company.
-                A scalable healthcare finance infrastructure platform.
-              </p>
-            </div>
-          </div>
-        </section>
 
         <Footer />
       </div>
