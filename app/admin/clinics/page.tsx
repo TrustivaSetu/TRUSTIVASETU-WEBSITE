@@ -6,16 +6,16 @@ import Link from "next/link";
 type Item = {
   id: string;
   name: string;
-  role: string | null;
-  quote: string;
-  photoUrl: string | null;
+  city: string;
+  specialty: string;
+  logoUrl: string | null;
   published: boolean;
   displayOrder: number;
 };
 
-const empty = { id: "", name: "", role: "", quote: "", photoUrl: "", published: true, displayOrder: 0 };
+const empty = { id: "", name: "", city: "", specialty: "", logoUrl: "", published: true, displayOrder: 0 };
 
-export default function AdminTestimonialsPage() {
+export default function AdminClinicsPage() {
   const [items, setItems] = useState<Item[]>([]);
   const [editing, setEditing] = useState<typeof empty | Item>(empty);
   const [loading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ export default function AdminTestimonialsPage() {
 
   async function load() {
     setLoading(true);
-    const res = await fetch("/api/admin/testimonials");
+    const res = await fetch("/api/admin/clinics");
     if (res.status === 401) {
       window.location.href = "/admin/login";
       return;
@@ -40,7 +40,7 @@ export default function AdminTestimonialsPage() {
     e.preventDefault();
     setMsg("");
     const isEdit = "id" in editing && editing.id;
-    const url = isEdit ? `/api/admin/testimonials/${editing.id}` : "/api/admin/testimonials";
+    const url = isEdit ? `/api/admin/clinics/${editing.id}` : "/api/admin/clinics";
     const res = await fetch(url, {
       method: isEdit ? "PUT" : "POST",
       headers: { "Content-Type": "application/json" },
@@ -56,8 +56,8 @@ export default function AdminTestimonialsPage() {
   }
 
   async function handleDelete(id: string) {
-    if (!confirm("Delete this testimonial?")) return;
-    await fetch(`/api/admin/testimonials/${id}`, { method: "DELETE" });
+    if (!confirm("Delete this clinic?")) return;
+    await fetch(`/api/admin/clinics/${id}`, { method: "DELETE" });
     load();
   }
 
@@ -65,18 +65,18 @@ export default function AdminTestimonialsPage() {
     <div style={styles.wrap}>
       <nav style={styles.nav}>
         <Link href="/admin/blog" style={styles.navLink}>Blog</Link>
-        <Link href="/admin/testimonials" style={{ ...styles.navLink, fontWeight: 700 }}>Testimonials</Link>
+        <Link href="/admin/testimonials" style={styles.navLink}>Testimonials</Link>
         <Link href="/admin/team" style={styles.navLink}>Team</Link>
-        <Link href="/admin/clinics" style={styles.navLink}>Clinics</Link>
+        <Link href="/admin/clinics" style={{ ...styles.navLink, fontWeight: 700 }}>Clinics</Link>
       </nav>
-      <h1 style={styles.h1}>Testimonials Manager</h1>
+      <h1 style={styles.h1}>Clinics Manager</h1>
 
       <form onSubmit={handleSave} style={styles.form}>
-        <h2 style={styles.h2}>{"id" in editing && editing.id ? "Edit Testimonial" : "New Testimonial"}</h2>
+        <h2 style={styles.h2}>{"id" in editing && editing.id ? "Edit Clinic" : "New Clinic"}</h2>
         <input style={styles.input} placeholder="Name" value={editing.name} onChange={(e) => setEditing({ ...editing, name: e.target.value })} required />
-        <input style={styles.input} placeholder="Role (e.g. Owner, Divine Health Clinic)" value={editing.role || ""} onChange={(e) => setEditing({ ...editing, role: e.target.value })} />
-        <input style={styles.input} placeholder="Photo URL (optional)" value={editing.photoUrl || ""} onChange={(e) => setEditing({ ...editing, photoUrl: e.target.value })} />
-        <textarea style={{ ...styles.input, height: "100px" }} placeholder="Quote" value={editing.quote} onChange={(e) => setEditing({ ...editing, quote: e.target.value })} required />
+        <input style={styles.input} placeholder="City" value={editing.city} onChange={(e) => setEditing({ ...editing, city: e.target.value })} required />
+        <input style={styles.input} placeholder="Specialty (e.g. IVF & Fertility)" value={editing.specialty} onChange={(e) => setEditing({ ...editing, specialty: e.target.value })} required />
+        <input style={styles.input} placeholder="Logo URL (optional)" value={editing.logoUrl || ""} onChange={(e) => setEditing({ ...editing, logoUrl: e.target.value })} />
         <input style={styles.input} type="number" placeholder="Display order (lower shows first)" value={editing.displayOrder} onChange={(e) => setEditing({ ...editing, displayOrder: Number(e.target.value) })} />
         <label style={styles.checkboxLabel}>
           <input type="checkbox" checked={editing.published} onChange={(e) => setEditing({ ...editing, published: e.target.checked })} /> Published
@@ -88,14 +88,15 @@ export default function AdminTestimonialsPage() {
         </div>
       </form>
 
-      <h2 style={styles.h2}>All Testimonials</h2>
+      <h2 style={styles.h2}>All Clinics</h2>
       {loading ? <p>Loading...</p> : items.length === 0 ? <p>None yet.</p> : (
         <table style={styles.table}>
-          <thead><tr><th style={styles.th}>Name</th><th style={styles.th}>Status</th><th style={styles.th}>Actions</th></tr></thead>
+          <thead><tr><th style={styles.th}>Name</th><th style={styles.th}>City</th><th style={styles.th}>Status</th><th style={styles.th}>Actions</th></tr></thead>
           <tbody>
             {items.map((it) => (
               <tr key={it.id}>
                 <td style={styles.td}>{it.name}</td>
+                <td style={styles.td}>{it.city}</td>
                 <td style={styles.td}>{it.published ? "Published" : "Draft"}</td>
                 <td style={styles.td}>
                   <button style={styles.linkBtn} onClick={() => setEditing(it)}>Edit</button>{" "}
@@ -126,4 +127,3 @@ const styles: Record<string, React.CSSProperties> = {
   td: { borderBottom: "1px solid #eee", padding: "0.5rem" },
   linkBtn: { background: "none", border: "none", color: "#07111f", textDecoration: "underline", cursor: "pointer", padding: 0 },
 };
-

@@ -20,6 +20,7 @@ const companyItems = [
   { label: "Blog", href: "/blog" },
   { label: "Team", href: "/team" },
   { label: "Testimonials", href: "/testimonials" },
+  { label: "Clinics", href: "/clinics" },
   { label: "Join Us", href: "/join-us", external: true },
 ];
 
@@ -176,12 +177,12 @@ export default function Navbar() {
           {/* RIGHT SIDE */}
           <div className="flex items-center gap-3 md:gap-4 lg:flex-1 lg:ml-8 xl:ml-12">
             {/* MOBILE BUTTON */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "✕" : "☰"}</button>
             </div>
 
             {/* DESKTOP NAV */}
-            <div className="hidden md:flex items-center gap-6 lg:flex-1">
+            <div className="hidden lg:flex items-center gap-6 lg:flex-1">
               <nav className="flex items-center gap-5 lg:gap-6 lg:flex-1 lg:justify-between">
                 {navItems.map((item) => (
                   <Link

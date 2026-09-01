@@ -68,6 +68,7 @@ export default function AdminTeamPage() {
         <Link href="/admin/blog" style={styles.navLink}>Blog</Link>
         <Link href="/admin/testimonials" style={styles.navLink}>Testimonials</Link>
         <Link href="/admin/team" style={{ ...styles.navLink, fontWeight: 700 }}>Team</Link>
+        <Link href="/admin/clinics" style={styles.navLink}>Clinics</Link>
       </nav>
       <h1 style={styles.h1}>Team Manager</h1>
 

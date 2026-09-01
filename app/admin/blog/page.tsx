@@ -82,6 +82,7 @@ export default function AdminBlogPage() {
         <Link href="/admin/blog" style={{ ...styles.navLink, fontWeight: 700 }}>Blog</Link>
         <Link href="/admin/testimonials" style={styles.navLink}>Testimonials</Link>
         <Link href="/admin/team" style={styles.navLink}>Team</Link>
+        <Link href="/admin/clinics" style={styles.navLink}>Clinics</Link>
       </nav>
       <h1 style={styles.h1}>Blog Manager</h1>
 
