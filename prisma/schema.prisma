@@ -63,6 +63,7 @@ model TeamMember {
 // never point the website directly at the LMS database.
 model PublicClinic {
   id           String  @id @default(cuid())
+  externalId   String? @unique // LMS Clinic record id — used by the clinic-approved webhook to upsert instead of duplicating
   name         String
   city         String
   specialty    String // e.g. "IVF & Fertility"
