@@ -36,11 +36,21 @@ export async function POST(req: NextRequest) {
 
   const existing = await db.publicClinic.findUnique({ where: { externalId } });
 
+  // Only overwrite logoUrl when the payload explicitly sends a non-empty
+  // string — otherwise keep whatever is already stored (e.g. a logo an
+  // admin added manually), since the LMS may not send one on every call.
+  const hasLogo = typeof logoUrl === "string" && logoUrl.trim() !== "";
+
   let clinic;
   if (existing) {
     clinic = await db.publicClinic.update({
       where: { externalId },
-      data: { name, city, specialty, logoUrl: logoUrl ?? null },
+      data: {
+        name,
+        city,
+        specialty,
+        ...(hasLogo ? { logoUrl } : {}),
+      },
     });
   } else {
     const count = await db.publicClinic.count();
@@ -50,7 +60,7 @@ export async function POST(req: NextRequest) {
         name,
         city,
         specialty,
-        logoUrl: logoUrl ?? null,
+        logoUrl: hasLogo ? logoUrl : null,
         published: true,
         displayOrder: count + 1,
       },
