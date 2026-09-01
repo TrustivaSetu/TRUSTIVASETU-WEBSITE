@@ -15,27 +15,40 @@ export default function Counter({
   prefix = "",
   duration = 2000,
 }: CounterProps) {
+  const target = Number(end);
+  const safeTarget = Number.isFinite(target) ? target : 0;
+
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 0;
-    const incrementTime = 20;
-    const totalSteps = duration / incrementTime;
-    const increment = end / totalSteps;
+    if (safeTarget <= 0) {
+      setCount(safeTarget);
+      return;
+    }
 
-    const timer = setInterval(() => {
-      start += increment;
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, incrementTime);
+    if (prefersReducedMotion || typeof requestAnimationFrame === "undefined") {
+      setCount(safeTarget);
+      return;
+    }
 
-    return () => clearInterval(timer);
-  }, [end, duration]);
+    let frame = 0;
+    const startTime = performance.now();
+
+    const tick = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      // easeOutCubic for a lively count-up
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(progress >= 1 ? safeTarget : Math.floor(eased * safeTarget));
+      if (progress < 1) frame = requestAnimationFrame(tick);
+    };
+
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [safeTarget, duration]);
 
   return (
     <span>

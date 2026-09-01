@@ -21,8 +21,8 @@ const companyItems = [
   { label: "Team", href: "/team" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Clinics", href: "/clinics" },
-  { label: "Training", href: "/training" },
   { label: "Join Us", href: "/join-us", external: true },
+  { label: "Training", href: "/training" },
 ];
 
 const knowledgeSources = sources.map((s) => ({
