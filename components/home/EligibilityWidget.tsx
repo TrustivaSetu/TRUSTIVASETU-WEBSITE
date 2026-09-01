@@ -37,10 +37,10 @@ export default function EligibilityWidget() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-10 bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6 max-w-md"
+      className="mt-6 bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 max-w-md"
     >
-      <p className="text-sm text-slate-300 mb-4">Check your No-Cost EMI eligibility</p>
-      <div className="flex flex-col gap-3">
+      <p className="text-sm text-slate-300 mb-3">Check your No-Cost EMI eligibility</p>
+      <div className="flex flex-col gap-2.5">
         <select
           value={treatment}
           onChange={(e) => setTreatment(e.target.value)}
