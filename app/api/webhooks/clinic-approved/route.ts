@@ -43,6 +43,8 @@ export async function POST(req: NextRequest) {
 
   let clinic;
   if (existing) {
+    // Update path: never touch `published` — a human may have already
+    // reviewed/published (or intentionally unpublished) this clinic.
     clinic = await db.publicClinic.update({
       where: { externalId },
       data: {
@@ -53,6 +55,9 @@ export async function POST(req: NextRequest) {
       },
     });
   } else {
+    // Create path: land as an unpublished draft so test/bad data from the
+    // LMS (or accidental webhook calls) never appears live on /clinics.
+    // An admin publishes it from /admin/clinics after review.
     const count = await db.publicClinic.count();
     clinic = await db.publicClinic.create({
       data: {
@@ -61,11 +66,16 @@ export async function POST(req: NextRequest) {
         city,
         specialty,
         logoUrl: hasLogo ? logoUrl : null,
-        published: true,
+        published: false,
         displayOrder: count + 1,
       },
     });
   }
 
-  return NextResponse.json({ success: true, clinic });
+  return NextResponse.json({
+    success: true,
+    created: !existing,
+    status: clinic.published ? "published" : "draft",
+    clinic,
+  });
 }
