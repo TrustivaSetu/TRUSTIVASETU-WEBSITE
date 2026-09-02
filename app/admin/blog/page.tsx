@@ -140,8 +140,8 @@ export default function AdminBlogPage() {
             Instagram post / reel URL
             <span style={styles.hint}>
               {" "}— the permalink of an Instagram post or reel (e.g.
-              https://www.instagram.com/reel/ABC123/). Rendered as an embed, not
-              an image.
+              https://www.instagram.com/reel/ABC123/). Rendered as a
+              click-to-watch card linking to Instagram.
             </span>
           </label>
           <input
