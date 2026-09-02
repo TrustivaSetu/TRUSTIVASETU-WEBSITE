@@ -10,11 +10,21 @@ type Post = {
   excerpt: string | null;
   content: string;
   coverImage: string | null;
+  instagramUrl: string | null;
   published: boolean;
   createdAt: string;
 };
 
-const empty = { id: "", title: "", slug: "", excerpt: "", content: "", coverImage: "", published: false };
+const empty = {
+  id: "",
+  title: "",
+  slug: "",
+  excerpt: "",
+  content: "",
+  coverImage: "",
+  instagramUrl: "",
+  published: false,
+};
 
 export default function AdminBlogPage() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -108,12 +118,40 @@ export default function AdminBlogPage() {
           onChange={(e) => setEditing({ ...editing, slug: e.target.value })}
           required
         />
-        <input
-          style={styles.input}
-          placeholder="Cover image URL (optional)"
-          value={editing.coverImage || ""}
-          onChange={(e) => setEditing({ ...editing, coverImage: e.target.value })}
-        />
+        <fieldset style={styles.fieldset}>
+          <legend style={styles.legend}>Media (both optional)</legend>
+
+          <label style={styles.fieldLabel} htmlFor="blog-cover">
+            Cover image URL
+            <span style={styles.hint}>
+              {" "}— a direct link to an image file (jpg / png / webp). Leave blank
+              if using an Instagram embed below.
+            </span>
+          </label>
+          <input
+            id="blog-cover"
+            style={styles.input}
+            placeholder="https://…/photo.jpg"
+            value={editing.coverImage || ""}
+            onChange={(e) => setEditing({ ...editing, coverImage: e.target.value })}
+          />
+
+          <label style={styles.fieldLabel} htmlFor="blog-instagram">
+            Instagram post / reel URL
+            <span style={styles.hint}>
+              {" "}— the permalink of an Instagram post or reel (e.g.
+              https://www.instagram.com/reel/ABC123/). Rendered as an embed, not
+              an image.
+            </span>
+          </label>
+          <input
+            id="blog-instagram"
+            style={styles.input}
+            placeholder="https://www.instagram.com/reel/…/"
+            value={editing.instagramUrl || ""}
+            onChange={(e) => setEditing({ ...editing, instagramUrl: e.target.value })}
+          />
+        </fieldset>
         <textarea
           style={{ ...styles.input, height: "60px" }}
           placeholder="Short excerpt"
@@ -204,6 +242,10 @@ const styles: Record<string, React.CSSProperties> = {
     color: "#111111",
   },
   checkboxLabel: { display: "block", marginBottom: "0.8rem", fontSize: "0.9rem", color: "#374151" },
+  fieldset: { border: "1px solid #d1d5db", borderRadius: "8px", padding: "0.9rem 1rem 0.4rem", marginBottom: "0.8rem" },
+  legend: { fontSize: "0.8rem", fontWeight: 700, color: "#07111f", textTransform: "uppercase", letterSpacing: "0.04em", padding: "0 0.4rem" },
+  fieldLabel: { display: "block", fontSize: "0.85rem", fontWeight: 600, color: "#111827", marginBottom: "0.3rem" },
+  hint: { fontWeight: 400, color: "#6b7280", fontSize: "0.8rem" },
   button: {
     padding: "0.6rem 1.2rem",
     background: "#07111f",

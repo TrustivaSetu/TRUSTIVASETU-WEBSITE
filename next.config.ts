@@ -27,14 +27,15 @@ poweredByHeader: false,
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.clarity.ms https://www.googletagmanager.com",
+              // instagram.com: blog post Instagram embeds (embed.js + iframe)
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.clarity.ms https://www.googletagmanager.com https://www.instagram.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: https: blob:",
               // LMS is no longer called from the browser — it goes through the
               // signed /api/lead proxy (server-to-server), so it's not listed here.
-              "connect-src 'self' https://api.web3forms.com https://*.supabase.co https://*.clarity.ms https://c.bing.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com",
-              "frame-src 'none'",
+              "connect-src 'self' https://api.web3forms.com https://*.supabase.co https://*.clarity.ms https://c.bing.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.instagram.com https://graph.instagram.com",
+              "frame-src https://www.instagram.com https://instagram.com",
               "frame-ancestors 'none'",
             ].join("; "),
           },

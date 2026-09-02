@@ -5,12 +5,15 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import InstagramEmbed from "@/components/blog/InstagramEmbed";
+import { validCoverImage } from "@/lib/utils";
 
 type Post = {
   title: string;
   content: string;
   excerpt: string | null;
   coverImage: string | null;
+  instagramUrl: string | null;
   publishedAt: string | null;
 };
 
@@ -93,14 +96,16 @@ export default function BlogPostPage() {
           </h1>
         </header>
 
-        {post.coverImage && (
+        {validCoverImage(post.coverImage) && (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={post.coverImage}
+            src={validCoverImage(post.coverImage) as string}
             alt={post.title}
             className="mb-8 w-full rounded-3xl border border-white/10"
           />
         )}
+
+        {post.instagramUrl && <InstagramEmbed url={post.instagramUrl} />}
 
         {post.excerpt && (
           <section className="mb-8 rounded-3xl border border-lime-300/20 bg-white/5 p-6 sm:p-8">

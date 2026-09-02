@@ -12,7 +12,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
  
   const { id } = await params;
   const body = await req.json();
-  const { title, slug, excerpt, content, coverImage, published } = body;
+  const { title, slug, excerpt, content, coverImage, instagramUrl, published } = body;
  
   const existing = await db.blogPost.findUnique({ where: { id } });
   if (!existing) {
@@ -26,7 +26,8 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
       slug,
       excerpt,
       content,
-      coverImage,
+      coverImage: coverImage?.trim() || null,
+      instagramUrl: instagramUrl?.trim() || null,
       published: !!published,
       // set publishedAt the first time a draft goes live; keep it once set
       publishedAt: published && !existing.publishedAt ? new Date() : existing.publishedAt,

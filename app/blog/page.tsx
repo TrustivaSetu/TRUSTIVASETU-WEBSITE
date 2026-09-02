@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { validCoverImage } from "@/lib/utils";
 
 type Post = {
   id: string;
@@ -64,10 +65,10 @@ export default function BlogListPage() {
                   href={`/blog/${p.slug}`}
                   className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all hover:border-lime-300/40 hover:bg-white/10"
                 >
-                  {p.coverImage && (
+                  {validCoverImage(p.coverImage) && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={p.coverImage}
+                      src={validCoverImage(p.coverImage) as string}
                       alt={p.title}
                       className="h-48 w-full object-cover"
                     />
