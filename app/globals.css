@@ -295,45 +295,50 @@ img {
   animation: avatarPulse 3s ease-in-out infinite;
 }
 
-/* ================= AMBIENT FLOATING RUPEE COINS (hero visual) ================= */
+/* ================= HERO COIN SPRITES (falling into the piggy bank) ================= */
 
-@keyframes rupeeDrift {
+@keyframes coinFall {
   0% {
-    transform: translateY(-12%) translateX(0);
+    top: 1%;
     opacity: 0;
+    transform: translateX(-50%) rotate(-6deg);
   }
-  12% {
-    opacity: 0.9;
+  9% {
+    opacity: 1;
   }
   50% {
-    transform: translateY(45%) translateX(6px);
+    transform: translateX(-50%) rotate(5deg);
   }
-  85% {
-    opacity: 0.9;
+  75% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0.12;
   }
   100% {
-    transform: translateY(105%) translateX(-4px);
+    top: 42%;
     opacity: 0;
+    transform: translateX(-50%) rotate(-3deg);
   }
 }
 
-.rupee-coin {
+.hero-coin {
   position: absolute;
-  top: 0;
-  font-size: clamp(14px, 3.2vw, 22px);
-  font-weight: 700;
-  color: #bef264;
-  text-shadow: 0 0 8px rgba(190, 242, 100, 0.65), 0 0 16px rgba(190, 242, 100, 0.35);
-  will-change: transform, opacity;
-  animation-name: rupeeDrift;
-  animation-timing-function: ease-in-out;
+  left: 78%;
+  top: 1%;
+  width: clamp(20px, 7%, 44px);
+  height: auto;
+  transform: translateX(-50%);
+  will-change: top, opacity, transform;
+  animation-name: coinFall;
+  animation-timing-function: ease-in;
   animation-iteration-count: infinite;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.28));
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rupee-coin {
-    animation: none;
-    opacity: 0;
+  .hero-coin {
+    display: none;
   }
 }
 
