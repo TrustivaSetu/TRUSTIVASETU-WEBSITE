@@ -31,6 +31,12 @@ const knowledgeSources = sources.map((s) => ({
   active: s.active === true,
 }));
 
+// Shared desktop nav item style: transparent/white at rest, fills solid lime
+// with dark navy text on hover — matching the "Partner with us" button.
+const desktopNavItem =
+  "whitespace-nowrap rounded-full px-2.5 py-1.5 text-sm font-medium text-white " +
+  "transition-all duration-200 ease-out hover:bg-[#bef264] hover:text-[#07111f]";
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [kcDesktopOpen, setKcDesktopOpen] = useState(false);
@@ -164,32 +170,34 @@ export default function Navbar() {
       <header className="sticky top-0 left-0 right-0 z-50 bg-[#07111f]/95 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
           {/* LOGO */}
-          <div className="flex items-center gap-2 md:gap-4">
+          <div className="flex shrink-0 items-center gap-2 md:gap-4">
             <Image src="/logo.png" alt="logo" width={56} height={56} priority />
 
             <div>
-              <div className="brand-glow text-lg md:text-2xl font-bold">Trustiva Setu</div>
-              <p className="text-xs md:text-sm text-gray-300">
+              <div className="brand-glow text-lg md:text-2xl font-bold whitespace-nowrap">
+                Trustiva Setu
+              </div>
+              <p className="text-xs md:text-sm text-gray-300 whitespace-nowrap">
                 Aarthsetu Technologies Pvt. Ltd.
               </p>
             </div>
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="flex items-center gap-3 md:gap-4 lg:flex-1 lg:ml-8 xl:ml-12">
+          <div className="flex items-center gap-3 md:gap-4 xl:flex-1 xl:ml-4 2xl:ml-12">
             {/* MOBILE BUTTON */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <button onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "✕" : "☰"}</button>
             </div>
 
             {/* DESKTOP NAV */}
-            <div className="hidden lg:flex items-center gap-6 lg:flex-1">
-              <nav className="flex items-center gap-5 lg:gap-6 lg:flex-1 lg:justify-between">
+            <div className="hidden xl:flex items-center xl:flex-1 xl:justify-end">
+              <nav className="flex items-center gap-0.5 rounded-full bg-white/5 px-2 py-1.5">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="inline-block transition-all duration-200 ease-out hover:text-lime-300 hover:-translate-y-0.5"
+                    className={desktopNavItem}
                   >
                     {item.label}
                   </Link>
@@ -202,7 +210,7 @@ export default function Navbar() {
                 >
                   <button
                     onClick={() => setCompanyDesktopOpen((o) => !o)}
-                    className="flex items-center gap-1 transition-all duration-200 ease-out hover:text-lime-300 hover:-translate-y-0.5"
+                    className={`flex items-center gap-1 ${desktopNavItem}`}
                   >
                     Company
                     <ChevronDown
@@ -237,7 +245,7 @@ export default function Navbar() {
                 >
                   <button
                     onClick={() => setKcDesktopOpen((o) => !o)}
-                    className="flex items-center gap-1 transition-all duration-200 ease-out hover:text-lime-300 hover:-translate-y-0.5"
+                    className={`flex items-center gap-1 ${desktopNavItem}`}
                   >
                     Knowledge Center
                     <ChevronDown
