@@ -584,6 +584,55 @@ a {
     0 20px 60px rgba(190,242,100,0.06);
 }
 
+/* ============ PARTNER CARD AMBIENT TWINKLE ============ */
+
+@keyframes partnerTwinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.partner-sparkle {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  background-color: #bef264;
+  /* 4-point star / sparkle */
+  clip-path: polygon(
+    50% 0%,
+    60% 40%,
+    100% 50%,
+    60% 60%,
+    50% 100%,
+    40% 60%,
+    0% 50%,
+    40% 40%
+  );
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity, transform;
+  filter: drop-shadow(0 0 3px rgba(190, 242, 100, 0.65));
+  animation-name: partnerTwinkle;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Reduced motion: freeze the sparkles as a faint static accent. */
+@media (prefers-reduced-motion: reduce) {
+  .partner-sparkle {
+    animation: none;
+    opacity: 0.16;
+    transform: scale(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
