@@ -11,7 +11,7 @@ import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import LendingPartners from "@/components/landing/LendingPartners";
 import EligibilityWidget from "@/components/home/EligibilityWidget";
 import VideoPlayer from "@/components/ui/VideoPlayer";
-import { celebrate } from "@/lib/celebrate";
+import { celebrate, triggerShine } from "@/lib/celebrate";
 
 export default function TrustivaSetuWebsite() {
   const howItWorksSteps = [
@@ -71,7 +71,10 @@ export default function TrustivaSetuWebsite() {
                 <Link href="/for-clinics#clinics">
                   <button
                     className="premium-btn premium-green-btn btn-shine"
-                    onClick={(e) => celebrate(e.currentTarget)}
+                    onClick={(e) => {
+                      triggerShine(e.currentTarget);
+                      celebrate(e.currentTarget);
+                    }}
                   >
                     <span className="relative z-[1]">Partner with us</span>
                   </button>

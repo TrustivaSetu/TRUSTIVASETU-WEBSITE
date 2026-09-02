@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { celebrate } from "@/lib/celebrate";
+import { celebrate, triggerShine } from "@/lib/celebrate";
 
 const treatments = [
   "IVF / Fertility",
@@ -30,6 +30,7 @@ export default function EligibilityWidget() {
       return;
     }
     setError("");
+    triggerShine(submitRef.current);
     celebrate(submitRef.current);
     const url = `https://lms.trustivasetu.com/chat?treatment=${encodeURIComponent(
       treatment

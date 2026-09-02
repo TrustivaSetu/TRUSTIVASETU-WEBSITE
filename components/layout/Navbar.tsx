@@ -56,6 +56,21 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
+  // Close the desktop dropdowns on an outside tap/click. On touch devices there
+  // is no mouseleave, so without this a tapped-open dropdown would stay open.
+  useEffect(() => {
+    if (!companyDesktopOpen && !kcDesktopOpen) return;
+    const onPointerDown = (e: PointerEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest("[data-desktop-dropdown]")) {
+        setCompanyDesktopOpen(false);
+        setKcDesktopOpen(false);
+      }
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [companyDesktopOpen, kcDesktopOpen]);
+
   return (
     <>
       {/* MOBILE MENU */}
@@ -205,8 +220,13 @@ export default function Navbar() {
 
                 <div
                   className="relative"
-                  onMouseEnter={() => setCompanyDesktopOpen(true)}
-                  onMouseLeave={() => setCompanyDesktopOpen(false)}
+                  data-desktop-dropdown
+                  onPointerEnter={(e) => {
+                    if (e.pointerType === "mouse") setCompanyDesktopOpen(true);
+                  }}
+                  onPointerLeave={(e) => {
+                    if (e.pointerType === "mouse") setCompanyDesktopOpen(false);
+                  }}
                 >
                   <button
                     onClick={() => setCompanyDesktopOpen((o) => !o)}
@@ -240,8 +260,13 @@ export default function Navbar() {
 
                 <div
                   className="relative"
-                  onMouseEnter={() => setKcDesktopOpen(true)}
-                  onMouseLeave={() => setKcDesktopOpen(false)}
+                  data-desktop-dropdown
+                  onPointerEnter={(e) => {
+                    if (e.pointerType === "mouse") setKcDesktopOpen(true);
+                  }}
+                  onPointerLeave={(e) => {
+                    if (e.pointerType === "mouse") setKcDesktopOpen(false);
+                  }}
                 >
                   <button
                     onClick={() => setKcDesktopOpen((o) => !o)}
