@@ -611,7 +611,9 @@ a {
   position: absolute;
   z-index: 0;
   display: block;
-  background-color: #bef264;
+  /* Dark, saturated green — pale lime (#bef264) has almost no contrast on the
+     white card. This still reads as a "green glint" but is actually visible. */
+  background-color: #3f6212;
   /* 4-point star / sparkle */
   clip-path: polygon(
     50% 0%,
@@ -626,8 +628,9 @@ a {
   opacity: 0;
   pointer-events: none;
   will-change: opacity, transform;
-  filter: drop-shadow(0 0 6px rgba(190, 242, 100, 0.95))
-    drop-shadow(0 0 14px rgba(190, 242, 100, 0.45));
+  /* Soft green bloom sized for the darker colour + a faint lift off the white. */
+  filter: drop-shadow(0 0 4px rgba(63, 98, 18, 0.55))
+    drop-shadow(0 0 10px rgba(101, 163, 13, 0.4));
   animation-name: partnerTwinkle;
   animation-duration: 2.6s;
   animation-timing-function: ease-out;
