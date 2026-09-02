@@ -168,7 +168,7 @@ export default function Navbar() {
             <Image src="/logo.png" alt="logo" width={56} height={56} />
 
             <div>
-              <div className="text-lg md:text-2xl font-bold">Trustiva Setu</div>
+              <div className="brand-glow text-lg md:text-2xl font-bold">Trustiva Setu</div>
               <p className="text-xs md:text-sm text-gray-300">
                 Aarthsetu Technologies Pvt. Ltd.
               </p>

@@ -59,7 +59,7 @@ export default function TrustivaSetuWebsite() {
           <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 md:gap-8 items-center">
             {/* LEFT COLUMN — text, CTA, eligibility widget */}
             <div>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-[-0.02em] mb-3">
+              <h1 className="hero-headline text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-[-0.02em] mb-3">
                 Medical loans and no-cost EMI for healthcare, across India.
               </h1>
               <p className="text-slate-300 text-base md:text-xl leading-6 md:leading-7 max-w-xl mb-4">

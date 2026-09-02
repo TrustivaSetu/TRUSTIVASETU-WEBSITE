@@ -393,6 +393,47 @@ img {
   }
 }
 
+/* ============ NAVBAR BRAND GLOW (static, persistent across all pages) ============ */
+
+.brand-glow {
+  text-shadow: 0 0 6px rgba(190, 242, 100, 0.45),
+    0 0 14px rgba(190, 242, 100, 0.22);
+}
+
+/* ============ HERO HEADLINE ENTRANCE (plays once on load) ============ */
+
+@keyframes headlineEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+    text-shadow: 0 0 0 rgba(190, 242, 100, 0);
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(190, 242, 100, 0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 8px rgba(190, 242, 100, 0.16);
+  }
+}
+
+.hero-headline {
+  animation: headlineEntrance 0.7s ease-out forwards;
+  transform-origin: left center;
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-headline {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    text-shadow: 0 0 8px rgba(190, 242, 100, 0.16);
+  }
+}
+
 /* ===== Copy Protection ===== */
 
 body{
