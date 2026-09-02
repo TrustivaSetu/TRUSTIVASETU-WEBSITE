@@ -6,6 +6,11 @@ const partners = [
     logoLight: "/logos/CleverPe_Black_H.png",
     logoDark: "/logos/CleverPe_White_H.png",
   },
+  {
+    name: "Paytm",
+    logoLight: "/logos/Paytm_Black_H.png",
+    logoDark: "/logos/Paytm_White_H.png",
+  },
 ];
 
 export default function LendingPartners() {
