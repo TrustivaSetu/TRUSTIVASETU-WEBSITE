@@ -396,8 +396,8 @@ img {
 /* ============ NAVBAR BRAND GLOW (static, persistent across all pages) ============ */
 
 .brand-glow {
-  text-shadow: 0 0 6px rgba(190, 242, 100, 0.45),
-    0 0 14px rgba(190, 242, 100, 0.22);
+  text-shadow: 0 0 4px rgba(190, 242, 100, 0.6),
+    0 0 12px rgba(190, 242, 100, 0.5), 0 0 22px rgba(190, 242, 100, 0.3);
 }
 
 /* ============ HERO HEADLINE ENTRANCE (plays once on load) ============ */

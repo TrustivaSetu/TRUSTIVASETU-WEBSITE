@@ -165,7 +165,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
           {/* LOGO */}
           <div className="flex items-center gap-2 md:gap-4">
-            <Image src="/logo.png" alt="logo" width={56} height={56} />
+            <Image src="/logo.png" alt="logo" width={56} height={56} priority />
 
             <div>
               <div className="brand-glow text-lg md:text-2xl font-bold">Trustiva Setu</div>
