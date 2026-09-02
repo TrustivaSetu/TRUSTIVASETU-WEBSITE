@@ -1,7 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
- 
+
+// Fallback select for when `instagramUrl` isn't in the DB yet (migration pending).
+const BASE_FIELDS = {
+  id: true,
+  title: true,
+  slug: true,
+  excerpt: true,
+  content: true,
+  coverImage: true,
+  published: true,
+  publishedAt: true,
+  createdAt: true,
+  updatedAt: true,
+} as const;
+
 // GET: list ALL posts (published + drafts) for the admin panel
 export async function GET() {
   try {
@@ -9,8 +24,19 @@ export async function GET() {
   } catch (res) {
     return res as Response;
   }
-  const posts = await db.blogPost.findMany({ orderBy: { createdAt: "desc" } });
-  return NextResponse.json(posts);
+  try {
+    const posts = await db.blogPost.findMany({ orderBy: { createdAt: "desc" } });
+    return NextResponse.json(posts);
+  } catch (err) {
+    if (err instanceof Prisma.PrismaClientKnownRequestError && err.code === "P2022") {
+      const posts = await db.blogPost.findMany({
+        orderBy: { createdAt: "desc" },
+        select: BASE_FIELDS,
+      });
+      return NextResponse.json(posts);
+    }
+    throw err;
+  }
 }
  
 // POST: create a new post

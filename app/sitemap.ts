@@ -34,7 +34,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const base = "https://www.trustivasetu.com";
 
-  const blogPosts = await db.blogPost.findMany({ where: { published: true } });
+  const blogPosts = await db.blogPost.findMany({
+    where: { published: true },
+    select: { slug: true, updatedAt: true, publishedAt: true },
+  });
 
   return [
 
