@@ -587,14 +587,23 @@ a {
 /* ============ PARTNER CARD AMBIENT TWINKLE ============ */
 
 @keyframes partnerTwinkle {
-  0%,
+  0% {
+    opacity: 0;
+    transform: scale(0.2) rotate(-20deg);
+  }
+  /* quick flash-in with a slight overshoot */
+  15% {
+    opacity: 1;
+    transform: scale(1.2) rotate(0deg);
+  }
+  32% {
+    opacity: 0.9;
+    transform: scale(0.95) rotate(8deg);
+  }
+  /* long, slow fade-out — each blink reads as a distinct glint */
   100% {
     opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
+    transform: scale(0.5) rotate(26deg);
   }
 }
 
@@ -617,10 +626,11 @@ a {
   opacity: 0;
   pointer-events: none;
   will-change: opacity, transform;
-  filter: drop-shadow(0 0 3px rgba(190, 242, 100, 0.65));
+  filter: drop-shadow(0 0 6px rgba(190, 242, 100, 0.95))
+    drop-shadow(0 0 14px rgba(190, 242, 100, 0.45));
   animation-name: partnerTwinkle;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
+  animation-duration: 2.6s;
+  animation-timing-function: ease-out;
   animation-iteration-count: infinite;
 }
 
@@ -628,7 +638,7 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .partner-sparkle {
     animation: none;
-    opacity: 0.16;
+    opacity: 0.32;
     transform: scale(1);
   }
 }

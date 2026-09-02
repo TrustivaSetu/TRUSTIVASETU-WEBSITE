@@ -19,11 +19,13 @@ const partners = [
 // Ambient twinkle: a handful of small sparkles per card, each with its own
 // position, size, duration and delay so they never blink in sync.
 const sparkles = [
-  { top: "17%", left: "9%", size: 10, duration: "3.1s", delay: "0s" },
-  { top: "72%", left: "15%", size: 8, duration: "2.4s", delay: "1.1s" },
-  { top: "23%", left: "88%", size: 9, duration: "3.5s", delay: "0.5s" },
-  { top: "76%", left: "84%", size: 7, duration: "2.8s", delay: "1.7s" },
-  { top: "12%", left: "61%", size: 6, duration: "2.2s", delay: "0.3s" },
+  // two in the natural eye-line, just above / just below the logo
+  { top: "13%", left: "43%", size: 18, duration: "2.4s", delay: "0.3s" },
+  { top: "83%", left: "57%", size: 14, duration: "2.0s", delay: "1.4s" },
+  // three fanned out toward the edges
+  { top: "20%", left: "10%", size: 20, duration: "3.0s", delay: "0s" },
+  { top: "26%", left: "88%", size: 16, duration: "2.7s", delay: "0.9s" },
+  { top: "72%", left: "16%", size: 13, duration: "2.3s", delay: "1.9s" },
 ];
 
 export default function LendingPartners() {
