@@ -84,13 +84,26 @@ export default function TrustivaSetuWebsite() {
 
             {/* RIGHT COLUMN — supporting visual */}
             <div className="flex justify-center md:justify-end">
-              <Image
-                src="/founder-note-visual.png"
-                alt="Trustiva Setu founder note"
-                width={800}
-                height={500}
-                className="w-full max-w-xs sm:max-w-md md:max-w-lg h-auto object-contain rounded-4xl border border-white/10 shadow-xl"
-              />
+              <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg">
+                <Image
+                  src="/founder-note-visual.png"
+                  alt="Trustiva Setu founder note"
+                  width={800}
+                  height={500}
+                  className="w-full h-auto object-contain rounded-4xl border border-white/10 shadow-xl"
+                />
+                {/* Ambient floating rupee coins layered over the static image */}
+                <div
+                  className="pointer-events-none absolute inset-0 overflow-hidden rounded-4xl"
+                  aria-hidden="true"
+                >
+                  <span className="rupee-coin" style={{ left: "16%", animationDelay: "0s", animationDuration: "5s" }}>₹</span>
+                  <span className="rupee-coin" style={{ left: "34%", animationDelay: "1.5s", animationDuration: "4.4s" }}>₹</span>
+                  <span className="rupee-coin" style={{ left: "52%", animationDelay: "3s", animationDuration: "5.6s" }}>₹</span>
+                  <span className="rupee-coin hidden sm:inline" style={{ left: "70%", animationDelay: "4.5s", animationDuration: "4.8s" }}>₹</span>
+                  <span className="rupee-coin hidden sm:inline" style={{ left: "84%", animationDelay: "6s", animationDuration: "6s" }}>₹</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

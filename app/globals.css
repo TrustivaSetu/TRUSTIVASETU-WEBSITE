@@ -295,6 +295,48 @@ img {
   animation: avatarPulse 3s ease-in-out infinite;
 }
 
+/* ================= AMBIENT FLOATING RUPEE COINS (hero visual) ================= */
+
+@keyframes rupeeDrift {
+  0% {
+    transform: translateY(-12%) translateX(0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(45%) translateX(6px);
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(105%) translateX(-4px);
+    opacity: 0;
+  }
+}
+
+.rupee-coin {
+  position: absolute;
+  top: 0;
+  font-size: clamp(14px, 3.2vw, 22px);
+  font-weight: 700;
+  color: #bef264;
+  text-shadow: 0 0 8px rgba(190, 242, 100, 0.65), 0 0 16px rgba(190, 242, 100, 0.35);
+  will-change: transform, opacity;
+  animation-name: rupeeDrift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rupee-coin {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 /* ===== Copy Protection ===== */
 
 body{
