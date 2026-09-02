@@ -106,6 +106,18 @@ export default function TrustivaSetuWebsite() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/coin-sprite-4.png" alt="" className="hero-coin hidden sm:block" style={{ left: "80%", animationDelay: "4.5s", animationDuration: "4.8s" }} />
                 </div>
+                {/* Sequential "loan process running" pulse over the phone step list */}
+                <div
+                  className="pointer-events-none absolute inset-0 overflow-hidden rounded-4xl"
+                  aria-hidden="true"
+                >
+                  <span className="hero-step-pulse" style={{ left: "19.2%", top: "30.6%", animationDelay: "0s" }} />
+                  <span className="hero-step-pulse" style={{ left: "20.1%", top: "39.5%", animationDelay: "0.6s" }} />
+                  <span className="hero-step-pulse" style={{ left: "21.0%", top: "48.2%", animationDelay: "1.2s" }} />
+                  <span className="hero-step-pulse" style={{ left: "23.0%", top: "57.2%", animationDelay: "1.8s" }} />
+                  <span className="hero-step-pulse" style={{ left: "23.0%", top: "66.2%", animationDelay: "2.4s" }} />
+                  <span className="hero-step-pulse" style={{ left: "22.6%", top: "75.8%", animationDelay: "3s" }} />
+                </div>
               </div>
             </div>
           </div>

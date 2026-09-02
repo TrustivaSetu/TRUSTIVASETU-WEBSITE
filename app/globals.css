@@ -342,6 +342,57 @@ img {
   }
 }
 
+/* ============ HERO LOAN-PROCESS STEP PULSE (sequential chase over phone) ============ */
+
+@keyframes stepPulse {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+    box-shadow: 0 0 0 0 rgba(190, 242, 100, 0);
+  }
+  3% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  8% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 12px 3px rgba(190, 242, 100, 0.7),
+      0 0 24px 8px rgba(190, 242, 100, 0.32);
+  }
+  14% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(1.18);
+  }
+  18% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.24);
+    box-shadow: 0 0 0 0 rgba(190, 242, 100, 0);
+  }
+}
+
+.hero-step-pulse {
+  position: absolute;
+  width: clamp(22px, 6.6%, 46px);
+  aspect-ratio: 1 / 1;
+  border: 2px solid rgba(190, 242, 100, 0.9);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+  will-change: opacity, transform;
+  animation-name: stepPulse;
+  animation-duration: 3.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-step-pulse {
+    display: none;
+  }
+}
+
 /* ===== Copy Protection ===== */
 
 body{
