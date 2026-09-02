@@ -434,6 +434,73 @@ img {
   }
 }
 
+/* ============ CTA MICRO-INTERACTIONS ============ */
+
+/* Diagonal shine sweep on hover (hero + form CTA) */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -140%;
+  width: 60%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 45%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.55) 55%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  transition: left 0.7s ease;
+}
+
+.btn-shine:hover::before,
+.btn-shine:focus-visible::before {
+  left: 140%;
+}
+
+/* Secondary "Talk to founders" link */
+.link-founders {
+  transition: text-shadow 0.25s ease, color 0.25s ease;
+}
+
+.link-founders:hover {
+  text-shadow: 0 0 6px rgba(190, 242, 100, 0.4),
+    0 0 12px rgba(190, 242, 100, 0.22);
+}
+
+.link-founders .link-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.link-founders:hover .link-arrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine::before {
+    display: none;
+  }
+
+  .link-founders .link-arrow {
+    transition: none;
+  }
+
+  .link-founders:hover .link-arrow {
+    transform: none;
+  }
+}
+
 /* ===== Copy Protection ===== */
 
 body{

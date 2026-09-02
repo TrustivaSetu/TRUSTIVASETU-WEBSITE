@@ -11,6 +11,7 @@ import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import LendingPartners from "@/components/landing/LendingPartners";
 import EligibilityWidget from "@/components/home/EligibilityWidget";
 import VideoPlayer from "@/components/ui/VideoPlayer";
+import { celebrate } from "@/lib/celebrate";
 
 export default function TrustivaSetuWebsite() {
   const howItWorksSteps = [
@@ -68,15 +69,18 @@ export default function TrustivaSetuWebsite() {
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <Link href="/for-clinics#clinics">
-                  <button className="premium-btn premium-green-btn">
-                    Partner with us
+                  <button
+                    className="premium-btn premium-green-btn btn-shine"
+                    onClick={(e) => celebrate(e.currentTarget)}
+                  >
+                    <span className="relative z-[1]">Partner with us</span>
                   </button>
                 </Link>
                 <Link
                   href="/contact#for-strategic-investors"
-                  className="text-slate-300 hover:text-lime-300 transition underline underline-offset-4"
+                  className="link-founders text-slate-300 hover:text-lime-300 transition underline underline-offset-4"
                 >
-                  Talk to founders
+                  Talk to founders <span className="link-arrow">→</span>
                 </Link>
               </div>
               <EligibilityWidget />

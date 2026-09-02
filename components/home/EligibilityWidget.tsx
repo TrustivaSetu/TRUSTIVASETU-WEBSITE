@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { celebrate } from "@/lib/celebrate";
 
 const treatments = [
   "IVF / Fertility",
@@ -16,6 +17,7 @@ export default function EligibilityWidget() {
   const [treatment, setTreatment] = useState("");
   const [cost, setCost] = useState("");
   const [error, setError] = useState("");
+  const submitRef = useRef<HTMLButtonElement>(null);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -28,6 +30,7 @@ export default function EligibilityWidget() {
       return;
     }
     setError("");
+    celebrate(submitRef.current);
     const url = `https://lms.trustivasetu.com/chat?treatment=${encodeURIComponent(
       treatment
     )}&cost=${encodeURIComponent(cost)}`;
@@ -63,8 +66,12 @@ export default function EligibilityWidget() {
         />
       </div>
       {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
-      <button type="submit" className="premium-btn premium-green-btn w-full mt-2.5">
-        Check my EMI options
+      <button
+        ref={submitRef}
+        type="submit"
+        className="premium-btn premium-green-btn btn-shine w-full mt-2.5"
+      >
+        <span className="relative z-[1]">Check my EMI options</span>
       </button>
     </form>
   );
