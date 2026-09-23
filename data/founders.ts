@@ -8,6 +8,7 @@ export interface Founder {
   phoneDisplay: string;         // e.g. "82184 73534"
   email: string;
   experience?: string;
+  image?: string;
 }
 
 export const COMPANY = {
@@ -67,13 +68,14 @@ export const founders: Founder[] = [
   {
     slug: "dharmendra-kumar",
     name: "Dharmendra Kumar",
-    role: "Regional Manager North",
+    role: "Regional Head - North",
     focus: "", // TODO: add a one-line focus statement, matching the style above
     expertise: [],
     phone: "+919758524344",
     phoneDisplay: "97585 24344",
     // TODO: confirm spelling - was typed as "dhramendra.kumar@..." originally
     email: "dharmendra.kumar@trustivasetu.com",
+    image: "/dharmendra.jpg",
   },
 ];
 
