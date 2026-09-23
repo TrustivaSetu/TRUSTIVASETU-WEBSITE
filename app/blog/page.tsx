@@ -80,6 +80,7 @@ export default function BlogListPage() {
                           day: "numeric",
                           month: "long",
                           year: "numeric",
+                          timeZone: "Asia/Kolkata",
                         })}
                       </p>
                     )}

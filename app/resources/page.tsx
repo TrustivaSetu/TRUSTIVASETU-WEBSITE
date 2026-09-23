@@ -480,7 +480,8 @@ fontSize:13
 📅 {new Date(article.publishedAt).toLocaleDateString("en-IN",{
 day:"2-digit",
 month:"short",
-year:"numeric"
+year:"numeric",
+timeZone:"UTC"
 })}
 </span>
 
