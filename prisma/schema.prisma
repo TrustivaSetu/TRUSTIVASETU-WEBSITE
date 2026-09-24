@@ -7,8 +7,12 @@ generator client {
 }
  
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  // DATABASE_URL is the Neon pooled endpoint with pgbouncer=true (added
+  // 2026-09-24); `prisma db push` must use a direct, session-mode connection,
+  // so route it through DIRECT_URL.
+  directUrl = env("DIRECT_URL")
 }
  
 // ---------- Admin login (you + Ajit only) ----------
