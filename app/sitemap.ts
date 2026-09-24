@@ -34,10 +34,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const base = "https://www.trustivasetu.com";
 
-  const blogPosts = await db.blogPost.findMany({
-    where: { published: true },
-    select: { slug: true, updatedAt: true, publishedAt: true },
-  });
+  // Published blog posts, when a database is reachable at build time. The
+  // sitemap must never fail the whole build just because the DB is
+  // unavailable (e.g. a Vercel build with no DATABASE_URL): fall back to no
+  // blog entries and still emit the rest of the sitemap.
+  let blogPosts: { slug: string; updatedAt: Date | null; publishedAt: Date | null }[] = [];
+  try {
+    blogPosts = await db.blogPost.findMany({
+      where: { published: true },
+      select: { slug: true, updatedAt: true, publishedAt: true },
+    });
+  } catch (e) {
+    console.warn("[sitemap] skipping blog URLs — database unreachable:", (e as Error).message);
+  }
 
   return [
 
