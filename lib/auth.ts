@@ -1,8 +1,9 @@
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 import bcrypt from "bcryptjs";
+import { getAuthSecret } from "./auth-secret";
  
-const secret = new TextEncoder().encode(process.env.AUTH_SECRET || "change-me-in-env");
+const secret = getAuthSecret(); // throws if AUTH_SECRET is missing — never a fallback
 const COOKIE_NAME = "trustiva_website_admin";
  
 export async function hashPassword(password: string) {
