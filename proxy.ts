@@ -1,7 +1,32 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { jwtVerify } from 'jose'
 
-export function proxy(request: NextRequest) {
+// Must match COOKIE_NAME in lib/auth.ts.
+const ADMIN_COOKIE = 'trustiva_website_admin'
+
+// Admin page shells used to load for anyone (only their /api/admin/* calls
+// were gated). Verify the admin session cookie here so /admin/* pages
+// redirect to the login page instead. Fails closed if AUTH_SECRET is unset.
+async function hasAdminSession(request: NextRequest): Promise<boolean> {
+  const token = request.cookies.get(ADMIN_COOKIE)?.value
+  const secret = process.env.AUTH_SECRET
+  if (!token || !secret) return false
+  try {
+    await jwtVerify(token, new TextEncoder().encode(secret))
+    return true
+  } catch {
+    return false
+  }
+}
+
+export async function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl
+  const isAdminPage = pathname === '/admin' || pathname.startsWith('/admin/')
+  if (isAdminPage && pathname !== '/admin/login' && !(await hasAdminSession(request))) {
+    return NextResponse.redirect(new URL('/admin/login', request.url))
+  }
+
   const basicAuthPassword = process.env.BASIC_AUTH_PASSWORD
 
   // No password configured — public access (production default)
