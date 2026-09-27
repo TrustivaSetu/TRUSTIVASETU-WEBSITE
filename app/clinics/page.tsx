@@ -18,12 +18,13 @@ type Item = {
 // LendingPartners.tsx), placed toward the card edges so the stars sit in the
 // empty space around the centred logo and text.
 const sparkles = [
-  { top: "10%", left: "8%", size: 18, duration: "2.4s", delay: "0.3s" },
-  { top: "16%", left: "91%", size: 14, duration: "2.0s", delay: "1.4s" },
-  { top: "52%", left: "5%", size: 16, duration: "3.0s", delay: "0s" },
-  { top: "60%", left: "93%", size: 20, duration: "2.7s", delay: "0.9s" },
-  { top: "88%", left: "18%", size: 13, duration: "2.3s", delay: "1.9s" },
+  { top: "10%", left: "8%", size: 12, duration: "2.4s", delay: "0.3s" },
+  { top: "18%", left: "88%", size: 10, duration: "2.0s", delay: "1.4s" },
+  { top: "80%", left: "10%", size: 11, duration: "2.7s", delay: "0.9s" },
 ];
+
+// Enough cards per marquee half to overfill a ~2400px-wide viewport.
+const MIN_MARQUEE_CARDS = 14;
 
 export default function ClinicsPage() {
   const [items, setItems] = useState<Item[]>([]);
@@ -41,6 +42,14 @@ export default function ClinicsPage() {
         setLoading(false);
       });
   }, []);
+
+  // One half of the marquee. With only a handful of clinics a single pass is
+  // narrower than a wide screen, which would leave a gap before the loop
+  // restarts, so repeat the list until the half is comfortably wider.
+  const marqueeSet =
+    items.length === 0
+      ? items
+      : Array.from({ length: Math.ceil(MIN_MARQUEE_CARDS / items.length) }, () => items).flat();
 
   return (
     <div className="min-h-screen bg-[#07111f] text-white">
@@ -73,60 +82,64 @@ export default function ClinicsPage() {
               </p>
             </div>
           ) : (
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {items.map((c, i) => (
-                <div
-                  key={c.id}
-                  className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 text-center transition-all hover:border-lime-300/40 hover:bg-white/10"
-                >
-                  {sparkles.map((s, j) => (
-                    <span
-                      key={j}
-                      aria-hidden="true"
-                      className="partner-sparkle partner-sparkle--on-dark"
-                      style={{
-                        top: s.top,
-                        left: s.left,
-                        width: s.size,
-                        height: s.size,
-                        animationDuration: s.duration,
-                        // Offset each card's set so neighbouring cards don't twinkle alike.
-                        animationDelay: `calc(${s.delay} + ${(i % 6) * 0.4}s)`,
-                      }}
-                    />
-                  ))}
+            <div className="clinic-marquee">
+              <div
+                className="clinic-marquee__track"
+                style={{ animationDuration: `${marqueeSet.length * 3.5}s` }}
+              >
+                {/* Two identical halves: the track slides by exactly -50%, so the
+                    loop restarts on a frame that looks the same — no seam. */}
+                {[0, 1].map((half) =>
+                  marqueeSet.map((c, i) => (
+                    <div
+                      key={`${half}-${i}-${c.id}`}
+                      aria-hidden={half === 1 || i >= items.length ? true : undefined}
+                      className="relative w-40 shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-3 py-4 text-center transition-colors hover:border-lime-300/40 hover:bg-white/10 sm:w-48"
+                    >
+                      {sparkles.map((s, j) => (
+                        <span
+                          key={j}
+                          aria-hidden="true"
+                          className="partner-sparkle partner-sparkle--on-dark"
+                          style={{
+                            top: s.top,
+                            left: s.left,
+                            width: s.size,
+                            height: s.size,
+                            animationDuration: s.duration,
+                            // Offset each card's set so neighbouring cards don't twinkle alike.
+                            animationDelay: `calc(${s.delay} + ${(i % 6) * 0.4}s)`,
+                          }}
+                        />
+                      ))}
 
-                  <div className="relative z-10 flex flex-col items-center">
-                    <div className="mb-4 flex h-20 items-center justify-center gap-3">
-                      {c.logoUrl ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={c.logoUrl}
-                          alt={`${c.name} logo`}
-                          className="h-20! w-40 rounded-2xl bg-white object-contain p-2"
-                        />
-                      ) : (
-                        <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-2xl font-bold text-lime-300">
-                          {c.name.charAt(0)}
+                      <div className="relative z-10 flex flex-col items-center">
+                        <div className="mb-3 flex h-12 items-center justify-center sm:h-14">
+                          {c.logoUrl ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={c.logoUrl}
+                              alt={`${c.name} logo`}
+                              loading="lazy"
+                              className="h-12! w-28 rounded-xl bg-white object-contain p-1.5 sm:h-14! sm:w-32"
+                            />
+                          ) : (
+                            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg font-bold text-lime-300 sm:h-14 sm:w-14">
+                              {c.name.charAt(0)}
+                            </div>
+                          )}
                         </div>
-                      )}
-                      {c.doctorPhotoUrl && (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={c.doctorPhotoUrl}
-                          alt={`Doctor at ${c.name}`}
-                          className="h-20! w-20 rounded-full object-cover ring-2 ring-white/20"
-                        />
-                      )}
+                        <p className="line-clamp-2 text-sm font-bold leading-snug text-white">
+                          {c.name}
+                        </p>
+                        <p className="mt-1 line-clamp-2 text-[10px] font-semibold uppercase tracking-wider text-lime-300 sm:text-[11px]">
+                          {c.specialty}
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-lg font-bold text-white">{c.name}</p>
-                    <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-lime-300">
-                      {c.specialty}
-                    </p>
-                    <p className="mt-2 text-sm text-gray-400">{c.city}</p>
-                  </div>
-                </div>
-              ))}
+                  ))
+                )}
+              </div>
             </div>
           )}
         </section>

@@ -645,6 +645,42 @@ a {
     drop-shadow(0 0 10px rgba(163, 230, 53, 0.35));
 }
 
+/* ============ /clinics LOGO MARQUEE ============ */
+
+.clinic-marquee {
+  overflow: hidden;
+  /* Fade the cards in/out at the edges instead of a hard cut. */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+
+.clinic-marquee__track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  /* translateX(-50%) needs the trailing gap too, so both halves are equal. */
+  padding-right: 1rem;
+  animation-name: scrollReviews;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.clinic-marquee:hover .clinic-marquee__track,
+.clinic-marquee:focus-within .clinic-marquee__track {
+  animation-play-state: paused;
+}
+
+/* Reduced motion: no auto-scroll; let people swipe/scroll the row instead. */
+@media (prefers-reduced-motion: reduce) {
+  .clinic-marquee {
+    overflow-x: auto;
+  }
+  .clinic-marquee__track {
+    animation: none !important;
+  }
+}
+
 /* Reduced motion: freeze the sparkles as a faint static accent. */
 @media (prefers-reduced-motion: reduce) {
   .partner-sparkle {
