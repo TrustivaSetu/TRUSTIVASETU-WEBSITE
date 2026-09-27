@@ -637,6 +637,14 @@ a {
   animation-iteration-count: infinite;
 }
 
+/* Variant for dark cards (e.g. /clinics): the site's lime accent reads well
+   on navy, where the dark green above would disappear. */
+.partner-sparkle--on-dark {
+  background-color: #bef264;
+  filter: drop-shadow(0 0 4px rgba(190, 242, 100, 0.6))
+    drop-shadow(0 0 10px rgba(163, 230, 53, 0.35));
+}
+
 /* Reduced motion: freeze the sparkles as a faint static accent. */
 @media (prefers-reduced-motion: reduce) {
   .partner-sparkle {
