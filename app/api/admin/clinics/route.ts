@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     return res as Response;
   }
   const body = await req.json();
-  const { name, city, specialty, logoUrl, published, displayOrder } = body;
+  const { name, city, specialty, logoUrl, doctorPhotoUrl, published, displayOrder } = body;
   if (!name || !city || !specialty) {
     return NextResponse.json(
       { error: "name, city and specialty are required" },
@@ -32,6 +32,7 @@ export async function POST(req: NextRequest) {
       city,
       specialty,
       logoUrl,
+      doctorPhotoUrl,
       published: published !== false,
       displayOrder: displayOrder || 0,
     },

@@ -67,14 +67,15 @@ model TeamMember {
 // Populate this manually or via a small sync script from the LMS DB —
 // never point the website directly at the LMS database.
 model PublicClinic {
-  id           String  @id @default(cuid())
-  externalId   String? @unique // LMS Clinic record id — used by the clinic-approved webhook to upsert instead of duplicating
-  name         String
-  city         String
-  specialty    String // e.g. "IVF & Fertility"
-  logoUrl      String?
-  displayOrder Int     @default(0)
-  published    Boolean @default(true)
+  id             String  @id @default(cuid())
+  externalId     String? @unique // LMS Clinic record id — used by the clinic-approved webhook to upsert instead of duplicating
+  name           String
+  city           String
+  specialty      String // e.g. "IVF & Fertility"
+  logoUrl        String?
+  doctorPhotoUrl String? // optional headshot of the lead doctor, shown beside the logo on /clinics
+  displayOrder   Int     @default(0)
+  published      Boolean @default(true)
 }
  
 // ---------- Contact / Enquiry form submissions ----------

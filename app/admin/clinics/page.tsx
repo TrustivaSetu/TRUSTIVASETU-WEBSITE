@@ -9,11 +9,12 @@ type Item = {
   city: string;
   specialty: string;
   logoUrl: string | null;
+  doctorPhotoUrl: string | null;
   published: boolean;
   displayOrder: number;
 };
 
-const empty = { id: "", name: "", city: "", specialty: "", logoUrl: "", published: true, displayOrder: 0 };
+const empty = { id: "", name: "", city: "", specialty: "", logoUrl: "", doctorPhotoUrl: "", published: true, displayOrder: 0 };
 
 export default function AdminClinicsPage() {
   const [items, setItems] = useState<Item[]>([]);
@@ -77,6 +78,7 @@ export default function AdminClinicsPage() {
         <input style={styles.input} placeholder="City" value={editing.city} onChange={(e) => setEditing({ ...editing, city: e.target.value })} required />
         <input style={styles.input} placeholder="Specialty (e.g. IVF & Fertility)" value={editing.specialty} onChange={(e) => setEditing({ ...editing, specialty: e.target.value })} required />
         <input style={styles.input} placeholder="Logo URL (optional)" value={editing.logoUrl || ""} onChange={(e) => setEditing({ ...editing, logoUrl: e.target.value })} />
+        <input style={styles.input} placeholder="Doctor photo URL (optional)" value={editing.doctorPhotoUrl || ""} onChange={(e) => setEditing({ ...editing, doctorPhotoUrl: e.target.value })} />
         <input style={styles.input} type="number" placeholder="Display order (lower shows first)" value={editing.displayOrder} onChange={(e) => setEditing({ ...editing, displayOrder: Number(e.target.value) })} />
         <label style={styles.checkboxLabel}>
           <input type="checkbox" checked={editing.published} onChange={(e) => setEditing({ ...editing, published: e.target.checked })} /> Published

@@ -11,6 +11,7 @@ type Item = {
   city: string;
   specialty: string;
   logoUrl: string | null;
+  doctorPhotoUrl: string | null;
 };
 
 export default function ClinicsPage() {
@@ -63,18 +64,28 @@ export default function ClinicsPage() {
                   key={c.id}
                   className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/5 p-6 text-center transition-all hover:border-lime-300/40 hover:bg-white/10"
                 >
-                  {c.logoUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={c.logoUrl}
-                      alt={c.name}
-                      className="mb-4 h-20 w-20 rounded-2xl bg-white object-contain p-2"
-                    />
-                  ) : (
-                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-2xl font-bold text-lime-300">
-                      {c.name.charAt(0)}
-                    </div>
-                  )}
+                  <div className="mb-4 flex h-20 items-center justify-center gap-3">
+                    {c.logoUrl ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={c.logoUrl}
+                        alt={`${c.name} logo`}
+                        className="h-20! w-40 rounded-2xl bg-white object-contain p-2"
+                      />
+                    ) : (
+                      <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-2xl font-bold text-lime-300">
+                        {c.name.charAt(0)}
+                      </div>
+                    )}
+                    {c.doctorPhotoUrl && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={c.doctorPhotoUrl}
+                        alt={`Doctor at ${c.name}`}
+                        className="h-20! w-20 rounded-full object-cover ring-2 ring-white/20"
+                      />
+                    )}
+                  </div>
                   <p className="text-lg font-bold text-white">{c.name}</p>
                   <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-lime-300">
                     {c.specialty}

@@ -10,7 +10,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
   }
   const { id } = await params;
   const body = await req.json();
-  const { name, city, specialty, logoUrl, published, displayOrder } = body;
+  const { name, city, specialty, logoUrl, doctorPhotoUrl, published, displayOrder } = body;
   const item = await db.publicClinic.update({
     where: { id },
     data: {
@@ -18,6 +18,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
       city,
       specialty,
       logoUrl,
+      doctorPhotoUrl,
       published: !!published,
       displayOrder: displayOrder || 0,
     },
