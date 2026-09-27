@@ -114,19 +114,32 @@ export default function ClinicsPage() {
                       ))}
 
                       <div className="relative z-10 flex flex-col items-center">
-                        <div className="mb-3 flex h-12 items-center justify-center sm:h-14">
+                        <div className="mb-3 flex h-12 items-center justify-center gap-1.5 sm:h-14 sm:gap-2">
                           {c.logoUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                               src={c.logoUrl}
                               alt={`${c.name} logo`}
                               loading="lazy"
-                              className="h-12! w-28 rounded-xl bg-white object-contain p-1.5 sm:h-14! sm:w-32"
+                              // Narrower logo when the doctor photo shares the row, so both
+                              // fit the card's inner width (136px mobile / 168px desktop).
+                              className={`h-12! rounded-xl bg-white object-contain p-1.5 sm:h-14! ${
+                                c.doctorPhotoUrl ? "w-22 sm:w-28" : "w-28 sm:w-32"
+                              }`}
                             />
                           ) : (
                             <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg font-bold text-lime-300 sm:h-14 sm:w-14">
                               {c.name.charAt(0)}
                             </div>
+                          )}
+                          {c.doctorPhotoUrl && (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={c.doctorPhotoUrl}
+                              alt={`Doctor at ${c.name}`}
+                              loading="lazy"
+                              className="h-8! w-8 shrink-0 rounded-full object-cover ring-2 ring-white/20 sm:h-10! sm:w-10"
+                            />
                           )}
                         </div>
                         <p className="line-clamp-2 text-sm font-bold leading-snug text-white">
