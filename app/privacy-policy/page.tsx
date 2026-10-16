@@ -26,9 +26,6 @@ export default function PrivacyPolicyPage() {
           <p className="text-gray-400 text-sm mt-1">
             For queries: <a href={`mailto:${EMAIL}`} className="text-lime-300 hover:underline">{EMAIL}</a>
           </p>
-          <div className="mt-4 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 text-yellow-300 text-sm">
-            <p className="font-bold"></p>
-          </div>
         </div>
 
         <div className="prose prose-invert max-w-none space-y-8 text-gray-300 leading-8">
