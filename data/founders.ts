@@ -4,9 +4,6 @@ export interface Founder {
   role: string;
   focus: string;               // one-line description (matches homepage copy style)
   expertise: string[];         // tag list (matches homepage copy style)
-  phone: string;                 // e.g. "+918218473534" - used for tel: and wa.me links
-  phoneDisplay: string;         // e.g. "82184 73534"
-  email: string;
   experience?: string;
   image?: string;
 }
@@ -30,9 +27,6 @@ export const founders: Founder[] = [
       "Strategic Partnerships",
       "NBFC Ecosystem Development",
     ],
-    phone: "+918218473534",
-    phoneDisplay: "82184 73534",
-    email: "abhishek.kashyap@trustivasetu.com",
     experience: "23+ Years experience in Pharma & Fintech",
   },
   {
@@ -43,9 +37,6 @@ export const founders: Founder[] = [
       "Driving strategic partnerships, conversion systems and lender expansion.",
     expertise: ["Banking + Fintech", "Credit Infrastructure", "Lending Operations"],
     // TODO: confirm phone + email
-    phone: "+919540810017",
-    phoneDisplay: "95408 10017",
-    email: "ajit.yadav@trustivasetu.com",
   },
   {
     slug: "manish",
@@ -61,9 +52,6 @@ export const founders: Founder[] = [
       "Financial Advisory",
     ],
     // TODO: confirm phone + email
-    phone: "+919650964302",
-    phoneDisplay: "96509 64302",
-    email: "manish@trustivasetu.com",
   },
   {
     slug: "dharmendra-kumar",
@@ -71,10 +59,7 @@ export const founders: Founder[] = [
     role: "Regional Head - North",
     focus: "", // TODO: add a one-line focus statement, matching the style above
     expertise: [],
-    phone: "+919758524344",
-    phoneDisplay: "97585 24344",
     // TODO: confirm spelling - was typed as "dhramendra.kumar@..." originally
-    email: "dharmendra.kumar@trustivasetu.com",
     image: "/dharmendra.jpg",
   },
 ];

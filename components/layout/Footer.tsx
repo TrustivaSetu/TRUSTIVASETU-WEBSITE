@@ -120,27 +120,16 @@ export default function Footer() {
               <a href="/refund-cancellation-policy" className="block text-gray-400 hover:text-lime-300 transition-colors">Refund &amp; Cancellation Policy</a>
             </div>
             <div className="mt-4 space-y-1 text-xs text-gray-500">
-              <p>📧 <TrackedLink
-                href="mailto:info@trustivasetu.com"
-                event="email_click_info_footer"
-                className="hover:text-lime-300"
-              >
-                info@trustivasetu.com
-              </TrackedLink></p>
-              <p>📧 <TrackedLink
-                href="mailto:admin@trustivasetu.com"
-                event="email_click_admin_footer"
-                className="hover:text-lime-300"
-              >
-                admin@trustivasetu.com
-              </TrackedLink></p>
-              <p>📧 <TrackedLink
-                href="mailto:legal@trustivasetu.com"
-                event="email_click_legal_footer"
-                className="hover:text-lime-300"
-              >
-                legal@trustivasetu.com
-              </TrackedLink></p>
+              <p>
+                📧{" "}
+                <TrackedLink
+                  href="mailto:info@trustivasetu.com"
+                  event="email_click_info_footer"
+                  className="hover:text-lime-300"
+                >
+                  info@trustivasetu.com
+                </TrackedLink>
+              </p>
             </div>
           </div>
         </div>

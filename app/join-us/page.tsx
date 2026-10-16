@@ -555,8 +555,8 @@ export default function JoinUsPage() {
           </a>
           {" · "}
           Admin:{" "}
-          <a href="mailto:admin@trustivasetu.com" className="text-lime-300 hover:underline">
-            admin@trustivasetu.com
+          <a href="mailto:info@trustivasetu.com" className="text-lime-300 hover:underline">
+            info@trustivasetu.com
           </a>
         </p>
       </div>

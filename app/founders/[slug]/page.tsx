@@ -4,7 +4,6 @@ import Link from "next/link";
 import { founders, getFounderBySlug } from "@/data/founders";
 import { getAudienceBySlug } from "@/data/audiences";
 import AnimatedAvatar from "@/components/ui/AnimatedAvatar";
-import FounderContactActions from "@/components/ui/FounderContactActions";
 
 export function generateStaticParams() {
   return founders.map((f) => ({ slug: f.slug }));
@@ -19,7 +18,7 @@ export async function generateMetadata({
   const founder = getFounderBySlug(slug);
   if (!founder) return {};
   const title = `${founder.name} — Trustiva Setu`;
-  const description = `${founder.name}'s digital card · 📱 ${founder.phoneDisplay} · 🌐 ${founder.email}`;
+  const description = `${founder.name} — ${founder.role} at Trustiva Setu`;
   return {
     title,
     description,
@@ -100,12 +99,6 @@ export default async function FounderPage({
             </div>
           )}
 
-          <div className="mt-6 space-y-1 text-sm text-gray-300">
-            <p>{founder.phoneDisplay}</p>
-            <p>{founder.email}</p>
-          </div>
-
-          <FounderContactActions founder={founder} />
 
           <div className="mt-8 pt-6 border-t border-white/10">
             {fromAudience ? (

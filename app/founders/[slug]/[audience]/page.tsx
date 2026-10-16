@@ -26,7 +26,7 @@ export async function generateMetadata({
   const aud = getAudienceBySlug(audience);
   if (!founder || !aud) return {};
   const title = `${aud.eyebrow} — ${founder.name}, Trustiva Setu`;
-  const description = `${founder.name}'s digital card · 📱 ${founder.phoneDisplay} · 🌐 ${founder.email}`;
+  const description = `${founder.name} — ${founder.role} at Trustiva Setu`;
   return {
     title,
     description,
@@ -57,10 +57,12 @@ export default async function FounderAudiencePage({
   if (!founder || !aud) return notFound();
 
   const pageUrl = `https://www.trustivasetu.com/founders/${founder.slug}/${aud.slug}`;
-  const shareText = encodeURIComponent(
-    `${aud.shareHook}\n\n${pageUrl}\n\n— *${founder.name}*, ${founder.role}\n📱 ${founder.phoneDisplay}\n📧 ${founder.email}`
-  );
+  const shareText = encodeURIComponent(`${aud.shareHook}
 
+${pageUrl}
+
+— ${founder.name}, ${founder.role}
+Contact: info@trustivasetu.com`);
   return (
     <main className="min-h-screen bg-[#07111f] text-white px-4 py-16 sm:py-24">
       <div className="max-w-2xl mx-auto text-center">
@@ -96,15 +98,7 @@ export default async function FounderAudiencePage({
             <div className="text-center sm:text-left">
               <p className="text-xl font-bold">{founder.name}</p>
               <p className="text-lime-300 text-sm font-semibold mb-3">{founder.role}</p>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm">
-                <a href={`tel:${founder.phone}`} className="text-gray-300 hover:text-lime-300 transition">
-                  {founder.phoneDisplay}
-                </a>
-                <a href={`mailto:${founder.email}`} className="text-gray-300 hover:text-lime-300 transition break-all">
-                  {founder.email}
-                </a>
-              </div>
-            </div>
+</div>
           </div>
           <a
             href={`https://wa.me/?text=${shareText}`}

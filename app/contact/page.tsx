@@ -209,7 +209,7 @@ export default function ContactPage() {
           </h2>
 
           <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-8">
-            Reach out to Trustiva Setu for general enquiries, admin support or to speak directly with our team.
+            Reach out to Trustiva Setu for general enquiries.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -225,45 +225,6 @@ export default function ContactPage() {
                   className="hover:underline"
                 >
                   info@trustivasetu.com
-                </TrackedLink>
-              </p>
-            </div>
-
-            <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
-              <p className="text-sm text-gray-400 mb-2">
-                Admin & Support
-              </p>
-
-              <p className="text-lg text-lime-300 font-semibold">
-                <TrackedLink
-                  href="mailto:admin@trustivasetu.com"
-                  event="email_click_admin"
-                  className="hover:underline"
-                >
-                  admin@trustivasetu.com
-                </TrackedLink>
-              </p>
-            </div>
-
-            <div className="bg-white/5 border border-lime-300/20 rounded-3xl p-6">
-              <p className="text-sm text-gray-400 mb-2">
-                Call Us
-              </p>
-
-              <p className="text-lg text-lime-300 font-semibold flex flex-col">
-                <TrackedLink
-                  href="tel:+918218473534"
-                  event="phone_click_primary"
-                  className="hover:underline"
-                >
-                  +91 82184 73534
-                </TrackedLink>
-                <TrackedLink
-                  href="tel:+919540810017"
-                  event="phone_click_secondary"
-                  className="hover:underline mt-1"
-                >
-                  +91 95408 10017
                 </TrackedLink>
               </p>
             </div>

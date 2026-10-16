@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const LAST_UPDATED = "June 1, 2026";
 const COMPANY = "Aarthsetu Technologies Private Limited";
 const BRAND = "Trustiva Setu";
-const EMAIL = "legal@trustivasetu.com";
+const EMAIL = "info@trustivasetu.com";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -131,8 +131,6 @@ export default function PrivacyPolicyPage() {
             <p className="mt-2 text-sm text-gray-400">
               Data Protection Officer: <span className="text-yellow-300">Abhishek Kashyap
 Designation: Founder & CEO, Aarthsetu Technologies Pvt Ltd
-Email: legal@trustivasetu.com
-Phone: +91 82184 73534
 Response Time: Within 30 days</span>
             </p>
           </section>

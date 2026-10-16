@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const LAST_UPDATED = "June 1, 2026";
 const COMPANY = "Aarthsetu Technologies Private Limited";
 const BRAND = "Trustiva Setu";
-const EMAIL = "legal@trustivasetu.com";
+const EMAIL = "info@trustivasetu.com";
 
 export default function TermsPage() {
   return (
