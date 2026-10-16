@@ -1,4 +1,25 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { NextConfig } from "next";
+import { PHASE_PRODUCTION_SERVER } from "next/constants";
+
+// Which build directory to use. scripts/deploy-production.sh builds into
+// .next-a / .next-b alternately (passing NEXT_BUILD_DIR) while the live server
+// keeps serving, then records the new one in .next-active and restarts. The
+// server reads .next-active itself, so a plain `pm2 restart` picks up the new
+// build without --update-env (which would also reload the env from .env files).
+// An ad-hoc `next build` or `next dev` still uses '.next'.
+function resolveDistDir(phase: string): string {
+  if (process.env.NEXT_BUILD_DIR) return process.env.NEXT_BUILD_DIR;
+  if (phase !== PHASE_PRODUCTION_SERVER) return ".next";
+  try {
+    const active = fs.readFileSync(path.join(process.cwd(), ".next-active"), "utf8").trim();
+    if (/^\.next(-[ab])?$/.test(active) && fs.existsSync(path.join(process.cwd(), active, "BUILD_ID"))) {
+      return active;
+    }
+  } catch {}
+  return ".next";
+}
 
 const nextConfig: NextConfig = {
 poweredByHeader: false,
@@ -46,4 +67,6 @@ poweredByHeader: false,
   },
 };
 
-export default nextConfig;
+const config = (phase: string): NextConfig => ({ ...nextConfig, distDir: resolveDistDir(phase) });
+
+export default config;
