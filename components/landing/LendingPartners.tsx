@@ -16,8 +16,8 @@ const partners = [
   },
   {
     name: "Gromo",
-    logoLight: "/logos/Gromo_Color_H.jpeg",
-    logoDark: "/logos/Gromo_Color_H.jpeg",
+    logoLight: "/logos/Gromo_Color_H.png",
+    logoDark: "/logos/Gromo_Color_H.png",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function LendingPartners() {
         Backed By Trusted Lending Partners
       </h2>
 
-      <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 items-stretch justify-items-center">
         {partners.map((partner, i) => (
           <motion.div
             key={partner.name}
@@ -59,7 +59,7 @@ export default function LendingPartners() {
             }
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.5, delay: i * 0.15, ease: "easeOut" }}
-            className="relative overflow-hidden flex items-center justify-center rounded-3xl bg-white ring-1 ring-black/5 px-8 py-6 min-h-[100px] min-w-[220px] shadow-[0_10px_35px_-10px_rgb(0_0_0_/_0.5)] transition-shadow duration-300 hover:shadow-[0_0_20px_rgb(190_242_100_/_0.45),0_10px_35px_-10px_rgb(0_0_0_/_0.4)]"
+            className="relative overflow-hidden flex items-center justify-center rounded-3xl bg-white ring-1 ring-black/5 px-8 py-6 min-h-[100px] w-full max-w-[280px] shadow-[0_10px_35px_-10px_rgb(0_0_0_/_0.5)] transition-shadow duration-300 hover:shadow-[0_0_20px_rgb(190_242_100_/_0.45),0_10px_35px_-10px_rgb(0_0_0_/_0.4)]"
           >
             {sparkles.map((s, j) => (
               <span
