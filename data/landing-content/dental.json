@@ -1,0 +1,72 @@
+{
+  "slug": "dental-loan",
+  "key": "dental",
+
+  "metadata": {
+    "title": "Dental Loan in India | Dental Treatment Financing | Trustiva Setu",
+    "description": "Affordable dental treatment financing for implants, braces, aligners and smile makeover procedures.",
+    "ogTitle": "Dental Loan in India | Trustiva Setu",
+    "ogDescription": "Finance your dental treatment through trusted lending partners."
+  },
+
+  "landing": {
+    "title": "Dental Loan in India",
+    "description": "Affordable dental treatment financing for implants, braces, aligners and smile makeover procedures.",
+    "heroTitle": "Dental Treatment Financing",
+    "heroSubtitle": "Finance your dental treatment through trusted lending partners.",
+
+    "treatments": [
+      {
+        "title": "Dental Implants",
+        "description": "Finance single and full-mouth dental implant procedures."
+      },
+      {
+        "title": "Invisible Aligners",
+        "description": "Affordable financing for clear aligner treatments."
+      },
+      {
+        "title": "Braces",
+        "description": "Flexible payment options for orthodontic treatment."
+      },
+      {
+        "title": "Root Canal Treatment",
+        "description": "Finance advanced restorative dental procedures."
+      },
+      {
+        "title": "Smile Makeover",
+        "description": "Funding support for cosmetic dentistry treatments."
+      },
+      {
+        "title": "Dental Crowns & Bridges",
+        "description": "Finance restorative dental care with easy repayments."
+      },
+      {
+        "title": "Full Mouth Rehabilitation",
+        "description": "Funding for comprehensive dental restoration."
+      },
+      {
+        "title": "Other Dental Treatments",
+        "description": "Finance a wide range of planned dental procedures."
+      }
+    ],
+
+    "faqs": [
+      {
+        "question": "Can I get a loan for dental treatment?",
+        "answer": "Eligible applicants can apply for financing for dental procedures through participating lending partners."
+      },
+      {
+        "question": "Which dental treatments are eligible?",
+        "answer": "Eligibility depends on the treatment and the lending partner's policies."
+      },
+      {
+        "question": "What documents are required?",
+        "answer": "PAN, Aadhaar, income proof and standard KYC documents may be required."
+      },
+      {
+        "question": "How quickly can my application be processed?",
+        "answer": "Processing time depends on document verification and lender assessment."
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "script-treemap-data",
+  "title": "Script Treemap Data",
+  "description": "Used for treemap app",
+  "score": 1,
+  "scoreDisplayMode": "informative",
+  "details": {
+    "type": "treemap-data",
+    "nodes": [
+      {
+        "name": "https://www.trustivasetu.com/",
+        "resourceBytes": 9927,
+        "encodedBytes": 1848,
+        "children": [
+          {
+            "name": "(inline) (self.__next_f=…",
+            "resourceBytes": 43,
+            "unusedBytes": 0
+          },
+          {
+            "name": "(inline) self.__next_f.p…",
+            "resourceBytes": 1538,
+            "unusedBytes": 0
+          },
+          {
+            "name": "(inline) self.__next_f.p…",
+            "resourceBytes": 4372,
+            "unusedBytes": 0
+          },
+          {
+            "name": "(inline) self.__next_f.p…",
+            "resourceBytes": 112,
+            "unusedBytes": 0
+          },
+          {
+            "name": "(inline) self.__next_f.p…",
+            "resourceBytes": 271,
+            "unusedBytes": 0
+          },
+          {
+            "name": "(inline) self.__next_f.p…",
+            "resourceBytes": 146,
+            "unusedBytes": 0
+          },
+          {
+            "name": "(inline) self.__next_f.p…",
+            "resourceBytes": 3445,
+            "unusedBytes": 0
+          }
+        ]
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/0tszvp5wpnn-t.js",
+        "resourceBytes": 50234,
+        "encodedBytes": 10519,
+        "unusedBytes": 38104
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/08zy_wf08hkxt.js",
+        "resourceBytes": 18163,
+        "encodedBytes": 6305,
+        "unusedBytes": 7722
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/turbopack-00jg7f.yi7uhv.js",
+        "resourceBytes": 10580,
+        "encodedBytes": 4167,
+        "unusedBytes": 4079
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/02g3221oh~3le.js",
+        "resourceBytes": 150333,
+        "encodedBytes": 40499,
+        "unusedBytes": 81890
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/10u3y4bw1ayzs.js",
+        "resourceBytes": 227314,
+        "encodedBytes": 71072,
+        "unusedBytes": 71216
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/0cq.30fmx6_0q.js",
+        "resourceBytes": 5176,
+        "encodedBytes": 2251,
+        "unusedBytes": 2258
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/0i-3xyjoll2aw.js",
+        "resourceBytes": 7901,
+        "encodedBytes": 3499,
+        "unusedBytes": 2187
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/0d3shmwh5_nmn.js",
+        "resourceBytes": 54644,
+        "encodedBytes": 12893,
+        "unusedBytes": 43694
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/0je5cjj4dvp4t.js",
+        "resourceBytes": 93538,
+        "encodedBytes": 21750,
+        "unusedBytes": 9739
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/0getnx--xxdy9.js",
+        "resourceBytes": 120501,
+        "encodedBytes": 39476,
+        "unusedBytes": 73670
+      },
+      {
+        "name": "https://www.trustivasetu.com/_next/static/chunks/08jkkh6i_oo.f.js",
+        "resourceBytes": 13995,
+        "encodedBytes": 5240,
+        "unusedBytes": 7319
+      }
+    ]
+  }
+}

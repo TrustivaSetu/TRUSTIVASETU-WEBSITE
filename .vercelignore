@@ -1,0 +1,12 @@
+.git
+node_modules
+.next
+backup
+logs
+temp
+*.deb
+*.log
+lighthouse.report.html
+lighthouse.report.json
+perf*
+treemap.json

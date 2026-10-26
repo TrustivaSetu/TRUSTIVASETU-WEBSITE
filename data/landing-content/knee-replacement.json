@@ -1,0 +1,52 @@
+{
+  "slug": "knee-replacement-loan",
+  "key": "knee-replacement",
+  "metadata": {
+    "title": "Knee Replacement Surgery in India | Healthcare Financing | Trustiva Setu",
+    "description": "Apply for a knee replacement surgery through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
+    "ogTitle": "Knee Replacement Surgery | Trustiva Setu",
+    "ogDescription": "Healthcare financing for knee replacement surgery."
+  },
+  "landing": {
+    "title": "Knee Replacement Surgery",
+    "description": "Healthcare financing for knee replacement surgery through trusted lending partners.",
+    "heroTitle": "Finance Your Knee Replacement Surgery",
+    "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
+    "treatments": [
+      {
+        "title": "Total Knee Replacement",
+        "description": "Finance complete knee replacement surgery."
+      },
+      {
+        "title": "Partial Knee Replacement",
+        "description": "Funding for partial knee replacement procedures."
+      },
+      {
+        "title": "Revision Knee Replacement",
+        "description": "Finance revision surgery where applicable."
+      },
+      {
+        "title": "Robotic Knee Surgery",
+        "description": "Funding support for robotic-assisted procedures."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I finance knee replacement surgery?",
+        "answer": "Eligible applicants may apply through lending partners."
+      },
+      {
+        "question": "Who is eligible?",
+        "answer": "Eligibility depends on lender credit assessment."
+      },
+      {
+        "question": "Which documents are needed?",
+        "answer": "PAN, Aadhaar, KYC and income proof."
+      },
+      {
+        "question": "How quickly is approval given?",
+        "answer": "Approval timelines vary by lender."
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "ivf-loan",
+  "key": "ivf",
+
+  "metadata": {
+    "title": "IVF Loan in India | Fertility Treatment Financing | Trustiva Setu",
+    "description": "Affordable IVF and fertility treatment financing across India.",
+    "ogTitle": "IVF Loan in India | Trustiva Setu",
+    "ogDescription": "Finance your fertility journey with trusted healthcare lenders."
+  },
+
+  "landing": {
+    "title": "IVF Loan in India",
+    "description": "Affordable IVF and fertility treatment financing across India.",
+    "heroTitle": "IVF Treatment Financing",
+    "heroSubtitle": "Finance your fertility journey with trusted healthcare lenders.",
+
+    "treatments": [
+      {
+        "title": "IVF Treatment",
+        "description": "Financing for complete IVF treatment cycles."
+      },
+      {
+        "title": "IUI Treatment",
+        "description": "Affordable finance for IUI procedures."
+      },
+      {
+        "title": "Egg Freezing",
+        "description": "Finance fertility preservation and egg freezing."
+      },
+      {
+        "title": "Embryo Transfer",
+        "description": "Support for embryo transfer related expenses."
+      },
+      {
+        "title": "Donor IVF",
+        "description": "Funding options for donor IVF programs."
+      },
+      {
+        "title": "Fertility Preservation",
+        "description": "Healthcare finance for long-term fertility planning."
+      },
+      {
+        "title": "ICSI Treatment",
+        "description": "Finance advanced fertility procedures like ICSI."
+      },
+      {
+        "title": "Other Fertility Care",
+        "description": "Flexible financing for additional fertility treatments."
+      }
+    ],
+
+    "faqs": [
+      {
+        "question": "Can I apply for an IVF loan?",
+        "answer": "Eligible applicants can apply for financing for IVF and other fertility treatments through participating lending partners."
+      },
+      {
+        "question": "Does the loan cover the full IVF treatment?",
+        "answer": "Coverage depends on the approved loan amount and the lending partner's policies."
+      },
+      {
+        "question": "What documents are required?",
+        "answer": "PAN, Aadhaar, address proof, income proof and standard KYC documents may be required."
+      },
+      {
+        "question": "How quickly is an IVF loan processed?",
+        "answer": "Processing time depends on document verification and the lending partner's assessment."
+      }
+    ]
+  }
+}

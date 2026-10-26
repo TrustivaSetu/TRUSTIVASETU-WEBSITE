@@ -1,0 +1,48 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start LMS (port 3000)",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "${workspaceFolder}/trustiva-lms",
+        "env": {}
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": { "regexp": "^$" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting",
+          "endsPattern": "Ready|compiled|Local:"
+        }
+      },
+      "presentation": { "reveal": "always", "panel": "dedicated", "group": "trustiva" }
+    },
+    {
+      "label": "Start LOS (port 3001)",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": { "cwd": "${workspaceFolder}/trustiva-los" },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": { "regexp": "^$" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting",
+          "endsPattern": "Ready|compiled|Local:"
+        }
+      },
+      "presentation": { "reveal": "always", "panel": "dedicated", "group": "trustiva" }
+    },
+    {
+      "label": "Start DEMO (LMS + LOS)",
+      "dependsOn": ["Start LMS (port 3000)", "Start LOS (port 3001)"],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    }
+  ]
+}

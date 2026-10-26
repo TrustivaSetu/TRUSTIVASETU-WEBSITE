@@ -1,0 +1,52 @@
+{
+  "slug": "bariatric-surgery-loan",
+  "key": "bariatric-surgery",
+  "metadata": {
+    "title": "Bariatric Surgery Loan in India | Healthcare Financing | Trustiva Setu",
+    "description": "Apply for a bariatric surgery loan through Trustiva Setu's lending partners. Loan approval is subject to lender eligibility.",
+    "ogTitle": "Bariatric Surgery Loan | Trustiva Setu",
+    "ogDescription": "Healthcare financing for bariatric surgery loan."
+  },
+  "landing": {
+    "title": "Bariatric Surgery Loan",
+    "description": "Healthcare financing for bariatric surgery loan through trusted lending partners.",
+    "heroTitle": "Finance Your Bariatric Surgery Loan",
+    "heroSubtitle": "Flexible healthcare financing through trusted lending partners.",
+    "treatments": [
+      {
+        "title": "Gastric Sleeve",
+        "description": "Finance sleeve gastrectomy."
+      },
+      {
+        "title": "Gastric Bypass",
+        "description": "Funding for gastric bypass surgery."
+      },
+      {
+        "title": "Mini Gastric Bypass",
+        "description": "Finance minimally invasive bariatric surgery."
+      },
+      {
+        "title": "Revision Bariatric Surgery",
+        "description": "Funding support for revision procedures."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can bariatric surgery be financed?",
+        "answer": "Eligible applicants may apply through lending partners."
+      },
+      {
+        "question": "What procedures are covered?",
+        "answer": "Coverage depends on clinic and lender policies."
+      },
+      {
+        "question": "Documents required?",
+        "answer": "Standard KYC and income proof."
+      },
+      {
+        "question": "Approval time?",
+        "answer": "Depends on lender verification."
+      }
+    ]
+  }
+}
