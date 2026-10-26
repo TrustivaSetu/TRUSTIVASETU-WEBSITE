@@ -14,6 +14,11 @@ const partners = [
     logoLight: "/logos/Paytm_Black_H.png",
     logoDark: "/logos/Paytm_White_H.png",
   },
+  {
+    name: "Gromo",
+    logoLight: "/logos/Gromo_Color_H.jpeg",
+    logoDark: "/logos/Gromo_Color_H.jpeg",
+  },
 ];
 
 // Ambient twinkle: a handful of small sparkles per card, each with its own

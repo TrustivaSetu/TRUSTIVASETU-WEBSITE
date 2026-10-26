@@ -9,7 +9,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 import LendingPartners from "@/components/landing/LendingPartners";
-import GromoAnnouncement from "@/components/landing/GromoAnnouncement";
 import EligibilityWidget from "@/components/home/EligibilityWidget";
 import VideoPlayer from "@/components/ui/VideoPlayer";
 import { celebrate, triggerShine } from "@/lib/celebrate";
@@ -299,7 +298,6 @@ export default function TrustivaSetuWebsite() {
           </div>
         </section>
         <LendingPartners />
-        <GromoAnnouncement />
 
         <Footer />
       </div>
