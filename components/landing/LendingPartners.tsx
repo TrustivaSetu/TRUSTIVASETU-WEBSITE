@@ -46,7 +46,7 @@ export default function LendingPartners() {
         Backed By Trusted Lending Partners
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 items-stretch justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 items-stretch justify-items-center max-w-4xl mx-auto">
         {partners.map((partner, i) => (
           <motion.div
             key={partner.name}
