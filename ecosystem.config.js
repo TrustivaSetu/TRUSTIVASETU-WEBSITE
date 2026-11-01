@@ -38,7 +38,7 @@ module.exports = {
     script: 'node_modules/.bin/next',
     args: 'start -p 3001',
     cwd: '/home/ubuntu/trustivasetu-website',
-    max_memory_restart: '400M',
+    max_memory_restart: '600M',
     env: {
       ...fileEnv,
       NODE_ENV: 'production'
